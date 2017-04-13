@@ -1,0 +1,60 @@
+html.home{
+  margin: 0;
+  padding: 0;
+
+  body{
+    min-width: 320px;
+    max-width: 1685px;
+    margin: 0 auto;
+    padding: 0;
+    background: white;
+
+    &.popup-open{
+      overflow: hidden;
+      #popup{
+        display: block;
+      }
+    }
+  }
+
+  @import "header";
+
+  section{
+    margin: 60px auto 0 auto;
+    @include clearfix;
+
+    header{
+      text-align: center;
+      font-size: 29px;
+      color: white;
+      font-weight: 600;
+      position: relative;
+      float: left;
+      margin: 0 0 0 50%;
+      background: #ed034b;
+      padding: 3px 8px 6px 8px;
+      @include translateX(-50%);
+      &:after{
+        content: '';
+        display: block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 6px 6px 0 6px;
+        border-color: #ed034b transparent transparent transparent;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        margin: 0 0 0 -3px;
+      }
+    }
+    .spacer{
+      clear: both;
+      height: 50px;
+    }
+  }
+
+  @import "projects";
+  @import "footer";
+  @import "intro";
+}

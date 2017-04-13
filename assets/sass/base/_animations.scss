@@ -1,11 +1,37 @@
-@include keyframes(poppin){
+@include keyframes(popupOpen){
   0% {
-    @include scale(0.7, 0.7);
+    border-radius: 1500px;
+    width: 600px;
+    height: 600px;
+    margin: -300px auto 0 auto;
+    top: 50%;
+    @include scale(0.1,0.1);
   }
-  100% {
-    @include scale(1, 1);
+  100%{
+    border-radius: 0;
+    width: 1200px;
+    height: 1200px;
+    margin: -600px auto 0 auto;
+    top: 50%;
+    @include scale(1.3,1.3);
   }
 }
+
+@include keyframes(popIn){
+  0% {
+    opacity: 0.7;
+    @include scale(0.1,0.1);
+  }
+  90%{
+    opacity: 1;
+    @include scale(1.2,1.2);
+  }
+  100%{
+    opacity: 1;
+    @include scale(1,1);
+  }
+}
+
 
 @include keyframes(fadeIn){
   0% {
@@ -28,41 +54,6 @@
 @include keyframes(rotation){
   100% {
     @include rotate(360deg);
-  }
-}
-
-@include keyframes(dropIn){
-  0% {
-    @include translateY(-20px);
-    opacity:0;
-  }
-  30% {
-    @include translateY(-20px);
-    opacity:0;
-  }
-  100% {
-    @include translateY(0);
-    opacity:1;
-  }
-}
-
-@include keyframes(slideUp){
-  0% {
-    @include translate(0, 15px);
-    opacity: 0;
-  }
-  100% {
-    @include translate(0,0);
-    opacity: 1;
-  }
-}
-
-@include keyframes(flash){
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
   }
 }
 

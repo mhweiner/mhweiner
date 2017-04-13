@@ -8,14 +8,13 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(255, 255, 255, 0.8);
+  background: #eee;
   z-index: 100;
   overflow: auto;
   backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
-  @include translate3d(0,0,0);
-  @include animation(slideUp 0.5s);
+  @include animation(popupOpen 0.4s);
   @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.94));
 
   .belt{
@@ -116,36 +115,20 @@
 
 .close-popup {
   display: none;
-  width: 45px;
-  height: 68px;
+  width: 50px;
+  height: 50px;
   position: fixed;
   float: none;
   top: 10px;
   right: 10px;
   cursor: pointer;
   z-index: 200;
-  line-height: 50px;
-  color: #d300ff;
-  font-size: 15px;
-  text-align: center;
-  padding: 31px 0 0 0;
-  text-transform: uppercase;
+  padding: 0;
   box-sizing: border-box;
-  font-family: $font;
-  @include animation(poppin 0.5s);
-  @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.94));
   backface-visibility: hidden;
+  @include animation(popIn 0.5s);
+  @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.94));
   @include translate3d(0,0,0);
-
-  @include media(0,900){
-    background: white;
-    border-radius: 5px;
-    height: 46px;
-    text-indent: -1000px;
-    overflow: hidden;
-    padding: 0;
-    line-height: 50px;
-  }
 
   &:before, &:after{
     display: block;
@@ -153,9 +136,10 @@
     height: 45px;
     position: absolute;
     content: "";
-    top: 0;
+    top: 3px;
     left: 50%;
-    background: #d300ff;
+    background: #f10043;
+    margin: 0 0 0 -1px;
   }
 
   &:before{
@@ -169,9 +153,9 @@
   }
 
   &:hover{
-    color: $color-secondary;
+    @include scale(1.1,1.1);
     &:before, &:after{
-      background: $color-secondary;
+      background: darken(#f10043, 20%);
     }
   }
 }

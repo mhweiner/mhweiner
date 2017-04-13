@@ -15,15 +15,15 @@
 		//load fastclick
 		FastClick.attach(document.body);
 
-		//start header animation
-		_initHeaderAnimation();
-
 		//setup routes
 		router.setControllers(controller);
 		router.setRoutes(routes);
 
 		//route!
 		router.route();
+
+		window.showPopup = _showPopup;
+
 	}
 
 	function _bindEvents() {
@@ -77,13 +77,11 @@
 		$popup.addClass(classes);
 		setTimeout(function(){
 			$popup.scrollTop(0);
-			setTimeout(function(){
-				$body.addClass('popup-open');
-			}, 50);
-			setTimeout(function(){
-				$body.find('.close-popup').css('display','block');
-			}, 600);
 		}, 10);
+		setTimeout(function(){
+			$body.addClass('popup-open');
+			$body.find('.close-popup').css('display','block');
+		}, 50);
 	}
 
 	function _hidePopup(){
@@ -101,21 +99,6 @@
 
 	function _hideSpinner(){
 		$body.find('.spinner').remove();
-	}
-
-	function _initHeaderAnimation(){
-		var colors = ['f60000','f10053','a200ac','7800bb','4433b0','0095ec','00afc6','008f7e'],
-			len = colors.length,
-			i = 0,
-			$h1 = $('header h1');
-		function next(){
-			i++;
-			if(i >= len) i = 0;
-			var c = '#' + colors[i];
-			$h1.css('color', c);
-		}
-		setInterval(next, 4000);
-		setTimeout(next, 10);
 	}
 
 	var controller = {
