@@ -4,7 +4,7 @@
   max-width: 1400px;
   position: relative;
   > article{
-    border: 1px solid #ddd;
+    border: 1px solid #aaa;
     float: left;
     width: 31%;
     margin: 0 1% 30px 1%;
@@ -13,17 +13,17 @@
     cursor: pointer;
     .img{
       height: 180px;
-      border-bottom: 1px solid #ddd;
+      border-bottom: 1px solid #aaa;
       position: relative;
       transition: all 0.15s ease-in-out;
       img{
-        max-height: 45%;
-        max-width: 50%;
+        max-height: 39%;
+        max-width: 55%;
         position: absolute;
         left: 50%;
         top: 50%;
-        transition: all 0.15s ease-in-out;
-        @include transform(translate(-50%,-50%));
+        transition: all 0.4s ease-in-out;
+        @include transform(translate(-50%,-50%) scale3d(1,1,1));
       }
     }
     .years{
@@ -31,7 +31,7 @@
       box-sizing: border-box;
       font-weight: 300;
       font-size: 26px;
-      border-right: 1px solid #ddd;
+      border-right: 1px solid #aaa;
       float: left;
       width: 100px;
       padding: 19px;
@@ -54,6 +54,7 @@
         font-style: italic;
         font-size: 17px;
         color: #333;
+        transition: all 0.15s ease-in-out;
         @include ellipsify;
       }
       h5{
@@ -66,16 +67,23 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        transition: all 0.15s ease-in-out;
         @include ellipsify;
       }
     }
     &:hover{
       &, > div{
-        border-color: #828282;
+        border-color: #666;
+        color: #333;
+        h4{
+          color: black;
+        }
+        h5{
+          color: #666;
+        }
       }
       img{
-        -webkit-filter: sepia(1);
-        filter: sepia(1);
+        @include transform(translate(-50%,-50%) scale3d(1.05,1.05,1));
       }
     }
   }

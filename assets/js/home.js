@@ -1,7 +1,6 @@
 (function() {
 
 	var $body = $('body'),
-		$grid = $body.find('.grid'),
 		$popup = $body.find('#popup');
 
 	var routes = {
@@ -28,9 +27,10 @@
 
 	function _bindEvents() {
 
-		//grid item
-		$grid.on('click', '[rel]', function (e) {
-			router.go2('project', {id: $(this).attr('rel')});
+		//project item
+		$body.on('click', 'article', function (e) {
+			_showPopup('');
+			//router.go2('project', {id: $(this).attr('rel')});
 		});
 
 		//close button

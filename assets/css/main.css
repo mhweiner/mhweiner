@@ -1,4 +1,5 @@
 /* cyrillic-ext */
+@import url(vendor/font-awesome.min.css);
 @font-face {
   font-family: 'Open Sans';
   font-style: normal;
@@ -305,6 +306,24 @@
     opacity: 1; }
   100% {
     opacity: 0; } }
+@-webkit-keyframes flash {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  55% {
+    opacity: 0; }
+  95% {
+    opacity: 0; } }
+@keyframes flash {
+  0% {
+    opacity: 1; }
+  50% {
+    opacity: 1; }
+  55% {
+    opacity: 0; }
+  95% {
+    opacity: 0; } }
 @-webkit-keyframes rotation {
   100% {
     -webkit-transform: rotate(360deg);
@@ -536,7 +555,7 @@ html.home {
       html.home body.popup-open #popup {
         display: block; }
   html.home header {
-    background: #faf0e6 url("../img/bg2.png") center 120% no-repeat;
+    background: linear-gradient(to right, #f5f5f5, #ecfff4);
     background-size: contain; }
     html.home header nav {
       margin: 0; }
@@ -564,21 +583,11 @@ html.home {
             line-height: 50px;
             position: relative;
             z-index: 1; }
-            html.home header nav ul li a.resume i {
-              background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFIAAABgCAYAAACOniU9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAABBdJREFUeNrsnU12mzAQxyep96YniG8QL7uLbxCW3dU9Qd0bkBuQG5AT1D1B8Q3wrkuy6xKfwEV5oz6qCPElwYBm3pskFk7AP/9HGomJfAP/2wZ9CVaUno190qD0tPTrwlzATErfjQUxWyBE1VPXQBMPIFY9dtmXXD3zxAXIq6eeMEiCMFcNx0/EUxyRqt0N+P0v+H3vWpHULWpQWzKWMm9huZaj0r62VGbCIJvTO+cwfQA5CkxfQDqH6RNIpzB9A+kMpo8gncD0FaR1mD6DtArTd5DWYDJISzAZpCWYDNISTAY5DGbIIO3AFM8LGORwmGupSgY5HGbEINvDfDIcF7c6tiuCF77FfidH72sbsFcQ0FT68nYeSvdsYnhfHbFtCCsKdyMjSqEtFPRNaXuQfRBx21ACuevYziANipR2Kf0n/mzqJ1MqF09VkVmlg28CeWKQ7RTaNGKKhPg89cWuZgCyyQoc2fdgqfTEcD3G8hgq6U+qpD2y3JDKqG1KtVJKoZ0rSfl6TtMfqiBnBZHn2gsFmTJI+6E9O8DUQF5YkXYsY5Du+kkO7R52VB5fWJH9rFAei3wyYJDdbadp2zPI7hYyyOEmQvhR034PM1glvyWuRmkRg2xvphB+oK5KKiA3CKtqpzmpkgrIg/L4rFHoQ0P4M0gNtATn3s+adrJ55dS3Gvaa8waVkVzd4WCqKWMExG81qH3fS2WGU9SEeMKKfD+TUc+pG51jGGlfir6KnBpk2iFssxqYge8gdWoMG2Y+OpiibeszSFWNectpZN1mT5FjdZIEqVNj28UJE8wcX1QK5t215HNijIJgriD7qFG+AeIFHcH+HmrR3EB26RsluBSm3+6LHEjTSB1giB/BzVZjRYvQ7wVy7Gq0ULM4ESM8ceyxxd94xa4gq4CR6dEBva7kZY0jfIpvVobn3YOFMpkxFZnXqKTu/BnmiocOy2hS1Tn02xqRfGgfWr6QCKHZSGW2qPi2UEPqIIMa5ckdR0NwP0PZoFJjpY+UKVPTEh0JkLEGINm1RUqDTVDp+AW0O02YH2FhZluRYUOflM6U02jrkQGG8A8wF60fYIG2sghRKO2+0naC97XgTzDjijOT3TqC+FJJgKWdYR7/VzgJyDqImWYGs4cF29DQPmogirzwl/K870sNaRuj9kEzndtpEu+lpDlOEnLdTGWnWVHJYCb1jVMl5KEykJxQedW2C/aLBXhgfUGqKlMHlktFoV5Y31HbBOjVN4hDQKaYXKvF8s+YhHsF0dZcewv21g+9G2zahjmHNhuDZJAMkq0xId8xon+2MR28gXl8ABB1O3Fo27GCQdqxTIA8M4fBlosvIfj9kX5D/W1m96H036V/LP0TC6uziZWuz6X/UVOdI/Sr4vLNU1Bq1v8KMAAshNVeBtJ5MQAAAABJRU5ErkJggg==") no-repeat center center;
-              background-size: contain;
-              width: 19px;
-              height: 22px;
-              margin: 14px 5px 0 0;
-              display: block;
-              float: left; }
             html.home header nav ul li a:after {
               content: '';
               display: block;
-              border: 3px solid #dc2574;
-              left: 0;
-              bottom: 5px;
-              right: 0;
+              left: -5px;
+              right: -5px;
               transition: all 0.1s ease-in-out;
               position: absolute;
               z-index: -1;
@@ -588,7 +597,10 @@ html.home {
               /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
               transform: scale(0.9, 0.9);
               /* IE 10, Fx 16+, Op 12.1+ */
-              height: 34px; }
+              height: 39px;
+              background: white;
+              box-shadow: rgba(0, 0, 0, 0.1) 1px 1px 2px 0;
+              border-radius: 40px; }
             html.home header nav ul li a:hover:after {
               opacity: 1;
               -webkit-transform: scale(1, 1);
@@ -608,6 +620,16 @@ html.home {
       -webkit-text-fill-color: transparent;
       padding: 70px 20px 90px 20px;
       opacity: 0.9; }
+      html.home header h1:after {
+        content: '';
+        display: inline-block;
+        background: linear-gradient(to right, #717171, #676767);
+        height: 12px;
+        width: 78px;
+        position: absolute;
+        margin: 89px 0 0 15px;
+        -webkit-animation: flash 1.2s linear infinite;
+        animation: flash 1.2s linear infinite; }
   html.home section {
     margin: 60px auto 0 auto; }
     html.home section:after {
@@ -649,7 +671,7 @@ html.home {
     max-width: 1400px;
     position: relative; }
     html.home #projects > article {
-      border: 1px solid #ddd;
+      border: 1px solid #aaa;
       float: left;
       width: 31%;
       margin: 0 1% 30px 1%;
@@ -658,26 +680,26 @@ html.home {
       cursor: pointer; }
       html.home #projects > article .img {
         height: 180px;
-        border-bottom: 1px solid #ddd;
+        border-bottom: 1px solid #aaa;
         position: relative;
         transition: all 0.15s ease-in-out; }
         html.home #projects > article .img img {
-          max-height: 45%;
-          max-width: 50%;
+          max-height: 39%;
+          max-width: 55%;
           position: absolute;
           left: 50%;
           top: 50%;
-          transition: all 0.15s ease-in-out;
-          -webkit-transform: translate(-50%, -50%);
+          transition: all 0.4s ease-in-out;
+          -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
           /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-          transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%) scale3d(1, 1, 1);
           /* IE 10, Fx 16+, Op 12.1+ */ }
       html.home #projects > article .years {
         height: 85px;
         box-sizing: border-box;
         font-weight: 300;
         font-size: 26px;
-        border-right: 1px solid #ddd;
+        border-right: 1px solid #aaa;
         float: left;
         width: 100px;
         padding: 19px;
@@ -699,6 +721,7 @@ html.home {
           font-style: italic;
           font-size: 17px;
           color: #333;
+          transition: all 0.15s ease-in-out;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden; }
@@ -712,14 +735,22 @@ html.home {
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
+          transition: all 0.15s ease-in-out;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden; }
       html.home #projects > article:hover, html.home #projects > article:hover > div {
-        border-color: #828282; }
+        border-color: #666;
+        color: #333; }
+        html.home #projects > article:hover h4, html.home #projects > article:hover > div h4 {
+          color: black; }
+        html.home #projects > article:hover h5, html.home #projects > article:hover > div h5 {
+          color: #666; }
       html.home #projects > article:hover img {
-        -webkit-filter: sepia(1);
-        filter: sepia(1); }
+        -webkit-transform: translate(-50%, -50%) scale3d(1.05, 1.05, 1);
+        /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+        transform: translate(-50%, -50%) scale3d(1.05, 1.05, 1);
+        /* IE 10, Fx 16+, Op 12.1+ */ }
   html.home footer {
     color: #999;
     font-family: Lora, Georgia, sans-serif;
