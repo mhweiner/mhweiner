@@ -2609,7 +2609,7 @@ h1, h2, h3, h4, h5 {
   position: fixed;
   height: 100%;
   width: 100%;
-  padding: 100px 0 40px 0;
+  padding: 71px 0 40px 0;
   top: 0;
   left: 0;
   right: 0;
@@ -2627,9 +2627,9 @@ h1, h2, h3, h4, h5 {
   #popup .content {
     display: none;
     position: relative;
-    max-width: 1213px;
+    max-width: 1000px;
     margin: 0 auto;
-    width: calc(100% - 150px);
+    padding: 0 15px;
     -webkit-animation: fadeIn 1s;
     animation: fadeIn 1s;
     -webkit-timing-function: ease-in-out;
@@ -2638,73 +2638,6 @@ h1, h2, h3, h4, h5 {
       content: '';
       display: table;
       clear: both; }
-    #popup .content .text {
-      float: left;
-      width: 33%;
-      padding: 20px 2%;
-      box-sizing: border-box;
-      background: white; }
-      @media only screen and (min-width: 0px) and (max-width: 1050px) and (min-height: 0px) and (max-height: 999999px) {
-        #popup .content .text {
-          width: auto;
-          float: none;
-          padding: 0 0 30px 0;
-          background: none; } }
-      @media only screen and (min-width: 0px) and (max-width: 850px) and (min-height: 0px) and (max-height: 999999px) {
-        #popup .content .text {
-          padding: 0 15px 30px 15px; } }
-    #popup .content .images {
-      float: right;
-      width: 66%;
-      padding: 0;
-      position: relative; }
-      #popup .content .images > * {
-        display: block;
-        margin: 0 0 10px 0;
-        width: 100%; }
-      #popup .content .images iframe {
-        height: 350px; }
-      #popup .content .images > comment {
-        margin: -10px 0 15px 0;
-        background: #528078;
-        padding: 15px;
-        box-sizing: border-box;
-        border-top: 1px solid white;
-        color: white;
-        font-size: 18px; }
-      @media only screen and (min-width: 0px) and (max-width: 1050px) and (min-height: 0px) and (max-height: 999999px) {
-        #popup .content .images {
-          width: auto;
-          float: none; } }
-    @media only screen and (min-width: 0px) and (max-width: 1050px) and (min-height: 0px) and (max-height: 999999px) {
-      #popup .content {
-        width: 100%;
-        max-width: 800px; } }
-  #popup h2 {
-    margin: 0 0 20px 0;
-    font-size: 40px;
-    color: #444;
-    font-weight: 300;
-    line-height: 1; }
-  #popup h3 {
-    margin: 0 0 20px 0;
-    font-size: 15px;
-    color: #222;
-    font-weight: 300; }
-  #popup h4 {
-    font-size: 20px;
-    font-weight: 400;
-    color: black;
-    margin: 0 0 20px 0; }
-  #popup p {
-    margin: 0 0 20px 0;
-    font-size: 20px;
-    color: #444;
-    line-height: 1.5; }
-  @media only screen and (min-width: 0px) and (max-width: 1050px) and (min-height: 0px) and (max-height: 999999px) {
-    #popup {
-      background: white;
-      padding-top: 50px; } }
 
 .close-popup {
   display: none;
@@ -2961,6 +2894,14 @@ html.home {
     margin: 0 auto; }
     html.home #intro h2 span {
       font-weight: 600; }
+  html.home .popup .project header h1 {
+    font-size: 41px;
+    padding: 0;
+    opacity: 1;
+    float: left;
+    margin: 0 0 20px 0;
+    line-height: 60px;
+    height: 60px; }
 
 #popup #about {
   max-width: 800px;
