@@ -17,12 +17,15 @@
   @include animation(popupOpen 0.4s);
   @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.94));
 
-  .belt{
+  .content{
+    display: none;
     position: relative;
     max-width: 1213px;
     margin: 0 auto;
     width: calc(100% - 150px);
     @include clearfix;
+    @include animation(fadeIn 1s);
+    @include animation-easing(ease-in-out);
 
     .text{
       float: left;

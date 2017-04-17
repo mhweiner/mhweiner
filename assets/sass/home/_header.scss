@@ -12,38 +12,28 @@ header{
       li{
         display: block;
         float: left;
-        margin: 0 0 0 15px;
+        margin: 0;
         padding: 0;
         a{
           color: black;
           text-decoration: none;
           font-size: 17px;
           font-weight: 600;
-          padding: 0 10px;
+          padding: 0 15px;
           display: block;
           line-height: 50px;
           position: relative;
           z-index: 1;
-          &:after{
-            content: '';
-            display: block;
-            left: -5px;
-            right: -5px;
-            transition: all 0.1s ease-in-out;
-            position: absolute;
-            z-index: -1;
-            opacity: 0;
-            top: 5px;
-            @include scale(0.9, 0.9);
-            height: 39px;
-            background: white;
-            box-shadow: rgba(0,0,0,0.1) 1px 1px 2px 0;
-            border-radius: 40px;
+          transition: color 0.15s ease-in-out;
+          i{
+            margin: 0 5px 0 0;
+            transition: color 0.15s ease-in-out;
+            color: #666;
           }
           &:hover{
-            &:after{
-              opacity: 1;
-              @include scale(1,1);
+            color: #f10043;
+            i{
+              color: #f10043;
             }
           }
         }

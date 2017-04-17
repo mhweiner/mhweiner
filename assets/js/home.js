@@ -20,21 +20,18 @@
 
 		//route!
 		router.route();
-
-		window.showPopup = _showPopup;
-
 	}
 
 	function _bindEvents() {
 
 		//project item
 		$body.on('click', 'article', function (e) {
-			_showPopup('');
+			open($(this).data('src'));
 			//router.go2('project', {id: $(this).attr('rel')});
 		});
 
 		//close button
-		$body.on('click', '.close-popup', _hidePopup);
+		$body.on('click', '.close-popup', _closePopup);
 
 		//about link
 		$body.on('click', '.about', function(e){
@@ -60,35 +57,61 @@
 		});
 	}
 
-	function _loadAbout(){
-		_showSpinner($body);
+	function _load(src, onSuccess){
+		_showSpinner();
 		$.ajax({
-			url: 'content/about.html',
+			url: 'content/' + src,
 			success: function(resp){
-				_showPopup(resp);
+				onSuccess.call(undefined, resp);
 			}
 		}).always(function(){
 			_hideSpinner();
 		});
 	}
 
-	function _showPopup(content, classes){
-		$popup.find('.belt').html(content);
-		$popup.addClass(classes);
-		setTimeout(function(){
-			$popup.scrollTop(0);
-		}, 10);
-		setTimeout(function(){
-			$body.addClass('popup-open');
-			$body.find('.close-popup').css('display','block');
-		}, 50);
+	function open(src){
+		var popupAnimationComplete = $.Deferred(),
+			contentLoaded = $.Deferred(),
+			content;
+
+		$.when(
+			popupAnimationComplete,
+			contentLoaded
+		).done(function(){
+			$popup.find('.content').html(content).css('display','block');
+		});
+
+		_showPopup(null, null, function(){
+			popupAnimationComplete.resolve();
+		});
+
+		_load(src, function(resp){
+			content = resp;
+			contentLoaded.resolve();
+		});
 	}
 
-	function _hidePopup(){
+	function _showPopup(content, classes, animationComplete){
+		$popup.addClass(classes);
+		setTimeout(function(){
+			$body.addClass('popup-open'); //prevent page from scrolling
+			$body.find('.close-popup').css('display','block'); //show popup close button
+			setTimeout(function(){
+				if(typeof animationComplete == 'function'){
+					animationComplete.apply();
+				}
+				if(content){
+					$popup.find('.content').html(content).css('display','block');
+				}
+			}, 350);
+		}, 0);
+	}
+
+	function _closePopup(){
 		$popup.scrollTop(0);
-		$popup.find('.belt').html('');
+		$popup.find('.content').html('').css('display','');
 		$body.removeClass('popup-open');
-		$body.find('.close-popup').css('display','none');
+		$body.find('.close-popup').css('display','');
 		window.location.hash = '';
 	}
 
