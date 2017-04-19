@@ -26,7 +26,7 @@
 
 		//project item
 		$body.on('click', 'article', function (e) {
-			open($(this).data('src'));
+			_open($(this).data('id'));
 			//router.go2('project', {id: $(this).attr('rel')});
 		});
 
@@ -41,74 +41,27 @@
 		});
 	}
 
-	/**
-	 * @param {string} id
-	 * @private
-	 */
-	function _loadPopup(id) {
-		_showSpinner();
+	function _load(id, onSuccess){
 		$.ajax({
-			url: 'content/' + id + '/content.html',
-			success: function(resp){
-				_showPopup(resp);
-			}
-		}).always(function(){
-			_hideSpinner();
+			url: 'content/' + id + '/index.html',
+			success: onSuccess
 		});
 	}
 
-	function _load(src, onSuccess){
+	function _open(src){
 		_showSpinner();
-		$.ajax({
-			url: 'content/' + src,
-			success: function(resp){
-				onSuccess.call(undefined, resp);
-			}
-		}).always(function(){
-			_hideSpinner();
-		});
-	}
-
-	function open(src){
-		var popupAnimationComplete = $.Deferred(),
-			contentLoaded = $.Deferred(),
-			content;
-
-		$.when(
-			popupAnimationComplete,
-			contentLoaded
-		).done(function(){
+		_load(src, function(content){
 			$popup.find('.content').html(content).css('display','block');
+			$popup.imagesLoaded().always(function(){
+				_hideSpinner();
+				$popup.addClass('loaded');
+				$body.addClass('popup-open'); //prevent page scrolling
+				$body.find('.close-popup').css('display','block'); //show close button
+			});
 		});
-
-		_showPopup(null, null, function(){
-			popupAnimationComplete.resolve();
-		});
-
-		_load(src, function(resp){
-			content = resp;
-			contentLoaded.resolve();
-		});
-	}
-
-	function _showPopup(content, classes, animationComplete){
-		$popup.addClass(classes);
-		setTimeout(function(){
-			$body.addClass('popup-open'); //prevent page from scrolling
-			$body.find('.close-popup').css('display','block'); //show popup close button
-			setTimeout(function(){
-				if(typeof animationComplete == 'function'){
-					animationComplete.apply();
-				}
-				if(content){
-					$popup.find('.content').html(content).css('display','block');
-				}
-			}, 350);
-		}, 0);
 	}
 
 	function _closePopup(){
-		$popup.scrollTop(0);
 		$popup.find('.content').html('').css('display','');
 		$body.removeClass('popup-open');
 		$body.find('.close-popup').css('display','');
@@ -126,7 +79,7 @@
 
 	var controller = {
 		project: function(data){
-			_loadPopup(data.id);
+			_open(data.id);
 		},
 		about: function(data){
 			_loadAbout();

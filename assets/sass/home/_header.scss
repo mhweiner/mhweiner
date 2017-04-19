@@ -41,7 +41,7 @@ header{
     }
   }
   h1{
-    font-size: 129px;
+    font-size: 100px;
     text-align: center;
     line-height: 0.8em;
     transition: color 3.8s ease-in-out;
@@ -51,17 +51,6 @@ header{
     background: linear-gradient(to right, #9c31bf, #f10043);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    padding: 70px 20px 90px 20px;
-    opacity: 0.9;
-    &:after{
-      content: '';
-      display: inline-block;
-      background: linear-gradient(to right, #717171, #676767);
-      height: 12px;
-      width: 78px;
-      position: absolute;
-      margin: 89px 0 0 15px;
-      @include animation(flash 1.2s linear infinite);
-    }
+    padding: 80px 20px 100px 20px;
   }
 }

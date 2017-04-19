@@ -1,0 +1,75 @@
+#popup .project{
+
+  header{
+    background: none;
+    @include clearfix;
+    h1{
+      font-size: 33px;
+      padding: 0;
+      float: left;
+      margin: 0 0 20px 0;
+      line-height: 60px;
+      height: 60px;
+      font-weight: 400;
+      &:after{
+        display: none;
+      }
+    }
+    a.ext-link{
+      text-transform: uppercase;
+      font-size: 13px;
+      float: right;
+      line-height: 60px;
+      i{
+        margin: 0 0 0 5px;
+      }
+    }
+  }
+
+  .slider{
+    position: relative;
+    button{
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      height: 100px;
+      width: 45px;
+      background: black;
+      border: none;
+      -webkit-appearance: none;
+      outline: none;
+      margin: -50px 0 0 0;
+      cursor: pointer;
+      transition: color 0.1s ease-in-out;
+      &:before, &:after{
+        content: '';
+        display: block;
+        width: 2px;
+        background: white;
+        height: 23px;
+        top: 50%;
+        left: 27px;
+        position: absolute;
+        margin: -4px 0 0 -7px;
+        @include rotateZ(-45deg);
+      }
+      &:before{
+        @include rotateZ(45deg);
+        margin: -20px 0 0 -7px;
+      }
+      &.next{
+        right: 0;
+        left: auto;
+        @include rotateY(180deg);
+      }
+      &:hover{
+        background: #333;
+      }
+    }
+    img{
+      width: 100%;
+    }
+  }
+
+}

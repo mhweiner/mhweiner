@@ -17,8 +17,8 @@
       position: relative;
       transition: all 0.15s ease-in-out;
       img{
-        max-height: 39%;
-        max-width: 55%;
+        max-height: 33%;
+        max-width: 52%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -72,18 +72,18 @@
       }
     }
     &:hover{
+      img{
+        @include transform(translate(-50%,-50%) scale3d(1.04,1.04,1));
+      }
       &, > div{
-        border-color: #666;
-        color: #333;
+        border-color: #444;
+        color: #222;
         h4{
           color: black;
         }
         h5{
-          color: #666;
+          color: #444;
         }
-      }
-      img{
-        @include transform(translate(-50%,-50%) scale3d(1.05,1.05,1));
       }
     }
   }
