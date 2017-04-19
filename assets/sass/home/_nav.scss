@@ -1,0 +1,56 @@
+nav{
+  margin: 0;
+  position: fixed;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 82px;
+  transition: width 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-sizing: border-box;
+  padding: 10px 0 10px 10px;
+  overflow: hidden;
+  a{
+    display: block;
+    position: relative;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    padding: 0 10px;
+    transition: all 0.1s ease-in-out;
+    border-radius: 5px 0 0 5px;
+    color: black;
+    span{
+      display: inline-block;
+      line-height: 55px;
+      vertical-align: top;
+      font-size: 17px;
+      padding: 0 0 0 2px;
+      opacity: 0;
+      transition: opacity 0.2s ease-in-out;
+    }
+    i{
+      display: inline-block;
+      width: 50px;
+      height: 55px;
+      font-size: 37px;
+      line-height: 55px;
+      text-align: center;
+    }
+    &.contact{
+      i{
+        line-height: 46px;
+      }
+    }
+    &:hover{
+      background: #96ccde;
+    }
+  }
+  &.open{
+    width: 170px;
+    a span{
+      opacity: 1;
+    }
+  }
+}

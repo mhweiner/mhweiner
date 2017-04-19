@@ -1,10 +1,17 @@
 #projects{
-  padding: 0 10px;
+  padding: 0 1%;
   min-width: 320px;
-  max-width: 1400px;
+  max-width: 1300px;
   position: relative;
+  margin: 0 auto;
+  @include clearfix;
+  header{
+    margin: 100px auto 50px 0;
+    font-size: 28px;
+    text-align: center;
+    color: #666;
+  }
   > article{
-    border: 1px solid #aaa;
     float: left;
     width: 31%;
     margin: 0 1% 30px 1%;
@@ -13,9 +20,9 @@
     cursor: pointer;
     .img{
       height: 180px;
-      border-bottom: 1px solid #aaa;
       position: relative;
       transition: all 0.15s ease-in-out;
+      background: #eee;
       img{
         max-height: 33%;
         max-width: 52%;
@@ -23,58 +30,37 @@
         left: 50%;
         top: 50%;
         transition: all 0.4s ease-in-out;
-        @include transform(translate(-50%,-50%) scale3d(1,1,1));
+        @include transform(translate3d(-50%,-50%, 0));
       }
-    }
-    .years{
-      height: 85px;
-      box-sizing: border-box;
-      font-weight: 300;
-      font-size: 26px;
-      border-right: 1px solid #aaa;
-      float: left;
-      width: 100px;
-      padding: 19px;
-      line-height: 1em;
-      color: #666;
-      transition: all 0.15s ease-in-out;
     }
     .description{
       height: 85px;
       box-sizing: border-box;
-      float: left;
-      width: calc(100% - 100px);
       padding: 0 20px;
       transition: all 0.15s ease-in-out;
+      text-align: center;
       h4{
         margin: 17px 0 0 0;
-        line-height: 27px;
-        height: 27px;
-        font-weight: 400;
-        font-style: italic;
-        font-size: 17px;
+        line-height: 28px;
+        height: 28px;
+        font-weight: 600;
+        font-size: 16px;
         color: #333;
         transition: all 0.15s ease-in-out;
         @include ellipsify;
       }
       h5{
         margin: 0;
-        line-height: 27px;
-        height: 27px;
-        font-weight: 600;
-        font-size: 17px;
+        line-height: 30px;
+        height: 30px;
+        font-weight: 400;
+        font-size: 14px;
         color: #8e8e8e;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden;
         transition: all 0.15s ease-in-out;
         @include ellipsify;
       }
     }
     &:hover{
-      img{
-        @include transform(translate(-50%,-50%) scale3d(1.04,1.04,1));
-      }
       &, > div{
         border-color: #444;
         color: #222;

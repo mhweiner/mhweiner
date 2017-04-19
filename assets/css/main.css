@@ -2534,10 +2534,10 @@ body, a, div {
   -webkit-font-smoothing: antialiased; }
 
 a {
-  color: #f10053;
+  color: #d422a9;
   text-decoration: none; }
   a:hover {
-    color: #be0041;
+    color: #a81b86;
     text-decoration: none; }
 
 .hidden {
@@ -2592,28 +2592,22 @@ h1, h2, h3, h4, h5 {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to right, #f5f5f5, #ecfff4);
+  background: #f3f3f3;
   z-index: 100;
   overflow: auto;
   backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
-  box-sizing: border-box;
-  opacity: 0; }
+  box-sizing: border-box; }
   #popup.loaded {
-    opacity: 1;
-    -webkit-animation: popupOpen 0.4s;
-    animation: popupOpen 0.4s;
-    -webkit-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    -webkit-animation: popupOpen 0.5s;
+    animation: popupOpen 0.5s;
+    -webkit-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.9);
+    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.9); }
   #popup .content {
     position: relative;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 0 15px;
-    -webkit-animation: fadeIn 0.4s;
-    animation: fadeIn 0.4s;
-    -webkit-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out; }
+    padding: 0 15px; }
     #popup .content:after {
       content: '';
       display: table;
@@ -2677,98 +2671,125 @@ html.home {
       overflow: hidden; }
       html.home body.popup-open #popup {
         display: block; }
-  html.home header {
-    background: linear-gradient(to right, #f5f5f5, #ecfff4);
-    background-size: contain; }
-    html.home header nav {
-      margin: 0; }
-      html.home header nav:after {
-        content: '';
-        display: table;
-        clear: both; }
-      html.home header nav ul {
-        display: block;
-        float: right;
-        margin: 0 20px 0 0;
-        padding: 0; }
-        html.home header nav ul li {
-          display: block;
-          float: left;
-          margin: 0;
-          padding: 0; }
-          html.home header nav ul li a {
-            color: black;
-            text-decoration: none;
-            font-size: 17px;
-            font-weight: 600;
-            padding: 0 15px;
-            display: block;
-            line-height: 50px;
-            position: relative;
-            z-index: 1;
-            transition: color 0.15s ease-in-out; }
-            html.home header nav ul li a i {
-              margin: 0 5px 0 0;
-              transition: color 0.15s ease-in-out;
-              color: #666; }
-            html.home header nav ul li a:hover {
-              color: #f10043; }
-              html.home header nav ul li a:hover i {
-                color: #f10043; }
-    html.home header h1 {
-      font-size: 100px;
-      text-align: center;
-      line-height: 0.8em;
-      transition: color 3.8s ease-in-out;
-      max-width: 1170px;
+  html.home nav {
+    margin: 0;
+    position: fixed;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    width: 82px;
+    transition: width 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-sizing: border-box;
+    padding: 10px 0 10px 10px;
+    overflow: hidden; }
+    html.home nav a {
+      display: block;
+      position: relative;
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      padding: 0 10px;
+      transition: all 0.1s ease-in-out;
+      border-radius: 5px 0 0 5px;
+      color: black; }
+      html.home nav a span {
+        display: inline-block;
+        line-height: 55px;
+        vertical-align: top;
+        font-size: 17px;
+        padding: 0 0 0 2px;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out; }
+      html.home nav a i {
+        display: inline-block;
+        width: 50px;
+        height: 55px;
+        font-size: 37px;
+        line-height: 55px;
+        text-align: center; }
+      html.home nav a.contact i {
+        line-height: 46px; }
+      html.home nav a:hover {
+        background: #96ccde; }
+    html.home nav.open {
+      width: 170px; }
+      html.home nav.open a span {
+        opacity: 1; }
+  html.home #intro {
+    height: 100vh;
+    min-height: 600px;
+    position: relative;
+    background: radial-gradient(ellipse at center, #9e326e 0%, #840ba3 100%); }
+    html.home #intro .belt {
+      max-width: 850px;
       margin: 0 auto;
-      color: #f10043;
-      background: linear-gradient(to right, #9c31bf, #f10043);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      padding: 80px 20px 100px 20px; }
-  html.home section {
-    margin: 60px auto 0 auto; }
-    html.home section:after {
+      padding: 30px 80px 30px 30px;
+      height: 100%;
+      position: relative;
+      box-sizing: border-box; }
+    html.home #intro h1 {
+      color: white;
+      font-size: 24px;
+      margin: 0;
+      font-weight: 600;
+      text-transform: uppercase; }
+    html.home #intro h2 {
+      font-weight: 400;
+      color: white;
+      font-size: 30px;
+      position: absolute;
+      top: 45%;
+      line-height: 1.5;
+      -webkit-transform: translate(0, -50%);
+      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+      transform: translate(0, -50%);
+      /* IE 10, Fx 16+, Op 12.1+ */ }
+      html.home #intro h2 span {
+        color: #ffffff;
+        font-weight: 600;
+        padding: 0 7px;
+        display: inline-block;
+        line-height: 38px;
+        font-size: 25px;
+        margin: 0 5px 0 0;
+        background: #bd379d; }
+    html.home #intro a.projects {
+      position: absolute;
+      bottom: 35px;
+      font-size: 22px;
+      line-height: 50px;
+      padding: 0 10px 0 0;
+      color: #ff4ed5;
+      transition: color 0.1s ease-in-out; }
+      html.home #intro a.projects i {
+        margin: 15px 10px 0 0;
+        font-size: 24px;
+        display: inline-block;
+        vertical-align: top;
+        width: 21px;
+        height: 22px;
+        background: url(../img/arrow.svg) no-repeat;
+        background-size: contain; }
+      html.home #intro a.projects:hover {
+        color: white; }
+  html.home #projects {
+    padding: 0 1%;
+    min-width: 320px;
+    max-width: 1300px;
+    position: relative;
+    margin: 0 auto; }
+    html.home #projects:after {
       content: '';
       display: table;
       clear: both; }
-    html.home section header {
+    html.home #projects header {
+      margin: 100px auto 50px 0;
+      font-size: 28px;
       text-align: center;
-      font-size: 29px;
-      color: white;
-      font-weight: 600;
-      position: relative;
-      float: left;
-      margin: 0 0 0 50%;
-      background: #ed034b;
-      padding: 3px 8px 6px 8px;
-      -webkit-transform: translateX(-50%);
-      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      transform: translateX(-50%);
-      /* IE 10, Fx 16+, Op 12.1+ */ }
-      html.home section header:after {
-        content: '';
-        display: block;
-        width: 0;
-        height: 0;
-        border-style: solid;
-        border-width: 6px 6px 0 6px;
-        border-color: #ed034b transparent transparent transparent;
-        position: absolute;
-        bottom: -5px;
-        left: 50%;
-        margin: 0 0 0 -3px; }
-    html.home section .spacer {
-      clear: both;
-      height: 50px; }
-  html.home #projects {
-    padding: 0 10px;
-    min-width: 320px;
-    max-width: 1400px;
-    position: relative; }
+      color: #666; }
     html.home #projects > article {
-      border: 1px solid #aaa;
       float: left;
       width: 31%;
       margin: 0 1% 30px 1%;
@@ -2777,9 +2798,9 @@ html.home {
       cursor: pointer; }
       html.home #projects > article .img {
         height: 180px;
-        border-bottom: 1px solid #aaa;
         position: relative;
-        transition: all 0.15s ease-in-out; }
+        transition: all 0.15s ease-in-out;
+        background: #eee; }
         html.home #projects > article .img img {
           max-height: 33%;
           max-width: 52%;
@@ -2787,36 +2808,22 @@ html.home {
           left: 50%;
           top: 50%;
           transition: all 0.4s ease-in-out;
-          -webkit-transform: translate(-50%, -50%) scale3d(1, 1, 1);
+          -webkit-transform: translate3d(-50%, -50%, 0);
           /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-          transform: translate(-50%, -50%) scale3d(1, 1, 1);
+          transform: translate3d(-50%, -50%, 0);
           /* IE 10, Fx 16+, Op 12.1+ */ }
-      html.home #projects > article .years {
-        height: 85px;
-        box-sizing: border-box;
-        font-weight: 300;
-        font-size: 26px;
-        border-right: 1px solid #aaa;
-        float: left;
-        width: 100px;
-        padding: 19px;
-        line-height: 1em;
-        color: #666;
-        transition: all 0.15s ease-in-out; }
       html.home #projects > article .description {
         height: 85px;
         box-sizing: border-box;
-        float: left;
-        width: calc(100% - 100px);
         padding: 0 20px;
-        transition: all 0.15s ease-in-out; }
+        transition: all 0.15s ease-in-out;
+        text-align: center; }
         html.home #projects > article .description h4 {
           margin: 17px 0 0 0;
-          line-height: 27px;
-          height: 27px;
-          font-weight: 400;
-          font-style: italic;
-          font-size: 17px;
+          line-height: 28px;
+          height: 28px;
+          font-weight: 600;
+          font-size: 16px;
           color: #333;
           transition: all 0.15s ease-in-out;
           white-space: nowrap;
@@ -2824,23 +2831,15 @@ html.home {
           overflow: hidden; }
         html.home #projects > article .description h5 {
           margin: 0;
-          line-height: 27px;
-          height: 27px;
-          font-weight: 600;
-          font-size: 17px;
+          line-height: 30px;
+          height: 30px;
+          font-weight: 400;
+          font-size: 14px;
           color: #8e8e8e;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden;
           transition: all 0.15s ease-in-out;
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden; }
-      html.home #projects > article:hover img {
-        -webkit-transform: translate(-50%, -50%) scale3d(1.04, 1.04, 1);
-        /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-        transform: translate(-50%, -50%) scale3d(1.04, 1.04, 1);
-        /* IE 10, Fx 16+, Op 12.1+ */ }
       html.home #projects > article:hover, html.home #projects > article:hover > div {
         border-color: #444;
         color: #222; }
@@ -2848,21 +2847,37 @@ html.home {
           color: black; }
         html.home #projects > article:hover h5, html.home #projects > article:hover > div h5 {
           color: #444; }
+  html.home #skills {
+    text-align: center; }
+    html.home #skills .belt {
+      margin: 0 auto;
+      max-width: 800px; }
+    html.home #skills header {
+      margin: 50px auto;
+      font-size: 28px;
+      text-align: center;
+      color: #666; }
+    html.home #skills ul {
+      display: block;
+      margin: 0; }
+      html.home #skills ul:after {
+        content: '';
+        display: table;
+        clear: both; }
+      html.home #skills ul li {
+        display: inline-block;
+        margin: 1px;
+        padding: 0 10px;
+        font-size: 14px;
+        color: #692860;
+        line-height: 35px;
+        background: #96ccde; }
   html.home footer {
     color: #999;
     font-family: Lora, Georgia, sans-serif;
     font-size: 14px;
     padding: 10px 0 10px 20px;
     text-align: center; }
-  html.home #intro h2 {
-    text-align: center;
-    font-weight: 400;
-    color: #474747;
-    font-size: 25px;
-    max-width: 775px;
-    margin: 0 auto; }
-    html.home #intro h2 span {
-      font-weight: 600; }
 
 #popup .project header {
   background: none; }

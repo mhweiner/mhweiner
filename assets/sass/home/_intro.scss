@@ -1,13 +1,62 @@
 #intro{
-  h2{
-    text-align: center;
-    font-weight: 400;
-    color: #474747;
-    font-size: 25px;
-    max-width: 775px;
+  height: 100vh;
+  min-height: 600px;
+  position: relative;
+  background: radial-gradient(ellipse at center, #9e326e 0%, #840ba3 100%);
+  .belt{
+    max-width: 850px;
     margin: 0 auto;
+    padding: 30px 80px 30px 30px;
+    height: 100%;
+    position: relative;
+    box-sizing: border-box;
+  }
+  h1{
+    color: white;
+    font-size: 24px;
+    margin: 0;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  h2{
+    font-weight: 400;
+    color: white;
+    font-size: 30px;
+    position: absolute;
+    top: 45%;
+    line-height: 1.5;
+    @include translate(0, -50%);
     span{
+      color: #ffffff;
       font-weight: 600;
+      padding: 0 7px;
+      display: inline-block;
+      line-height: 38px;
+      font-size: 25px;
+      margin: 0 5px 0 0;
+      background: #bd379d;
+    }
+  }
+  a.projects{
+    position: absolute;
+    bottom: 35px;
+    font-size: 22px;
+    line-height: 50px;
+    padding: 0 10px 0 0;
+    color: #ff4ed5;
+    transition: color 0.1s ease-in-out;
+    i{
+      margin: 15px 10px 0 0;
+      font-size: 24px;
+      display: inline-block;
+      vertical-align: top;
+      width: 21px;
+      height: 22px;
+      background: url(../img/arrow.svg) no-repeat;
+      background-size: contain;
+    }
+    &:hover{
+      color: white;
     }
   }
 }

@@ -39,6 +39,17 @@
 			router.go2('about');
 			return false;
 		});
+
+		var t, $nav = $body.find('nav');
+		$nav.on('mouseover', function(){
+			clearTimeout(t);
+			$nav.addClass('open');
+		});
+		$nav.on('mouseout', function(){
+			t = setTimeout(function(){
+				$nav.removeClass('open');
+			}, 300);
+		});
 	}
 
 	function _load(id, onSuccess){
@@ -63,7 +74,7 @@
 
 	function _closePopup(){
 		$popup.find('.content').html('').css('display','');
-		$body.removeClass('popup-open');
+		$body.removeClass('popup-open blur');
 		$body.find('.close-popup').css('display','');
 		window.location.hash = '';
 	}
