@@ -17,6 +17,19 @@ html.home{
     }
   }
 
+  section{
+    padding: 15px;
+    .belt{
+      margin: 0 auto;
+      max-width: 1100px;
+    }
+    header{
+      margin: 50px 0;
+      font-size: 28px;
+      color: #666;
+    }
+  }
+
   @import "nav";
   @import "intro";
   @import "projects";

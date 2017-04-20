@@ -44,7 +44,8 @@ nav{
       }
     }
     &:hover{
-      background: #96ccde;
+      background: $color-base;
+      color: white;
     }
   }
   &.open{

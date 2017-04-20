@@ -1,27 +1,18 @@
 #skills{
-  text-align: center;
-  .belt{
-    margin: 0 auto;
-    max-width: 800px;
-  }
-  header{
-    margin: 50px auto;
-    font-size: 28px;
-    text-align: center;
-    color: #666;
-  }
+  background: #eee;
   ul{
     display: block;
     margin: 0;
+    padding: 0;
     @include clearfix;
     li{
       display: inline-block;
-      margin: 1px;
+      margin: 5px;
       padding: 0 10px;
-      font-size: 14px;
-      color: #692860;
+      font-size: 21px;
+      color: #4c49a7;
       line-height: 35px;
-      background: #96ccde;
+      background: #d4dbe2;
     }
   }
 }

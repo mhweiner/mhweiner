@@ -2534,10 +2534,10 @@ body, a, div {
   -webkit-font-smoothing: antialiased; }
 
 a {
-  color: #d422a9;
+  color: #4c49a7;
   text-decoration: none; }
   a:hover {
-    color: #a81b86;
+    color: #3c3984;
     text-decoration: none; }
 
 .hidden {
@@ -2553,8 +2553,8 @@ a {
   display: table;
   clear: both; }
 
-h1, h2, h3, h4, h5 {
-  font-family: "Open Sans", sans-serif; }
+h1, h2, h3, h4, h5, header {
+  font-family: "Asar", serif; }
 
 .spinner {
   position: fixed;
@@ -2671,6 +2671,15 @@ html.home {
       overflow: hidden; }
       html.home body.popup-open #popup {
         display: block; }
+  html.home section {
+    padding: 15px; }
+    html.home section .belt {
+      margin: 0 auto;
+      max-width: 1100px; }
+    html.home section header {
+      margin: 50px 0;
+      font-size: 28px;
+      color: #666; }
   html.home nav {
     margin: 0;
     position: fixed;
@@ -2712,7 +2721,8 @@ html.home {
       html.home nav a.contact i {
         line-height: 46px; }
       html.home nav a:hover {
-        background: #96ccde; }
+        background: #4c49a7;
+        color: white; }
     html.home nav.open {
       width: 170px; }
       html.home nav.open a span {
@@ -2721,47 +2731,48 @@ html.home {
     height: 100vh;
     min-height: 600px;
     position: relative;
-    background: radial-gradient(ellipse at center, #9e326e 0%, #840ba3 100%); }
+    background: #eee; }
     html.home #intro .belt {
-      max-width: 850px;
-      margin: 0 auto;
-      padding: 30px 80px 30px 30px;
+      padding: 30px 80px 30px 15px;
       height: 100%;
       position: relative;
       box-sizing: border-box; }
     html.home #intro h1 {
-      color: white;
+      color: #5a5a5a;
       font-size: 24px;
       margin: 0;
       font-weight: 600;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      font-family: "Open Sans", sans-serif; }
     html.home #intro h2 {
       font-weight: 400;
-      color: white;
-      font-size: 30px;
+      color: #545454;
+      font-size: 38px;
       position: absolute;
-      top: 45%;
+      top: 50%;
       line-height: 1.5;
+      font-family: "Asar", serif;
+      margin: 0;
+      padding: 0;
       -webkit-transform: translate(0, -50%);
       /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
       transform: translate(0, -50%);
       /* IE 10, Fx 16+, Op 12.1+ */ }
       html.home #intro h2 span {
-        color: #ffffff;
-        font-weight: 600;
-        padding: 0 7px;
+        color: #4c49a7;
+        padding: 0 15px;
         display: inline-block;
-        line-height: 38px;
-        font-size: 25px;
+        line-height: 53px;
+        font-size: 36px;
         margin: 0 5px 0 0;
-        background: #bd379d; }
+        background: #d4dbe2; }
     html.home #intro a.projects {
       position: absolute;
       bottom: 35px;
       font-size: 22px;
       line-height: 50px;
       padding: 0 10px 0 0;
-      color: #ff4ed5;
+      color: black;
       transition: color 0.1s ease-in-out; }
       html.home #intro a.projects i {
         margin: 15px 10px 0 0;
@@ -2773,35 +2784,28 @@ html.home {
         background: url(../img/arrow.svg) no-repeat;
         background-size: contain; }
       html.home #intro a.projects:hover {
-        color: white; }
+        color: #a74988; }
   html.home #projects {
-    padding: 0 1%;
-    min-width: 320px;
-    max-width: 1300px;
-    position: relative;
-    margin: 0 auto; }
+    margin: 0 auto;
+    padding: 0;
+    position: relative; }
     html.home #projects:after {
       content: '';
       display: table;
       clear: both; }
-    html.home #projects header {
-      margin: 100px auto 50px 0;
-      font-size: 28px;
-      text-align: center;
-      color: #666; }
-    html.home #projects > article {
+    html.home #projects article {
       float: left;
       width: 31%;
       margin: 0 1% 30px 1%;
       box-sizing: border-box;
       transition: all 0.15s ease-in-out;
       cursor: pointer; }
-      html.home #projects > article .img {
+      html.home #projects article .img {
         height: 180px;
         position: relative;
         transition: all 0.15s ease-in-out;
         background: #eee; }
-        html.home #projects > article .img img {
+        html.home #projects article .img img {
           max-height: 33%;
           max-width: 52%;
           position: absolute;
@@ -2812,66 +2816,59 @@ html.home {
           /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
           transform: translate3d(-50%, -50%, 0);
           /* IE 10, Fx 16+, Op 12.1+ */ }
-      html.home #projects > article .description {
-        height: 85px;
-        box-sizing: border-box;
-        padding: 0 20px;
-        transition: all 0.15s ease-in-out;
-        text-align: center; }
-        html.home #projects > article .description h4 {
-          margin: 17px 0 0 0;
-          line-height: 28px;
-          height: 28px;
-          font-weight: 600;
-          font-size: 16px;
-          color: #333;
-          transition: all 0.15s ease-in-out;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden; }
-        html.home #projects > article .description h5 {
-          margin: 0;
-          line-height: 30px;
-          height: 30px;
-          font-weight: 400;
-          font-size: 14px;
-          color: #8e8e8e;
-          transition: all 0.15s ease-in-out;
-          white-space: nowrap;
-          text-overflow: ellipsis;
-          overflow: hidden; }
-      html.home #projects > article:hover, html.home #projects > article:hover > div {
+      html.home #projects article .description p.title {
+        margin: 17px 0 0 0;
+        line-height: 28px;
+        height: 28px;
+        font-weight: 600;
+        font-size: 16px;
+        color: #333;
+        transition: color 0.15s ease-in-out;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+      html.home #projects article .description p.description {
+        margin: 0;
+        line-height: 30px;
+        height: 30px;
+        font-weight: 400;
+        font-size: 15px;
+        color: #8e8e8e;
+        transition: color 0.15s ease-in-out;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden; }
+      html.home #projects article:hover, html.home #projects article:hover > div {
         border-color: #444;
         color: #222; }
-        html.home #projects > article:hover h4, html.home #projects > article:hover > div h4 {
+        html.home #projects article:hover h4, html.home #projects article:hover > div h4 {
           color: black; }
-        html.home #projects > article:hover h5, html.home #projects > article:hover > div h5 {
+        html.home #projects article:hover h5, html.home #projects article:hover > div h5 {
           color: #444; }
+    html.home #projects .projects-container {
+      margin: 0 -1%; }
+      html.home #projects .projects-container:after {
+        content: '';
+        display: table;
+        clear: both; }
   html.home #skills {
-    text-align: center; }
-    html.home #skills .belt {
-      margin: 0 auto;
-      max-width: 800px; }
-    html.home #skills header {
-      margin: 50px auto;
-      font-size: 28px;
-      text-align: center;
-      color: #666; }
+    background: #eee; }
     html.home #skills ul {
       display: block;
-      margin: 0; }
+      margin: 0;
+      padding: 0; }
       html.home #skills ul:after {
         content: '';
         display: table;
         clear: both; }
       html.home #skills ul li {
         display: inline-block;
-        margin: 1px;
+        margin: 5px;
         padding: 0 10px;
-        font-size: 14px;
-        color: #692860;
+        font-size: 21px;
+        color: #4c49a7;
         line-height: 35px;
-        background: #96ccde; }
+        background: #d4dbe2; }
   html.home footer {
     color: #999;
     font-family: Lora, Georgia, sans-serif;

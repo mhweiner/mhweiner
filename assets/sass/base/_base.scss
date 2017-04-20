@@ -8,7 +8,7 @@ html,body{
 }
 
 body,a,div{
-  font-family: $font;
+  font-family: $font-body;
   -webkit-font-smoothing: antialiased;
 }
 
@@ -33,6 +33,6 @@ a{
   @include clearfix;
 }
 
-h1,h2,h3,h4,h5{
-  font-family: $font;
+h1,h2,h3,h4,h5,header{
+  font-family: $font-header;
 }

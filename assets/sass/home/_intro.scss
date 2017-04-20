@@ -2,39 +2,40 @@
   height: 100vh;
   min-height: 600px;
   position: relative;
-  background: radial-gradient(ellipse at center, #9e326e 0%, #840ba3 100%);
+  background: #eee;
   .belt{
-    max-width: 850px;
-    margin: 0 auto;
-    padding: 30px 80px 30px 30px;
+    padding: 30px 80px 30px 15px;
     height: 100%;
     position: relative;
     box-sizing: border-box;
   }
   h1{
-    color: white;
+    color: #5a5a5a;
     font-size: 24px;
     margin: 0;
     font-weight: 600;
     text-transform: uppercase;
+    font-family: $font-body;
   }
   h2{
     font-weight: 400;
-    color: white;
-    font-size: 30px;
+    color: #545454;
+    font-size: 38px;
     position: absolute;
-    top: 45%;
+    top: 50%;
     line-height: 1.5;
+    font-family: $font-header;
+    margin: 0;
+    padding: 0;
     @include translate(0, -50%);
     span{
-      color: #ffffff;
-      font-weight: 600;
-      padding: 0 7px;
+      color: #4c49a7;
+      padding: 0 15px;
       display: inline-block;
-      line-height: 38px;
-      font-size: 25px;
+      line-height: 53px;
+      font-size: 36px;
       margin: 0 5px 0 0;
-      background: #bd379d;
+      background: #d4dbe2;
     }
   }
   a.projects{
@@ -43,7 +44,7 @@
     font-size: 22px;
     line-height: 50px;
     padding: 0 10px 0 0;
-    color: #ff4ed5;
+    color: black;
     transition: color 0.1s ease-in-out;
     i{
       margin: 15px 10px 0 0;
@@ -56,7 +57,7 @@
       background-size: contain;
     }
     &:hover{
-      color: white;
+      color: #a74988;
     }
   }
 }
