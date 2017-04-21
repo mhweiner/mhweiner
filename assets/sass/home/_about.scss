@@ -1,5 +1,12 @@
-#skills{
-  background: #eee;
+#about{
+  background: #4c49a7 url('../img/bg.jpg');
+  background-size: cover;
+  height: 100vh;
+  min-height: 600px;
+  max-height: 1200px;
+  header{
+    color: white;
+  }
   ul{
     display: block;
     margin: 0;

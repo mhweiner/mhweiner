@@ -11,6 +11,9 @@ nav{
   box-sizing: border-box;
   padding: 10px 0 10px 10px;
   overflow: hidden;
+  @include media(0,420){
+    width: 64px;
+  }
   a{
     display: block;
     position: relative;
@@ -29,6 +32,10 @@ nav{
       padding: 0 0 0 2px;
       opacity: 0;
       transition: opacity 0.2s ease-in-out;
+      @include media(0,420){
+        font-size: 13px;
+        line-height: 40px;
+      }
     }
     i{
       display: inline-block;
@@ -37,10 +44,16 @@ nav{
       font-size: 37px;
       line-height: 55px;
       text-align: center;
+      @include media(0,420){
+        width: 35px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 29px;
+      }
     }
     &.contact{
       i{
-        line-height: 46px;
+        line-height: 36px;
       }
     }
     &:hover{
@@ -52,6 +65,9 @@ nav{
     width: 170px;
     a span{
       opacity: 1;
+    }
+    @include media(0,420){
+      width: 121px;
     }
   }
 }
