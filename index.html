@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html class="home">
 <head lang="en">
-    <link href="https://fonts.googleapis.com/css?family=Asar" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
     <meta name="description" content="">
@@ -32,7 +31,7 @@
     <meta name="theme-color" content="#ffffff">
 </head>
 <body>
-    <div class="close-popup"></div>
+    <div class="close-popup"><i></i></div>
     <div id="popup"><div class="content"></div></div>
 
     <nav>
@@ -44,55 +43,55 @@
     <section id="intro">
         <div class="belt">
             <h1>Marc H. Weiner</h1>
-            <h2>Hello! I'm an <span>engineer</span>, <span>project manager</span>, and <span>UX architect</span>, based in NYC. I lead teams that build useful products.</h2>
-            <a href="#" class="projects"><i></i>Recent work</a>
+            <h2>Hello! I'm an <span>engineer</span>, <span>project manager</span>, and <span>business analyst</span>, based in NYC. I lead teams that build useful products.</h2>
+            <a href="#" class="more projects"><i></i>Recent work</a>
         </div>
     </section>
 
     <section id="projects">
         <div class="belt">
-            <header>Here's some projects I've worked on.</header>
+            <h3>Here are some of my recent projects.</h3>
             <div class="projects-container">
-                <article>
-                    <div class="img" style="background: #526364;"><img src="assets/img/logos/advizr.png"></div>
-                    <div class="description">
-                        <p class="title">Advizr</p>
-                        <p class="description">Financial Planning, Reinvented.</p>
-                    </div>
-                </article>
-                <article>
-                    <div class="img" style="background: #ef0000;"><img src="assets/img/logos/marvel-white.png"></div>
+                <article data-id="marvel">
+                    <div class="img"><img src="assets/img/logos/marvel-white.png"></div>
                     <div class="description">
                         <p class="title">Marvel.com</p>
-                        <p class="description">Official website of Marvel. Fully responsive content-rich website.</p>
+                        <p class="description">Official website of Marvel</p>
                     </div>
                 </article>
-                <article>
-                    <div class="img"><img src="assets/img/logos/ciro.png"></div>
+                <article data-id="advizr">
+                    <div class="img"><img src="assets/img/logos/advizr.png"></div>
+                    <div class="description">
+                        <p class="title">Advizr</p>
+                        <p class="description">Financial Planning, reinvented</p>
+                    </div>
+                </article>
+                <article data-id="ciro">
+                    <div class="img"><img src="assets/img/logos/ciro-icon.png"></div>
                     <div class="description">
                         <p class="title">Ciro</p>
-                        <p class="description">Simple and flexible Agile project management.</p>
+                        <p class="description">Better Agile project management</p>
                     </div>
                 </article>
                 <article data-id="devotify">
                     <div class="img"><img src="assets/img/logos/devotify.png"></div>
                     <div class="description">
                         <p class="title">Devotify</p>
-                        <p class="description">Get loyal fans for your local business.</p>
+                        <p class="description">Locally devoted</p>
                     </div>
                 </article>
-                <article>
-                    <div class="img" style="background:#6da643;"><img src="assets/img/logos/roadsign.png" style="max-height: 76%;"></div>
+                <article data-id="roadsign">
+                    <div class="img"><img src="assets/img/logos/roadsign.png" style="max-height: none;max-width: 67%;"></div>
                     <div class="description">
-                        <p class="title">Road Sign by Metrogistics</p>
-                        <p class="description">A logistics tracking app for transporting vehicles.</p>
+                        <p class="title">Road Sign</p>
+                        <p class="description">Revolutionizing auto transportation</p>
                     </div>
                 </article>
-                <article>
-                    <div class="img" style="background: #3886c3;"><img src="assets/img/logos/nextemr.png"></div>
+                <article data-id="nextemr">
+                    <div class="img"><img src="assets/img/logos/nextemr.png"></div>
                     <div class="description">
                         <p class="title">NextEMR</p>
-                        <p class="description">User-friendly Medical record software</p>
+                        <p class="description">User-friendly medical record software</p>
                     </div>
                 </article>
             </div>
@@ -101,12 +100,9 @@
 
     <section id="about">
         <div class="belt">
-            <header>A little about myself.</header>
-            <p>asdfasdfasdf</p>
+            Lorem ipsum dolar sit amet.  Lorem ipsum dolar sit amet.  Lorem ipsum dolar sit amet.  Lorem ipsum dolar sit amet.  Lorem ipsum dolar sit amet.  Lorem ipsum dolar sit amet.  Lorem ipsum dolar sit amet.  Lorem ipsum dolar sit amet.  Lorem ipsum dolar sit amet.
         </div>
     </section>
-
-    <footer></footer>
 
     <script src="assets/js/jquery-2.1.4.min.js"></script>
     <script src="assets/js/imagesloaded.min.js"></script>

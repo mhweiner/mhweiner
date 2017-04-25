@@ -31,24 +31,13 @@
 		});
 
 		//close button
-		$body.on('click', '.close-popup', _closePopup);
+		$body.on('click', '.close-popup', _close);
 
 		//about link
 		$body.on('click', '.about', function(e){
 			e.preventDefault();
 			router.go2('about');
 			return false;
-		});
-
-		var t, $nav = $body.find('nav');
-		$nav.on('mouseover', function(){
-			clearTimeout(t);
-			$nav.addClass('open');
-		});
-		$nav.on('mouseout', function(){
-			t = setTimeout(function(){
-				$nav.removeClass('open');
-			}, 300);
 		});
 	}
 
@@ -67,21 +56,26 @@
 				_hideSpinner();
 				$popup.addClass('loaded');
 				$body.addClass('popup-open'); //prevent page scrolling
-				$body.find('.close-popup').css('display','block'); //show close button
+				setTimeout(function(){
+					$body.find('.close-popup').css('display','block'); //show close button
+				}, 200);
+			}).progress(function( instance, image){
+				var result = image.isLoaded ? 'loaded' : 'broken';
+				console.log( 'image is ' + result + ' for ' + image.img.src );
 			});
 		});
 	}
 
-	function _closePopup(){
+	function _close(){
+		$body.find('.close-popup').css('display','');
 		$popup.find('.content').html('').css('display','');
 		$body.removeClass('popup-open blur');
-		$body.find('.close-popup').css('display','');
 		window.location.hash = '';
 	}
 
 	function _showSpinner(){
 		_hideSpinner();
-		$body.prepend('<div class="spinner"><i></i></div>');
+		$body.prepend('<div class="spinner"><p>Loading... <span>54%</span></p><i></i></div>');
 	}
 
 	function _hideSpinner(){

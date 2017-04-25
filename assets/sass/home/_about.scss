@@ -1,25 +1,16 @@
 #about{
-  background: #4c49a7 url('../img/bg.jpg');
-  background-size: cover;
-  height: 100vh;
-  min-height: 600px;
-  max-height: 1200px;
-  header{
-    color: white;
-  }
-  ul{
-    display: block;
-    margin: 0;
-    padding: 0;
-    @include clearfix;
-    li{
-      display: inline-block;
-      margin: 5px;
-      padding: 0 10px;
-      font-size: 21px;
-      color: #4c49a7;
-      line-height: 35px;
-      background: #d4dbe2;
+  .belt{
+    padding: 30px;
+    position: relative;
+    box-sizing: border-box;
+    &:before{
+      content: '';
+      background: #d6d6d6;
+      height: 1px;
+      width: 200px;
+      position: absolute;
+      top: 0;
+      left: 30px;
     }
   }
 }

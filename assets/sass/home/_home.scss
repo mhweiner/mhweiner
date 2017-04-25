@@ -4,8 +4,7 @@ html.home{
 
   body{
     min-width: 320px;
-    max-width: 1685px;
-    margin: 0 auto;
+    margin: 0;
     padding: 0;
     background: white;
 
@@ -18,15 +17,41 @@ html.home{
   }
 
   section{
-    padding: 15px;
+    transition: filter 0.1s ease-in-out;
     .belt{
       margin: 0 auto;
       max-width: 1100px;
+      padding: 0 30px;
+      height: 100%;
+      position: relative;
+      box-sizing: border-box;
+      @include media(0,420){
+        padding: 10px;
+      }
     }
-    header{
-      margin: 50px 0;
-      font-size: 28px;
-      color: #666;
+    a.more{
+      position: absolute;
+      bottom: 0;
+      font-size: 26px;
+      line-height: 50px;
+      padding: 0 10px 0 0;
+      color: black;
+      transition: color 0.15s ease-in-out;
+      display: inline-block;
+      vertical-align: top;
+      i{
+        margin: 13px 10px 0 0;
+        font-size: 24px;
+        display: inline-block;
+        vertical-align: top;
+        width: 24px;
+        height: 26px;
+        background: url(../img/arrow.svg) no-repeat;
+        background-size: contain;
+      }
+      &:hover{
+        color: $color-base;
+      }
     }
   }
 
@@ -34,7 +59,6 @@ html.home{
   @import "intro";
   @import "projects";
   @import "about";
-  @import "footer";
 }
 
 @import "popup.project";

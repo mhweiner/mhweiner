@@ -1,78 +1,78 @@
 #popup{
   display: none;
   position: fixed;
-  height: 100%;
-  width: 100%;
-  padding: 71px 0 40px 0;
+  padding: 0;
   top: 0;
-  left: 0;
-  right: 0;
   bottom: 0;
-  background: rgba(243, 243, 243, 1);
+  background: rgba(238, 238, 238, 0.95);
   z-index: 100;
   overflow: auto;
   backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
+  left: 0;
+  right: 0;
+  width: 100%;
 
   &.loaded{
-    @include animation(popupOpen 0.5s);
+    @include animation(fadeIn 0.3s);
     @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.90));
   }
 
   .content{
-    position: relative;
-    max-width: 1000px;
+    display: block;
+    max-width: 1050px;
     margin: 0 auto;
-    padding: 0 15px;
-    @include clearfix;
   }
 
 }
 
 .close-popup {
   display: none;
-  width: 50px;
-  height: 50px;
   position: fixed;
-  float: none;
-  top: 10px;
-  right: 10px;
-  cursor: pointer;
   z-index: 200;
-  padding: 0;
-  box-sizing: border-box;
   backface-visibility: hidden;
-  @include animation(popIn 0.5s);
-  @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.94));
-  @include translate3d(0,0,0);
+  max-width: 1050px;
+  margin: 0 auto;
+  height: 50px;
+  left: 0;
+  right: 0;
+  top: 0;
+  @include translate3d(0, 0, 0);
 
-  &:before, &:after{
-    display: block;
-    width: 2px;
-    height: 45px;
+  i{
     position: absolute;
-    content: "";
-    top: 3px;
-    left: 50%;
-    background: #f10043;
-    margin: 0 0 0 -1px;
-  }
+    display: block;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    padding: 0;
+    box-sizing: border-box;
+    background: #da465e;
+    transition: background 0.15s ease-in-out;
+    right: 0;
+    top: 0;
+    @include animation(grow 0.2s);
+    @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.90));
 
-  &:before{
-    -webkit-transform: rotateZ(45deg);
-    transform: rotateZ(45deg);
-  }
-
-  &:after{
-    -webkit-transform: rotateZ(-45deg);
-    transform: rotateZ(-45deg);
-  }
-
-  &:hover{
-    @include scale(1.1,1.1);
     &:before, &:after{
-      background: darken(#f10043, 20%);
+      content: '';
+      display: block;
+      width: 2px;
+      height: 36px;
+      position: absolute;
+      background: white;
+      left: 30px;
+      top: 11px;
+      @include rotate(45deg);
+    }
+
+    &:after{
+      @include rotate(-45deg);
+    }
+
+    &:hover{
+      background: #9a3e4d;
     }
   }
 }

@@ -1,11 +1,12 @@
 .spinner{
   position: fixed;
   z-index: 9000;
-  @include fadeIn(0.5s);
+  @include fadeIn(0.15s);
   left: 0;
   top: 0;
   right: 0;
   bottom: 0;
+  background: rgba(238, 238, 238, 0.95);
   i{
     display: block;
     height: 100px;
@@ -17,5 +18,17 @@
     background: url('../img/spinner.png');
     background-size: contain;
     @include rotation;
+  }
+  p{
+    font-size: 24px;
+    font-weight: 300;
+    text-align: center;
+    line-height: 100vh;
+    margin: -117px 0 0 0;
+    color: #333;
+    span{
+      font-weight: 400;
+      color: black;
+    }
   }
 }
