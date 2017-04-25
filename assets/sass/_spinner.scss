@@ -1,7 +1,7 @@
 .spinner{
   position: fixed;
-  z-index: 9000;
-  @include fadeIn(0.15s);
+  z-index: 1000;
+  @include fadeIn(0.4s);
   left: 0;
   top: 0;
   right: 0;
@@ -9,26 +9,49 @@
   background: rgba(238, 238, 238, 0.95);
   i{
     display: block;
-    height: 100px;
-    width: 100px;
     position: absolute;
+    border: 2px solid $color-base;
+    height: 14px;
+    width: 200px;
+    margin: -7px 0 0 -100px;
     left: 50%;
     top: 50%;
-    margin: -50px 0 0 -50px;
-    background: url('../img/spinner.png');
-    background-size: contain;
-    @include rotation;
+    box-sizing: border-box;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.6);
+    &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      width: 25%;
+      background: $color-base;
+      height: 100%;
+      left: 0;
+      top: 0;
+    }
+    &:after{
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+      background-size: 32px 32px;
+      z-index: 1001;
+      width: 100%;
+      @include animation(barberpole 500ms linear infinite);
+    }
   }
   p{
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 19px;
+    font-weight: 400;
     text-align: center;
-    line-height: 100vh;
-    margin: -117px 0 0 0;
-    color: #333;
-    span{
-      font-weight: 400;
-      color: black;
-    }
+    line-height: 50px;
+    margin: -72px 0 0 0;
+    color: #525252;
+    position: absolute;
+    top: 50%;
+    width: 100%;
   }
 }

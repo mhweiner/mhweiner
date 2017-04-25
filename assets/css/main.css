@@ -2384,6 +2384,28 @@
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: rotate(360deg);
     /* IE 10, Fx 16+, Op 12.1+ */ } }
+@-webkit-keyframes barberpole {
+  0% {
+    -webkit-transform: translate(0, 0);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: translate(0, 0);
+    /* IE 10, Fx 16+, Op 12.1+ */ }
+  100% {
+    -webkit-transform: translate(-32px, 0);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: translate(-32px, 0);
+    /* IE 10, Fx 16+, Op 12.1+ */ } }
+@keyframes barberpole {
+  0% {
+    -webkit-transform: translate(0, 0);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: translate(0, 0);
+    /* IE 10, Fx 16+, Op 12.1+ */ }
+  100% {
+    -webkit-transform: translate(-32px, 0);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: translate(-32px, 0);
+    /* IE 10, Fx 16+, Op 12.1+ */ } }
 html, body {
   margin: 0;
   padding: 0;
@@ -2423,9 +2445,9 @@ h1, h2, h3, h4, h5, header {
 
 .spinner {
   position: fixed;
-  z-index: 9000;
-  -webkit-animation: fadeIn 0.15s;
-  animation: fadeIn 0.15s;
+  z-index: 1000;
+  -webkit-animation: fadeIn 0.4s;
+  animation: fadeIn 0.4s;
   -webkit-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
   -webkit-animation-fill-mode: forwards;
@@ -2437,26 +2459,48 @@ h1, h2, h3, h4, h5, header {
   background: rgba(238, 238, 238, 0.95); }
   .spinner i {
     display: block;
-    height: 100px;
-    width: 100px;
     position: absolute;
+    border: 2px solid #673AB7;
+    height: 14px;
+    width: 200px;
+    margin: -7px 0 0 -100px;
     left: 50%;
     top: 50%;
-    margin: -50px 0 0 -50px;
-    background: url("../img/spinner.png");
-    background-size: contain;
-    -webkit-animation: rotation 1.5s linear infinite;
-    animation: rotation 1.5s linear infinite; }
+    box-sizing: border-box;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.6); }
+    .spinner i:before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 25%;
+      background: #673AB7;
+      height: 100%;
+      left: 0;
+      top: 0; }
+    .spinner i:after {
+      content: '';
+      display: block;
+      position: absolute;
+      height: 100%;
+      left: 0;
+      top: 0;
+      background: linear-gradient(45deg, rgba(255, 255, 255, 0.2) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.2) 50%, rgba(255, 255, 255, 0.2) 75%, transparent 75%, transparent);
+      background-size: 32px 32px;
+      z-index: 1001;
+      width: 100%;
+      -webkit-animation: barberpole 500ms linear infinite;
+      animation: barberpole 500ms linear infinite; }
   .spinner p {
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 19px;
+    font-weight: 400;
     text-align: center;
-    line-height: 100vh;
-    margin: -117px 0 0 0;
-    color: #333; }
-    .spinner p span {
-      font-weight: 400;
-      color: black; }
+    line-height: 50px;
+    margin: -72px 0 0 0;
+    color: #525252;
+    position: absolute;
+    top: 50%;
+    width: 100%; }
 
 #popup {
   display: none;

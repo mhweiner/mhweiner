@@ -75,7 +75,7 @@
 
 	function _showSpinner(){
 		_hideSpinner();
-		$body.prepend('<div class="spinner"><p>Loading... <span>54%</span></p><i></i></div>');
+		$body.prepend('<div class="spinner"><p>Loading...</p><i></i></div>');
 	}
 
 	function _hideSpinner(){
