@@ -435,8 +435,7 @@ html.home {
       position: relative;
       margin: 0;
       padding: 0;
-      line-height: 70px;
-      font-size: 40px; }
+      line-height: 70px; }
       html.home nav a span {
         font-size: 22px;
         font-weight: 300;
@@ -446,19 +445,50 @@ html.home {
       html.home nav a svg {
         display: inline-block;
         vertical-align: top;
-        margin: 16px 12px 0 0;
         color: #c5c5c5;
         transition: fill 0.15s ease-in-out;
-        height: 50px;
-        width: 50px;
         fill: #464646; }
       html.home nav a:hover span {
         color: #673AB7; }
       html.home nav a:hover svg {
         fill: #673AB7; }
+      html.home nav a.about svg {
+        height: 39px;
+        width: 50px;
+        margin: 21px 12px 0 0; }
+        @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
+          html.home nav a.about svg {
+            height: 46px;
+            width: 50px;
+            margin: 18px 15px 0 0; } }
+      html.home nav a.contact svg {
+        width: 50px;
+        height: 37px;
+        margin: 23px 9px 0 0; }
+        @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
+          html.home nav a.contact svg {
+            width: 50px;
+            height: 46px;
+            margin: 21px 15px 0 0; } }
+      html.home nav a.resume svg {
+        height: 38px;
+        margin: 20px 10px 0 0;
+        width: 50px; }
+        @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
+          html.home nav a.resume svg {
+            height: 46px;
+            margin: 19px 15px 0 0;
+            width: 50px; } }
+    @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
+      html.home nav ul {
+        width: 350px; }
+      html.home nav a {
+        line-height: 80px; }
+        html.home nav a span {
+          font-size: 27px; } }
   html.home header {
     margin: 0 auto;
-    max-width: 1040px;
+    max-width: 1100px;
     position: fixed;
     left: 0;
     right: 0;
@@ -467,7 +497,7 @@ html.home {
   html.home .menu-toggle {
     display: block;
     top: 40px;
-    right: 0;
+    right: 31px;
     cursor: pointer;
     font-size: 34px;
     z-index: 100;
