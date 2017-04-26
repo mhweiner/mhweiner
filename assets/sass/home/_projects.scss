@@ -1,11 +1,10 @@
 #projects{
   position: relative;
-  padding: 60px 0 30px;
+  padding: 60px 0 15px;
   box-sizing: border-box;
-  min-height: 741px;
   @include clearfix;
   h3{
-    font-size: 29px;
+    font-size: 22px;
     margin: 0 0 40px 0;
     color: #999;
   }
@@ -132,6 +131,6 @@
   }
   .projects-container{
     @include clearfix;
-    margin: 0 -1% 15px -1%;
+    margin: 0 -1% 0 -1%;
   }
 }

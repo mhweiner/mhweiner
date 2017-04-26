@@ -29,30 +29,6 @@ html.home{
         padding: 10px;
       }
     }
-    a.more{
-      position: absolute;
-      bottom: 0;
-      font-size: 26px;
-      line-height: 50px;
-      padding: 0 10px 0 0;
-      color: black;
-      transition: color 0.15s ease-in-out;
-      display: inline-block;
-      vertical-align: top;
-      i{
-        margin: 13px 10px 0 0;
-        font-size: 24px;
-        display: inline-block;
-        vertical-align: top;
-        width: 24px;
-        height: 26px;
-        background: url(../img/arrow.svg) no-repeat;
-        background-size: contain;
-      }
-      &:hover{
-        color: $color-base;
-      }
-    }
   }
 
   @import "nav";

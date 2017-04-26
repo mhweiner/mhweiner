@@ -31,7 +31,7 @@
 		});
 
 		//close button
-		$body.on('click', '.close-popup', _close);
+		$body.on('click', '.close-popup i', _close);
 
 		//about link
 		$body.on('click', '.about', function(e){
@@ -48,20 +48,26 @@
 		});
 	}
 
-	function _open(src){
-		_showSpinner();
-		_load(src, function(content){
+	function _open(id){
+		_showProgressBar();
+		_load(id, function(content){
+			$popup.addClass(id);
 			$popup.find('.content').html(content).css('display','block');
+			var num_images = $popup.find('img').length,
+				num_images_loaded = 0;
 			$popup.imagesLoaded().always(function(){
-				_hideSpinner();
+				_hideProgressBar();
 				$popup.addClass('loaded');
 				$body.addClass('popup-open'); //prevent page scrolling
 				setTimeout(function(){
 					$body.find('.close-popup').css('display','block'); //show close button
 				}, 200);
-			}).progress(function( instance, image){
-				var result = image.isLoaded ? 'loaded' : 'broken';
-				console.log( 'image is ' + result + ' for ' + image.img.src );
+			}).progress(function(instance, image){
+				num_images_loaded++;
+				var percentage = (num_images_loaded / num_images) * 100;
+				//we're always starting with 25% for the loader, so let's do percentage of remaining 75
+				percentage = percentage * 0.80 + 20;
+				_updateProgressBar(percentage);
 			});
 		});
 	}
@@ -73,13 +79,17 @@
 		window.location.hash = '';
 	}
 
-	function _showSpinner(){
-		_hideSpinner();
-		$body.prepend('<div class="spinner"><p>Loading...</p><i></i></div>');
+	function _showProgressBar(){
+		_hideProgressBar();
+		$body.prepend('<div class="progressbar"><div class="progress"></div><div class="barberpole"></div></div>');
 	}
 
-	function _hideSpinner(){
-		$body.find('.spinner').remove();
+	function _hideProgressBar(){
+		$body.find('.progressbar').remove();
+	}
+
+	function _updateProgressBar(percentage){
+		$body.find('.progressbar .progress').css('width', percentage + '%');
 	}
 
 	var controller = {
