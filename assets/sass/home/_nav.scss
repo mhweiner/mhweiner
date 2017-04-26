@@ -4,7 +4,7 @@ nav{
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   top: 10px;
-  right: 0;
+  right: 10px;
   z-index: 10;
   box-sizing: border-box;
   a{
@@ -33,18 +33,15 @@ nav{
       display: inline-block;
       width: 65px;
       height: 55px;
-      font-size: 37px;
+      font-size: 41px;
       line-height: 55px;
       text-align: center;
-      color: #383838;
+      color: rgba(0,0,0,0.6);
       transition: color 0.15s ease-in-out;
     }
     &.contact{
       i{
         line-height: 46px;
-        @include media(0,420){
-          line-height: 36px;
-        }
       }
     }
     &:hover{
@@ -56,22 +53,85 @@ nav{
       }
     }
   }
+}
 
-  @include media(0,420){
-    width: 64px;
-    &.open{
-      width: 121px;
+header{
+  margin: 0 auto;
+  max-width: 1040px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: 10;
+}
+
+.menu-toggle{
+
+  display: block;
+  top: 40px;
+  right: 0;
+  cursor: pointer;
+  font-size: 34px;
+  z-index: 100;
+  padding: 20px 45px 22px 1px;
+  position: absolute;
+
+  span, span:before, span:after{
+    cursor: pointer;
+    height: 2px;
+    width: 45px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  span{
+    &:before{
+      top: -13px;
     }
-    a{
-      span{
-        font-size: 13px;
-        line-height: 40px;
+    &:after{
+      bottom: -13px;
+      width: 30px;
+      right: 0;
+    }
+  }
+
+  &:hover{
+    span{
+      &,&:before,&:after{
+        background-color: $color-base;
       }
-      i{
-        width: 35px;
-        height: 40px;
-        line-height: 40px;
-        font-size: 29px;
+      &:after{
+        width: 100%;
+      }
+    }
+  }
+
+  &.active{
+    background-color: transparent;
+    box-shadow: none;
+    span{
+      background-color: transparent;
+      &:before, &:after{
+        top: 0;
+        background-color: #da465e;
+      }
+      &:before{
+        @include rotate(45deg);
+      }
+      &:after{
+        @include rotate(-45deg);
+        width: 100%;
+        right: auto;
+      }
+    }
+    &:hover{
+      span{
+        &:before,&:after{
+          background-color: black;
+        }
       }
     }
   }
