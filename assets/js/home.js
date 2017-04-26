@@ -1,7 +1,9 @@
 (function() {
 
 	var $body = $('body'),
-		$popup = $body.find('#popup');
+		$popup = $body.find('#popup'),
+		$menu_toggle = $body.find('a.menu-toggle'),
+		$nav = $body.find('nav');
 
 	var routes = {
 		project: 'project/:id',
@@ -24,6 +26,17 @@
 
 	function _bindEvents() {
 
+		//toggle nav bar
+		$menu_toggle.on('click', function(e){
+			e.preventDefault();
+			e.stopPropagation();
+			if($menu_toggle.hasClass('active')){
+				_closeMenu();
+			} else {
+				_openMenu();
+			}
+		});
+
 		//project item
 		$body.on('click', 'article', function (e) {
 			_open($(this).data('id'));
@@ -32,13 +45,6 @@
 
 		//close button
 		$body.on('click', '.close-popup i', _close);
-
-		//about link
-		$body.on('click', '.about', function(e){
-			e.preventDefault();
-			router.go2('about');
-			return false;
-		});
 	}
 
 	function _load(id, onSuccess){
@@ -90,6 +96,18 @@
 
 	function _updateProgressBar(percentage){
 		$body.find('.progressbar .progress').css('width', percentage + '%');
+	}
+
+	function _openMenu(){
+		$menu_toggle.addClass('active');
+		$nav.css('display','block');
+		$body.on('click.menu', _closeMenu);
+	}
+
+	function _closeMenu(){
+		$body.off('click.menu');
+		$menu_toggle.removeClass('active');
+		$nav.css('display','');
 	}
 
 	var controller = {
