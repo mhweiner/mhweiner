@@ -496,13 +496,15 @@ html.home {
     z-index: 10; }
   html.home .menu-toggle {
     display: block;
-    top: 40px;
-    right: 31px;
+    top: 29px;
+    right: 21px;
     cursor: pointer;
     font-size: 34px;
     z-index: 100;
-    padding: 20px 45px 22px 1px;
-    position: absolute; }
+    padding: 29px 54px 32px 10px;
+    position: absolute;
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border-radius: 50px; }
     html.home .menu-toggle span, html.home .menu-toggle span:before, html.home .menu-toggle span:after {
       cursor: pointer;
       height: 2px;
@@ -523,13 +525,13 @@ html.home {
     html.home .menu-toggle:hover span:after {
       width: 100%; }
     html.home .menu-toggle.active {
-      background-color: transparent;
-      box-shadow: none; }
+      box-shadow: none;
+      background: #e8e8e8; }
       html.home .menu-toggle.active span {
         background-color: transparent; }
         html.home .menu-toggle.active span:before, html.home .menu-toggle.active span:after {
           top: 0;
-          background-color: #da465e; }
+          background-color: #666; }
         html.home .menu-toggle.active span:before {
           -webkit-transform: rotate(45deg);
           /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
@@ -543,7 +545,7 @@ html.home {
           width: 100%;
           right: auto; }
       html.home .menu-toggle.active:hover span:before, html.home .menu-toggle.active:hover span:after {
-        background-color: #da1700; }
+        background-color: #da465e; }
   html.home #intro {
     height: 100vh;
     min-height: 600px;
@@ -642,7 +644,7 @@ html.home {
       color: #999; }
     html.home #projects article {
       float: left;
-      width: 31.3%;
+      width: 31.33333%;
       margin: 0 1% 30px 1%;
       box-sizing: border-box;
       cursor: pointer; }

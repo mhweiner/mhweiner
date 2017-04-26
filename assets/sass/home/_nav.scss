@@ -106,13 +106,15 @@ header{
 .menu-toggle{
 
   display: block;
-  top: 40px;
-  right: 31px;
+  top: 29px;
+  right: 21px;
   cursor: pointer;
   font-size: 34px;
   z-index: 100;
-  padding: 20px 45px 22px 1px;
+  padding: 29px 54px 32px 10px;
   position: absolute;
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 50px;
 
   span, span:before, span:after{
     cursor: pointer;
@@ -148,13 +150,13 @@ header{
   }
 
   &.active{
-    background-color: transparent;
     box-shadow: none;
+    background: #e8e8e8;
     span{
       background-color: transparent;
       &:before, &:after{
         top: 0;
-        background-color: #da465e;
+        background-color: #666;
       }
       &:before{
         @include rotate(45deg);
@@ -166,10 +168,8 @@ header{
       }
     }
     &:hover{
-      span{
-        &:before,&:after{
-          background-color: #da1700;
-        }
+      span:before, span:after{
+        background-color: #da465e;
       }
     }
   }
