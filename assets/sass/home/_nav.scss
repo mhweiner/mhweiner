@@ -124,6 +124,11 @@ header{
   border-radius: 50px;
   outline: none;
 
+  @include media(0,600){
+    right: 10px;
+    top: 10px;
+  }
+
   span, span:before, span:after{
     cursor: pointer;
     height: 2px;

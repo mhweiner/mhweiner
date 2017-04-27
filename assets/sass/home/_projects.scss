@@ -3,10 +3,27 @@
   padding: 60px 0 15px;
   box-sizing: border-box;
   @include clearfix;
+  @include media(0,600){
+    padding: 30px 0 15px;
+  }
+  @include media(0,420){
+    padding: 0;
+  }
   h3{
     font-size: 22px;
     margin: 0 0 40px 0;
     color: #999;
+    @include media(0,600){
+      padding: 0 15px;
+    }
+    @include media(0,420){
+      display: none;
+    }
+  }
+  .belt{
+    @include media(0,600){
+      padding: 0;
+    }
   }
   article{
     float: left;
@@ -65,6 +82,9 @@
         color: #777;
         transition: color 0.15s ease-in-out;
         @include ellipsify;
+      }
+      @include media(0,600){
+        display: none;
       }
     }
     &:hover{
@@ -128,9 +148,15 @@
         background: #32ba6b;
       }
     }
+    @include media(0,600){
+      margin: 0;
+    }
   }
   .projects-container{
     @include clearfix;
     margin: 0 -1% 0 -1%;
+    @include media(0,600){
+      margin: 0;
+    }
   }
 }

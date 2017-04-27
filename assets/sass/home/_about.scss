@@ -16,6 +16,9 @@
       font-size: 22px;
       margin: 0 0 40px 0;
       color: #999;
+      @include media(0,470){
+        display: none;
+      }
     }
     img{
       width: 30%;
@@ -29,6 +32,30 @@
       color: #666;
       font-size: 17px;
       width: 55%;
+    }
+    @include media(0,600){
+      padding: 20px 15px;
+      &:before{
+        display: none;
+      }
+      p{
+        width: auto;
+      }
+      img{
+        width: 100%;
+        float: left;
+        margin: 0 15px 15px 0;
+        max-width: 278px;
+        border-radius: 0;
+        border: 2px solid;
+      }
+    }
+    @include media(0,470){
+      img{
+        margin: 0 auto 37px auto;
+        float: none;
+        display: block;
+      }
     }
   }
 }

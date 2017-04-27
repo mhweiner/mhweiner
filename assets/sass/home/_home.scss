@@ -25,8 +25,8 @@ html.home{
       height: 100%;
       position: relative;
       box-sizing: border-box;
-      @include media(0,420){
-        padding: 10px;
+      @include media(0,600){
+        padding: 0 15px;
       }
     }
   }
