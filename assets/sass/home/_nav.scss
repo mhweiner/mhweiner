@@ -35,7 +35,7 @@ nav{
     line-height: 70px;
     outline: none;
     span{
-      font-size: 22px;
+      font-size: 20px;
       font-weight: 300;
       text-transform: uppercase;
       color: #656565;
@@ -89,12 +89,12 @@ nav{
   }
   @include media(450){
     ul{
-      width: 375px;
+      width: 315px;
     }
     a{
       line-height: 90px;
       span{
-        font-size: 29px;
+        font-size: 23px;
       }
     }
   }

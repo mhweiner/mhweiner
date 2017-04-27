@@ -7,7 +7,7 @@
       content: '';
       background: #d6d6d6;
       height: 1px;
-      width: 200px;
+      width: 50px;
       position: absolute;
       top: 0;
       left: 30px;
@@ -16,9 +16,6 @@
       font-size: 22px;
       margin: 0 0 40px 0;
       color: #999;
-      @include media(0,470){
-        display: none;
-      }
     }
     img{
       width: 30%;
@@ -34,7 +31,7 @@
       width: 55%;
     }
     @include media(0,600){
-      padding: 20px 15px;
+      padding: 30px 15px 0 15px;
       &:before{
         display: none;
       }
@@ -42,19 +39,17 @@
         width: auto;
       }
       img{
-        width: 100%;
-        float: left;
+        width: 50%;
         margin: 0 15px 15px 0;
-        max-width: 278px;
-        border-radius: 0;
-        border: 2px solid;
+        max-width: 250px;
+      }
+      h3{
+        margin: 0 0 20px 0;
       }
     }
-    @include media(0,470){
+    @include media(0,450){
       img{
-        margin: 0 auto 37px auto;
         float: none;
-        display: block;
       }
     }
   }

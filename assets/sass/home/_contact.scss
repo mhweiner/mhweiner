@@ -7,7 +7,7 @@
       content: '';
       background: #d6d6d6;
       height: 1px;
-      width: 200px;
+      width: 50px;
       position: absolute;
       top: 0;
       left: 30px;
@@ -85,7 +85,7 @@
               stroke: none;
               fill: #444;
               height: 68px;
-              width: 49px;
+              width: 42px;
             }
             &:hover{
               svg{
@@ -94,6 +94,18 @@
             }
           }
         }
+      }
+    }
+    @include media(0,600){
+      padding: 15px 15px 50px 15px;
+      &:before{
+        display: none;
+      }
+      p{
+        width: auto;
+      }
+      h3{
+        margin: 0 0 20px 0;
       }
     }
   }
