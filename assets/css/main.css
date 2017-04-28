@@ -767,9 +767,13 @@ html.home {
       html.home #projects article[data-id="advizr"] .img {
         background: #3c3c3c; }
       html.home #projects article[data-id="ciro"] .img {
-        background: linear-gradient(to bottom right, #5200af, #6d3aa7); }
+        background: linear-gradient(to bottom right, #7029c1, #590eaf); }
+        html.home #projects article[data-id="ciro"] .img img {
+          max-height: 40%; }
       html.home #projects article[data-id="devotify"] .img {
         background: linear-gradient(to bottom right, #1a435b, #6c286d); }
+        html.home #projects article[data-id="devotify"] .img img {
+          max-height: 50%; }
       html.home #projects article[data-id="roadsign"] .img {
         background: #6da643; }
       html.home #projects article[data-id="nextemr"] .img {
@@ -827,14 +831,6 @@ html.home {
     padding: 50px 30px;
     position: relative;
     box-sizing: border-box; }
-    html.home #contact .belt:before {
-      content: '';
-      background: #d6d6d6;
-      height: 1px;
-      width: 50px;
-      position: absolute;
-      top: 0;
-      left: 30px; }
     html.home #contact .belt h3 {
       font-size: 26px;
       margin: 0 0 40px 0;

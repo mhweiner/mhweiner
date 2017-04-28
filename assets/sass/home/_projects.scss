@@ -130,12 +130,18 @@
     }
     &[data-id="ciro"]{
       .img{
-        background: linear-gradient(to bottom right, #5200af, #6d3aa7);
+        background: linear-gradient(to bottom right, #7029c1, #590eaf);
+        img{
+          max-height: 40%;
+        }
       }
     }
     &[data-id="devotify"]{
       .img{
         background: linear-gradient(to bottom right, #1a435b, #6c286d);
+        img{
+          max-height: 50%;
+        }
       }
     }
     &[data-id="roadsign"]{
