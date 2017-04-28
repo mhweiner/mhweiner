@@ -38,6 +38,9 @@
       line-height: 50px;
       font-weight: 400;
       color: #444444;
+      @include media(0,600){
+        line-height: 1.2em;
+      }
     }
 
     h3{
@@ -61,13 +64,13 @@
     a.ext-link{
       text-transform: uppercase;
       font-size: 13px;
-      line-height: 50px;
+      line-height: 45px;
       display: inline-block;
       vertical-align: top;
-      border: 1px solid #aaa;
+      border: 1px solid #ddd;
       border-radius: 50px;
       padding: 0 20px;
-      margin: 0 0 0 20px;
+      margin: 0 0 0 15px;
       color: #666;
       transition: all 0.2s ease-in-out;
       i{
@@ -77,9 +80,9 @@
         color: $color-base;
         border-color: $color-base;
       }
-      @include media(0,450){
+      @include media(0,600){
         display: block;
-        margin: 0;
+        margin: 15px 0 0 0;
         border-radius: 0;
       }
     }
@@ -103,7 +106,32 @@
         width: 100%;
         float: none;
       }
+
+      ul{
+        margin: 0 0 30px 0;
+        padding: 0;
+        li{
+          margin: 0 0 12px 0;
+          display: block;
+          padding: 0 0 0 20px;
+          color: #636363;
+          position: relative;
+          line-height: 1.4;
+          &:before{
+            content: '';
+            display: block;
+            width: 4px;
+            height: 4px;
+            background: #b5b1b1;
+            position: absolute;
+            top: 6px;
+            left: 0;
+          }
+        }
+      }
     }
   }
+
+  @import "popup.project.roadsign";
 
 }

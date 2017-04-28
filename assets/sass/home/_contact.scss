@@ -5,7 +5,7 @@
     box-sizing: border-box;
     h3{
       font-size: 26px;
-      margin: 0 0 40px 0;
+      margin: 0 0 20px 0;
       color: #999;
     }
     ul{
@@ -88,7 +88,7 @@
       }
     }
     @include media(0,600){
-      padding: 15px 15px 50px 15px;
+      padding: 30px 15px 50px 15px;
       &:before{
         display: none;
       }

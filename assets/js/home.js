@@ -7,7 +7,7 @@
 
 	var routes = {
 		project: 'project/:id',
-		about: 'about'
+		closePopup: '!'
 	};
 
 	function _init() {
@@ -39,12 +39,13 @@
 
 		//project item
 		$body.on('click', 'article', function (e) {
-			_open($(this).data('id'));
-			//router.go2('project', {id: $(this).attr('rel')});
+			router.go2('project', {id: $(this).data('id')});
 		});
 
 		//close button
-		$body.on('click', '.close-popup i', _close);
+		$body.on('click', '.close-popup i', function(){
+			_close();
+		});
 
 		//nav
 		$body.on('click', '[data-jump]', function(e){
@@ -84,11 +85,18 @@
 		});
 	}
 
-	function _close(){
+	/**
+	 * @param {boolean=} doNotUpdateHash
+	 * @private
+	 */
+	function _close(doNotUpdateHash){
 		$body.find('.close-popup').css('display','');
 		$popup.find('.content').html('').css('display','');
+		$popup.get(0).scrollTop = 0;
 		$body.removeClass('popup-open blur');
-		window.location.hash = '';
+		if(!doNotUpdateHash){
+			window.location.hash = '!';
+		}
 	}
 
 	function _showProgressBar(){
@@ -120,17 +128,15 @@
 		project: function(data){
 			_open(data.id);
 		},
-		about: function(data){
-			_loadAbout();
+		closePopup: function(){
+			_close(true);
 		}
 	};
 
 	//No need to ask, he's a smooth operator
 	var _scrollTo = (function(){
-		// first add raf shim
-		// http://www.paulirish.com/2011/requestanimationframe-for-smart-animating/
 		window.requestAnimFrame = (function(){
-			return  window.requestAnimationFrame       ||
+			return  window.requestAnimationFrame   ||
 				window.webkitRequestAnimationFrame ||
 				window.mozRequestAnimationFrame    ||
 				function( callback ){
@@ -138,7 +144,6 @@
 				};
 		})();
 
-		// main function
 		function scrollToY(scrollTargetY, speed, easing) {
 			// scrollTargetY: the target scrollY property of the window
 			// speed: time in pixels per second

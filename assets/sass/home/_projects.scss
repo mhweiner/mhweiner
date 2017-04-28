@@ -37,8 +37,8 @@
       background: #eee;
       overflow: hidden;
       img{
-        max-height: 33%;
-        max-width: 52%;
+        max-height: 37%;
+        max-width: 53%;
         position: absolute;
         left: 50%;
         top: 50%;
@@ -130,9 +130,9 @@
     }
     &[data-id="ciro"]{
       .img{
-        background: linear-gradient(to bottom right, #7029c1, #590eaf);
+        background: #74358c;
         img{
-          max-height: 40%;
+          max-height: 43%;
         }
       }
     }
