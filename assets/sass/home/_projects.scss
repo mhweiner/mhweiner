@@ -1,6 +1,6 @@
 #projects{
   position: relative;
-  padding: 60px 0 15px;
+  padding: 70px 0 0 0;
   box-sizing: border-box;
   @include clearfix;
   @include media(0,600){
@@ -10,7 +10,7 @@
     padding: 0;
   }
   h3{
-    font-size: 22px;
+    font-size: 26px;
     margin: 0 0 40px 0;
     color: #999;
     @include media(0,600){
@@ -125,7 +125,7 @@
     }
     &[data-id="advizr"]{
       .img{
-        background: #526364;
+        background: #3c3c3c;
       }
     }
     &[data-id="ciro"]{
@@ -135,7 +135,7 @@
     }
     &[data-id="devotify"]{
       .img{
-        background: #153449;
+        background: linear-gradient(to bottom right, #1a435b, #6c286d);
       }
     }
     &[data-id="roadsign"]{

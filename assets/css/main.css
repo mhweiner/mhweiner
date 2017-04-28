@@ -457,8 +457,8 @@ html.home {
         margin: 21px 12px 0 0; }
         @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
           html.home nav a.about svg {
-            height: 52px;
-            width: 50px;
+            height: 58px;
+            width: 60px;
             margin: 18px 20px 0 0; } }
       html.home nav a.contact svg {
         width: 50px;
@@ -466,26 +466,26 @@ html.home {
         margin: 23px 9px 0 0; }
         @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
           html.home nav a.contact svg {
-            width: 50px;
-            height: 51px;
-            margin: 21px 20px 0 0; } }
+            width: 60px;
+            height: 54px;
+            margin: 18px 20px 0 0; } }
       html.home nav a.resume svg {
         height: 38px;
         margin: 20px 10px 0 0;
         width: 50px; }
         @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
           html.home nav a.resume svg {
-            height: 50px;
-            margin: 19px 20px 0 0;
-            width: 50px; } }
+            height: 54px;
+            margin: 16px 20px 0 0;
+            width: 60px; } }
     @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
       html.home nav ul {
-        width: 315px; }
+        width: 330px; }
       html.home nav a {
         line-height: 90px; }
         html.home nav a span {
-          font-size: 23px; } }
-  html.home header {
+          font-size: 24px; } }
+  html.home body > header {
     margin: 0 auto;
     max-width: 1100px;
     position: fixed;
@@ -552,7 +552,8 @@ html.home {
         background-color: #da465e; }
   html.home #intro {
     height: 100vh;
-    min-height: 600px;
+    min-height: 700px;
+    max-height: 900px;
     position: relative;
     background: #eee;
     padding: 30px 0;
@@ -618,8 +619,8 @@ html.home {
       @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
         html.home #intro h2 {
           position: relative;
-          padding: 15px 0 25px;
-          margin: 34px 0 0 0;
+          padding: 0;
+          margin: 45px 0;
           transform: none;
           top: auto;
           left: auto; } }
@@ -655,7 +656,7 @@ html.home {
           stroke: #000000; }
   html.home #projects {
     position: relative;
-    padding: 60px 0 15px;
+    padding: 70px 0 0 0;
     box-sizing: border-box; }
     html.home #projects:after {
       content: '';
@@ -668,7 +669,7 @@ html.home {
       html.home #projects {
         padding: 0; } }
     html.home #projects h3 {
-      font-size: 22px;
+      font-size: 26px;
       margin: 0 0 40px 0;
       color: #999; }
       @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
@@ -764,11 +765,11 @@ html.home {
       html.home #projects article[data-id="marvel"] .img {
         background: #ef0000; }
       html.home #projects article[data-id="advizr"] .img {
-        background: #526364; }
+        background: #3c3c3c; }
       html.home #projects article[data-id="ciro"] .img {
         background: linear-gradient(to bottom right, #5200af, #6d3aa7); }
       html.home #projects article[data-id="devotify"] .img {
-        background: #153449; }
+        background: linear-gradient(to bottom right, #1a435b, #6c286d); }
       html.home #projects article[data-id="roadsign"] .img {
         background: #6da643; }
       html.home #projects article[data-id="nextemr"] .img {
@@ -786,19 +787,11 @@ html.home {
         html.home #projects .projects-container {
           margin: 0; } }
   html.home #about .belt {
-    padding: 45px 30px;
+    padding: 50px 30px 0 30px;
     position: relative;
     box-sizing: border-box; }
-    html.home #about .belt:before {
-      content: '';
-      background: #d6d6d6;
-      height: 1px;
-      width: 50px;
-      position: absolute;
-      top: 0;
-      left: 30px; }
     html.home #about .belt h3 {
-      font-size: 22px;
+      font-size: 26px;
       margin: 0 0 40px 0;
       color: #999; }
     html.home #about .belt img {
@@ -812,6 +805,8 @@ html.home {
       color: #666;
       font-size: 17px;
       width: 55%; }
+      html.home #about .belt p:last-child {
+        margin: 0; }
     @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
       html.home #about .belt {
         padding: 30px 15px 0 15px; }
@@ -829,7 +824,7 @@ html.home {
       html.home #about .belt img {
         float: none; } }
   html.home #contact .belt {
-    padding: 45px 30px;
+    padding: 50px 30px;
     position: relative;
     box-sizing: border-box; }
     html.home #contact .belt:before {
@@ -841,7 +836,7 @@ html.home {
       top: 0;
       left: 30px; }
     html.home #contact .belt h3 {
-      font-size: 22px;
+      font-size: 26px;
       margin: 0 0 40px 0;
       color: #999; }
     html.home #contact .belt ul {
@@ -910,7 +905,27 @@ html.home {
         html.home #contact .belt h3 {
           margin: 0 0 20px 0; } }
 
-#popup .project img {
+#popup .project header {
+  background: linear-gradient(to bottom right, #1a435b, #6c286d);
+  position: relative;
+  padding: 25% 0 0 0;
+  height: 0; }
+  #popup .project header img {
+    max-height: 44%;
+    max-width: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: auto;
+    -webkit-transform: translate3d(-50%, -50%, 0);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: translate3d(-50%, -50%, 0);
+    /* IE 10, Fx 16+, Op 12.1+ */ }
+  @media only screen and (min-width: 0px) and (max-width: 800px) and (min-height: 0px) and (max-height: 999999px) {
+    #popup .project header {
+      padding: 0;
+      height: 200px; } }
+#popup .project > img {
   width: 100%;
   display: block;
   margin: 0; }
@@ -929,13 +944,20 @@ html.home {
     font-weight: 400;
     color: #444444; }
   #popup .project .text h3 {
-    margin: 0 0 20px 0;
-    border-bottom: 1px solid #e4e4e4;
+    margin: 0 0 35px 0;
     line-height: 1;
-    padding: 0 0 20px 0;
     font-weight: 400;
-    font-size: 19px;
-    color: #383737; }
+    font-size: 18px;
+    color: #313131;
+    position: relative; }
+    #popup .project .text h3:after {
+      content: '';
+      width: 29px;
+      height: 1px;
+      background: #d6d2d2;
+      position: absolute;
+      bottom: -20px;
+      left: 0; }
   #popup .project .text a.ext-link {
     text-transform: uppercase;
     font-size: 13px;

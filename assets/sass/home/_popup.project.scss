@@ -1,6 +1,26 @@
 #popup .project {
 
-  img{
+  header{
+    background: linear-gradient(to bottom right, #1a435b, #6c286d);
+    position: relative;
+    padding: 25% 0 0 0;
+    height: 0;
+    img{
+      max-height: 44%;
+      max-width: 50%;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: auto;
+      @include transform(translate3d(-50%,-50%, 0));
+    }
+    @include media(0,800){
+      padding: 0;
+      height: 200px;
+    }
+  }
+
+  > img{
     width: 100%;
     display: block;
     margin: 0;
@@ -21,13 +41,21 @@
     }
 
     h3{
-      margin: 0 0 20px 0;
-      border-bottom: 1px solid #e4e4e4;
+      margin: 0 0 35px 0;
       line-height: 1;
-      padding: 0 0 20px 0;
       font-weight: 400;
-      font-size: 19px;
-      color: #383737;
+      font-size: 18px;
+      color: #313131;
+      position: relative;
+      &:after{
+        content: '';
+        width: 29px;
+        height: 1px;
+        background: #d6d2d2;
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+      }
     }
 
     a.ext-link{

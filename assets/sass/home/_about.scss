@@ -1,19 +1,10 @@
 #about{
   .belt{
-    padding: 45px 30px;
+    padding: 50px 30px 0 30px;
     position: relative;
     box-sizing: border-box;
-    &:before{
-      content: '';
-      background: #d6d6d6;
-      height: 1px;
-      width: 50px;
-      position: absolute;
-      top: 0;
-      left: 30px;
-    }
     h3{
-      font-size: 22px;
+      font-size: 26px;
       margin: 0 0 40px 0;
       color: #999;
     }
@@ -29,6 +20,9 @@
       color: #666;
       font-size: 17px;
       width: 55%;
+      &:last-child{
+        margin: 0;
+      }
     }
     @include media(0,600){
       padding: 30px 15px 0 15px;
