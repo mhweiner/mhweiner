@@ -76,7 +76,20 @@
               stroke: none;
               fill: #444;
               height: 68px;
-              width: 42px;
+              width: 46px;
+            }
+            &:hover{
+              svg{
+                fill: $color-base;
+              }
+            }
+          }
+          &.quora{
+            svg{
+              stroke: none;
+              fill: #444;
+              height: 68px;
+              width: 37px;
             }
             &:hover{
               svg{

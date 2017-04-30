@@ -20,7 +20,7 @@
     }
   }
 
-  > img{
+  > img, .img-container > img{
     width: 100%;
     display: block;
     margin: 0;
@@ -133,5 +133,7 @@
   }
 
   @import "popup.project.roadsign";
+  @import "popup.project.marvel";
+  @import "popup.project.advizr";
 
 }

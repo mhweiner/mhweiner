@@ -1,0 +1,17 @@
+&#project-marvel{
+  background: #333;
+  header{
+    background: #262626;
+    padding: 30% 0 0 0;
+    overflow: hidden;
+    img{
+      max-height: none;
+      height: 100%;
+      width: auto;
+      max-width: none;
+    }
+  }
+  .img-container{
+    background: url('../img/stripebg.svg'), #444;
+  }
+}
