@@ -144,19 +144,18 @@
 				};
 		})();
 
-		function scrollToY(scrollTargetY, speed, easing) {
+		function scrollToY(scrollTargetY, speed) {
 			// scrollTargetY: the target scrollY property of the window
 			// speed: time in pixels per second
 			// easing: easing equation to use
 
 			var scrollY = window.scrollY || document.documentElement.scrollTop,
-				scrollTargetY = scrollTargetY || 0,
-				speed = speed || 2000,
-				easing = easing || 'easeOutSine',
 				currentTime = 0;
+				scrollTargetY = scrollTargetY || 0,
+				speed = speed || 2000;
 
-			// min time .1, max time .8 seconds
-			var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, .8));
+			// min time .1, max time 20 seconds
+			var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, 20));
 
 			// easing equation
 			function easingEquation(pos) {
@@ -172,7 +171,6 @@
 
 				if (p < 1) {
 					requestAnimFrame(tick);
-
 					window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
 				} else {
 					console.log('scroll done');
@@ -186,7 +184,7 @@
 
 		return function(id){
 			var $elem = $('#' + id);
-			scrollToY($elem.offset().top, 500);
+			scrollToY($elem.offset().top, 850);
 		};
 
 	})();
