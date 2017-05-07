@@ -126,18 +126,4 @@
       }
     }
   }
-  > svg{
-    position: absolute;
-    bottom: 0;
-    height: 60%;
-    width: 86%;
-    opacity: 0.03;
-    left: 54%;
-    @include translateX(-50%);
-    &:last-child{
-      left: 61%;
-      bottom: -51px;
-      height: 63%;
-    }
-  }
 }
