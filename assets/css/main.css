@@ -1,58 +1,30 @@
-/* cyrillic */
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Rubik Light"), local("Rubik-Light"), url(https://fonts.gstatic.com/s/rubik/v4/rN0AGm-UbeCy1H1Jew93RBkAz4rYn47Zy2rvigWQf6w.woff2) format("woff2");
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
-/* hebrew */
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 300;
-  src: local("Rubik Light"), local("Rubik-Light"), url(https://fonts.gstatic.com/s/rubik/v4/oip-K2YN3EYHgt8SY7FJfBkAz4rYn47Zy2rvigWQf6w.woff2) format("woff2");
-  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F; }
 /* latin-ext */
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 300;
-  src: local("Rubik Light"), local("Rubik-Light"), url(https://fonts.gstatic.com/s/rubik/v4/uvJKCkkt46588W3D3t_gLBkAz4rYn47Zy2rvigWQf6w.woff2) format("woff2");
+  src: local("Rubik Light"), local("Rubik-Light"), url(/assets/fonts/uvJKCkkt46588W3D3t_gLBkAz4rYn47Zy2rvigWQf6w.woff2) format("woff2");
   unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
 /* latin */
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 300;
-  src: local("Rubik Light"), local("Rubik-Light"), url(https://fonts.gstatic.com/s/rubik/v4/tRvJQnSw4lmceQIbdzOKGHYhjbSpvc47ee6xR_80Hnw.woff2) format("woff2");
+  src: local("Rubik Light"), local("Rubik-Light"), url(/assets/fonts/tRvJQnSw4lmceQIbdzOKGHYhjbSpvc47ee6xR_80Hnw.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
-/* cyrillic */
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Rubik"), local("Rubik-Regular"), url(https://fonts.gstatic.com/s/rubik/v4/H-PGIsE3CA76bgvfUI8sM4DGDUGfDkXyfkzVDelzfFk.woff2) format("woff2");
-  unicode-range: U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116; }
-/* hebrew */
-@font-face {
-  font-family: 'Rubik';
-  font-style: normal;
-  font-weight: 400;
-  src: local("Rubik"), local("Rubik-Regular"), url(https://fonts.gstatic.com/s/rubik/v4/yliIEUJv6vLJBV8IXYupkIDGDUGfDkXyfkzVDelzfFk.woff2) format("woff2");
-  unicode-range: U+0590-05FF, U+20AA, U+25CC, U+FB1D-FB4F; }
 /* latin-ext */
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  src: local("Rubik"), local("Rubik-Regular"), url(https://fonts.gstatic.com/s/rubik/v4/Vi2gYeiEKThJHNpaE3cq54DGDUGfDkXyfkzVDelzfFk.woff2) format("woff2");
+  src: local("Rubik"), local("Rubik-Regular"), url(/assets/fonts/Vi2gYeiEKThJHNpaE3cq54DGDUGfDkXyfkzVDelzfFk.woff2) format("woff2");
   unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF; }
 /* latin */
 @font-face {
   font-family: 'Rubik';
   font-style: normal;
   font-weight: 400;
-  src: local("Rubik"), local("Rubik-Regular"), url(https://fonts.gstatic.com/s/rubik/v4/p_PvaTv0YzIEJlEVv30xK6CWcynf_cDxXwCLxiixG1c.woff2) format("woff2");
+  src: local("Rubik"), local("Rubik-Regular"), url(/assets/fonts/p_PvaTv0YzIEJlEVv30xK6CWcynf_cDxXwCLxiixG1c.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 /* This only supports IE10+, and recent versions of evergreen browsers (Chrome, Safari, Firefox) */
 .ellipsify {
@@ -1074,6 +1046,34 @@ html.home {
       max-width: none; }
   #popup .project#project-marvel .img-container {
     background: url("../img/stripebg.svg"), #444; }
+    #popup .project#project-marvel .img-container.alt {
+      background: url("../img/stripebg.svg"), #ccc; }
+  #popup .project#project-marvel a.presentation {
+    display: block;
+    background: #eee;
+    border: 1px solid #673AB7;
+    box-shadow: #673ab7 1px 1px 0;
+    margin: -5px 0 30px 0;
+    font-size: 17px;
+    line-height: 50px;
+    height: 50px;
+    border-radius: 3px;
+    overflow: hidden; }
+    #popup .project#project-marvel a.presentation svg {
+      display: inline-block;
+      background: #673ab7;
+      stroke: none;
+      height: 50px;
+      width: 50px;
+      margin: 0 20px 0 0;
+      vertical-align: top; }
+    #popup .project#project-marvel a.presentation:hover, #popup .project#project-marvel a.presentation:focus {
+      background: #ddd;
+      color: #4d3294;
+      border-color: #4d3294;
+      box-shadow: #4d3294 1px 1px 0; }
+      #popup .project#project-marvel a.presentation:hover svg, #popup .project#project-marvel a.presentation:focus svg {
+        background: #4d3294; }
 #popup .project#project-advizr {
   background: #dedede;
   padding: 0 0 30px 0; }
@@ -1136,5 +1136,9 @@ html.home {
     background: linear-gradient(to bottom right, #408aaf, #32ba6b); }
     #popup .project#project-nextemr header img {
       max-height: 90px; }
+  @media only screen and (min-width: 0px) and (max-width: 900px) and (min-height: 0px) and (max-height: 999999px) {
+    #popup .project#project-nextemr section {
+      width: 100%;
+      float: none; } }
 
 /*# sourceMappingURL=main.css.map */
