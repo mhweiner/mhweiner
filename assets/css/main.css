@@ -784,8 +784,7 @@ html.home {
       html.home #projects article[data-id="ciro"] .img {
         background: #ccc; }
         html.home #projects article[data-id="ciro"] .img img {
-          max-height: 100px;
-          max-width: 100px; }
+          max-height: 70px; }
       html.home #projects article[data-id="devotify"] .img {
         background: linear-gradient(to bottom right, #1a435b, #6c286d); }
         html.home #projects article[data-id="devotify"] .img img {
@@ -1080,6 +1079,18 @@ html.home {
   #popup .project#project-advizr header {
     background: #444; }
     #popup .project#project-advizr header img {
-      max-height: 25%; }
+      max-height: 20%; }
+#popup .project#project-ciro {
+  background: #333; }
+  #popup .project#project-ciro header {
+    background: linear-gradient(to bottom right, #d4d6d6, #efefef); }
+    #popup .project#project-ciro header img {
+      max-height: 70px; }
+#popup .project#project-nextemr {
+  background: #333; }
+  #popup .project#project-nextemr header {
+    background: linear-gradient(to bottom right, #408aaf, #32ba6b); }
+    #popup .project#project-nextemr header img {
+      max-height: 90px; }
 
 /*# sourceMappingURL=main.css.map */
