@@ -26,6 +26,13 @@
   font-weight: 400;
   src: local("Rubik"), local("Rubik-Regular"), url(/assets/fonts/p_PvaTv0YzIEJlEVv30xK6CWcynf_cDxXwCLxiixG1c.woff2) format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
+/* latin */
+@font-face {
+  font-family: 'Rubik';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Rubik Bold"), local("Rubik-Bold"), url(https://fonts.gstatic.com/s/rubik/v4/0hS39AKxpJlEXQF3mVPgrnYhjbSpvc47ee6xR_80Hnw.woff2) format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215; }
 /* This only supports IE10+, and recent versions of evergreen browsers (Chrome, Safari, Firefox) */
 .ellipsify {
   white-space: nowrap;
@@ -1067,12 +1074,12 @@ html.home {
       width: 50px;
       margin: 0 20px 0 0;
       vertical-align: top; }
-    #popup .project#project-marvel a.presentation:hover, #popup .project#project-marvel a.presentation:focus {
+    #popup .project#project-marvel a.presentation:hover {
       background: #ddd;
       color: #4d3294;
       border-color: #4d3294;
       box-shadow: #4d3294 1px 1px 0; }
-      #popup .project#project-marvel a.presentation:hover svg, #popup .project#project-marvel a.presentation:focus svg {
+      #popup .project#project-marvel a.presentation:hover svg {
         background: #4d3294; }
 #popup .project#project-advizr {
   background: #dedede;
