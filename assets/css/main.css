@@ -47,9 +47,9 @@
 @-webkit-keyframes grow {
   0% {
     opacity: 0.7;
-    -webkit-transform: scale(0.15, 0.1);
+    -webkit-transform: scale(0.15, 0.15);
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-    transform: scale(0.15, 0.1);
+    transform: scale(0.15, 0.15);
     /* IE 10, Fx 16+, Op 12.1+ */ }
   100% {
     opacity: 1;
@@ -60,9 +60,9 @@
 @keyframes grow {
   0% {
     opacity: 0.7;
-    -webkit-transform: scale(0.15, 0.1);
+    -webkit-transform: scale(0.15, 0.15);
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-    transform: scale(0.15, 0.1);
+    transform: scale(0.15, 0.15);
     /* IE 10, Fx 16+, Op 12.1+ */ }
   100% {
     opacity: 1;
@@ -70,18 +70,12 @@
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: scale(1, 1);
     /* IE 10, Fx 16+, Op 12.1+ */ } }
-@-webkit-keyframes popIn {
+@-webkit-keyframes growALittle {
   0% {
-    opacity: 0.7;
-    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0.1;
+    -webkit-transform: scale(0.95, 0.95);
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-    transform: scale(0.1, 0.1);
-    /* IE 10, Fx 16+, Op 12.1+ */ }
-  90% {
-    opacity: 1;
-    -webkit-transform: scale(1.2, 1.2);
-    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-    transform: scale(1.2, 1.2);
+    transform: scale(0.95, 0.95);
     /* IE 10, Fx 16+, Op 12.1+ */ }
   100% {
     opacity: 1;
@@ -89,18 +83,12 @@
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: scale(1, 1);
     /* IE 10, Fx 16+, Op 12.1+ */ } }
-@keyframes popIn {
+@keyframes growALittle {
   0% {
-    opacity: 0.7;
-    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0.1;
+    -webkit-transform: scale(0.95, 0.95);
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-    transform: scale(0.1, 0.1);
-    /* IE 10, Fx 16+, Op 12.1+ */ }
-  90% {
-    opacity: 1;
-    -webkit-transform: scale(1.2, 1.2);
-    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-    transform: scale(1.2, 1.2);
+    transform: scale(0.95, 0.95);
     /* IE 10, Fx 16+, Op 12.1+ */ }
   100% {
     opacity: 1;
@@ -279,22 +267,29 @@ h1, h2, h3, h4, h5, header {
   padding: 0;
   top: 0;
   bottom: 0;
-  background: rgba(238, 238, 238, 0.95);
+  background: #eee;
   z-index: 100;
   overflow: auto;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
   left: 0;
   right: 0;
-  width: 100%; }
+  width: 100%;
+  -webkit-transform: translate3d(0, 0, 0);
+  /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+  transform: translate3d(0, 0, 0);
+  /* IE 10, Fx 16+, Op 12.1+ */ }
   #popup.loaded {
-    -webkit-animation: fadeIn 0.3s;
-    animation: fadeIn 0.3s;
+    -webkit-animation: growALittle 0.3s;
+    animation: growALittle 0.3s;
     -webkit-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.9);
     animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.9); }
+    #popup.loaded .content {
+      display: block; }
   #popup .content {
-    display: block;
+    display: none;
     max-width: 1050px;
     margin: 0 auto; }
 
@@ -372,538 +367,545 @@ html.home {
     @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
       html.home section .belt {
         padding: 0 15px; } }
-  html.home nav {
-    display: none;
-    margin: 0;
-    position: fixed;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    top: 0;
-    right: 0;
-    z-index: 10;
-    box-sizing: border-box;
-    left: 0;
-    bottom: 0;
-    background: rgba(251, 251, 251, 0.95);
-    -webkit-animation: fadeIn 0.15s;
-    animation: fadeIn 0.15s;
-    -webkit-timing-function: ease-in-out;
-    animation-timing-function: ease-in-out;
-    -webkit-animation-fill-mode: forwards;
-    animation-fill-mode: forwards; }
-    html.home nav ul {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      display: block;
-      margin: 0 auto;
-      padding: 0;
-      width: 265px;
-      -webkit-transform: translate(-50%, -50%);
-      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      transform: translate(-50%, -50%);
-      /* IE 10, Fx 16+, Op 12.1+ */ }
-      html.home nav ul li {
-        display: block;
-        margin: 0;
-        padding: 0; }
-    html.home nav a {
-      display: block;
-      position: relative;
-      margin: 0;
-      padding: 0;
-      line-height: 70px;
-      outline: none; }
-      html.home nav a span {
-        font-size: 20px;
-        color: #656565;
-        transition: color 0.15s ease-in-out; }
-      html.home nav a svg {
-        display: inline-block;
-        vertical-align: top;
-        color: #c5c5c5;
-        transition: fill 0.15s ease-in-out;
-        fill: #464646; }
-      html.home nav a:hover span, html.home nav a:active span, html.home nav a:focus span {
-        color: #673AB7; }
-      html.home nav a:hover svg, html.home nav a:active svg, html.home nav a:focus svg {
-        fill: #673AB7; }
-      html.home nav a.about svg {
-        height: 39px;
-        width: 50px;
-        margin: 15px 12px 0 0; }
-        @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
-          html.home nav a.about svg {
-            height: 58px;
-            width: 60px;
-            margin: 14px 20px 0 0; } }
-      html.home nav a.contact svg {
-        width: 50px;
-        height: 37px;
-        margin: 18px 9px 0 0; }
-        @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
-          html.home nav a.contact svg {
-            width: 60px;
-            height: 54px;
-            margin: 18px 20px 0 0; } }
-      html.home nav a.resume svg {
-        height: 38px;
-        margin: 17px 10px 0 0;
-        width: 50px; }
-        @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
-          html.home nav a.resume svg {
-            height: 54px;
-            margin: 16px 20px 0 0;
-            width: 60px; } }
-    @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home nav ul {
-        width: 330px; }
-      html.home nav a {
-        line-height: 90px; }
-        html.home nav a span {
-          font-size: 22px; } }
-  html.home body > header {
-    margin: 0 auto;
-    max-width: 1100px;
-    position: fixed;
-    left: 0;
-    right: 0;
-    height: 1px;
-    z-index: 10; }
-  html.home .menu-toggle {
-    display: block;
-    top: 29px;
-    right: 21px;
-    cursor: pointer;
-    font-size: 34px;
-    z-index: 100;
-    padding: 29px 54px 32px 10px;
+
+nav {
+  display: none;
+  margin: 0;
+  position: fixed;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  top: 0;
+  right: 0;
+  z-index: 10;
+  box-sizing: border-box;
+  left: 0;
+  bottom: 0;
+  background: rgba(251, 251, 251, 0.95);
+  -webkit-animation: fadeIn 0.15s;
+  animation: fadeIn 0.15s;
+  -webkit-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards; }
+  nav ul {
     position: absolute;
-    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    border-radius: 50px;
-    outline: none; }
-    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home .menu-toggle {
-        right: 10px;
-        top: 10px; } }
-    html.home .menu-toggle span, html.home .menu-toggle span:before, html.home .menu-toggle span:after {
-      cursor: pointer;
-      height: 2px;
-      width: 45px;
-      background: black;
-      position: absolute;
+    top: 50%;
+    left: 50%;
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 265px;
+    -webkit-transform: translate(-50%, -50%);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: translate(-50%, -50%);
+    /* IE 10, Fx 16+, Op 12.1+ */ }
+    nav ul li {
       display: block;
-      content: '';
-      transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-    html.home .menu-toggle span:before {
-      top: -13px; }
-    html.home .menu-toggle span:after {
-      bottom: -13px;
-      width: 30px;
-      right: 0; }
-    html.home .menu-toggle:hover span, html.home .menu-toggle:hover span:before, html.home .menu-toggle:hover span:after {
-      background-color: #673AB7; }
-    html.home .menu-toggle:hover span:after {
-      width: 100%; }
-    html.home .menu-toggle.active {
-      box-shadow: none;
-      background: #e8e8e8; }
-      html.home .menu-toggle.active span {
-        background-color: transparent; }
-        html.home .menu-toggle.active span:before, html.home .menu-toggle.active span:after {
-          top: 0;
-          background-color: #666; }
-        html.home .menu-toggle.active span:before {
-          -webkit-transform: rotate(45deg);
-          /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-          transform: rotate(45deg);
-          /* IE 10, Fx 16+, Op 12.1+ */ }
-        html.home .menu-toggle.active span:after {
-          -webkit-transform: rotate(-45deg);
-          /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-          transform: rotate(-45deg);
-          /* IE 10, Fx 16+, Op 12.1+ */
-          width: 100%;
-          right: auto; }
-      html.home .menu-toggle.active:hover span:before, html.home .menu-toggle.active:hover span:after {
-        background-color: #da465e; }
-  html.home #intro {
-    height: 100vh;
-    min-height: 700px;
-    max-height: 900px;
-    position: relative;
-    background: #eee;
-    padding: 30px 0;
-    box-sizing: border-box;
-    overflow: hidden; }
-    html.home #intro:after {
-      content: '';
-      display: table;
-      clear: both; }
-    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home #intro {
-        padding: 15px 0 30px 0; } }
-    @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home #intro {
-        height: auto;
-        min-height: 0; } }
-    html.home #intro .belt {
-      z-index: 1; }
-    html.home #intro h1 {
-      color: #444343;
-      font-size: 23px;
       margin: 0;
-      font-weight: 400;
-      cursor: pointer;
-      float: left; }
-      html.home #intro h1 img {
-        width: 70px;
-        height: 70px;
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0 10px 0 0;
-        opacity: 0.8; }
-      @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #intro h1 {
-          width: 200px; }
-          html.home #intro h1 img {
-            display: block;
-            margin: 0 0 10px 0; } }
-      @media only screen and (min-width: 0px) and (max-width: 800px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #intro h1 {
-          float: none; } }
-      html.home #intro h1:hover {
-        color: #673AB7; }
-        html.home #intro h1:hover img {
-          -webkit-animation: rotation 2.5s linear infinite;
-          animation: rotation 2.5s linear infinite; }
-    html.home #intro h2 {
-      color: #545454;
-      font-size: 41px;
-      position: absolute;
-      top: 50%;
-      left: 0;
-      line-height: 1.6;
-      margin: 0;
-      padding: 0 80px 0 30px;
-      -webkit-transform: translate(0, -50%);
-      /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-      transform: translate(0, -50%);
-      /* IE 10, Fx 16+, Op 12.1+ */ }
-      html.home #intro h2 span {
-        color: #673AB7;
-        padding: 0 15px;
-        display: inline-block;
-        line-height: 53px;
-        font-size: 38px;
-        margin: 0 5px 0 0;
-        background: #d4dbe2; }
-      @media only screen and (min-width: 0px) and (max-width: 800px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #intro h2 {
-          font-size: 32px;
-          padding: 0 60px 0 30px; }
-          html.home #intro h2 span {
-            padding: 0 10px;
-            line-height: 43px;
-            font-size: 30px;
-            margin: 0 3px 0 0; } }
-      @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #intro h2 {
-          padding: 0 15px; } }
-      @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #intro h2 {
-          position: relative;
-          padding: 0;
-          margin: 45px 0;
-          transform: none;
-          top: auto;
-          left: auto; } }
-    html.home #intro a.more {
-      display: block;
-      position: absolute;
-      bottom: 5px;
-      font-size: 19px;
-      line-height: 55px;
-      padding: 0 20px;
-      color: #673AB7;
-      transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
-      vertical-align: top;
-      border: 2px solid #673AB7; }
-      @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #intro a.more {
-          display: none; } }
-      html.home #intro a.more svg {
-        margin: 18px 10px 0 0;
-        font-size: 24px;
-        display: inline-block;
-        vertical-align: top;
-        width: 16px;
-        height: 19px; }
-        html.home #intro a.more svg g {
-          transition: stroke 0.15s ease-in-out;
-          stroke: #673AB7;
-          stroke-width: 3; }
-      html.home #intro a.more:hover {
-        color: black;
-        border-color: black; }
-        html.home #intro a.more:hover svg g {
-          stroke: #000000; }
-  html.home #projects {
-    position: relative;
-    padding: 70px 0 0 0;
-    box-sizing: border-box; }
-    html.home #projects:after {
-      content: '';
-      display: table;
-      clear: both; }
-    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home #projects {
-        padding: 30px 0 15px; } }
-    @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home #projects {
-        padding: 0; } }
-    html.home #projects h3 {
-      font-size: 22px;
-      margin: 0 0 40px 0;
-      color: #828181; }
-      @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #projects h3 {
-          padding: 0 15px; } }
-      @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #projects h3 {
-          display: none; } }
-    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home #projects .belt {
-        padding: 0; } }
-    html.home #projects article {
-      float: left;
-      width: 31.33333%;
-      margin: 0 1% 30px 1%;
-      box-sizing: border-box;
-      cursor: pointer; }
-      html.home #projects article .img {
-        height: 180px;
-        position: relative;
-        background: #eee;
-        overflow: hidden; }
-        html.home #projects article .img img {
-          max-height: 37%;
-          max-width: 53%;
-          position: absolute;
-          left: 50%;
-          top: 50%;
-          -webkit-transform: translate3d(-50%, -50%, 0);
-          /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-          transform: translate3d(-50%, -50%, 0);
-          /* IE 10, Fx 16+, Op 12.1+ */ }
-        html.home #projects article .img:before, html.home #projects article .img:after {
-          content: '';
-          display: block;
-          position: absolute;
-          opacity: 0;
-          transition: opacity 0.3s ease-in-out;
-          width: 100%;
-          height: 100%; }
-        html.home #projects article .img:before {
-          background: rgba(103, 58, 183, 0.76);
-          z-index: 1; }
-        html.home #projects article .img:after {
-          background: url(../img/mag.png) center center no-repeat;
-          background-size: 75px 75px;
-          z-index: 2; }
-      html.home #projects article .description p.title {
-        margin: 17px 0 0 0;
-        line-height: 28px;
-        height: 28px;
-        font-size: 18px;
-        color: #333;
-        transition: color 0.15s ease-in-out;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden; }
-      html.home #projects article .description p.description {
-        margin: 0;
-        line-height: 30px;
-        height: 30px;
-        font-weight: 400;
-        font-size: 14px;
-        color: #777;
-        transition: color 0.15s ease-in-out;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-        overflow: hidden; }
-      @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #projects article .description {
-          display: none; } }
-      html.home #projects article:hover p.title {
-        color: #673AB7; }
-      html.home #projects article:hover .img:before, html.home #projects article:hover .img:after {
-        opacity: 1; }
-      @media only screen and (min-width: 601px) and (max-width: 1000px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #projects article {
-          width: 48%; }
-          html.home #projects article .img {
-            height: 220px; }
-            html.home #projects article .img img {
-              max-height: 27%;
-              max-width: 50%; } }
-      @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #projects article {
-          width: 100%;
-          margin: 0 0 30px 0; }
-          html.home #projects article .img {
-            height: 230px; }
-            html.home #projects article .img img {
-              max-height: 28%;
-              max-width: 40%; } }
-      html.home #projects article[data-id="marvel"] .img {
-        background: #ef0000; }
-      html.home #projects article[data-id="advizr"] .img {
-        background: #3c3c3c; }
-      html.home #projects article[data-id="ciro"] .img {
-        background: #ccc; }
-        html.home #projects article[data-id="ciro"] .img img {
-          max-height: 70px; }
-      html.home #projects article[data-id="devotify"] .img {
-        background: linear-gradient(to bottom right, #1a435b, #6c286d); }
-        html.home #projects article[data-id="devotify"] .img img {
-          max-height: 50%; }
-      html.home #projects article[data-id="roadsign"] .img {
-        background: #6da643; }
-        html.home #projects article[data-id="roadsign"] .img img {
-          max-height: 60px;
-          max-width: 73%; }
-      html.home #projects article[data-id="nextemr"] .img {
-        background: #32ba6b; }
-      @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #projects article {
-          margin: 0; } }
-    html.home #projects .projects-container {
-      margin: 0 -1% 0 -1%; }
-      html.home #projects .projects-container:after {
-        content: '';
-        display: table;
-        clear: both; }
-      @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-        html.home #projects .projects-container {
-          margin: 0; } }
-  html.home #about .belt {
-    padding: 50px 30px 0 30px;
-    position: relative;
-    box-sizing: border-box; }
-    html.home #about .belt h3 {
-      font-size: 22px;
-      margin: 0 0 20px 0;
-      color: #828181; }
-    html.home #about .belt img {
-      width: 30%;
-      border-radius: 250px;
-      float: right;
-      margin: -30px 0 0 0; }
-    html.home #about .belt p {
-      margin: 0 0 20px 0;
-      line-height: 1.5;
-      color: #666;
-      font-size: 17px;
-      width: 55%; }
-      html.home #about .belt p:last-child {
-        margin: 0; }
-    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home #about .belt {
-        padding: 45px 15px 0 15px; }
-        html.home #about .belt:before {
-          display: none; }
-        html.home #about .belt p {
-          width: auto; }
-        html.home #about .belt img {
-          width: 50%;
-          margin: 0 15px 15px 0;
-          max-width: 250px; }
-        html.home #about .belt h3 {
-          margin: 0 0 20px 0; } }
-    @media only screen and (min-width: 0px) and (max-width: 450px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home #about .belt img {
-        float: none; } }
-  html.home #contact .belt {
-    padding: 50px 30px;
-    position: relative;
-    box-sizing: border-box; }
-    html.home #contact .belt h3 {
-      font-size: 22px;
-      margin: 0 0 10px 0;
-      color: #828181; }
-    html.home #contact .belt ul {
-      display: block;
-      margin: 0 auto;
       padding: 0; }
-      html.home #contact .belt ul:after {
-        content: '';
-        display: table;
-        clear: both; }
-      html.home #contact .belt ul li {
-        display: block;
-        margin: 0 20px 0 0;
-        padding: 0;
-        float: left; }
-        html.home #contact .belt ul li a {
+  nav a {
+    display: block;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    line-height: 70px;
+    outline: none; }
+    nav a span {
+      font-size: 20px;
+      color: #656565;
+      transition: color 0.15s ease-in-out; }
+    nav a svg {
+      display: inline-block;
+      vertical-align: top;
+      color: #c5c5c5;
+      transition: fill 0.15s ease-in-out;
+      fill: #464646; }
+    nav a:hover span, nav a:active span, nav a:focus span {
+      color: #673AB7; }
+    nav a:hover svg, nav a:active svg, nav a:focus svg {
+      fill: #673AB7; }
+    nav a.about svg {
+      height: 39px;
+      width: 50px;
+      margin: 15px 12px 0 0; }
+      @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
+        nav a.about svg {
+          height: 58px;
+          width: 60px;
+          margin: 14px 20px 0 0; } }
+    nav a.contact svg {
+      width: 50px;
+      height: 37px;
+      margin: 18px 9px 0 0; }
+      @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
+        nav a.contact svg {
+          width: 60px;
+          height: 54px;
+          margin: 18px 20px 0 0; } }
+    nav a.resume svg {
+      height: 38px;
+      margin: 17px 10px 0 0;
+      width: 50px; }
+      @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
+        nav a.resume svg {
+          height: 54px;
+          margin: 16px 20px 0 0;
+          width: 60px; } }
+  @media only screen and (min-width: 450px) and (max-width: 999999px) and (min-height: 0px) and (max-height: 999999px) {
+    nav ul {
+      width: 330px; }
+    nav a {
+      line-height: 90px; }
+      nav a span {
+        font-size: 22px; } }
+
+body > header {
+  margin: 0 auto;
+  max-width: 1100px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  height: 1px;
+  z-index: 10; }
+
+.menu-toggle {
+  display: block;
+  top: 29px;
+  right: 21px;
+  cursor: pointer;
+  font-size: 34px;
+  z-index: 100;
+  padding: 29px 54px 32px 10px;
+  position: absolute;
+  transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border-radius: 50px;
+  outline: none; }
+  @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+    .menu-toggle {
+      right: 10px;
+      top: 10px; } }
+  .menu-toggle span, .menu-toggle span:before, .menu-toggle span:after {
+    cursor: pointer;
+    height: 2px;
+    width: 45px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 0.15s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+  .menu-toggle span:before {
+    top: -13px; }
+  .menu-toggle span:after {
+    bottom: -13px;
+    width: 30px;
+    right: 0; }
+  .menu-toggle:hover span, .menu-toggle:hover span:before, .menu-toggle:hover span:after {
+    background-color: #673AB7; }
+  .menu-toggle:hover span:after {
+    width: 100%; }
+  .menu-toggle.active {
+    box-shadow: none;
+    background: #e8e8e8; }
+    .menu-toggle.active span {
+      background-color: transparent; }
+      .menu-toggle.active span:before, .menu-toggle.active span:after {
+        top: 0;
+        background-color: #666; }
+      .menu-toggle.active span:before {
+        -webkit-transform: rotate(45deg);
+        /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+        transform: rotate(45deg);
+        /* IE 10, Fx 16+, Op 12.1+ */ }
+      .menu-toggle.active span:after {
+        -webkit-transform: rotate(-45deg);
+        /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+        transform: rotate(-45deg);
+        /* IE 10, Fx 16+, Op 12.1+ */
+        width: 100%;
+        right: auto; }
+    .menu-toggle.active:hover span:before, .menu-toggle.active:hover span:after {
+      background-color: #da465e; }
+
+#intro {
+  height: 100vh;
+  min-height: 700px;
+  max-height: 900px;
+  position: relative;
+  background: #eee;
+  padding: 30px 0;
+  box-sizing: border-box;
+  overflow: hidden; }
+  #intro:after {
+    content: '';
+    display: table;
+    clear: both; }
+  @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+    #intro {
+      padding: 15px 0 30px 0; } }
+  @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
+    #intro {
+      height: auto;
+      min-height: 0; } }
+  #intro .belt {
+    z-index: 1; }
+  #intro h1 {
+    color: #444343;
+    font-size: 23px;
+    margin: 0;
+    font-weight: 400;
+    cursor: pointer;
+    float: left; }
+    #intro h1 img {
+      width: 70px;
+      height: 70px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px 0 0;
+      opacity: 0.8; }
+    @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
+      #intro h1 {
+        width: 200px; }
+        #intro h1 img {
           display: block;
-          position: relative;
-          margin: 0;
-          padding: 0;
-          outline: none;
-          text-align: center; }
-          html.home #contact .belt ul li a span {
-            ffont-size: 16px;
-            color: #656565;
-            transition: color 0.15s ease-in-out;
-            display: block;
-            line-height: 26px; }
-          html.home #contact .belt ul li a svg {
-            display: inline-block;
-            vertical-align: top;
-            color: #c5c5c5;
-            transition: stroke 0.15s ease-in-out, fill 0.15s ease-in-out; }
-          html.home #contact .belt ul li a:hover span, html.home #contact .belt ul li a:active span, html.home #contact .belt ul li a:focus span {
-            color: #673AB7; }
-          html.home #contact .belt ul li a.email svg {
-            stroke: #444444;
-            stroke-width: 16px;
-            fill: none;
-            width: 54px;
-            height: 68px; }
-          html.home #contact .belt ul li a.email:hover svg {
-            stroke: #673AB7; }
-          html.home #contact .belt ul li a.linkedin svg {
-            stroke: #444444;
-            stroke-width: 20px;
-            fill: none;
-            width: 45px;
-            height: 68px; }
-          html.home #contact .belt ul li a.linkedin:hover svg {
-            stroke: #673AB7; }
-          html.home #contact .belt ul li a.github svg {
-            stroke: none;
-            fill: #444;
-            height: 68px;
-            width: 46px; }
-          html.home #contact .belt ul li a.github:hover svg {
-            fill: #673AB7; }
-          html.home #contact .belt ul li a.quora svg {
-            stroke: none;
-            fill: #444;
-            height: 68px;
-            width: 37px; }
-          html.home #contact .belt ul li a.quora:hover svg {
-            fill: #673AB7; }
+          margin: 0 0 10px 0; } }
+    @media only screen and (min-width: 0px) and (max-width: 800px) and (min-height: 0px) and (max-height: 999999px) {
+      #intro h1 {
+        float: none; } }
+    #intro h1:hover {
+      color: #673AB7; }
+      #intro h1:hover img {
+        -webkit-animation: rotation 2.5s linear infinite;
+        animation: rotation 2.5s linear infinite; }
+  #intro h2 {
+    color: #545454;
+    font-size: 41px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 80px 0 30px;
+    -webkit-transform: translate(0, -50%);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: translate(0, -50%);
+    /* IE 10, Fx 16+, Op 12.1+ */ }
+    #intro h2 span {
+      color: #673AB7;
+      padding: 0 15px;
+      display: inline-block;
+      line-height: 53px;
+      font-size: 38px;
+      margin: 0 5px 0 0;
+      background: #d4dbe2; }
+    @media only screen and (min-width: 0px) and (max-width: 800px) and (min-height: 0px) and (max-height: 999999px) {
+      #intro h2 {
+        font-size: 32px;
+        padding: 0 60px 0 30px; }
+        #intro h2 span {
+          padding: 0 10px;
+          line-height: 43px;
+          font-size: 30px;
+          margin: 0 3px 0 0; } }
     @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
-      html.home #contact .belt {
-        padding: 30px 15px 50px 15px; }
-        html.home #contact .belt:before {
-          display: none; }
-        html.home #contact .belt p {
-          width: auto; }
-        html.home #contact .belt h3 {
-          margin: 0 0 20px 0; } }
+      #intro h2 {
+        padding: 0 15px; } }
+    @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
+      #intro h2 {
+        position: relative;
+        padding: 0;
+        margin: 45px 0;
+        transform: none;
+        top: auto;
+        left: auto; } }
+  #intro a.more {
+    display: block;
+    position: absolute;
+    bottom: 5px;
+    font-size: 19px;
+    line-height: 55px;
+    padding: 0 20px;
+    color: #673AB7;
+    transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+    vertical-align: top;
+    border: 2px solid #673AB7; }
+    @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
+      #intro a.more {
+        display: none; } }
+    #intro a.more svg {
+      margin: 18px 10px 0 0;
+      font-size: 24px;
+      display: inline-block;
+      vertical-align: top;
+      width: 16px;
+      height: 19px; }
+      #intro a.more svg g {
+        transition: stroke 0.15s ease-in-out;
+        stroke: #673AB7;
+        stroke-width: 3; }
+    #intro a.more:hover {
+      color: black;
+      border-color: black; }
+      #intro a.more:hover svg g {
+        stroke: #000000; }
+
+#projects {
+  position: relative;
+  padding: 70px 0 0 0;
+  box-sizing: border-box; }
+  #projects:after {
+    content: '';
+    display: table;
+    clear: both; }
+  @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+    #projects {
+      padding: 30px 0 15px; } }
+  @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
+    #projects {
+      padding: 0; } }
+  #projects h3 {
+    font-size: 22px;
+    margin: 0 0 40px 0;
+    color: #828181; }
+    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+      #projects h3 {
+        padding: 0 15px; } }
+    @media only screen and (min-width: 0px) and (max-width: 420px) and (min-height: 0px) and (max-height: 999999px) {
+      #projects h3 {
+        display: none; } }
+  @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+    #projects .belt {
+      padding: 0; } }
+  #projects article {
+    float: left;
+    width: 31.33333%;
+    margin: 0 1% 30px 1%;
+    box-sizing: border-box;
+    cursor: pointer; }
+    #projects article .img {
+      height: 180px;
+      position: relative;
+      background: #eee;
+      overflow: hidden; }
+      #projects article .img img {
+        max-height: 37%;
+        max-width: 53%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        -webkit-transform: translate3d(-50%, -50%, 0);
+        /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+        transform: translate3d(-50%, -50%, 0);
+        /* IE 10, Fx 16+, Op 12.1+ */ }
+      #projects article .img:before, #projects article .img:after {
+        content: '';
+        display: block;
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        width: 100%;
+        height: 100%; }
+      #projects article .img:before {
+        background: rgba(103, 58, 183, 0.76);
+        z-index: 1; }
+      #projects article .img:after {
+        background: url(../img/mag.png) center center no-repeat;
+        background-size: 75px 75px;
+        z-index: 2; }
+    #projects article .description p.title {
+      margin: 17px 0 0 0;
+      line-height: 28px;
+      height: 28px;
+      font-size: 18px;
+      color: #333;
+      transition: color 0.15s ease-in-out;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    #projects article .description p.description {
+      margin: 0;
+      line-height: 30px;
+      height: 30px;
+      font-weight: 400;
+      font-size: 14px;
+      color: #777;
+      transition: color 0.15s ease-in-out;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden; }
+    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+      #projects article .description {
+        display: none; } }
+    @media only screen and (min-width: 601px) and (max-width: 1000px) and (min-height: 0px) and (max-height: 999999px) {
+      #projects article {
+        width: 48%; }
+        #projects article .img {
+          height: 220px; }
+          #projects article .img img {
+            max-height: 27%;
+            max-width: 50%; } }
+    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+      #projects article {
+        width: 100%;
+        margin: 0 0 30px 0; }
+        #projects article .img {
+          height: 230px; }
+          #projects article .img img {
+            max-height: 28%;
+            max-width: 40%; } }
+    #projects article[data-id="marvel"] .img {
+      background: #ef0000; }
+    #projects article[data-id="advizr"] .img {
+      background: #3c3c3c; }
+    #projects article[data-id="ciro"] .img {
+      background: #ccc; }
+      #projects article[data-id="ciro"] .img img {
+        max-height: 70px; }
+    #projects article[data-id="devotify"] .img {
+      background: linear-gradient(to bottom right, #1a435b, #6c286d); }
+      #projects article[data-id="devotify"] .img img {
+        max-height: 50%; }
+    #projects article[data-id="roadsign"] .img {
+      background: #6da643; }
+      #projects article[data-id="roadsign"] .img img {
+        max-height: 60px;
+        max-width: 73%; }
+    #projects article[data-id="nextemr"] .img {
+      background: #32ba6b; }
+    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+      #projects article {
+        margin: 0; } }
+    html.not-iOS #projects article:hover p.title {
+      color: #673AB7; }
+    html.not-iOS #projects article:hover .img:before, html.not-iOS #projects article:hover .img:after {
+      opacity: 1; }
+  #projects .projects-container {
+    margin: 0 -1% 0 -1%; }
+    #projects .projects-container:after {
+      content: '';
+      display: table;
+      clear: both; }
+    @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+      #projects .projects-container {
+        margin: 0; } }
+
+#about .belt {
+  padding: 50px 30px 0 30px;
+  position: relative;
+  box-sizing: border-box; }
+  #about .belt h3 {
+    font-size: 22px;
+    margin: 0 0 20px 0;
+    color: #828181; }
+  #about .belt img {
+    width: 30%;
+    border-radius: 250px;
+    float: right;
+    margin: -30px 0 0 0; }
+  #about .belt p {
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+    color: #666;
+    font-size: 17px;
+    width: 55%; }
+    #about .belt p:last-child {
+      margin: 0; }
+  @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+    #about .belt {
+      padding: 45px 15px 0 15px; }
+      #about .belt:before {
+        display: none; }
+      #about .belt p {
+        width: auto; }
+      #about .belt img {
+        width: 50%;
+        margin: 0 15px 15px 0;
+        max-width: 250px; }
+      #about .belt h3 {
+        margin: 0 0 20px 0; } }
+  @media only screen and (min-width: 0px) and (max-width: 450px) and (min-height: 0px) and (max-height: 999999px) {
+    #about .belt img {
+      float: none; } }
+
+#contact .belt {
+  padding: 50px 30px;
+  position: relative;
+  box-sizing: border-box; }
+  #contact .belt h3 {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    color: #828181; }
+  #contact .belt ul {
+    display: block;
+    margin: 0 auto;
+    padding: 0; }
+    #contact .belt ul:after {
+      content: '';
+      display: table;
+      clear: both; }
+    #contact .belt ul li {
+      display: block;
+      margin: 0 20px 0 0;
+      padding: 0;
+      float: left; }
+      #contact .belt ul li a {
+        display: block;
+        position: relative;
+        margin: 0;
+        padding: 0;
+        outline: none;
+        text-align: center; }
+        #contact .belt ul li a span {
+          ffont-size: 16px;
+          color: #656565;
+          transition: color 0.15s ease-in-out;
+          display: block;
+          line-height: 26px; }
+        #contact .belt ul li a svg {
+          display: inline-block;
+          vertical-align: top;
+          color: #c5c5c5;
+          transition: stroke 0.15s ease-in-out, fill 0.15s ease-in-out; }
+        #contact .belt ul li a:hover span, #contact .belt ul li a:active span, #contact .belt ul li a:focus span {
+          color: #673AB7; }
+        #contact .belt ul li a.email svg {
+          stroke: #444444;
+          stroke-width: 16px;
+          fill: none;
+          width: 54px;
+          height: 68px; }
+        #contact .belt ul li a.email:hover svg {
+          stroke: #673AB7; }
+        #contact .belt ul li a.linkedin svg {
+          stroke: #444444;
+          stroke-width: 20px;
+          fill: none;
+          width: 45px;
+          height: 68px; }
+        #contact .belt ul li a.linkedin:hover svg {
+          stroke: #673AB7; }
+        #contact .belt ul li a.github svg {
+          stroke: none;
+          fill: #444;
+          height: 68px;
+          width: 46px; }
+        #contact .belt ul li a.github:hover svg {
+          fill: #673AB7; }
+        #contact .belt ul li a.quora svg {
+          stroke: none;
+          fill: #444;
+          height: 68px;
+          width: 37px; }
+        #contact .belt ul li a.quora:hover svg {
+          fill: #673AB7; }
+  @media only screen and (min-width: 0px) and (max-width: 600px) and (min-height: 0px) and (max-height: 999999px) {
+    #contact .belt {
+      padding: 30px 15px 50px 15px; }
+      #contact .belt:before {
+        display: none; }
+      #contact .belt p {
+        width: auto; }
+      #contact .belt h3 {
+        margin: 0 0 20px 0; } }
 
 #popup .project header {
   background: linear-gradient(to bottom right, #1a435b, #6c286d);

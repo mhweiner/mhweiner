@@ -10,6 +10,25 @@
       width: auto;
       max-width: none;
     }
+    @include media(0,800){
+      height: 200px;
+      padding: 0;
+      img{
+        display: none;
+      }
+      &:before{
+        content: '';
+        display: block;
+        width: 212px;
+        height: 76px;
+        position: absolute;
+        background: #f0141e url(/dist/img/logos/marvel-white.png) no-repeat center center;
+        background-size: 94%;
+        left: 50%;
+        top: 50%;
+        @include translate(-50%,-50%);
+      }
+    }
   }
   .img-container{
     background: url('../img/stripebg.svg'), #444;

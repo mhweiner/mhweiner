@@ -29,12 +29,11 @@ html.home{
       }
     }
   }
-
-  @import "nav";
-  @import "intro";
-  @import "projects";
-  @import "about";
-  @import "contact";
 }
 
+@import "nav";
+@import "intro";
+@import "projects";
+@import "about";
+@import "contact";
 @import "popup.project";

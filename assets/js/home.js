@@ -11,6 +11,11 @@
 	};
 
 	function _init() {
+
+		//feature detection
+		_featureDetection();
+
+		//bind events
 		_bindEvents();
 
 		//load fastclick
@@ -22,6 +27,47 @@
 
 		//route!
 		router.route();
+	}
+
+	function _featureDetection(){
+		//add some classes to html
+		if(_env('isMac')){
+			$('html').addClass('mac');
+		} else {
+			$('html').addClass('not-mac');
+		}
+		if(_env('isiOS')){
+			$('html').addClass('iOS');
+		} else {
+			$('html').addClass('not-iOS');
+		}
+		if(_env('isSafari')){
+			$('html').addClass('safari');
+		} else {
+			$('html').addClass('not-safari');
+		}
+	}
+
+	/**
+	 * Environment detection. Returns information about the browser, OS, ADV master Area, etc.
+	 * Possible keywords:
+	 * isChrome, isSafari, isiOS, isMac
+	 * @param test
+	 * @returns {*}
+	 */
+	function _env(test){
+		var tests = {};
+		tests.isChrome = function(){ return /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);};
+		tests.isSafari = function(){ return /Safari/.test(navigator.userAgent) && /Apple Computer/.test(navigator.vendor);};
+		tests.isiOS = function(){ return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;};
+		tests.isMac = function(){ return navigator.platform.toUpperCase().indexOf('MAC')>=0; };
+
+		//make sure test exists
+		if(typeof tests[test] === 'undefined'){
+			throw "test '" + test + "' is not defined in Pivot.util.env";
+		}
+
+		return tests[test].apply();
 	}
 
 	function _bindEvents() {
@@ -62,6 +108,8 @@
 	}
 
 	function _open(id){
+		//prevent page scroll
+		$body.css('overflow', 'hidden');
 		_showProgressBar();
 		_load(id, function(content){
 			$popup.addClass(id);
@@ -90,6 +138,8 @@
 	 * @private
 	 */
 	function _close(doNotUpdateHash){
+		//re-enable page scroll
+		$body.css('overflow', 'auto');
 		$body.find('.close-popup').css('display','');
 		$popup.find('.content').html('').css('display','');
 		$popup.get(0).scrollTop = 0;

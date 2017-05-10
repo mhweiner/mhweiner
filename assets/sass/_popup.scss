@@ -4,10 +4,11 @@
   padding: 0;
   top: 0;
   bottom: 0;
-  background: rgba(238, 238, 238, 0.95);
+  background: #eee;
   z-index: 100;
   overflow: auto;
   backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   -webkit-overflow-scrolling: touch;
   box-sizing: border-box;
   left: 0;
@@ -15,12 +16,15 @@
   width: 100%;
 
   &.loaded{
-    @include animation(fadeIn 0.3s);
+    @include animation(growALittle 0.3s);
     @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.90));
+    .content{
+      display: block;
+    }
   }
 
   .content{
-    display: block;
+    display: none;
     max-width: 1050px;
     margin: 0 auto;
   }
