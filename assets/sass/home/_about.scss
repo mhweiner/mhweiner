@@ -24,7 +24,7 @@
         margin: 0;
       }
     }
-    @include media(0,600){
+    @include media(0,1000){
       padding: 45px 15px 0 15px;
       &:before{
         display: none;
@@ -34,14 +34,14 @@
       }
       img{
         width: 50%;
-        margin: 0 15px 15px 0;
-        max-width: 250px;
+        margin: 0 0 20px 20px;
+        max-width: 300px;
       }
       h3{
         margin: 0 0 20px 0;
       }
     }
-    @include media(0,450){
+    @include media(0,500){
       img{
         float: none;
       }

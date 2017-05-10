@@ -167,13 +167,11 @@ body > header{
   }
 
   &.active{
-    box-shadow: none;
-    background: #e8e8e8;
     span{
       background-color: transparent;
       &:before, &:after{
         top: 0;
-        background-color: #666;
+        background-color: #da465e;
       }
       &:before{
         @include rotate(45deg);
@@ -186,7 +184,7 @@ body > header{
     }
     &:hover{
       span:before, span:after{
-        background-color: #da465e;
+        background-color: #953040;
       }
     }
   }
