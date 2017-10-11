@@ -10,7 +10,7 @@ nav{
   box-sizing: border-box;
   left: 0;
   bottom: 0;
-  background: #f2f2f2;
+  background: linear-gradient(to bottom, #673AB7, #b200ff);
   @include fadeIn(0.15s);
   ul{
     position: absolute;
@@ -135,7 +135,7 @@ body > header{
 
   span, span:before, span:after{
     cursor: pointer;
-    height: 2px;
+    height: 3px;
     width: 45px;
     background: black;
     position: absolute;
@@ -157,9 +157,6 @@ body > header{
 
   &:hover{
     span{
-      &,&:before,&:after{
-        background-color: $color-base;
-      }
       &:after{
         width: 100%;
       }
@@ -171,7 +168,7 @@ body > header{
       background-color: transparent;
       &:before, &:after{
         top: 0;
-        background-color: #da465e;
+        background-color: white;
       }
       &:before{
         @include rotate(45deg);
@@ -183,9 +180,7 @@ body > header{
       }
     }
     &:hover{
-      span:before, span:after{
-        background-color: #953040;
-      }
+      background: rgba(0,0,0,0.2);
     }
   }
 }

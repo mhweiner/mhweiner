@@ -3,7 +3,7 @@
   min-height: 700px;
   max-height: 900px;
   position: relative;
-  background: #eee;
+  background: linear-gradient(to bottom, #673AB7, #b200ff);
   padding: 30px 0;
   box-sizing: border-box;
   overflow: hidden;
@@ -18,66 +18,51 @@
   .belt{
     z-index: 1;
   }
-  h1{
-    color: #444343;
-    font-size: 23px;
+  a.logo{
+    color: #2f1a50;
+    font-size: 27px;
     margin: 0;
-    font-weight: 400;
+    font-weight: 600;
     cursor: pointer;
     float: left;
     line-height: 30px;
+    text-transform: uppercase;
+    font-family: $font-header;
     @include media(0,420){
       width: 200px;
     }
     @include media(0,800){
       float: none;
     }
+    img{
+      display: inline-block;
+      margin: -4px 10px 0 0;
+      vertical-align: middle;
+      height: 50px;
+    }
     &:hover{
       img{
         @include animation(rotation 2.5s linear infinite);
       }
-      color: $color-base;
     }
   }
-  h2{
-    color: #545454;
-    font-size: 41px;
+  .text{
     position: absolute;
     top: 49%;
     left: 0;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0 80px 0 30px;
+    color: white;
+    padding: 0 30px;
     @include translate(0, -50%);
+  }
+  h2{
+    font-family: $font-header;
+    font-size: 43px;
+    line-height: 1.5;
+    margin: 0;
+    color: #d0d0d0;
     span{
-      color: $color-base;
-      padding: 0 15px;
-      display: inline-block;
-      line-height: 53px;
-      font-size: 38px;
-      margin: 0 5px 0 0;
-      background: #d4dbe2;
-    }
-    @include media(0,800){
-      font-size: 32px;
-      padding: 0 60px 0 30px;
-      span{
-        padding: 0 10px;
-        line-height: 43px;
-        font-size: 30px;
-        margin: 0 3px 0 0;
-      }
-    }
-    @include media(0,600){
-      padding: 0 15px;
-    }
-    @include media(0,420){
-      position: relative;
-      padding: 0;
-      margin: 60px 0;
-      transform: none;
-      top: auto;
-      left: auto;
+      color: white;
+      border-bottom: 2px solid;
     }
   }
   a.more{
@@ -87,10 +72,13 @@
     font-size: 19px;
     line-height: 55px;
     padding: 0 20px;
-    color: $color-base;
+    color: black;
     transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
     vertical-align: top;
-    border: 2px solid $color-base;
+    border: 2px solid black;
+    text-transform: uppercase;
+    font-family: $font-header;
+    font-weight: 600;
     @include media(0,420){
       position: relative;
       float: left;
@@ -107,15 +95,15 @@
       height: 19px;
       g{
         transition: stroke 0.15s ease-in-out;
-        stroke: $color-base;
+        stroke: black;
         stroke-width: 3;
       }
     }
     &:hover{
-      color: black;
-      border-color: black;
+      color: white;
+      border-color: white;
       svg g{
-        stroke: #000000;
+        stroke: white;
       }
     }
   }

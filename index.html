@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no">
     <meta name="description" content="">
     <title>Marc H. Weiner - Lead Software Engineer, Product Manager, UX Architect</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed:400,700" rel="stylesheet">
     <link href="/dist/css/main.css" rel="stylesheet">
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -33,53 +34,55 @@
 
     <section id="intro">
         <div class="belt">
-            <h1 data-jump="about">Marc Howard Weiner</h1>
-            <h2>Hello! I'm a <span>software engineer</span>, <span>project manager</span>, and <span>business analyst</span>, based in NYC.</h2>
+            <a class="logo" data-jump="about" href=""><img src="/dist/img/gear-icon.svg">Marc Howard Weiner</a>
+            <div class="text">
+                <h2>I'm a <span>software engineer</span> and <span>UX architect</span>, based in NYC. I design systems that scale and make users happy.</h2>
+            </div>
             <a href="#" class="more projects" data-jump="projects"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="32" viewBox="0 0 30 32"><g><path d="M1 16L16 31"/><path d="M29 16L14 31"/><path d="M15 30L15 0"/></g></svg>Past work</a>
         </div>
     </section>
 
     <section id="projects">
         <div class="belt">
-            <h3>Some of my past work.</h3>
+            <h3>work.</h3>
             <div class="projects-container">
                 <article data-id="marvel">
-                    <div class="img"><img src="/assets/img/logos/marvel-white.png"></div>
+                    <div class="img"><img src="/dist/img/logos/marvel-white.png"></div>
                     <div class="description">
                         <p class="title">Marvel.com</p>
                         <p class="description">Official website of Marvel</p>
                     </div>
                 </article>
                 <article data-id="advizr">
-                    <div class="img"><img src="/assets/img/logos/advizr.png"></div>
+                    <div class="img"><img src="/dist/img/logos/advizr.png"></div>
                     <div class="description">
                         <p class="title">Advizr</p>
                         <p class="description">Financial Planning, reinvented</p>
                     </div>
                 </article>
                 <article data-id="ciro">
-                    <div class="img"><img src="/assets/img/logos/ciro-icon2.png"></div>
+                    <div class="img"><img src="/dist/img/logos/ciro-icon2.png"></div>
                     <div class="description">
                         <p class="title">Ciro</p>
                         <p class="description">Better Agile project management</p>
                     </div>
                 </article>
                 <article data-id="devotify">
-                    <div class="img"><img src="/assets/img/logos/devotify.png"></div>
+                    <div class="img"><img src="/dist/img/logos/devotify.png"></div>
                     <div class="description">
                         <p class="title">Devotify</p>
                         <p class="description">Locally devoted</p>
                     </div>
                 </article>
                 <article data-id="roadsign">
-                    <div class="img"><img src="/assets/img/logos/roadsign.png"></div>
+                    <div class="img"><img src="/dist/img/logos/roadsign.png"></div>
                     <div class="description">
                         <p class="title">Road Sign</p>
                         <p class="description">Revolutionizing auto transportation</p>
                     </div>
                 </article>
                 <article data-id="nextemr">
-                    <div class="img"><img src="/assets/img/logos/nextemr.png"></div>
+                    <div class="img"><img src="/dist/img/logos/nextemr.png"></div>
                     <div class="description">
                         <p class="title">NextEMR</p>
                         <p class="description">User-friendly medical record software</p>
@@ -91,19 +94,13 @@
 
     <section id="about">
         <div class="belt">
-            <h3>A little about myself.</h3>
+            <h3>about.</h3>
             <img src="assets/img/profile.jpg">
             <p>With 15+ years of experience, I have helped start several successful startups and led development of award-winning, disruptive products.
             <p>I enjoy innovation while embracing practicality and iteration. I am research-driven and enjoy solving problems, optimizing processes, and making the most with constraints.</p>
             <p>My expertise is in software architecture, full-stack development, technical strategy, R&D, process design, team building, leadership, business analysis, and user experience. I have worked across medical, industrial, e-commerce, financial, and entertainment industries.</p>
             <p>When I'm not programming, I'm usually snowboarding, flying airplanes, rock climbing, hiking, or watching cooking shows.</p>
-        </div>
-    </section>
-
-    <section id="contact">
-        <div class="belt">
-            <h3>Let's connect.</h3>
-            <ul>
+            <ul class="connect">
                 <li>
                     <a href="mailto:mhweiner234@gmail.com" class="email"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 444 308"><path d="M424 316.1L424 15.3 15.3 15.3 15.3 316.1 424 316.1z"></path><path d="M19.1 19.2L195.4 197.8C208.5 211 232.3 210.8 245.1 197.9L421.3 20.6"></path><path d="M25.2 306.2L160.3 168.1"></path><path d="M412.6 304.6L281.2 170"></path></svg><span>Email</span></a>
                 </li>
@@ -114,7 +111,7 @@
                     <a href="http://github.com/mhweiner" target="_blank" class="github"><svg xmlns="http://www.w3.org/2000/svg" viewBox="3 0 68 67"><path d="M41.11,47.4c6.16-.73,12.71-3,12.71-13.61A10.68,10.68,0,0,0,51,26.4a10,10,0,0,0-.34-7.28s-2.24-.73-7.5,2.8a27.13,27.13,0,0,0-7-1,26.46,26.46,0,0,0-7,1c-5.32-3.53-7.56-2.8-7.56-2.8a10,10,0,0,0-.34,7.28,10.67,10.67,0,0,0-2.8,7.39C18.49,44.43,25,46.67,31.2,47.4a6.21,6.21,0,0,0-1.79,3.75c-1.57.67-5.66,2-8.12-2.3a5.71,5.71,0,0,0-4.2-2.8s-2.74-.06-.22,1.68c0,0,1.85.84,3.08,4,0,0,1.68,5.32,9.41,3.64v4.76c0,.73-.56,1.57-2,1.34a27.63,27.63,0,1,1,17.53,0c-1.4.28-2-.56-2-1.34V52.5c0-2.58-.84-4.26-1.85-5.1ZM67.77,35.31A31.61,31.61,0,1,0,36.19,66.89,31.63,31.63,0,0,0,67.77,35.31Z"/></svg><span>GitHub</span></a>
                 </li>
             </ul>
-         </div>
+        </div>
     </section>
 
     <script src="/dist/js/base.js"></script>
