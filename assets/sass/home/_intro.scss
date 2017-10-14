@@ -3,7 +3,7 @@
   min-height: 700px;
   max-height: 1200px;
   position: relative;
-  background: linear-gradient(to bottom, #673AB7, #b200ff);
+  background: linear-gradient(to bottom, #2c68b7, #b200ff);
   padding: 30px 0;
   box-sizing: border-box;
   overflow: hidden;
@@ -15,7 +15,7 @@
     z-index: 1;
   }
   a.logo{
-    color: #340d48;
+    color: #000;
     font-size: 27px;
     margin: 0;
     font-weight: 600;
@@ -52,14 +52,10 @@
   }
   h2{
     font-family: $font-header;
-    font-size: 43px;
-    line-height: 1.5;
+    font-size: 42px;
+    line-height: 1.3;
     margin: 0;
-    color: #d0d0d0;
-    span{
-      color: white;
-      border-bottom: 2px solid;
-    }
+    color: white;
   }
   a.more{
     display: block;
@@ -93,7 +89,7 @@
       display: block;
       height: 0;
       width: 100%;
-      background: #edf967;
+      background: #bd4dff;
       transition: height 0.3s ease-in-out;
       position: absolute;
       left: 0;
@@ -106,5 +102,20 @@
         height: 100%;
       }
     }
+  }
+  #gear1{
+    @include animation(rotation 50s linear infinite);
+    position: absolute;
+    bottom: -100px;
+    right: -165px;
+    width: 500px;
+  }
+  #gear2{
+    @include animation(rotation 25s linear infinite);
+    animation-direction: reverse;
+    position: absolute;
+    bottom: -95px;
+    right: 182px;
+    width: 250px;
   }
 }

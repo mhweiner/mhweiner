@@ -1,6 +1,6 @@
 #projects{
   position: relative;
-  padding: 70px 0 0 0;
+  padding: 70px 0;
   box-sizing: border-box;
   @include clearfix;
   @include media(0,600){
@@ -24,12 +24,12 @@
   }
   article{
     float: left;
-    width: 31.33333%;
-    margin: 0 1% 30px 1%;
+    width: 32.3333333333%;
+    margin: 0 0.5% 10px 0.5%;
     box-sizing: border-box;
     cursor: pointer;
     .img{
-      height: 180px;
+      height: 235px;
       position: relative;
       background: #eee;
       overflow: hidden;
@@ -61,6 +61,7 @@
       }
     }
     .description{
+      display: none;
       p.title{
         margin: 17px 0 0 0;
         line-height: 28px;

@@ -6,6 +6,8 @@
         "assets/js/fastclick.js",
         "assets/js/routematcher.js",
         "assets/js/router.js",
+        "assets/js/smoothScrollToElement.js",
+        "assets/js/intro.js",
         "assets/js/home.js"
       ]
     }
