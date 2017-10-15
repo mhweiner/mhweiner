@@ -1,22 +1,19 @@
 #popup .project {
 
   header{
-    background: linear-gradient(to bottom right, #1a435b, #6c286d);
-    position: relative;
-    padding: 25% 0 0 0;
-    height: 0;
-    img{
-      max-height: 44%;
-      max-width: 50%;
-      position: absolute;
-      left: 50%;
-      top: 50%;
-      width: auto;
-      @include transform(translate3d(-50%,-50%, 0));
+    background: #272727;
+    padding: 20px 30px;
+    h1{
+      color: white;
+      font-size: 50px;
+      margin: 0;
     }
-    @include media(0,800){
-      padding: 0;
-      height: 200px;
+    .button{
+      font-size: 18px;
+      line-height: 50px;
+      margin: 1px 0 0 25px;
+      vertical-align: top;
+      color: white;
     }
   }
 
@@ -28,28 +25,16 @@
 
   .text{
     background: white;
-    padding: 0 0 30px 0;
+    padding: 30px 0;
     @include clearfix;
-
-    h1{
-      font-size: 27px;
-      padding: 30px;
-      margin: 0;
-      line-height: 50px;
-      font-weight: 400;
-      color: #444444;
-      @include media(0,600){
-        line-height: 1.2em;
-      }
-    }
 
     h3{
       margin: 0 0 35px 0;
       line-height: 1;
-      font-weight: 400;
       font-size: 18px;
       color: #313131;
       position: relative;
+      text-transform: uppercase;
       &:after{
         content: '';
         width: 29px;
@@ -130,6 +115,10 @@
         }
       }
     }
+  }
+
+  .images{
+    background: white;
   }
 
   @import "popup.project.roadsign";

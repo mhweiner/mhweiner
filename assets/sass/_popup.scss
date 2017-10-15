@@ -4,7 +4,7 @@
   padding: 0;
   top: 0;
   bottom: 0;
-  background: #eee;
+  background: linear-gradient(to bottom, #2c68b7, #b200ff);
   z-index: 100;
   overflow: auto;
   backface-visibility: hidden;
@@ -25,7 +25,7 @@
 
   .content{
     display: none;
-    max-width: 1050px;
+    max-width: 1100px;
     margin: 0 auto;
   }
 
@@ -36,38 +36,38 @@
   position: fixed;
   z-index: 200;
   backface-visibility: hidden;
-  max-width: 1050px;
+  max-width: 1100px;
   margin: 0 auto;
-  height: 60px;
   left: 0;
   right: 0;
   top: 0;
   @include translate3d(0, 0, 0);
 
   i{
-    position: absolute;
+    position: fixed;
     display: block;
     width: 60px;
     height: 60px;
     cursor: pointer;
     padding: 0;
     box-sizing: border-box;
-    background: #da465e;
     transition: background 0.15s ease-in-out;
-    right: 0;
-    top: 0;
+    right: 14px;
+    top: 19px;
+    border-radius: 60px;
+    background: rgba(0,0,0,0.4);
     @include animation(grow 0.2s);
     @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.90));
 
     &:before, &:after{
       content: '';
       display: block;
-      width: 2px;
-      height: 36px;
+      width: 3px;
+      height: 40px;
       position: absolute;
       background: white;
-      left: 30px;
-      top: 11px;
+      left: 29px;
+      top: 10px;
       @include rotate(45deg);
     }
 
@@ -76,7 +76,7 @@
     }
 
     &:hover{
-      background: #9a3e4d;
+      background: rgba(0,0,0,0.6);
     }
   }
 }
