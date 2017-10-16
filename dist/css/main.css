@@ -373,6 +373,30 @@ html.home {
       html.home section .belt {
         padding: 0 15px; } }
 
+@-webkit-keyframes rotateIn {
+  0% {
+    -webkit-transform: rotate(15deg);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: rotate(15deg);
+    /* IE 10, Fx 16+, Op 12.1+ */ }
+  100% {
+    -webkit-transform: rotate(0);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: rotate(0);
+    /* IE 10, Fx 16+, Op 12.1+ */ } }
+
+@keyframes rotateIn {
+  0% {
+    -webkit-transform: rotate(15deg);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: rotate(15deg);
+    /* IE 10, Fx 16+, Op 12.1+ */ }
+  100% {
+    -webkit-transform: rotate(0);
+    /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
+    transform: rotate(0);
+    /* IE 10, Fx 16+, Op 12.1+ */ } }
+
 nav {
   display: none;
   margin: 0;
@@ -397,7 +421,13 @@ nav {
     margin: 100px auto 0 auto;
     padding: 0;
     width: 100%;
-    max-width: 1100px; }
+    max-width: 1100px;
+    -webkit-animation: rotateIn 0.2s;
+    animation: rotateIn 0.2s;
+    -webkit-timing-function: ease-in-out;
+    animation-timing-function: ease-in-out;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards; }
     nav ul li {
       display: block;
       margin: 0;
@@ -813,17 +843,19 @@ body > header {
 
 #popup .project header {
   background: #272727;
-  padding: 20px 30px; }
+  padding: 25px 30px; }
   #popup .project header h1 {
     color: white;
-    font-size: 50px;
+    font-size: 44px;
     margin: 0; }
   #popup .project header .button {
     font-size: 18px;
-    line-height: 50px;
+    line-height: 45px;
     margin: 1px 0 0 25px;
     vertical-align: top;
     color: white; }
+    #popup .project header .button:before {
+      background: #863be4; }
 
 #popup .project > img, #popup .project .img-container > img {
   width: 100%;
@@ -979,7 +1011,7 @@ body > header {
 
 #popup .project#project-ciro .img-container {
   padding: 20px 0 0 0;
-  background: linear-gradient(to bottom right, #c27def, #7835a2); }
+  background: #b7dade; }
   #popup .project#project-ciro .img-container:nth-child(odd) {
     background: white; }
   #popup .project#project-ciro .img-container img {
