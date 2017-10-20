@@ -375,9 +375,9 @@ html.home {
 
 @-webkit-keyframes slin {
   0% {
-    -webkit-transform: translate3d(0, 100px, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-    transform: translate3d(0, 100px, 0);
+    transform: translate3d(100%, 0, 0);
     /* IE 10, Fx 16+, Op 12.1+ */ }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -387,9 +387,9 @@ html.home {
 
 @keyframes slin {
   0% {
-    -webkit-transform: translate3d(0, 100px, 0);
+    -webkit-transform: translate3d(100%, 0, 0);
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
-    transform: translate3d(0, 100px, 0);
+    transform: translate3d(100%, 0, 0);
     /* IE 10, Fx 16+, Op 12.1+ */ }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
@@ -407,37 +407,35 @@ nav {
   right: 0;
   z-index: 10;
   box-sizing: border-box;
-  left: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, #2c68b7, #b200ff); }
+  background: #333;
+  width: 100%;
+  max-width: 292px;
+  -webkit-animation: slin 0.3s;
+  animation: slin 0.3s;
+  -webkit-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
   nav ul {
     display: block;
-    margin: 100px auto 0 auto;
-    padding: 18px;
-    width: 100%;
-    max-width: 1100px;
-    box-sizing: border-box; }
+    margin: 30px 0 0 0; }
     nav ul li {
       display: block;
       margin: 0;
-      padding: 0;
-      text-align: right; }
+      padding: 0; }
   nav a {
     display: inline-block;
     position: relative;
     margin: 0;
     padding: 0;
-    line-height: 1.1em;
+    line-height: 1.2em;
     outline: none;
     color: white;
     font-family: "Roboto Condensed", sans-serif;
     font-weight: 600;
-    font-size: 60px;
-    text-transform: uppercase;
-    -webkit-animation: fadeIn 0.3s;
-    animation: fadeIn 0.3s;
-    -webkit-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    animation-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    font-size: 45px;
+    text-transform: uppercase; }
+    nav a:hover {
+      color: #b751fd; }
 
 body > header {
   margin: 0 auto;
@@ -955,8 +953,8 @@ body > header {
   height: auto; }
 
 #popup .project#project-marvel .text {
-  margin: -30px 0;
-  padding: 0; }
+  margin: -30px 0 0 0;
+  padding: 0 0 30px 0; }
 
 #popup .project#project-marvel img.featured {
   width: 100%;
