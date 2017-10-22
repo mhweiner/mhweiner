@@ -28,6 +28,7 @@
     margin: 0 0.5% 10px 0.5%;
     box-sizing: border-box;
     cursor: pointer;
+    position: relative;
     .img{
       height: 235px;
       position: relative;
@@ -54,35 +55,26 @@
         background: rgba(103, 58, 183, 0.76);
         z-index: 1;
       }
-      &:after{
-        background: url(../img/mag.png) center center no-repeat;
-        background-size: 75px 75px;
-        z-index: 2;
-      }
     }
     .description{
-      display: none;
+      opacity: 0;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1;
+      transition: opacity 0.3s ease-in-out;
+      padding: 20px;
       p.title{
-        margin: 17px 0 0 0;
-        line-height: 28px;
-        height: 28px;
-        font-size: 18px;
-        color: #333;
-        transition: color 0.15s ease-in-out;
-        @include ellipsify;
+        margin: 0 0 10px 0;
+        color: white;
+        font-weight: 700;
+        font-family: $font-header;
+        font-size: 30px;
       }
-      p.description{
+      p.subtitle{
         margin: 0;
-        line-height: 30px;
-        height: 30px;
-        font-weight: 400;
-        font-size: 14px;
-        color: #777;
-        transition: color 0.15s ease-in-out;
-        @include ellipsify;
-      }
-      @include media(0,600){
-        display: none;
+        color: white;
+        font-size: 20px;
       }
     }
     @include media(601,1000){
@@ -111,6 +103,15 @@
         background: #ef0000;
       }
     }
+    &[data-id="shutterstock"]{
+      .img{
+        background: url('/dist/img/shutterstock-bg.jpg') center center no-repeat;
+        background-size: cover;
+        img{
+          max-width: 75%;
+        }
+      }
+    }
     &[data-id="advizr"]{
       .img{
         background: #3c3c3c;
@@ -126,7 +127,7 @@
     }
     &[data-id="devotify"]{
       .img{
-        background: linear-gradient(to bottom right, #1a435b, #6c286d);
+        background: #3e9391;
         img{
           max-height: 50%;
         }
@@ -134,7 +135,7 @@
     }
     &[data-id="roadsign"]{
       .img{
-        background: linear-gradient(to bottom right, #ffe7d7, #97aebc);
+        background: #88c15f;
         img{
           max-width: 73%;
           max-height: 68%;
@@ -149,16 +150,14 @@
     @include media(0,600){
       margin: 0;
     }
-    html.not-iOS &{
-      &:hover{
-        p.title{
-          color: $color-base;
+    &:hover{
+      .img{
+        &:before,&:after{
+          opacity: 1;
         }
-        .img{
-          &:before,&:after{
-            opacity: 1;
-          }
-        }
+      }
+      .description{
+        opacity: 1;
       }
     }
   }
