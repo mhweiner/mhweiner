@@ -28,6 +28,17 @@ html.home{
         padding: 0 15px;
       }
     }
+    h3{
+      font-size: 33px;
+      margin: 0 0 25px 0;
+      color: #000000;
+      text-transform: uppercase;
+      font-family: $font-header;
+      font-weight: 600;
+      @include media(0,600){
+        display: none;
+      }
+    }
   }
 }
 

@@ -1,57 +1,62 @@
 #intro{
   height: 100vh;
-  min-height: 700px;
+  min-height: 675px;
   max-height: 1200px;
   position: relative;
   background: linear-gradient(to bottom, #2c68b7, #b200ff);
-  padding: 30px;
+  padding: 15px;
   box-sizing: border-box;
   overflow: hidden;
   @include clearfix;
-  @include media(0, 750){
-    padding: 15px;
-  }
   a.logo{
     color: #000;
-    font-size: 27px;
     margin: 0;
     font-weight: 600;
     cursor: pointer;
     float: left;
-    line-height: 30px;
     text-transform: uppercase;
     font-family: $font-header;
-    @include media(0,750){
-      width: 100px;
-      line-height: 0.8em;
-      font-size: 37px;
-    }
-    img{
-      display: inline-block;
-      margin: -4px 10px 0 0;
-      vertical-align: middle;
-      height: 50px;
+    width: 100px;
+    line-height: 0.8em;
+    font-size: 30px;
+    @include media(600){
+      width: auto;
+      margin: 22px 0 0 20px;
+      font-size: 26px;
     }
   }
   .text{
     position: absolute;
-    top: 59%;
+    top: 49%;
     left: 0;
     right: 0;
     color: white;
     @include translate(0, -50%);
+    @include media(0,500){
+      top: 54%;
+    }
   }
   h2{
     font-family: $font-header;
-    font-size: 42px;
+    font-size: 40px;
     font-weight: 400;
     line-height: 1.3;
     margin: 0 auto;
     color: white;
-    max-width: 930px;
+    max-width: 897px;
     padding: 0;
     display: block;
     text-align: center;
+    @include media(0,1100){
+      font-size: 34px;
+      max-width: 762px;
+      padding: 0 30px;
+    }
+    @include media(0,500){
+      padding: 0 15px;
+      font-size: 29px;
+      line-height: 1.3em;
+    }
   }
   a[data-jump="projects"]{
     font-size: 20px;
@@ -73,13 +78,10 @@
     }
   }
   .gears{
-    position: absolute;
-    z-index: 10;
     width: 179px;
     height: 168px;
-    left: 50%;
-    margin: -229px 0 0 -89px;
-    top: 48%;
+    position: relative;
+    margin: 0 auto 30px auto;
   }
   #gear1{
     @include animation(rotation 50s linear infinite);

@@ -3,14 +3,6 @@
   padding: 70px 0;
   box-sizing: border-box;
   @include clearfix;
-  h3{
-    font-size: 33px;
-    margin: 0 0 25px 0;
-    color: #000000;
-    text-transform: uppercase;
-    font-family: $font-header;
-    font-weight: 700;
-  }
   .belt{
     img{
       width: 150px;

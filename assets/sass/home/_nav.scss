@@ -21,8 +21,7 @@ nav{
   box-sizing: border-box;
   bottom: 0;
   background: #333;
-  width: 100%;
-  max-width: 292px;
+  width: 292px;
   @include animation(slin 0.3s);
   @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.94));
   ul{
@@ -50,6 +49,12 @@ nav{
       color: #b751fd;
     }
   }
+  @include media(0,600) {
+    width: 240px;
+    a{
+      font-size: 40px;
+    }
+  }
 }
 
 body > header{
@@ -65,7 +70,7 @@ body > header{
 
   display: block;
   top: 15px;
-  right: 10px;
+  right: 15px;
   cursor: pointer;
   font-size: 34px;
   z-index: 100;
@@ -76,8 +81,9 @@ body > header{
   outline: none;
 
   @include media(0,600){
-    right: 10px;
-    top: 10px;
+    &.active{
+      background: #bd4dff;
+    }
   }
 
   span, span:before, span:after{
@@ -119,6 +125,9 @@ body > header{
         width: 100%;
         right: auto;
       }
+    }
+    @include media(0,600){
+      right: 257px;
     }
   }
 }
