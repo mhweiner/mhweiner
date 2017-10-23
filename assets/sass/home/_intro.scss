@@ -36,7 +36,7 @@
   }
   .text{
     position: absolute;
-    top: 49%;
+    top: 59%;
     left: 0;
     right: 0;
     color: white;
@@ -49,9 +49,10 @@
     line-height: 1.3;
     margin: 0 auto;
     color: white;
-    max-width: 1100px;
+    max-width: 930px;
     padding: 0;
     display: block;
+    text-align: center;
   }
   a[data-jump="projects"]{
     font-size: 20px;
@@ -72,19 +73,29 @@
       }
     }
   }
+  .gears{
+    position: absolute;
+    z-index: 10;
+    width: 179px;
+    height: 168px;
+    left: 50%;
+    margin: -229px 0 0 -89px;
+    top: 48%;
+  }
   #gear1{
     @include animation(rotation 50s linear infinite);
     position: absolute;
-    bottom: -100px;
-    right: -165px;
-    width: 500px;
+    top: 0;
+    right: 0;
+    width: 150px;
+    z-index: 1;
   }
   #gear2{
     @include animation(rotation 25s linear infinite);
     animation-direction: reverse;
     position: absolute;
-    bottom: -95px;
-    right: 182px;
-    width: 250px;
+    bottom: 0;
+    left: 0;
+    width: 75px;
   }
 }
