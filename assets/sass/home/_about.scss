@@ -122,12 +122,11 @@
             }
           }
         }
-        &.quora{
+        &.resume{
           svg{
-            stroke: none;
-            fill: #444;
+            fill: #444444;
+            width: 45px;
             height: 68px;
-            width: 37px;
           }
           &:hover{
             svg{

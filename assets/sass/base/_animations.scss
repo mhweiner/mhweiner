@@ -20,6 +20,16 @@
   }
 }
 
+@include keyframes(slideUp){
+  0% {
+    opacity: 0.1;
+    @include translateX(50px);
+  }
+  100%{
+    opacity: 1;
+    @include translateX(0);
+  }
+}
 
 @include keyframes(fadeIn){
   0% {

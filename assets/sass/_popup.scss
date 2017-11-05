@@ -4,7 +4,7 @@
   padding: 0;
   top: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, #2c68b7, #b200ff);
+  background: #ddd;
   z-index: 100;
   overflow: auto;
   backface-visibility: hidden;
@@ -16,7 +16,7 @@
   width: 100%;
 
   &.loaded{
-    @include animation(growALittle 0.3s);
+    @include animation(slideUp 0.3s);
     @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.90));
     .content{
       display: block;
