@@ -22,6 +22,7 @@ nav{
   bottom: 0;
   background: #333;
   width: 292px;
+  @include translate3d(0,0,0);
   @include animation(slin 0.3s);
   @include animation-easing(cubic-bezier(0.25, 0.46, 0.45, 0.94));
   ul{

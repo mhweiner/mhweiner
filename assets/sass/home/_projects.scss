@@ -29,34 +29,8 @@
         position: absolute;
         left: 50%;
         top: 50%;
+        z-index: 20;
         @include transform(translate3d(-50%,-50%, 0));
-      }
-      &:before, &:after{
-        content: '';
-        display: block;
-        position: absolute;
-        opacity: 0;
-        transition: opacity 0.3s ease-in-out;
-        width: 100%;
-        height: 100%;
-      }
-      &:before{
-        background: rgba(103, 58, 183, 0.9);
-        z-index: 1;
-      }
-      &:after{
-        z-index: 2;
-        font-weight: 700;
-        font-family: $font-header;
-        color: #36ccfd;
-        left: 20px;
-        top: 20px;
-        width: 44px;
-        height: 44px;
-        background-image:
-        url('data:image/svg+xml;utf8,<svg version="1.1" viewBox="-1 -1 52.966 52.966" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
-<path stroke="#000" stroke-width="1" d="m51.704 51.273l-14.859-15.453c3.79-3.801 6.138-9.041 6.138-14.82 0-11.58-9.42-21-21-21s-21 9.42-21 21 9.42 21 21 21c5.083 0 9.748-1.817 13.384-4.832l14.895 15.491c0.196 0.205 0.458 0.307 0.721 0.307 0.25 0 0.499-0.093 0.693-0.279 0.398-0.383 0.41-1.016 0.028-1.414zm-29.721-11.273c-10.477 0-19-8.523-19-19s8.523-19 19-19 19 8.523 19 19-8.524 19-19 19z"/>
-</svg>');
       }
     }
     .description{
@@ -78,12 +52,14 @@
           margin: 0 5px 5px 0;
           color: white;
           background: black;
+          transition: background 0.15s ease-in-out;
         }
       }
       p.subtitle{
         margin: 0;
         color: #4e4e4e;
         font-size: 16px;
+        transition: color 0.15s ease-in-out;
       }
     }
     @include media(601,1000){
@@ -160,13 +136,11 @@
       margin: 0;
     }
     &:hover{
-      .img{
-        &:before,&:after{
-          opacity: 1;
-        }
+      p.tags span{
+        background: rgb(103, 58, 183);
       }
-      .description{
-        opacity: 1;
+      p.subtitle{
+        color: black;
       }
     }
   }

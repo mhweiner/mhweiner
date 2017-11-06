@@ -18,6 +18,11 @@
 }
 
 @mixin animation-easing($function){
-  -webkit-timing-function: $function;
+  -webkit-animation-timing-function: $function;
   animation-timing-function: $function;
+}
+
+@mixin animation-direction($direction){
+  -webkit-animation-direction: $direction;
+  animation-direction: $direction;
 }

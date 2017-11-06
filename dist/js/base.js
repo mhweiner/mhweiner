@@ -1151,7 +1151,9 @@ function Intro($scope) {
 		router.setRoutes(routes);
 
 		//route!
-		router.route();
+		if(!router.route()){
+			window.location.hash = "!";
+		}
 	}
 
 	function _featureDetection(){
@@ -1213,11 +1215,6 @@ function Intro($scope) {
 			router.go2('project', {id: $(this).data('id')});
 		});
 
-		//close button
-		$body.on('click', '.close-popup i', function(){
-			_close();
-		});
-
 		//page jumping
 		$body.on('click', '[data-jump]', function(e){
 			e.preventDefault();
@@ -1233,21 +1230,15 @@ function Intro($scope) {
 	}
 
 	function _open(id){
-		//prevent page scroll
-		$body.css('overflow', 'hidden');
 		_showProgressBar();
 		_load(id, function(content){
 			$popup.addClass(id);
-			$popup.find('.content').html(content).css('display','block');
+			$popup.find('.content').html(content);
 			var num_images = $popup.find('img').length,
 				num_images_loaded = 0;
 			$popup.imagesLoaded().always(function(){
 				_hideProgressBar();
-				$popup.addClass('loaded');
-				$body.addClass('popup-open'); //prevent page scrolling
-				setTimeout(function(){
-					$body.find('.close-popup').css('display','block'); //show close button
-				}, 200);
+				$body.addClass('popup-open');
 			}).progress(function(instance, image){
 				num_images_loaded++;
 				var percentage = (num_images_loaded / num_images) * 100;
@@ -1263,15 +1254,18 @@ function Intro($scope) {
 	 * @private
 	 */
 	function _close(doNotUpdateHash){
-		//re-enable page scroll
-		$body.css('overflow', 'auto');
-		$body.find('.close-popup').css('display','');
-		$popup.find('.content').html('').css('display','');
-		$popup.get(0).scrollTop = 0;
-		$body.removeClass('popup-open blur');
-		if(!doNotUpdateHash){
-			window.location.hash = '!';
-		}
+		//do animation and then close
+		console.log('closing...');
+    $popup.addClass('slideOut');
+		setTimeout(function(){
+			$popup.removeClass('slideOut');
+      $popup.find('.content').html('');
+      $popup.get(0).scrollTop = 0;
+      $body.removeClass('popup-open');
+      if(!doNotUpdateHash){
+        window.location.hash = '!';
+      }
+		}, 305);
 	}
 
 	function _showProgressBar(){
