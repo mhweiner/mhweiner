@@ -45,29 +45,14 @@ a.button{
   line-height: 55px;
   padding: 0 20px;
   color: black;
-  transition: border-color 0.15s ease-in-out, color 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out, color 0.15s ease-in-out;
   vertical-align: top;
   border: 2px solid;
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
   z-index: 1;
-  &:before{
-    content: '';
-    display: block;
-    height: 0;
-    width: 100%;
-    background: #bd4dff;
-    transition: height 0.3s ease-in-out;
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-  }
   &:hover{
-    &:before{
-      height: 100%;
-    }
+    background: #bd4dff;
   }
 }

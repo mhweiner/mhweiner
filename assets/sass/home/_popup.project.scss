@@ -22,6 +22,19 @@
         height: 19px;
         margin: 0 0 0 10px;
       }
+      &:hover{
+        background: #bd4dff;
+      }
+    }
+
+    &.above{
+      position: relative;
+      width: 100%;
+      box-sizing: border-box;
+      a.button{
+        margin: 0;
+        float: right;
+      }
     }
   }
 
