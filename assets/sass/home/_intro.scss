@@ -62,26 +62,30 @@
     position: absolute;
     bottom: 40px;
     font-size: 23px;
-    line-height: 55px;
-    padding: 0 20px;
+    line-height: 60px;
+    padding: 0;
     margin: 0;
-    color: black;
     left: 50%;
+    border-radius: 60px;
+    width: 60px;
+    background: rgba(0,0,0,0.4);
+    border: none;
     @include translateX(-50%);
+    transition: background 0.3s ease-in-out;
     svg{
-      margin: 15px 10px 0 0;
       font-size: 24px;
       display: inline-block;
       vertical-align: top;
-      width: 14px;
-      height: 23px;
+      width: 29px;
+      height: 30px;
+      margin: 15px 0 0 15px;
       g{
-        stroke: black;
-        stroke-width: 5px;
+        stroke: white;
+        stroke-width: 3px;
       }
     }
-    &:before{
-      background: #e685df;
+    &:hover{
+      background: rgba(0,0,0,1);
     }
   }
   .gears{

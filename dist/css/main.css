@@ -634,27 +634,31 @@ body > header {
     position: absolute;
     bottom: 40px;
     font-size: 23px;
-    line-height: 55px;
-    padding: 0 20px;
+    line-height: 60px;
+    padding: 0;
     margin: 0;
-    color: black;
     left: 50%;
+    border-radius: 60px;
+    width: 60px;
+    background: rgba(0, 0, 0, 0.4);
+    border: none;
     -webkit-transform: translateX(-50%);
     /* Ch <36, Saf 5.1+, iOS, An =<4.4.4 */
     transform: translateX(-50%);
-    /* IE 10, Fx 16+, Op 12.1+ */ }
+    /* IE 10, Fx 16+, Op 12.1+ */
+    transition: background 0.3s ease-in-out; }
     #intro a[data-jump="projects"] svg {
-      margin: 15px 10px 0 0;
       font-size: 24px;
       display: inline-block;
       vertical-align: top;
-      width: 14px;
-      height: 23px; }
+      width: 29px;
+      height: 30px;
+      margin: 15px 0 0 15px; }
       #intro a[data-jump="projects"] svg g {
-        stroke: black;
-        stroke-width: 5px; }
-    #intro a[data-jump="projects"]:before {
-      background: #e685df; }
+        stroke: white;
+        stroke-width: 3px; }
+    #intro a[data-jump="projects"]:hover {
+      background: black; }
   #intro .gears {
     width: 179px;
     height: 168px;
