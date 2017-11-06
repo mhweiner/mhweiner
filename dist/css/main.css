@@ -1098,14 +1098,19 @@ body > header {
       margin: 0 0 15px 0; } }
 
 #popup .project#project-advizr .text {
-  margin: 0;
-  padding: 30px 0; }
+  margin: 40px 0 0 0;
+  padding: 0; }
 
-#popup .project#project-advizr > img {
-  max-width: 900px;
+#popup .project#project-advizr .images {
+  background: #dddddd;
+  margin: 0;
+  padding: 20px 0; }
+
+#popup .project#project-advizr .images img {
+  max-width: 1000px;
   margin: 30px auto 30px auto;
-  border-radius: 5px;
-  display: block; }
+  display: block;
+  border: 1px solid #aaa; }
 
 #popup .project#project-ciro .img-container {
   padding: 20px 0 0 0;

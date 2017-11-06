@@ -10,13 +10,18 @@
     }
   }
   .text{
-    margin: 0;
-    padding: 30px 0;
+    margin: 40px 0 0 0;
+    padding: 0;
   }
-  > img{
-    max-width: 900px;
+  .images{
+    background: #dddddd;
+    margin: 0;
+    padding: 20px 0;
+  }
+  .images img{
+    max-width: 1000px;
     margin: 30px auto 30px auto;
-    border-radius: 5px;
     display: block;
+    border: 1px solid #aaa;
   }
 }
