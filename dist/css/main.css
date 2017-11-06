@@ -924,35 +924,33 @@ body > header {
         fill: #673AB7; }
 
 #popup .project h1 {
-  position: absolute;
   background: black;
   color: white;
   margin: 0;
   padding: 0 0 0 10px;
   font-size: 27px;
-  line-height: 50px; }
+  line-height: 50px;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box; }
   #popup .project h1 a.button {
     display: inline-block;
     vertical-align: top;
     border: none;
-    background: white;
-    margin: 0 0 0 15px;
     line-height: 50px;
-    font-size: 17px; }
+    font-size: 17px;
+    color: white;
+    background: none;
+    margin: 0;
+    float: right; }
     #popup .project h1 a.button svg {
+      fill: white;
       display: inline-block;
       vertical-align: middle;
       height: 19px;
       margin: 0 0 0 10px; }
     #popup .project h1 a.button:hover {
       background: #bd4dff; }
-  #popup .project h1.above {
-    position: relative;
-    width: 100%;
-    box-sizing: border-box; }
-    #popup .project h1.above a.button {
-      margin: 0;
-      float: right; }
 
 #popup .project .images img {
   width: 100%;
@@ -1107,10 +1105,12 @@ body > header {
   padding: 20px 0; }
 
 #popup .project#project-advizr .images img {
-  max-width: 1000px;
+  max-width: 900px;
   margin: 30px auto 30px auto;
   display: block;
   border: 1px solid #aaa; }
+  #popup .project#project-advizr .images img.no-border {
+    border: none; }
 
 #popup .project#project-ciro .img-container {
   padding: 20px 0 0 0;

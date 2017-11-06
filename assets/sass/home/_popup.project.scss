@@ -1,22 +1,27 @@
 #popup .project {
 
   h1{
-    position: absolute;
     background: black;
     color: white;
     margin: 0;
     padding: 0 0 0 10px;
     font-size: 27px;
     line-height: 50px;
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
     a.button{
       display: inline-block;
       vertical-align: top;
       border: none;
-      background: white;
-      margin: 0 0 0 15px;
       line-height: 50px;
       font-size: 17px;
+      color: white;
+      background: none;
+      margin: 0;
+      float: right;
       svg{
+        fill: white;
         display: inline-block;
         vertical-align: middle;
         height: 19px;
@@ -24,16 +29,6 @@
       }
       &:hover{
         background: #bd4dff;
-      }
-    }
-
-    &.above{
-      position: relative;
-      width: 100%;
-      box-sizing: border-box;
-      a.button{
-        margin: 0;
-        float: right;
       }
     }
   }
