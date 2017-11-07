@@ -1,9 +1,14 @@
 #about{
 
+  position: relative;
+  padding: 70px 0;
+  box-sizing: border-box;
+
+  @include media(0,600){
+    padding: 20px 0;
+  }
+
   .belt{
-    padding: 70px 30px;
-    position: relative;
-    box-sizing: border-box;
     img{
       width: 34%;
       border-radius: 250px;
@@ -20,26 +25,17 @@
         margin: 0;
       }
     }
-    @include media(0,1000){
-      padding: 45px 15px 0 15px;
-      &:before{
-        display: none;
-      }
+    @include media(0,600){
       p{
-        width: auto;
+        width: 100%;
       }
       img{
-        width: 50%;
-        margin: 0 0 20px 20px;
-        max-width: 300px;
-      }
-      h3{
-        margin: 0 0 20px 0;
-      }
-    }
-    @include media(0,500){
-      img{
+        width: 100%;
+        max-width: 400px;
+        border-radius: 400px;
+        display: block;
         float: none;
+        margin: 20px auto;
       }
     }
   }
@@ -62,8 +58,8 @@
         outline: none;
         text-align: center;
         span{
-          font-size: 16px;
-          color: #656565;
+          font-size: 14px;
+          color: #8c8c8c;
           transition: color 0.15s ease-in-out;
           display: block;
           line-height: 26px;
@@ -84,8 +80,8 @@
             stroke: #444444;
             stroke-width: 16px;
             fill: none;
-            width: 54px;
-            height: 68px;
+            width: 44px;
+            height: 55px;
           }
           &:hover{
             svg{
@@ -98,8 +94,8 @@
             stroke: #444444;
             stroke-width: 20px;
             fill: none;
-            width: 45px;
-            height: 68px;
+            width: 41px;
+            height: 54px;
           }
           &:hover{
             svg{
@@ -111,7 +107,7 @@
           svg{
             stroke: none;
             fill: #444;
-            height: 68px;
+            height: 55px;
             width: 46px;
           }
           &:hover{
@@ -123,8 +119,8 @@
         &.resume{
           svg{
             fill: #444444;
-            width: 45px;
-            height: 68px;
+            width: 39px;
+            height: 55px;
           }
           &:hover{
             svg{

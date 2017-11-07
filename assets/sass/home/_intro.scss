@@ -1,6 +1,6 @@
 #intro{
   height: 100vh;
-  min-height: 675px;
+  min-height: 725px;
   max-height: 1200px;
   position: relative;
   background: linear-gradient(to bottom, #2371d8, #e461d4);
@@ -33,7 +33,7 @@
     color: white;
     @include translate(0, -50%);
     @include media(0,500){
-      top: 54%;
+      top: 50%;
     }
   }
   h2{
@@ -47,15 +47,15 @@
     padding: 0;
     display: block;
     text-align: center;
-    @include media(0,1100){
+    @include media(601,1100){
       font-size: 34px;
       max-width: 762px;
       padding: 0 30px;
     }
-    @include media(0,500){
+    @include media(0,600){
       padding: 0 15px;
-      font-size: 29px;
-      line-height: 1.3em;
+      font-size: 28px;
+      line-height: 1.2em;
     }
   }
   a[data-jump="projects"]{

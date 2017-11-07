@@ -73,8 +73,11 @@
       }
     }
     @include media(0,600){
-      width: 100%;
-      margin: 0 0 30px 0;
+      margin: 0;
+      padding: 5px 5px 88px 5px;
+      box-sizing: border-box;
+      width: auto;
+      display: block;
       .img{
         height: 230px;
         img{
