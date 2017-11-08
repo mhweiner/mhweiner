@@ -166,6 +166,32 @@
     background: white;
   }
 
+  footer{
+    background: #bdbdbd;
+    padding: 20px;
+    text-align: center;
+    a{
+      background: white;
+      border: none;
+      height: 55px;
+      line-height: 55px;
+      display: inline-block;
+      svg{
+        stroke: black;
+        transform: rotateZ(-90deg);
+        stroke-width: 4px;
+        width: 14px;
+        height: 47px;
+        display: inline-block;
+        vertical-align: top;
+        margin: 3px 0 0 10px;
+      }
+      &:hover{
+        background: #bd4dff;
+      }
+    }
+  }
+
   @import "popup.project.roadsign";
   @import "popup.project.marvel";
   @import "popup.project.advizr";
