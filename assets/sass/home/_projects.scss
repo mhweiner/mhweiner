@@ -29,7 +29,7 @@
         position: absolute;
         left: 50%;
         top: 50%;
-        z-index: 20;
+        z-index: 1;
         @include transform(translate3d(-50%,-50%, 0));
       }
     }
@@ -38,7 +38,7 @@
       padding: 0 15px;
       margin: -10px 0 0 0;
       height: 115px;
-      z-index: 10;
+      z-index: 2;
       p.tags{
         margin: 0 0 10px 0;
         font-weight: 700;

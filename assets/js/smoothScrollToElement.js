@@ -3,6 +3,8 @@ window.smoothScrollToElement = (function(){
 
   'use strict';
 
+  var default_speed = 1800;
+
   window.requestAnimFrame = (function(){
     return  window.requestAnimationFrame   ||
       window.webkitRequestAnimationFrame ||
@@ -17,13 +19,17 @@ window.smoothScrollToElement = (function(){
     // speed: time in pixels per second
     // easing: easing equation to use
 
+    console.log('scrolling at' + speed);
+    console.log(scrollTargetY);
+
     var scrollY = window.scrollY || document.documentElement.scrollTop,
       currentTime = 0;
-    scrollTargetY = scrollTargetY || 0,
-      speed = speed || 2000;
+      scrollTargetY = scrollTargetY || 0;
 
     // min time .1, max time 20 seconds
     var time = Math.max(.1, Math.min(Math.abs(scrollY - scrollTargetY) / speed, 20));
+
+    console.log(time);
 
     // easing equation
     function easingEquation(pos) {
@@ -32,7 +38,7 @@ window.smoothScrollToElement = (function(){
 
     // add animation loop
     function tick() {
-      currentTime += 1 / 60;
+      currentTime += (1 / 60);
 
       var p = currentTime / time;
       var t = easingEquation(p);
@@ -41,7 +47,6 @@ window.smoothScrollToElement = (function(){
         requestAnimFrame(tick);
         window.scrollTo(0, scrollY + ((scrollTargetY - scrollY) * t));
       } else {
-        console.log('scroll done');
         window.scrollTo(0, scrollTargetY);
       }
     }
@@ -52,7 +57,7 @@ window.smoothScrollToElement = (function(){
 
   return function(id){
     var $elem = $('#' + id);
-    scrollToY($elem.offset().top, 850);
+    scrollToY($elem.offset().top, default_speed);
   };
 
 })();

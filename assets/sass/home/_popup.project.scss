@@ -4,22 +4,23 @@
     background: black;
     color: white;
     margin: 0;
-    padding: 0 0 0 10px;
+    padding: 10px 160px 11px 10px;
     font-size: 27px;
-    line-height: 50px;
+    line-height: 1.1;
     position: relative;
     width: 100%;
     box-sizing: border-box;
     a.button{
-      display: inline-block;
-      vertical-align: top;
+      display: block;
       border: none;
       line-height: 50px;
       font-size: 17px;
       color: white;
       background: none;
       margin: 0;
-      float: right;
+      position: absolute;
+      top: 0;
+      right: 0;
       svg{
         fill: white;
         display: inline-block;
@@ -46,6 +47,31 @@
     padding: 30px 0;
     position: relative;
     @include clearfix;
+
+    h2{
+      margin: 0 0 25px 0;
+      color: black;
+    }
+
+    i.icon{
+      background: #ac53d6;
+      height: 40px;
+      width: 40px;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 10px 0 0;
+      text-align: center;
+      line-height: 40px;
+      color: white;
+      border-radius: 40px;
+      font-size: 24px;
+      &.blue{
+        background: #5252ec;
+      }
+      &.green{
+        background: #32ba6b;
+      }
+    }
 
     h3{
       margin: 0 0 35px 0;
