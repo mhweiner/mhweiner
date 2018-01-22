@@ -2,26 +2,25 @@
   height: 100vh;
   min-height: 725px;
   position: relative;
-  background: linear-gradient(to bottom, #2371d8, #e461d4);
+  background: linear-gradient(26deg, #0067ff, #39c2f7);
   padding: 15px;
   box-sizing: border-box;
   overflow: hidden;
   @include clearfix;
   a.logo{
     color: #000;
-    margin: 0;
     font-weight: 600;
     cursor: pointer;
     float: left;
     text-transform: uppercase;
     font-family: $font-header;
-    width: 100px;
     line-height: 0.8em;
-    font-size: 30px;
-    @include media(600){
-      width: auto;
-      margin: 22px 0 0 20px;
-      font-size: 26px;
+    font-size: 42px;
+    width: 106px;
+    margin: 22px 0 0 20px;
+    transition: all 0.2s ease-in-out;
+    &:hover{
+      @include rotateZ(5deg);
     }
   }
   .text{
@@ -37,15 +36,24 @@
   }
   h2{
     font-family: $font-header;
-    font-size: 34px;
+    font-size: 35px;
     font-weight: 400;
-    line-height: 1.3;
+    line-height: 1.5;
     margin: 0 auto;
     color: white;
     max-width: 897px;
     padding: 0;
     display: block;
     text-align: center;
+    strong {
+      display: inline-block;
+      vertical-align: top;
+      background: white;
+      color: #1996fc;
+      line-height: 1.4;
+      font-weight: 400;
+      padding: 0 11px;
+    }
     @include media(601,1100){
       font-size: 34px;
       max-width: 762px;
@@ -63,14 +71,12 @@
     font-size: 23px;
     line-height: 60px;
     padding: 0;
-    margin: 0;
+    margin: 0 0 0 -30px;
     left: 50%;
     border-radius: 60px;
     width: 60px;
-    background: rgba(0,0,0,0.4);
-    border: none;
-    @include translateX(-50%);
-    transition: background 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
+    background: rgba(0,0,0,0);
     svg{
       font-size: 24px;
       display: inline-block;
@@ -84,29 +90,17 @@
       }
     }
     &:hover{
-      background: rgba(0,0,0,1);
+      @include scale3d(1.1, 1.1, 1);
+      background: rgba(0,0,0,0.5);
     }
   }
-  .gears{
+  .capsule{
     width: 179px;
     height: 168px;
     position: relative;
     margin: 0 auto 30px auto;
-  }
-  #gear1{
-    @include animation(rotation 50s linear infinite);
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 150px;
-    z-index: 1;
-  }
-  #gear2{
-    @include animation(rotation 25s linear infinite);
-    animation-direction: reverse;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 75px;
+    object {
+      transform: rotateZ(10deg) scale(1.1,1.1);
+    }
   }
 }
