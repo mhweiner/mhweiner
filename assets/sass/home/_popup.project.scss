@@ -22,14 +22,14 @@
       top: 0;
       right: 0;
       svg{
-        fill: white;
         display: inline-block;
         vertical-align: middle;
         height: 19px;
         margin: 0 0 0 10px;
+        fill: white;
       }
       &:hover{
-        background: #bd4dff;
+        background: $color-base;
       }
     }
   }

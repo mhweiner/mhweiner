@@ -37,9 +37,6 @@ html.home{
         text-transform: uppercase;
         font-family: $font-header;
         font-weight: 600;
-        @include media(0,600){
-          display: none;
-        }
       }
     }
   }

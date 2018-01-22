@@ -58,10 +58,10 @@
         text-align: center;
         span{
           font-size: 14px;
-          color: $color-secondary;
+          color: #666;
           transition: color 0.15s ease-in-out;
           display: block;
-          line-height: 26px;
+          line-height: 20px;
         }
         svg{
           display: inline-block;
@@ -76,7 +76,7 @@
         }
         &.email{
           svg{
-            stroke: $color-secondary;
+            stroke: #666;
             stroke-width: 16px;
             fill: none;
             width: 44px;
@@ -90,7 +90,7 @@
         }
         &.linkedin{
           svg{
-            stroke: $color-secondary;
+            stroke: #666;
             stroke-width: 20px;
             fill: none;
             width: 41px;
@@ -105,7 +105,7 @@
         &.github{
           svg{
             stroke: none;
-            fill: $color-secondary;
+            fill: #666;
             height: 55px;
             width: 46px;
           }
@@ -117,7 +117,7 @@
         }
         &.resume{
           svg{
-            fill: $color-secondary;
+            fill: #666;
             width: 39px;
             height: 55px;
           }

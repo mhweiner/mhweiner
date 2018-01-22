@@ -68,18 +68,23 @@ nav{
   font-size: 34px;
   z-index: 2;
   padding: 0;
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: all 0.2s ease-in-out;
   border-radius: 50px;
   outline: none;
-  background: $color-secondary;
+  background: #33bdf7;
   height: 65px;
   width: 65px;
+
+  @include media(0, 600) {
+
+    top: 10px;
+    right: 10px;
+
+  }
 
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   @include translate3d(0,0,0);
-  @include animation(growALittle 0.5s);
-  @include animation-easing(ease-in-out);
 
   span, span:before, span:after{
     cursor: pointer;

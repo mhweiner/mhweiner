@@ -4,15 +4,12 @@
   box-sizing: border-box;
   background: #222;
   @include clearfix;
-  @include media(0,600){
-    padding: 0;
+  @include media(0,649){
+    padding: 30px 0;
   }
   .belt{
     h3{
       color: white;
-    }
-    @include media(0,600){
-      padding: 0;
     }
   }
   article{
@@ -50,28 +47,15 @@
         transition: color 0.15s ease-in-out;
       }
     }
-    @include media(601,1000){
-      width: 48%;
-      .img{
-        height: 220px;
-        img{
-          max-height: 27%;
-          max-width: 50%;
-        }
-      }
+    @include media(650,1150){
+      width: 47%;
     }
-    @include media(0,600){
+    @include media(0,649){
+      width: 100%;
       margin: 0;
-      padding: 5px 5px 88px 5px;
-      box-sizing: border-box;
-      width: auto;
-      display: block;
-      .img{
-        height: 230px;
-        img{
-          max-height: 28%;
-          max-width: 40%;
-        }
+      .description {
+        height: auto;
+        margin: 0 0 30px 0;
       }
     }
     &[data-id="marvel"]{
@@ -134,8 +118,8 @@
   }
   .projects-container{
     @include clearfix;
-    margin: 0 -1% 0 -1%;
-    @include media(0,600){
+    margin: 0 -1.5%;
+    @include media(0,649){
       margin: 0;
     }
   }

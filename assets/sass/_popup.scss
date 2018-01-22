@@ -39,6 +39,12 @@
         display: inline-block;
         vertical-align: top;
         margin: 0 10px 0 0;
+        transition: all 0.15s ease-in-out;
+      }
+      &:hover{
+        svg{
+          stroke: white;
+        }
       }
     }
   }
