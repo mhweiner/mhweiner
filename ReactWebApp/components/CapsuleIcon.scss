@@ -1,19 +1,46 @@
 @import "../styles/defines";
 
+@include keyframes(rock) {
+  0% {
+    @include transform(rotateZ(12deg));
+  }
+  20% {
+    @include transform(rotateZ(20deg));
+  }
+  40% {
+    @include transform(rotateZ(15deg));
+  }
+  60% {
+    @include transform(rotateZ(22deg));
+  }
+  80% {
+    @include transform(rotateZ(17deg));
+  }
+  100% {
+    @include transform(rotateZ(12deg));
+  }
+}
+
 .default {
 
   width: 200px;
   background: #00cbff;
   height: 200px;
   border-radius: 200px;
+  position: relative;
+  overflow: hidden;
 
   object {
 
-    transform: rotateZ(14deg) translate(22%, 8%);
-    display: block;
-    transform-origin: center;
     width: 73%;
     height: 73%;
+    z-index: 100;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin: -77px 0 0 -73px;
+    @include animation(rock 3.5s ease-in-out infinite);
 
   }
 
