@@ -3,14 +3,12 @@
 @import "helpers/transform";
 @import "helpers/misc";
 
-$font: 'Roboto', Helvetica, sans-serif;
-$serif-font: 'Source Serif Pro', serif;
+//colors
 
-$color-ec: #b05fd8;
+$color-base: #0067ff;
+$color-secondary: #39c2f7;
 
-$color-vkr-object: #3dc396;
-$color-vkr-motive: #BF0063;
-$color-vkr-goal: #aa0999;
-$color-vkr-experience: #8b00ff;
-$color-vkr-cause-effect: #434ab9;
-$color-vkr-action: #3d92d6;
+//fonts
+
+$font: 'Roboto', sans-serif;
+$font-header: 'Righteous', serif;

@@ -1,0 +1,20 @@
+@import "../styles/defines";
+
+.default {
+
+  width: 200px;
+  background: #00cbff;
+  height: 200px;
+  border-radius: 200px;
+
+  object {
+
+    transform: rotateZ(14deg) translate(22%, 8%);
+    display: block;
+    transform-origin: center;
+    width: 73%;
+    height: 73%;
+
+  }
+
+}

@@ -1,14 +1,10 @@
+@import "defines";
 @import "fonts";
-
-* {
-
-  font-family: $font-body;
-
-}
 
 html, body {
 
   background: white;
   margin: 0;
+  font-family: $font;
 
 }

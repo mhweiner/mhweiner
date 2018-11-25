@@ -1,0 +1,51 @@
+@import "../styles/defines";
+
+.default {
+
+  height: 100vh;
+  min-height: 725px;
+  position: relative;
+  background: linear-gradient(26deg, #0067ff, #39c2f7);
+  padding: 15px;
+  box-sizing: border-box;
+  overflow: hidden;
+
+}
+
+.logo{
+
+  color: black;
+  cursor: pointer;
+  text-transform: uppercase;
+  line-height: 0.8em;
+  font-size: 31px;
+  margin: 0;
+  display: block;
+  float: left;
+  width: 173px;
+  font-family: $font-header;
+
+}
+
+.text{
+
+  color: white;
+  font-size: 27px;
+  line-height: 1.4;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  padding: 0;
+  box-sizing: border-box;
+  transform: translate(-50%, -50%);
+  max-width: 900px;
+  text-align: center;
+
+  > div {
+
+    margin: 0 auto 40px auto;
+
+  }
+
+}
