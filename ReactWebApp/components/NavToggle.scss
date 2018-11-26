@@ -1,0 +1,73 @@
+@import "../styles/defines";
+
+.default{
+
+  display: block;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  font-size: 34px;
+  padding: 29px 51px 32px 16px;
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  outline: none;
+  background: white;
+  z-index: 1000;
+
+  span, span:before, span:after{
+    cursor: pointer;
+    height: 2px;
+    width: 37px;
+    background: black;
+    position: absolute;
+    display: block;
+    content: '';
+    transition: all 0.3s ease-in-out;
+  }
+
+  span{
+    &:before{
+      top: -13px;
+    }
+    &:after{
+      bottom: -13px;
+    }
+  }
+
+  &:hover{
+    span{
+      &,&:before,&:after{
+        background-color: $color-secondary;
+      }
+    }
+  }
+
+}
+
+.isOpen{
+  background: #ff0088;
+  span{
+    background-color: transparent;
+    &:before, &:after{
+      top: 0;
+      background-color: white;
+    }
+    &:before{
+      @include rotate(45deg);
+    }
+    &:after{
+      @include rotate(-45deg);
+      width: 100%;
+      right: auto;
+    }
+  }
+  &:hover{
+    background: black;
+    span {
+      background: transparent;
+    }
+    span:before, span:after{
+      background-color: white;
+    }
+  }
+}

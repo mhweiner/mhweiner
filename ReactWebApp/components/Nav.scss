@@ -1,0 +1,157 @@
+@import "../styles/defines";
+
+@include keyframes(animateBackgroundOpen) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@include keyframes(animateBackgroundClose) {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@include keyframes(animateLinkOpen) {
+  from {
+    @include translateY(100%);
+  }
+  to {
+    @include translateY(0);
+  }
+}
+
+@include keyframes(animateLinkClose) {
+  from {
+    @include translateY(0);
+  }
+  to {
+    @include translateY(100%);
+  }
+}
+
+@include keyframes(animateInLinkChevron) {
+  from {
+    @include translateX(-10px);
+    opacity: 0;
+  }
+  to {
+    @include translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.default {
+
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+
+  &:before {
+
+    content: '';
+    display: block;
+    background: linear-gradient(180deg, rgba(3, 104, 177, 0.92), rgba(21, 131, 210, 0.92));
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+
+  }
+
+  ul {
+
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translateY(-50%);
+
+
+    li {
+
+      display: block;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      overflow: hidden;
+
+      a {
+
+        @include translateY(100%);
+        font-family: $font-header;
+        font-size: 70px;
+        text-decoration: none;
+        display: inline-block;
+        color: white;
+        position: relative;
+
+        &:before {
+
+          color: black;
+          display: none;
+          content: '\F105';
+          position: absolute;
+          left: -30px;
+          font-family: $font-icons;
+          font-weight: 600;
+          top: 24px;
+          font-size: 40px;
+          @include animation(animateInLinkChevron 0.2s cubic-bezier(0.17, 0.67, 0.26, 1));
+
+        }
+
+        &:hover {
+
+          &:before {
+
+            display: block;
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+}
+
+.animateBackgroundOpen {
+  &:before {
+    @include animation(animateBackgroundOpen 0.2s ease-in-out);
+    @include animation-fill-mode(forwards);
+  }
+}
+
+.animateBackgroundClose {
+  &:before {
+    @include animation(animateBackgroundClose 0.1s ease-in-out);
+    @include animation-fill-mode(forwards);
+  }
+}
+
+.animateLinkOpen {
+  @include animation(animateLinkOpen 0.5s ease-in-out);
+  @include animation-fill-mode(forwards);
+}
+
+.animateLinkClose {
+  @include animation(animateLinkClose 0.2s ease-in-out);
+  @include animation-fill-mode(forwards);
+}

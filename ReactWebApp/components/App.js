@@ -1,21 +1,61 @@
 import React, {Component} from 'react';
-import mr from 'mr-router'
-import { CSSTransition } from 'react-transition-group';
 
 /* Components */
 
+import NavToggle from "./NavToggle";
+import Nav from "./Nav";
 import Intro from "./Intro";
-
-/* styles */
-
-import styles from './App.scss';
-
 
 export default class App extends Component {
 
+  state = {
+    navIsOpen: false,
+    navToggleIsOpen: false
+  };
+
+  navRef = React.createRef();
+
+  toggleNav = (open) => {
+
+    if (open) {
+
+      this.setState({
+        navIsOpen: true,
+        navToggleIsOpen: true
+      });
+
+    } else if (this.navRef.current) {
+
+      this.setState({
+        navToggleIsOpen: false
+      });
+
+      this.navRef.current.animateClose(() => {
+
+        this.setState({
+          navIsOpen: false
+        });
+
+      });
+
+    } else {
+
+      this.setState({
+        navIsOpen: false,
+        navToggleIsOpen: false
+      });
+
+    }
+
+  };
+
   render() {
 
-    return <Intro/>;
+    return (<div>
+      <NavToggle toggleNav={this.toggleNav} isOpen={this.state.navToggleIsOpen}/>
+      {this.state.navIsOpen && <Nav ref={this.navRef}/>}
+      <Intro/>
+    </div>);
 
   }
 
