@@ -16,7 +16,7 @@ export default class Intro extends React.Component {
         <div className={styles.text}>
           <CapsuleIcon/>
           I'm a Software Engineer and UX Architect based in NYC. I build award-winning products used by millions of
-          people and that help run some of the world's largest companies.
+          people and some of the world's largest companies.
         </div>
         <button className={styles.downArrow} data-jump="projects">
           <svg xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="187.5 107.5 105 105">

@@ -5,6 +5,8 @@ import React, {Component} from 'react';
 import NavToggle from "./NavToggle";
 import Nav from "./Nav";
 import Intro from "./Intro";
+import Projects from "./Projects";
+import Skills from "./Skills";
 
 export default class App extends Component {
 
@@ -52,9 +54,11 @@ export default class App extends Component {
   render() {
 
     return (<div>
-      <NavToggle toggleNav={this.toggleNav} isOpen={this.state.navToggleIsOpen}/>
+      <NavToggle toggleNav={this.toggleNav} isOpenToggle={this.state.navToggleIsOpen} isOpen={this.state.navIsOpen}/>
       {this.state.navIsOpen && <Nav ref={this.navRef}/>}
       <Intro/>
+      <Projects/>
+      <Skills/>
     </div>);
 
   }

@@ -8,7 +8,7 @@
   cursor: pointer;
   font-size: 34px;
   padding: 29px 51px 32px 16px;
-  position: absolute;
+  position: fixed;
   transition: all 0.3s ease-in-out;
   outline: none;
   background: white;
@@ -45,7 +45,7 @@
 }
 
 .isOpen{
-  background: #ff0088;
+  background: black;
   span{
     background-color: transparent;
     &:before, &:after{

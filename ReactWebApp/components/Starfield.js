@@ -124,6 +124,7 @@ export default class Starfield extends React.Component {
     this.generateRandomShootingStar();
     this.generateRandomShootingStar();
     this.generateRandomShootingStar();
+    this.generateRandomShootingStar();
     setInterval(this.generateRandomShootingStar, 100);
 
   };

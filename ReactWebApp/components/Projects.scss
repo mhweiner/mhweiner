@@ -1,0 +1,165 @@
+@import "../styles/defines";
+
+.default {
+
+  background: #eee;
+
+  .belt {
+
+    max-width: $gridWidth;
+    padding: 50px 20px;
+    margin: 0 auto;
+
+  }
+
+  h3 {
+
+    color: black;
+    font-family: $font-header;
+    font-size: 40px;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+
+  }
+
+  article {
+
+    width: 30%;
+    margin: 0 1.5% 40px 1.5%;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    background: white;
+    box-shadow: rgba(0,0,0,0.3) 0 0 4px;
+    border-radius: 3px;
+    overflow: hidden;
+    @include transitionTransform(0.1s ease-in-out);
+
+    &:hover {
+
+      box-shadow: rgba(0,0,0,0.3) 0 0 6px;
+      @include translateY(-6px);
+
+    }
+
+    .img{
+
+      height: 200px;
+      position: relative;
+      background: #eee;
+      overflow: hidden;
+
+      img{
+
+        max-height: 37%;
+        max-width: 53%;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 1;
+        @include transform(translate3d(-50%,-50%, 0));
+
+      }
+
+    }
+
+    &[data-id="marvel"]{
+      .img{
+        background: #ef0000;
+      }
+    }
+
+    &[data-id="shutterstock"]{
+      .img{
+        background: url('/static/images/shutterstock-bg.jpg') center center no-repeat;
+        background-size: cover;
+        img{
+          max-width: 75%;
+        }
+      }
+    }
+
+    &[data-id="advizr"]{
+      .img{
+        background: #3c3c3c;
+      }
+    }
+
+    &[data-id="ciro"]{
+      .img{
+        background: linear-gradient(to bottom right, #dcd9d9, #d8d8d8);
+        img{
+          max-height: 70px;
+        }
+      }
+    }
+
+    &[data-id="devotify"]{
+      .img{
+        background: #3e9391;
+        img{
+          max-height: 50%;
+        }
+      }
+    }
+
+    &[data-id="roadsign"]{
+      .img{
+        background: #88c15f;
+        img{
+          max-width: 73%;
+          max-height: 68%;
+        }
+      }
+    }
+
+    &[data-id="nextemr"]{
+      .img{
+        background: #32ba6b;
+      }
+    }
+
+  }
+
+}
+
+.container{
+
+  margin: 0 -1.5%;
+
+  @include media(0,649){
+    margin: 0;
+  }
+
+}
+
+.tag {
+
+  display: inline-block;
+  vertical-align: top;
+  line-height: 23px;
+  border: 1px solid black;
+  padding: 0 10px;
+  font-size: 11px;
+  text-transform: uppercase;
+  margin: 0 5px 0 0;
+
+}
+
+.description{
+
+  padding: 15px;
+  height: 111px;
+  box-sizing: border-box;
+
+  p{
+
+    margin: 11px 0 0 0;
+    color: black;
+    font-size: 15px;
+
+  }
+
+}

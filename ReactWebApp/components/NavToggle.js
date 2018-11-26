@@ -15,7 +15,7 @@ export default class NavToggle extends React.Component {
 
     let classes = [styles.default];
 
-    if (this.props.isOpen) {
+    if (this.props.isOpenToggle) {
 
       classes.push(styles.isOpen);
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import {addClass, removeClass} from "../utils/DOM";
+import {addClass} from "../utils/DOM";
 
 import styles from './Nav.scss';
 
