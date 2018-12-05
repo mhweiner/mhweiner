@@ -20,16 +20,19 @@ export default class Nav extends React.Component {
       <div className={styles.default} ref={this.ref}>
         <ul>
           <li>
-            <a href="#">ABOUT</a>
+            <a href="#">Work</a>
           </li>
           <li>
-            <a href="#">WORK</a>
+            <a href="#">Skills</a>
           </li>
           <li>
-            <a href="#">CONTACT</a>
+            <a href="#">Philosophy</a>
           </li>
           <li>
-            <a href="#">RESUME</a>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
           </li>
         </ul>
       </div>

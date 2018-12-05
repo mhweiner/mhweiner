@@ -1,0 +1,27 @@
+@import "../styles/defines";
+
+.default {
+
+  background: url(/static/images/starfield.jpg) no-repeat center center;
+  background-size: cover;
+  min-height: 100vh;
+
+  .belt {
+
+    max-width: $gridWidth;
+    padding: 50px 20px;
+    margin: 0 auto;
+
+  }
+
+  h3 {
+
+    color: white;
+    font-family: $font-header;
+    font-size: 40px;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+
+  }
+
+}

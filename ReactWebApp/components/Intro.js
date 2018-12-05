@@ -15,7 +15,7 @@ export default class Intro extends React.Component {
         </div>
         <div className={styles.text}>
           <CapsuleIcon/>
-          I'm a Software Engineer and UX Architect based in NYC. I build award-winning products used by millions of
+          I'm a Full-Stack Software Engineer and UX Architect based in NYC. I build award-winning products used by millions of
           people and some of the world's largest companies.
         </div>
         <button className={styles.downArrow} data-jump="projects">

@@ -61,7 +61,7 @@
 
     content: '';
     display: block;
-    background: linear-gradient(180deg, rgba(3, 104, 177, 0.92), rgba(21, 131, 210, 0.92));
+    background: #00e2ffd6;
     position: absolute;
     left: 0;
     top: 0;
@@ -98,6 +98,8 @@
         display: inline-block;
         color: white;
         position: relative;
+        text-shadow: #000000a3 5px 3px;
+        text-transform: uppercase;
 
         &:before {
 
@@ -110,6 +112,7 @@
           font-weight: 600;
           top: 24px;
           font-size: 40px;
+          text-shadow: none;
           @include animation(animateInLinkChevron 0.2s cubic-bezier(0.17, 0.67, 0.26, 1));
 
         }

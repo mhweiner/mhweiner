@@ -7,6 +7,7 @@ import Nav from "./Nav";
 import Intro from "./Intro";
 import Projects from "./Projects";
 import Skills from "./Skills";
+import Philosophy from "./Philosophy";
 
 export default class App extends Component {
 
@@ -16,6 +17,29 @@ export default class App extends Component {
   };
 
   navRef = React.createRef();
+
+  compoentDidMount() {
+
+    window.addEventListener('scroll', throttle());
+
+    window.addEventListener('scroll', function(e) {
+
+      last_known_scroll_position = window.scrollY;
+
+      if (!ticking) {
+
+        window.requestAnimationFrame(function() {
+          doSomething(last_known_scroll_position);
+          ticking = false;
+        });
+
+        ticking = true;
+
+      }
+
+    });
+
+  }
 
   toggleNav = (open) => {
 
@@ -51,6 +75,20 @@ export default class App extends Component {
 
   };
 
+  onScroll = () => {
+
+    if (window.scrollY < window.outerHeight) {
+
+      console.log('play');
+
+    } else {
+
+      console.log('stop');
+
+    }
+
+  };
+
   render() {
 
     return (<div>
@@ -59,6 +97,7 @@ export default class App extends Component {
       <Intro/>
       <Projects/>
       <Skills/>
+      <Philosophy/>
     </div>);
 
   }
