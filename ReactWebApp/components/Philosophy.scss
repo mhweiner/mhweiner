@@ -4,7 +4,6 @@
 
   background: url(/static/images/starfield.jpg) no-repeat center center;
   background-size: cover;
-  min-height: 100vh;
 
   .belt {
 
@@ -21,6 +20,15 @@
     font-size: 40px;
     margin: 0 0 40px 0;
     text-transform: uppercase;
+
+  }
+
+  p {
+
+    color: white;
+    font-size: 27px;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
 
   }
 

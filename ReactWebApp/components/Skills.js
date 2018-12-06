@@ -15,9 +15,8 @@ export default class Skills extends React.Component {
             <ul>
               <li>Requirement Gathering</li>
               <li>Documentation &amp; Specifications</li>
-              <li>Full-stack software development</li>
+              <li>Full-Stack Software development</li>
               <li>REST API &amp; Microservices (MoA/SoA)</li>
-              <li>Front-End UI Development</li>
               <li>R&amp;D</li>
               <li>Technical Architecture &amp; Strategy</li>
               <li>Performance Optimization</li>
@@ -29,10 +28,10 @@ export default class Skills extends React.Component {
               <li>Automated Testing</li>
               <li>Build Tooling</li>
               <li>BDD (Behavior Driven Development)</li>
-              <li>Real-time Systems</li>
+              <li>Real-Time Systems</li>
               <li>Modular &amp; Orthogonal Design</li>
               <li>Responsive Design</li>
-              <li>SOLID</li>
+              <li>Object Oriented Programming</li>
             </ul>
           </section>
           <section>
@@ -49,7 +48,7 @@ export default class Skills extends React.Component {
             </ul>
           </section>
           <section>
-            <h4>Languages & Databases</h4>
+            <h4>Languages</h4>
             <ul>
               <li>Javascript</li>
               <li>HTML5/CSS3</li>

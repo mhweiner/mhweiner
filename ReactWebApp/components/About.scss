@@ -1,0 +1,89 @@
+@import "../styles/defines";
+
+.default {
+
+  background: white;
+
+  .belt {
+
+    max-width: $gridWidth;
+    padding: 50px 20px;
+    margin: 0 auto;
+
+  }
+
+  h3 {
+
+    color: black;
+    font-family: $font-header;
+    font-size: 40px;
+    margin: 0 0 40px 0;
+    text-transform: uppercase;
+
+  }
+
+  p {
+
+    color: black;
+    font-size: 21px;
+    margin: 0 0 20px 0;
+    line-height: 1.3;
+
+  }
+
+  img {
+
+    float: right;
+    width: 32%;
+    border-radius: 600px;
+    margin: 0 0 0 40px;
+
+  }
+
+}
+
+ul.contact {
+
+  margin: 0;
+  padding: 0;
+
+  li {
+
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+
+    a {
+
+      text-decoration: none;
+      color: #949494;
+      font-size: 13px;
+      text-align: center;
+      display: inline-block;
+
+      i {
+
+        display: inline-block;
+        height: 75px;
+        width: 75px;
+        text-align: center;
+        line-height: 75px;
+        background: #007fff;
+        color: white;
+        font-size: 39px;
+        border-radius: 75px;
+
+      }
+
+      span {
+
+        display: block;
+        line-height: 21px;
+
+      }
+
+    }
+
+  }
+
+}

@@ -8,6 +8,7 @@ import Intro from "./Intro";
 import Projects from "./Projects";
 import Skills from "./Skills";
 import Philosophy from "./Philosophy";
+import About from "./About";
 
 export default class App extends Component {
 
@@ -98,6 +99,7 @@ export default class App extends Component {
       <Projects/>
       <Skills/>
       <Philosophy/>
+      <About/>
     </div>);
 
   }
