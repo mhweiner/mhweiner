@@ -12,6 +12,7 @@ export default class Intro extends React.Component {
       <div className={styles.default}>
         <div className={styles.logo} data-jump="about">
           <span>Marc Howard Weiner</span>
+          <i className='fa fa-arrow-down'/>
         </div>
         <div className={styles.text}>
           <CapsuleIcon/>

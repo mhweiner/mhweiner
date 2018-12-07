@@ -61,7 +61,7 @@
 
     content: '';
     display: block;
-    background: #00e2ffd6;
+    background: #1cc4dad6;
     position: absolute;
     left: 0;
     top: 0;
@@ -113,7 +113,7 @@
           top: 24px;
           font-size: 40px;
           text-shadow: none;
-          @include animation(animateInLinkChevron 0.2s cubic-bezier(0.17, 0.67, 0.26, 1));
+          @include animation(animateInLinkChevron 0.3s cubic-bezier(0.17, 0.67, 0.26, 1));
 
         }
 

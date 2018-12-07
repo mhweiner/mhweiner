@@ -24,6 +24,32 @@
   float: left;
   width: 173px;
   font-family: $font-header;
+  transition: all 0.1s ease-in-out;
+
+  i {
+
+    display: block;
+    font-size: 17px;
+    margin: 2px 0 0 0;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+    color: #80dcff;
+    @include translateY(-5px);
+
+  }
+
+  &:hover {
+
+    color: #80dcff;
+
+    i {
+
+      opacity: 1;
+      @include translateY(0);
+
+    }
+
+  }
 
 }
 

@@ -13,13 +13,13 @@ export default class Skills extends React.Component {
           <section>
             <h4>Technical</h4>
             <ul>
-              <li>Requirement Gathering</li>
-              <li>Documentation &amp; Specifications</li>
-              <li>Full-Stack Software development</li>
+              <li>Full-Stack Software Development</li>
               <li>REST API &amp; Microservices (MoA/SoA)</li>
               <li>R&amp;D</li>
               <li>Technical Architecture &amp; Strategy</li>
               <li>Performance Optimization</li>
+              <li>Requirement Gathering</li>
+              <li>Documentation &amp; Specifications</li>
             </ul>
           </section>
           <section className="cont">
@@ -37,12 +37,11 @@ export default class Skills extends React.Component {
           <section>
             <h4>Frameworks & Tools</h4>
             <ul>
-              <li>React/Redux</li>
-              <li>node.js, webpack, babel</li>
-              <li>pm2, Docker</li>
+              <li>React, Redux</li>
+              <li>npm, node.js, webpack, babel</li>
+              <li>pm2, Docker, Kuberneties</li>
               <li>Swagger/OpenAPI</li>
-              <li>JSONAPI.org</li>
-              <li>PubNub</li>
+              <li>PubNub, Twilio</li>
               <li>AWS, DigitalOcean</li>
               <li>Sketch, Adobe CC</li>
             </ul>

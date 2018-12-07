@@ -13,10 +13,18 @@ export default class Projects extends React.Component {
           <div className={styles.container}>
 
             <article data-id="advizr">
-              <div className={styles.img} style={{background: 'white'}}>
-                <img src="static/images/logos/advizr.png"/>
+              <div className={styles.img} style={{
+                background: 'linear-gradient(90deg, #ff8100, #ff636f)'
+              }}>
+                <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
+                <img src="static/images/logos/advizr-icon.png" style={{
+                  maxWidth: 'none',
+                  maxHeight: 'none',
+                  height: '59%'
+                }}/>
               </div>
               <div className={styles.description}>
+                <img src='static/images/award.png' className={styles.awardBadge}/>
                 <ul className={styles.tags}>
                   <li>Front-End</li>
                   <li>UX</li>
@@ -27,8 +35,50 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
+            <article data-id="ec">
+              <div className={styles.img} style={{
+                background: 'url(/static/images/ec-bg.png) center center no-repeat',
+                backgroundSize: 'cover'
+              }}>
+                <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
+                <img src="static/images/logos/ec.png" className={styles.ec}/>
+              </div>
+              <div className={styles.description}>
+                <ul className={styles.tags}>
+                  <li>Back-End</li>
+                  <li>Architecture</li>
+                  <li>API Design</li>
+                </ul>
+                <h4>Shutterstock Invoice API</h4>
+                <p>Microservice that powers Shutterstock's enterprise e-commerce systems.</p>
+              </div>
+            </article>
+
+            <article data-id="shutterstock">
+              <div className={styles.img} style={{
+                background: 'url(/static/images/shutterstock-bg.jpg) center center no-repeat',
+                backgroundSize: 'cover'
+              }}>
+                <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
+                <img src="static/images/logos/shutterstock.png"style={{maxWidth: '75%'}}/>
+              </div>
+              <div className={styles.description}>
+                <ul className={styles.tags}>
+                  <li>Back-End</li>
+                  <li>Architecture</li>
+                  <li>API Design</li>
+                </ul>
+                <h4>Shutterstock Invoice API</h4>
+                <p>Microservice that powers Shutterstock's enterprise e-commerce systems.</p>
+              </div>
+            </article>
+
             <article data-id="marvel">
-              <div className={styles.img} style={{background: '#ef0000'}}>
+              <div className={styles.img} style={{
+                background: 'url(/static/images/marvel-bg.jpg) center center no-repeat',
+                backgroundSize: 'cover'
+              }}>
+                <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
                 <img src="static/images/logos/marvel-white.png"/>
               </div>
               <div className={styles.description}>
@@ -44,6 +94,7 @@ export default class Projects extends React.Component {
 
             <article data-id="ciro">
               <div className={styles.img} style={{background: 'linear-gradient(to bottom right, #dcd9d9, #d8d8d8)'}}>
+                <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
                 <img src="static/images/logos/ciro-icon2.png" style={{maxHeight:'70px'}}/>
               </div>
               <div className={styles.description}>
@@ -57,26 +108,9 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article data-id="shutterstock">
-              <div className={styles.img} style={{
-                background: 'url(/static/images/shutterstock-bg.jpg) center center no-repeat',
-                backgroundSize: 'cover'
-              }}>
-                <img src="static/images/logos/shutterstock.png"style={{maxWidth: '75%'}}/>
-              </div>
-              <div className={styles.description}>
-                <ul className={styles.tags}>
-                  <li>Back-End</li>
-                  <li>Architecture</li>
-                  <li>API Design</li>
-                </ul>
-                <h4>Shutterstock Invoice API</h4>
-                <p>Microservice that powers Shutterstock's enterprise e-commerce systems.</p>
-              </div>
-            </article>
-
             <article data-id="devotify">
               <div className={styles.img} style={{background: '#3e9391'}}>
+                <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
                 <img src="static/images/logos/devotify.png" style={{maxHeight: '50%'}}/>
               </div>
               <div className={styles.description}>
@@ -86,19 +120,6 @@ export default class Projects extends React.Component {
                 </ul>
                 <h4>Devotify</h4>
                 <p>Hyper-local loyalty platform for iOS and Android.</p>
-              </div>
-            </article>
-
-            <article data-id="roadsign">
-              <div className={styles.img} style={{background: '#88c15f'}}>
-                <img src="static/images/logos/roadsign.png" style={{
-                  maxWidth: '73%',
-                  maxHeight: '68%'
-                }}/>
-              </div>
-              <div className={styles.description}>
-                <h4>Roadsign</h4>
-                <p>National shipping logistics tracking platform.</p>
               </div>
             </article>
 
