@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import throttle from '../utils/throttle';
 
 /* Components */
 
@@ -10,6 +11,7 @@ import Skills from "./Skills";
 import Philosophy from "./Philosophy";
 import About from "./About";
 
+
 export default class App extends Component {
 
   state = {
@@ -18,29 +20,6 @@ export default class App extends Component {
   };
 
   navRef = React.createRef();
-
-  compoentDidMount() {
-
-    window.addEventListener('scroll', throttle());
-
-    window.addEventListener('scroll', function(e) {
-
-      last_known_scroll_position = window.scrollY;
-
-      if (!ticking) {
-
-        window.requestAnimationFrame(function() {
-          doSomething(last_known_scroll_position);
-          ticking = false;
-        });
-
-        ticking = true;
-
-      }
-
-    });
-
-  }
 
   toggleNav = (open) => {
 
@@ -71,20 +50,6 @@ export default class App extends Component {
         navIsOpen: false,
         navToggleIsOpen: false
       });
-
-    }
-
-  };
-
-  onScroll = () => {
-
-    if (window.scrollY < window.outerHeight) {
-
-      console.log('play');
-
-    } else {
-
-      console.log('stop');
 
     }
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import throttle from "../utils/throttle";
 
 export default class Starfield extends React.Component {
 
@@ -6,7 +7,25 @@ export default class Starfield extends React.Component {
 
   componentDidMount() {
 
-    this.startAnimation();
+    this.start();
+
+    window.addEventListener('scroll', throttle(() => {
+
+      if (window.scrollY > 400) {
+
+        this.stop();
+
+      } else {
+
+        if (!this.isPlaying) {
+
+          this.start();
+
+        }
+
+      }
+
+    }, 100));
 
   }
 
@@ -105,12 +124,12 @@ export default class Starfield extends React.Component {
       let clientRect = this.ref.current.getClientRects()[0];
       let startPos = {
         x: this.rand(-100, clientRect.width - 100),
-        y: 300
+        y: 275
       };
       let angle = -75;
       let duration = this.rand(600, 1400);
       let brightness = this.rand(1, 10) / 10;
-      let distance = 300;
+      let distance = 350;
 
       this.shootingStar(this.ref.current, 1, startPos, distance, angle, duration, brightness);
 
@@ -118,14 +137,22 @@ export default class Starfield extends React.Component {
 
   };
 
-  startAnimation = () => {
+  start = () => {
 
+    this.isPlaying = true;
     this.generateRandomShootingStar();
     this.generateRandomShootingStar();
     this.generateRandomShootingStar();
     this.generateRandomShootingStar();
     this.generateRandomShootingStar();
-    setInterval(this.generateRandomShootingStar, 100);
+    this.interval = setInterval(this.generateRandomShootingStar, 100);
+
+  };
+
+  stop = () => {
+
+    this.isPlaying = false;
+    clearInterval(this.interval);
 
   };
 

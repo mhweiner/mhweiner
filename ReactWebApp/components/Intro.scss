@@ -8,7 +8,6 @@
   background: linear-gradient(26deg, #0067ff, #39c2f7);
   padding: 15px;
   box-sizing: border-box;
-  overflow: hidden;
 
 }
 
@@ -24,7 +23,7 @@
   float: left;
   width: 173px;
   font-family: $font-header;
-  transition: all 0.1s ease-in-out;
+  transition: all 0.2s ease-in-out;
 
   i {
 
@@ -32,7 +31,7 @@
     font-size: 17px;
     margin: 2px 0 0 0;
     opacity: 0;
-    transition: all 0.1s ease-in-out;
+    transition: all 0.3s ease-in-out;
     color: #80dcff;
     @include translateY(-5px);
 

@@ -12,7 +12,7 @@ export default class Projects extends React.Component {
           <h3>work.</h3>
           <div className={styles.container}>
 
-            <article data-id="advizr">
+            <article>
               <div className={styles.img} style={{
                 background: 'linear-gradient(90deg, #ff8100, #ff636f)'
               }}>
@@ -35,7 +35,7 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article data-id="ec">
+            <article>
               <div className={styles.img} style={{
                 background: 'url(/static/images/ec-bg.png) center center no-repeat',
                 backgroundSize: 'cover'
@@ -45,16 +45,16 @@ export default class Projects extends React.Component {
               </div>
               <div className={styles.description}>
                 <ul className={styles.tags}>
-                  <li>Back-End</li>
-                  <li>Architecture</li>
+                  <li>Front-End</li>
+                  <li>UX</li>
                   <li>API Design</li>
                 </ul>
-                <h4>Shutterstock Invoice API</h4>
-                <p>Microservice that powers Shutterstock's enterprise e-commerce systems.</p>
+                <h4>Elemental Cognition</h4>
+                <p>Public-facing and internal applications for a leading Artificial Intelligence research company.</p>
               </div>
             </article>
 
-            <article data-id="shutterstock">
+            <article>
               <div className={styles.img} style={{
                 background: 'url(/static/images/shutterstock-bg.jpg) center center no-repeat',
                 backgroundSize: 'cover'
@@ -65,7 +65,6 @@ export default class Projects extends React.Component {
               <div className={styles.description}>
                 <ul className={styles.tags}>
                   <li>Back-End</li>
-                  <li>Architecture</li>
                   <li>API Design</li>
                 </ul>
                 <h4>Shutterstock Invoice API</h4>
@@ -73,7 +72,7 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article data-id="marvel">
+            <article>
               <div className={styles.img} style={{
                 background: 'url(/static/images/marvel-bg.jpg) center center no-repeat',
                 backgroundSize: 'cover'
@@ -92,10 +91,10 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article data-id="ciro">
+            <article>
               <div className={styles.img} style={{background: 'linear-gradient(to bottom right, #dcd9d9, #d8d8d8)'}}>
                 <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
-                <img src="static/images/logos/ciro-icon2.png" style={{maxHeight:'70px'}}/>
+                <img src="static/images/logos/ciro.png" style={{maxHeight:'70px'}}/>
               </div>
               <div className={styles.description}>
                 <ul className={styles.tags}>
@@ -108,7 +107,7 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article data-id="devotify">
+            <article>
               <div className={styles.img} style={{background: '#3e9391'}}>
                 <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
                 <img src="static/images/logos/devotify.png" style={{maxHeight: '50%'}}/>
