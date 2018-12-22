@@ -1,0 +1,164 @@
+@import "../../styles/defines";
+
+$breakpoint: 1350;
+
+.base {
+
+  padding: 0 15px 15px 15px;
+  max-width: 1200px;
+  margin: 0 auto;
+
+  img {
+
+    width: 100%;
+    margin: 0 0 20px 0;
+
+    .border {
+
+      border: 1px solid black;
+
+    }
+
+  }
+
+}
+
+.images {
+
+  margin: 30px auto;
+  max-width: 1000px;
+
+}
+
+.text {
+
+  font-size: 20px;
+
+  -webkit-columns: 450px 2; /* Ch, Saf, And, BB  */
+  -moz-columns: 450px 2; /* Fx */
+  columns: 450px 2; /* IE 10, Op 11.1+ */
+
+  -webkit-column-gap: 40px;
+  -moz-column-gap: 40px;
+  column-gap: 40px;
+
+  border-bottom: 1px solid grey;
+  padding: 0 0 35px;
+
+  section {
+
+    -webkit-column-break-inside: avoid;
+    page-break-inside: avoid;
+    break-inside: avoid;
+
+  }
+
+  p {
+
+    line-height: 1.3;
+    font-size: 18px;
+    color: #333;
+
+  }
+
+  h2 {
+
+    font-size: 28px;
+    margin: 0;
+
+  }
+
+  h3 {
+
+    margin: 30px 0 20px 0;
+    position: relative;
+    font-size: 20px;
+
+    i {
+
+      font-size: 25px;
+      margin: 0 8px 0 0;
+      display: inline-block;
+      vertical-align: top;
+
+      &.challenge {
+
+        color: #09b911;
+
+      }
+
+      &.involvement {
+
+        color: black;
+
+      }
+
+      &.achievements {
+
+        color: #ff9100;
+
+      }
+
+      &.technology {
+
+        color: #800080;
+
+      }
+
+      &.solution {
+
+        color: $color-base;
+
+      }
+
+    }
+
+  }
+
+  ul {
+
+    margin: 0;
+    padding: 0 0 0 30px;
+
+    li {
+
+      margin: 0 0 20px 0;
+      line-height: 1.3;
+      font-size: 17px;
+      color: #333;
+
+    }
+
+  }
+
+  a.extLink {
+
+    color: black;
+    padding: 0 10px;
+    line-height: 40px;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.1s ease-in-out;
+    border: 2px solid;
+    margin: 20px 0 0 0;
+
+    i {
+
+      margin: 0 0 0 7px;
+
+    }
+
+    &:hover {
+
+      border: 2px solid black;
+      background: black;
+      color: white;
+
+    }
+
+  }
+
+}

@@ -23,13 +23,13 @@ export default class About extends React.Component {
           <ul className={styles.contact}>
               <li>
                 <a href="mailto:mhweiner234@gmail.com" className="email">
-                  <i className='far fa-envelope'/>
+                  <i className='far fa-envelope' style={{fontSize: '26px'}}/>
                   <span>Email</span>
                 </a>
               </li>
               <li>
                 <a href="http://linkedin.com/in/mhweiner" target="_blank" className="linkedin">
-                  <i className='fab fa-linkedin'/>
+                  <i className='fab fa-linkedin-in' style={{fontSize: '26px'}}/>
                   <span>LinkedIn</span>
                 </a>
               </li>

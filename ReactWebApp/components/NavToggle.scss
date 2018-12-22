@@ -12,9 +12,11 @@
   transition: all 0.3s ease-in-out;
   outline: none;
   background: white;
-  z-index: 1000;
+  z-index: 150;
+  backface-visibility: hidden;
 
   span, span:before, span:after{
+
     cursor: pointer;
     height: 2px;
     width: 37px;
@@ -23,51 +25,88 @@
     display: block;
     content: '';
     transition: all 0.3s ease-in-out;
+
   }
 
   span{
+
     &:before{
+
       top: -13px;
+
     }
+
     &:after{
+
       bottom: -13px;
+
     }
+
   }
 
-  &:hover{
-    span{
-      &,&:before,&:after{
+  &:hover {
+
+    span {
+
+      &, &:before, &:after {
+
         background-color: $color-secondary;
+
       }
+
     }
+
   }
 
 }
 
-.isOpen{
+.isOpen {
+
   background: black;
-  span{
+
+  span {
+
     background-color: transparent;
-    &:before, &:after{
+
+    &:before, &:after {
+
       top: 0;
       background-color: white;
+
     }
-    &:before{
+
+    &:before {
+
       @include rotate(45deg);
+
     }
-    &:after{
+
+    &:after {
+
       @include rotate(-45deg);
       width: 100%;
       right: auto;
+
     }
+
   }
-  &:hover{
+
+  &:hover {
+
     background: black;
+
     span {
+
       background: transparent;
+
     }
-    span:before, span:after{
+
+    span:before, span:after {
+
       background-color: white;
+
     }
+
   }
+
 }

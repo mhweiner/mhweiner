@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import throttle from '../utils/throttle';
 
 /* Components */
 
@@ -8,18 +7,15 @@ import Nav from "./Nav";
 import Intro from "./Intro";
 import Projects from "./Projects";
 import Skills from "./Skills";
-import Philosophy from "./Philosophy";
 import About from "./About";
+import ProjectModal from "./ProjectModal";
 
 
 export default class App extends Component {
 
-  state = {
-    navIsOpen: false,
-    navToggleIsOpen: false
-  };
-
-  navRef = React.createRef();
+  nav = React.createRef();
+  projectModal = React.createRef();
+  state = {};
 
   toggleNav = (open) => {
 
@@ -30,13 +26,13 @@ export default class App extends Component {
         navToggleIsOpen: true
       });
 
-    } else if (this.navRef.current) {
+    } else if (this.nav.current) {
 
       this.setState({
         navToggleIsOpen: false
       });
 
-      this.navRef.current.animateClose(() => {
+      this.nav.current.animateClose(() => {
 
         this.setState({
           navIsOpen: false
@@ -55,15 +51,43 @@ export default class App extends Component {
 
   };
 
+  openProject = (project) => {
+
+    if (project) {
+
+      this.setState({
+        project: project
+      });
+
+    } else if (this.projectModal.current) {
+
+      this.projectModal.current.animateClose(() => {
+
+        this.setState({
+          project: null
+        });
+
+      });
+
+    } else {
+
+      this.setState({
+        project: null
+      });
+
+    }
+
+  };
+
   render() {
 
     return (<div>
       <NavToggle toggleNav={this.toggleNav} isOpenToggle={this.state.navToggleIsOpen} isOpen={this.state.navIsOpen}/>
-      {this.state.navIsOpen && <Nav ref={this.navRef}/>}
+      {this.state.navIsOpen && <Nav ref={this.nav}/>}
+      {this.state.project && <ProjectModal project={this.state.project} ref={this.projectModal} close={() => this.openProject()}/>}
       <Intro/>
-      <Projects/>
+      <Projects openProject={this.openProject}/>
       <Skills/>
-      <Philosophy/>
       <About/>
     </div>);
 

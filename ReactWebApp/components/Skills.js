@@ -49,7 +49,7 @@ export default class Skills extends React.Component {
           <section>
             <h4>Languages</h4>
             <ul>
-              <li>Javascript</li>
+              <li>Javascript/ES6/Typescript</li>
               <li>HTML5/CSS3</li>
               <li>PHP7</li>
               <li>Java</li>

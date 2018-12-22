@@ -12,7 +12,7 @@ export default class Projects extends React.Component {
           <h3>work.</h3>
           <div className={styles.container}>
 
-            <article>
+            <article onClick={() => this.props.openProject('Advizr')}>
               <div className={styles.img} style={{
                 background: 'linear-gradient(90deg, #ff8100, #ff636f)'
               }}>
@@ -35,7 +35,7 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article>
+            <article onClick={() => this.props.openProject('advizr')}>
               <div className={styles.img} style={{
                 background: 'url(/static/images/ec-bg.png) center center no-repeat',
                 backgroundSize: 'cover'
@@ -54,7 +54,7 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article>
+            <article onClick={() => this.props.openProject('advizr')}>
               <div className={styles.img} style={{
                 background: 'url(/static/images/shutterstock-bg.jpg) center center no-repeat',
                 backgroundSize: 'cover'
@@ -72,7 +72,7 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article>
+            <article onClick={() => this.props.openProject('advizr')}>
               <div className={styles.img} style={{
                 background: 'url(/static/images/marvel-bg.jpg) center center no-repeat',
                 backgroundSize: 'cover'
@@ -91,7 +91,7 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article>
+            <article onClick={() => this.props.openProject('advizr')}>
               <div className={styles.img} style={{background: 'linear-gradient(to bottom right, #dcd9d9, #d8d8d8)'}}>
                 <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
                 <img src="static/images/logos/ciro.png" style={{maxHeight:'70px'}}/>
@@ -107,10 +107,10 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article>
+            <article onClick={() => this.props.openProject('advizr')}>
               <div className={styles.img} style={{background: '#3e9391'}}>
                 <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
-                <img src="static/images/logos/devotify.png" style={{maxHeight: '50%'}}/>
+                <img src="static/images/logos/devotify.png" style={{maxHeight: '57%', maxWidth: '40%'}}/>
               </div>
               <div className={styles.description}>
                 <ul className={styles.tags}>

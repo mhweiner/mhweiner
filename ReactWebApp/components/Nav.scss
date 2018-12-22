@@ -19,20 +19,38 @@
 }
 
 @include keyframes(animateLinkOpen) {
-  from {
-    @include translateY(100%);
+  0% {
+    color: rgba(0,0,0,0.1);
   }
-  to {
-    @include translateY(0);
+  20% {
+    color: rgba(0,0,0,1);
+  }
+  40% {
+    color: rgba(0,0,0,0.1);
+  }
+  60% {
+    color: rgba(0,0,0,1);
+  }
+  80% {
+    color: rgba(0,0,0,0.1);
+  }
+  100% {
+    color: rgba(0,0,0,1);
   }
 }
 
 @include keyframes(animateLinkClose) {
-  from {
-    @include translateY(0);
+  0% {
+    color: rgba(0,0,0,1);
   }
-  to {
-    @include translateY(100%);
+  33% {
+    color: rgba(0,0,0,.1);
+  }
+  66% {
+    color: rgba(0,0,0,1);
+  }
+  100% {
+    color: rgba(0,0,0,0);
   }
 }
 
@@ -61,7 +79,7 @@
 
     content: '';
     display: block;
-    background: #1cc4dad6;
+    background: #59ecffd6;
     position: absolute;
     left: 0;
     top: 0;
@@ -78,52 +96,34 @@
     position: absolute;
     top: 50%;
     width: 100%;
-    transform: translateY(-50%);
-
+    @include translateY(-50%);
 
     li {
 
       display: block;
-      margin: 0;
+      margin: 0 0 10px;
       padding: 0;
       text-align: center;
       overflow: hidden;
 
+
       a {
 
-        @include translateY(100%);
         font-family: $font-header;
-        font-size: 70px;
+        font-size: 60px;
         text-decoration: none;
         display: inline-block;
-        color: white;
+        color: black;
         position: relative;
-        text-shadow: #000000a3 5px 3px;
         text-transform: uppercase;
-
-        &:before {
-
-          color: black;
-          display: none;
-          content: '\F105';
-          position: absolute;
-          left: -30px;
-          font-family: $font-icons;
-          font-weight: 600;
-          top: 24px;
-          font-size: 40px;
-          text-shadow: none;
-          @include animation(animateInLinkChevron 0.3s cubic-bezier(0.17, 0.67, 0.26, 1));
-
-        }
+        transition: all 0.1s ease-in-out;
+        line-height: 100px;
+        width: 400px;
+        border: 4px black solid;
 
         &:hover {
 
-          &:before {
-
-            display: block;
-
-          }
+          background: white;
 
         }
 

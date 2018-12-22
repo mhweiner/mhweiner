@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Starfield from "./Starfield";
+import StarField from "./StarField";
 
 import styles from './CapsuleIcon.scss';
 
@@ -10,7 +10,7 @@ export default class CapsuleIcon extends React.Component {
 
     return (
       <div className={styles.default}>
-        <Starfield/>
+        <StarField/>
         <object type="image/svg+xml" data="static/images/capsule.svg"/>
       </div>
     );

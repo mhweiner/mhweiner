@@ -26,9 +26,6 @@ export default class Nav extends React.Component {
             <a href="#">Skills</a>
           </li>
           <li>
-            <a href="#">Philosophy</a>
-          </li>
-          <li>
             <a href="#">About</a>
           </li>
           <li>

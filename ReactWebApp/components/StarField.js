@@ -1,9 +1,10 @@
 import React from 'react';
 import throttle from "../utils/throttle";
 
-export default class Starfield extends React.Component {
+export default class StarField extends React.Component {
 
   ref = React.createRef();
+  currentAnimations = [];
 
   componentDidMount() {
 
@@ -11,21 +12,20 @@ export default class Starfield extends React.Component {
 
     window.addEventListener('scroll', throttle(() => {
 
-      if (window.scrollY > 400) {
+      this.stop();
+      clearTimeout(this.restartTimeout);
 
-        this.stop();
-
-      } else {
+      if (window.scrollY < 400) {
 
         if (!this.isPlaying) {
 
-          this.start();
+          this.restartTimeout = setTimeout(this.start, 200);
 
         }
 
       }
 
-    }, 100));
+    }, 100, {leading: true}));
 
   }
 
@@ -115,6 +115,20 @@ export default class Starfield extends React.Component {
 
     createElement();
 
+    return {
+      stop: () => {
+
+        clearInterval(animateInterval);
+
+        if (el) {
+
+          el.remove();
+
+        }
+
+      }
+    };
+
   }
 
   generateRandomShootingStar = () => {
@@ -131,7 +145,9 @@ export default class Starfield extends React.Component {
       let brightness = this.rand(1, 10) / 10;
       let distance = 350;
 
-      this.shootingStar(this.ref.current, 1, startPos, distance, angle, duration, brightness);
+      this.currentAnimations.push(this.shootingStar(
+        this.ref.current, 1, startPos, distance, angle, duration, brightness
+      ));
 
     }, this.rand(50, 100));
 
