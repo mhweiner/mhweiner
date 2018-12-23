@@ -71,6 +71,22 @@
     outline: none;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
+    position: relative;
+
+    &:after {
+
+      content: '';
+      display: block;
+      background: $color-base;
+      height: 2px;
+      position: absolute;
+      bottom: 11px;
+      right: 8px;
+      left: 10px;
+      opacity: 0;
+      transition: opacity 0.15s ease-in-out;
+
+    }
 
     span {
 
@@ -92,8 +108,13 @@
 
     &:hover {
 
-      background: black;
-      color: white;
+      color: $color-base;
+
+      &:after {
+
+        opacity: 1;
+
+      }
 
     }
 

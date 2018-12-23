@@ -14,7 +14,7 @@ export default class Advizr extends React.Component {
 
     return (<div className={styles.base}>
 
-      <img src='/static/images/content/advizr/hero.jpg' style={{borderBottom: '2px solid black'}}/>
+      <img src='/static/images/content/advizr/hero2.jpg' style={{borderBottom: '2px solid black'}}/>
 
       <div className={styles.text}>
 

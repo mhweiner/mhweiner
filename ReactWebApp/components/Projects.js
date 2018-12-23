@@ -72,7 +72,7 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article onClick={() => this.props.openProject('advizr')}>
+            <article onClick={() => this.props.openProject('Marvel.com')}>
               <div className={styles.img} style={{
                 background: 'url(/static/images/marvel-bg.jpg) center center no-repeat',
                 backgroundSize: 'cover'
@@ -91,7 +91,7 @@ export default class Projects extends React.Component {
               </div>
             </article>
 
-            <article onClick={() => this.props.openProject('advizr')}>
+            <article onClick={() => this.props.openProject('Ciro')}>
               <div className={styles.img} style={{background: 'linear-gradient(to bottom right, #dcd9d9, #d8d8d8)'}}>
                 <div className={styles.seeProject}><i className='fa fa-fighter-jet'/>Go to Mission</div>
                 <img src="static/images/logos/ciro.png" style={{maxHeight:'70px'}}/>
