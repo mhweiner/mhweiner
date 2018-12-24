@@ -13,12 +13,10 @@
 
 .default {
 
-  width: 30%;
-  margin: 0 1.5% 40px 1.5%;
   box-sizing: border-box;
   cursor: pointer;
   position: relative;
-  display: inline-block;
+  display: block;
   vertical-align: top;
   border-radius: 5px;
   overflow: hidden;
@@ -26,6 +24,23 @@
   background: #efefef;
   transition: all 0.1s ease-in-out;
   box-shadow: rgba(0,0,0,0.6) 0 0 1px;
+  margin: 0 0 20px 0;
+
+  @include media(650, 999){
+
+    display: inline-block;
+    width: 47%;
+    margin: 0 1.5% 40px 1.5%;
+
+  }
+
+  @include media(1000){
+
+    display: inline-block;
+    width: 30%;
+    margin: 0 1.5% 40px 1.5%;
+
+  }
 
   &:hover {
 

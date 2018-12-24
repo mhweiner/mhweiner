@@ -26,10 +26,12 @@
 
 .container{
 
-  margin: 0 -1.5%;
+  margin: 0;
 
-  @include media(0,649){
-    margin: 0;
+  @include media(550){
+
+    margin: 0 -1.5%;
+
   }
 
 }
