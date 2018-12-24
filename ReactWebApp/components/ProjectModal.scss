@@ -7,7 +7,7 @@
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: 200;
+  z-index: -1;
   background: #eee;
   backface-visibility: hidden;
   @include translateY(30px);
@@ -20,6 +20,7 @@
 
   @include translateY(0);
   opacity: 1;
+  z-index: 200;
 
 }
 
@@ -27,6 +28,7 @@
 
   @include translateY(30px);
   opacity: 0;
+  z-index: 200;
 
 }
 

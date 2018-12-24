@@ -103,17 +103,18 @@
 
       a {
 
-        font-family: $font-header;
-        font-size: 55px;
+        font-family: $font;
+        font-size: 49px;
         text-decoration: none;
         display: inline-block;
-        color: rgba(0,0,0,0);
+        color: rgba(0, 0, 0, 0);
         position: relative;
         text-transform: uppercase;
         transition: all 0.1s ease-in-out;
         line-height: 90px;
         width: 400px;
         border: 5px black solid;
+        font-weight: bold;
 
         &:hover {
 

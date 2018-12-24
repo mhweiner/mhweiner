@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import projectData from '../projectData';
 
 /* Components */
 
@@ -15,7 +16,9 @@ export default class App extends Component {
 
   nav = React.createRef();
   projectModal = React.createRef();
-  state = {};
+  state = {
+    project: null
+  };
 
   toggleNav = (open) => {
 
@@ -53,10 +56,11 @@ export default class App extends Component {
 
   openProject = (project) => {
 
-    if (project) {
+    if (project !== null) {
 
       this.setState({
-        project: project
+        project: project,
+        isLoading: true
       });
 
     } else if (this.projectModal.current) {
@@ -84,9 +88,19 @@ export default class App extends Component {
     return (<div>
       <NavToggle toggleNav={this.toggleNav} isOpenToggle={this.state.navToggleIsOpen} isOpen={this.state.navIsOpen}/>
       {this.state.navIsOpen && <Nav ref={this.nav}/>}
-      {this.state.project && <ProjectModal project={this.state.project} ref={this.projectModal} close={() => this.openProject()}/>}
+      {this.state.project !== null && <ProjectModal
+        project={this.state.project}
+        ref={this.projectModal}
+        close={() => this.openProject(null)}
+        onLoad={() => this.setState({isLoading: false})}
+      />}
       <Intro/>
-      <Projects openProject={this.openProject}/>
+      <Projects
+        projects={projectData}
+        open={this.openProject}
+        isLoading={this.state.isLoading}
+        project={this.state.project}
+      />
       <Skills/>
       <About/>
     </div>);
