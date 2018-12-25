@@ -10,6 +10,7 @@ import Devotify from "./components/Projects/Devotify";
 const projects = [
 
   {
+    id: 'Advizr',
     title: 'Advizr',
     description: 'Financial Planning, reinvented.',
     tags: ['Front-End', 'UX', 'API Design'],
@@ -27,6 +28,7 @@ const projects = [
   },
 
   {
+    id: 'Elemental_Cognition',
     title: 'Elemental Cognition',
     description: 'Public-facing and internal applications for a leading Artificial Intelligence research company.',
     tags: ['Front-End', 'UX', 'API Design'],
@@ -51,6 +53,7 @@ const projects = [
   },
 
   {
+    id: 'Shutterstock_Invoice_API',
     title: 'Shutterstock Invoice API',
     description: 'Microservice that powers Shutterstock\'s enterprise e-commerce systems.',
     tags: ['Back-End', 'API Design'],
@@ -66,6 +69,7 @@ const projects = [
   },
 
   {
+    id: 'Marvel.com',
     title: 'Marvel.com',
     description: 'The official website of Marvel Entertainment.',
     tags: ['R&D', 'Front-End', 'Process Design'],
@@ -78,6 +82,7 @@ const projects = [
   },
 
   {
+    id: 'Ciro',
     title: 'Ciro',
     description: 'Helping development teams communicate more effectively.',
     tags: ['Full-Stack', 'UX', 'Founder'],
@@ -92,6 +97,7 @@ const projects = [
   },
 
   {
+    id: 'Devotify',
     title: 'Devotify',
     description: 'Hyper-local loyalty platform for iOS and Android.',
     tags: ['Front-End', 'UX'],

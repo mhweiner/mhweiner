@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import projectData from '../projectData';
+import mr from 'mr-router';
 
 /* Components */
 
@@ -18,6 +19,49 @@ export default class App extends Component {
   projectModal = React.createRef();
   state = {
     project: null
+  };
+
+  componentDidMount() {
+
+    // Set routes
+    mr.setRoutes({
+      home: '!',
+      project: 'project/:project'
+    });
+
+    // Set controllers
+    mr.setControllers({
+      home: () => this.setState({
+        project: null
+      }),
+      project: (opts) => {
+
+        this.openProject(this.getProjectIndexById(opts.project));
+
+      }
+    });
+
+    // Route according to current hash or set to home
+    if(!mr.route()) {
+
+      mr.go('home');
+
+    }
+
+  }
+
+  getProjectIndexById = (id) => {
+
+    for (let i = 0; i < projectData.length; i++) {
+
+      if (projectData[i].id === id) {
+
+        return i;
+
+      }
+
+    }
+
   };
 
   toggleNav = (open) => {
@@ -54,12 +98,12 @@ export default class App extends Component {
 
   };
 
-  openProject = (project) => {
+  openProject = (projectIndex) => {
 
-    if (project !== null) {
+    if (projectIndex !== null) {
 
       this.setState({
-        project: project,
+        project: projectIndex,
         isLoading: true
       });
 
@@ -91,13 +135,13 @@ export default class App extends Component {
       {this.state.project !== null && <ProjectModal
         project={this.state.project}
         ref={this.projectModal}
-        close={() => this.openProject(null)}
+        close={() => mr.go('home')}
         onLoad={() => this.setState({isLoading: false})}
       />}
       <Intro/>
       <Projects
         projects={projectData}
-        open={this.openProject}
+        open={(id) => mr.go('project', {project: id})}
         isLoading={this.state.isLoading}
         project={this.state.project}
       />

@@ -17,7 +17,7 @@ export default class Projects extends React.Component {
             {this.props.projects.map((project, k) => <ProjectThumbnail
               key={k.toString()}
               project={project}
-              onClick={() => this.props.open(k)}
+              onClick={() => this.props.open(project.id)}
               isLoading={this.props.project === k && this.props.isLoading}
             />)}
 

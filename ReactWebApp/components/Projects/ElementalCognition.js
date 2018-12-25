@@ -86,7 +86,9 @@ export default class ElementalCognition extends React.Component {
           webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen
           style={{
             width: '100%',
-            height: '600px'
+            height: '571px',
+            border: '1px solid',
+            background: 'black'
           }}
         />
       </div>
