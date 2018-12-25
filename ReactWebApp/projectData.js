@@ -3,6 +3,9 @@ import React from "react";
 import Advizr from "./components/Projects/Advizr";
 import Marvel from "./components/Projects/Marvel";
 import Ciro from "./components/Projects/Ciro";
+import ElementalCognition from "./components/Projects/ElementalCognition";
+import Shutterstock from "./components/Projects/Shutterstock";
+import Devotify from "./components/Projects/Devotify";
 
 const projects = [
 
@@ -44,7 +47,7 @@ const projects = [
       bottom: '0',
       top: 'auto'
     },
-    content: <Advizr/>
+    content: <ElementalCognition/>
   },
 
   {
@@ -59,7 +62,7 @@ const projects = [
     imgStyle: {
       maxWidth: '75%'
     },
-    content: <Advizr/>
+    content: <Shutterstock/>
   },
 
   {
@@ -100,7 +103,7 @@ const projects = [
       maxHeight: '57%',
       maxWidth: '40%'
     },
-    content: <Advizr/>
+    content: <Devotify/>
   }
 
 ];

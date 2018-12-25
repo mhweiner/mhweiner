@@ -29,7 +29,7 @@ export default class ProjectModal extends React.Component {
     return (
       <div className={styles.default} ref={this.ref}>
         <div className={styles.header}>
-          <button onClick={this.props.close}><i className='fa fa-arrow-left'/>Back<span> to Projects</span></button>
+          <button onClick={this.props.close}><i className='fa fa-arrow-left'/>Back<span> to Work</span></button>
           <h1>{proj.title}</h1>
         </div>
         <div className={styles.content} ref={this.contentRef}>

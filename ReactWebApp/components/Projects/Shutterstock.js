@@ -1,9 +1,9 @@
 import React from 'react';
 
 import styles from './base.scss';
-import ciroStyles from './Ciro.scss';
+import ssStyles from './Shutterstock.scss';
 
-export default class Ciro extends React.Component {
+export default class Shutterstock extends React.Component {
 
   render() {
 
@@ -15,13 +15,11 @@ export default class Ciro extends React.Component {
 
     return (<div className={styles.base}>
 
-      <div className={ciroStyles.hero}>
-        <img src='/static/images/content/ciro/lockup.png'/>
-      </div>
+      <div className={ssStyles.hero}/>
 
       <div className={styles.text}>
 
-        <h2>Project management and collaboration tools should speed up communication, not slow it down.</h2>
+        <h2>Teaching a system through "natural learning" will help machines understand the "why" behind their answers.</h2>
 
         <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
 
@@ -79,13 +77,6 @@ export default class Ciro extends React.Component {
           </ul>
         </section>
 
-      </div>
-
-      <div className={styles.images}>
-        <img src="/static/images/content/ciro/ss-notification.png" style={{borderBottom: '1px solid'}}/>
-        <img src="/static/images/content/ciro/ss-workflow.png" style={{borderBottom: '1px solid'}}/>
-        <img src="/static/images/content/ciro/ss-sprints.png" style={{borderBottom: '1px solid'}}/>
-        <img src="/static/images/content/ciro/ss-tasks.png" style={{borderBottom: '1px solid'}}/>
       </div>
 
     </div>);

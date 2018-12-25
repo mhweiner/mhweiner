@@ -1,9 +1,9 @@
 import React from 'react';
 
 import styles from './base.scss';
-import ciroStyles from './Ciro.scss';
+import devotifyStyles from './Devotify.scss';
 
-export default class Ciro extends React.Component {
+export default class Devotify extends React.Component {
 
   render() {
 
@@ -15,8 +15,8 @@ export default class Ciro extends React.Component {
 
     return (<div className={styles.base}>
 
-      <div className={ciroStyles.hero}>
-        <img src='/static/images/content/ciro/lockup.png'/>
+      <div className={devotifyStyles.hero}>
+        <img src='/static/images/content/devotify/1.jpg'/>
       </div>
 
       <div className={styles.text}>
@@ -82,10 +82,9 @@ export default class Ciro extends React.Component {
       </div>
 
       <div className={styles.images}>
-        <img src="/static/images/content/ciro/ss-notification.png" style={{borderBottom: '1px solid'}}/>
-        <img src="/static/images/content/ciro/ss-workflow.png" style={{borderBottom: '1px solid'}}/>
-        <img src="/static/images/content/ciro/ss-sprints.png" style={{borderBottom: '1px solid'}}/>
-        <img src="/static/images/content/ciro/ss-tasks.png" style={{borderBottom: '1px solid'}}/>
+        <img src="/static/images/content/devotify/5.gif" style={{borderBottom: '1px solid'}}/>
+        <img src="/static/images/content/devotify/3.jpg" style={{borderBottom: '1px solid'}}/>
+        <img src="/static/images/content/devotify/6.gif" style={{borderBottom: '1px solid'}}/>
       </div>
 
     </div>);
