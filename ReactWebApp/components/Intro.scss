@@ -5,9 +5,10 @@
   height: 100vh;
   min-height: 725px;
   position: relative;
-  background: linear-gradient(26deg, #0067ff, #39c2f7);
+  background: linear-gradient(26deg, #ffffff, #60d3ff);
   padding: 15px;
   box-sizing: border-box;
+  border-bottom: 1px solid #98d3e4;
 
 }
 
@@ -32,14 +33,14 @@
     margin: 2px 0 0 0;
     opacity: 0;
     transition: all 0.3s ease-in-out;
-    color: #80dcff;
+    color: #20019e;
     @include translateY(-5px);
 
   }
 
   &:hover {
 
-    color: #80dcff;
+    color: #20019e;
 
     i {
 
@@ -54,8 +55,7 @@
 
 .text{
 
-  color: white;
-  font-size: 27px;
+  color: black;
   line-height: 1.4;
   width: 80%;
   position: absolute;
@@ -65,7 +65,8 @@
   box-sizing: border-box;
   transform: translate(-50%, -50%);
   max-width: 900px;
-  text-align: center;
+  font-size: 47px;
+  font-weight: bold;
 
   > div {
 
@@ -103,7 +104,7 @@
       fill: none;
       stroke-linejoin: round;
       stroke-width: 4;
-      stroke: #FFF;
+      stroke: black;
       transition: stroke 0.1s ease-in-out;
 
     }
@@ -116,7 +117,7 @@
 
     svg line, svg circle {
 
-      stroke: black;
+      stroke: $color-base;
 
     }
 

@@ -16,10 +16,8 @@
   h3 {
 
     color: black;
-    font-family: $font-header;
-    font-size: 40px;
+    font-size: 33px;
     margin: 0 0 40px 0;
-    text-transform: uppercase;
 
   }
 
@@ -57,10 +55,11 @@ ul.contact {
     a {
 
       text-decoration: none;
-      color: #949494;
+      color: $color-base;
       font-size: 13px;
       text-align: center;
       display: inline-block;
+      transition: color 0.1s ease-in-out;
 
       i {
 
@@ -69,7 +68,7 @@ ul.contact {
         width: 45px;
         text-align: center;
         line-height: 45px;
-        background: #007fff;
+        background: $color-base;
         color: white;
         font-size: 41px;
         border-radius: 45px;
@@ -79,9 +78,11 @@ ul.contact {
 
       &:hover {
 
+        color: black;
+
         i {
 
-          background: darken($color-base, 15%);
+          background: black;
 
         }
 

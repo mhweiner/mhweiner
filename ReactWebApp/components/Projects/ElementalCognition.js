@@ -13,7 +13,7 @@ export default class ElementalCognition extends React.Component {
 
     };
 
-    return (<div className={styles.base}>
+    return (<div className={[styles.base, ecStyles.default].join(' ')}>
 
       <div className={ecStyles.hero}/>
 
@@ -21,7 +21,13 @@ export default class ElementalCognition extends React.Component {
 
         <h2>Teaching a system through "natural learning" will help machines understand the "why" behind their answers.</h2>
 
-        <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
+        <p>Modern AI leaves much to be desired. Although machines have become pretty good at recognizing patterns, faces, and roads, they cannot understand
+        something as simple as a children's bedtime story. They cannot reason and explain the "why" or the "how" behind the answers they give us. Their answers are either opaque or based on statistics.</p>
+
+        <p>To tackle the problem of "understanding", Elemental Cognition, founded and led by IBM Watson alum Dr. David Ferrucci, starts by attempting to teach the system children's stories.
+        To understand why something as seemingly simple as a children's story is so difficult, let's take one simple example:</p>
+
+        <blockquote>John and Mary were running a race. John fell. He hurt his knee. Mary looked back. Mary wanted to win. If she kept running she would win. Mary stopped. She ran back. She helped John up.</blockquote>
 
         <h3><i className={c(['fa', 'fa-flag', styles.challenge])}/>The Challenge</h3>
         <p>Existing tools are slow and painful. They either show too much information, or too little. Most importantly, they don't solve the biggest problem that teams face — too many interruptions. </p>
@@ -77,6 +83,8 @@ export default class ElementalCognition extends React.Component {
           </ul>
         </section>
 
+        <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
+
       </div>
 
       <div className={styles.images}>
@@ -91,6 +99,14 @@ export default class ElementalCognition extends React.Component {
             background: 'black'
           }}
         />
+        <iframe src="https://www.youtube.com/embed/vsyPZdt6noE" frameBorder="0"
+                allow="encrypted-media;"
+                allowFullScreen style={{
+                  width: '100%',
+                  height: '571px',
+                  border: '1px solid',
+                  background: 'black'
+                }}/>
       </div>
 
     </div>);

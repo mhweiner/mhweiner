@@ -11,7 +11,8 @@
   position: fixed;
   transition: all 0.3s ease-in-out;
   outline: none;
-  background: white;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
   z-index: 150;
   backface-visibility: hidden;
 
@@ -48,9 +49,15 @@
 
     span {
 
-      &, &:before, &:after {
+      &:before {
 
-        background-color: $color-secondary;
+        @include translateY(-4px);
+
+      }
+
+      &:after {
+
+        @include translateY(4px);
 
       }
 
@@ -60,7 +67,7 @@
 
 }
 
-.isOpen {
+.isOpen, .isOpen:hover {
 
   background: black;
 
@@ -72,6 +79,7 @@
 
       top: 0;
       background-color: white;
+      @include translateY(0);
 
     }
 

@@ -53,7 +53,7 @@ export default class StarField extends React.Component {
       newElement.id = randomId;
       elementContainer.insertBefore(newElement, parent.firstChild);
 
-      setTimeout(function(){
+      setTimeout(() => {
 
         el = elementContainer.querySelector('#' + randomId);
         applyCSS();
@@ -67,7 +67,7 @@ export default class StarField extends React.Component {
 
       el.style.width = '100px';
       el.style.height = '3px';
-      el.style.background = 'linear-gradient(to right, rgba(255,255,255,0), rgba(255,255,255,1))';
+      el.style.background = 'white';
       el.style.left = '0';
       el.style.top = '0';
       el.style.zIndex = zIndex;
@@ -142,7 +142,7 @@ export default class StarField extends React.Component {
       };
       let angle = -75;
       let duration = this.rand(600, 1400);
-      let brightness = this.rand(1, 10) / 10;
+      let brightness = this.rand(4, 10) / 10;
       let distance = 350;
 
       this.currentAnimations.push(this.shootingStar(
@@ -159,9 +159,7 @@ export default class StarField extends React.Component {
     this.generateRandomShootingStar();
     this.generateRandomShootingStar();
     this.generateRandomShootingStar();
-    this.generateRandomShootingStar();
-    this.generateRandomShootingStar();
-    this.interval = setInterval(this.generateRandomShootingStar, 100);
+    this.interval = setInterval(this.generateRandomShootingStar, 150);
 
   };
 

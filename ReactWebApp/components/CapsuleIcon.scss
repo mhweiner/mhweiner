@@ -23,10 +23,10 @@
 
 .default {
 
-  width: 200px;
-  background: #00cbff;
-  height: 200px;
-  border-radius: 200px;
+  width: 250px;
+  background: $color-base;
+  height: 250px;
+  border-radius: 250px;
   position: relative;
   overflow: hidden;
   will-change: transform;
@@ -40,7 +40,7 @@
     position: absolute;
     left: 50%;
     top: 50%;
-    margin: -77px 0 0 -73px;
+    margin: -39% 0 0 -35%;
     @include animation(rock 3.5s ease-in-out infinite);
 
   }

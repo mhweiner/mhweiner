@@ -10,14 +10,9 @@ export default class Intro extends React.Component {
 
     return (
       <div className={styles.default}>
-        <div className={styles.logo} onClick={() => this.props.scrollTo('about')}>
-          <span>Marc Howard Weiner</span>
-          <i className='fa fa-arrow-down'/>
-        </div>
         <div className={styles.text}>
           <CapsuleIcon/>
-          I'm a Full-Stack Software Engineer and UX Architect based in NYC. I build award-winning products used by millions of
-          people and some of the world's largest companies.
+          I'm Marc Weiner. A software engineer and UX architect based in NYC. I build award-winning products used by millions of people and some of the world's largest companies.
         </div>
         <button className={styles.downArrow} onClick={() => this.props.scrollTo('work')}>
           <svg xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="187.5 107.5 105 105">
