@@ -31,9 +31,7 @@ export default class App extends Component {
 
     // Set controllers
     mr.setControllers({
-      home: () => this.setState({
-        project: null
-      }),
+      home: () => this.openProject(null),
       project: (opts) => {
 
         this.openProject(this.getProjectIndexById(opts.project));
@@ -98,9 +96,37 @@ export default class App extends Component {
 
   };
 
+  allowBodyScroll = (allowScroll) => {
+
+    let s = document.body.style;
+
+    if (allowScroll) {
+
+      s.position = null;
+      s.overflow = null;
+      s.overflowX = null;
+      s.overflowY = null;
+      s.left = null;
+      s.right = null;
+
+    } else {
+
+      s.position = 'absolute';
+      s.overflow = 'hidden';
+      s.overflowX = 'hidden';
+      s.overflowY = 'scroll !important';
+      s.left = '0';
+      s.right = '0';
+
+    }
+
+  };
+
   openProject = (projectIndex) => {
 
     if (projectIndex !== null) {
+
+      this.allowBodyScroll(false);
 
       this.setState({
         project: projectIndex,
@@ -111,6 +137,8 @@ export default class App extends Component {
 
       this.projectModal.current.animateClose(() => {
 
+        this.allowBodyScroll(true);
+
         this.setState({
           project: null
         });
@@ -118,6 +146,8 @@ export default class App extends Component {
       });
 
     } else {
+
+      this.allowBodyScroll(true);
 
       this.setState({
         project: null
