@@ -10,7 +10,7 @@ export default class Intro extends React.Component {
 
     return (
       <div className={styles.default}>
-        <div className={styles.logo} data-jump="about">
+        <div className={styles.logo} onClick={() => this.props.scrollTo('about')}>
           <span>Marc Howard Weiner</span>
           <i className='fa fa-arrow-down'/>
         </div>
@@ -19,7 +19,7 @@ export default class Intro extends React.Component {
           I'm a Full-Stack Software Engineer and UX Architect based in NYC. I build award-winning products used by millions of
           people and some of the world's largest companies.
         </div>
-        <button className={styles.downArrow} data-jump="projects">
+        <button className={styles.downArrow} onClick={() => this.props.scrollTo('work')}>
           <svg xmlns="http://www.w3.org/2000/svg" width="105" height="105" viewBox="187.5 107.5 105 105">
             <circle cx="240" cy="160" r="50"/>
             <line x1="240" y1="134.8" x2="240" y2="184.8"/>

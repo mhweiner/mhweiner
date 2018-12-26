@@ -8,7 +8,7 @@ export default class About extends React.Component {
   render() {
 
     return (
-      <div className={styles.default}>
+      <div className={[styles.default, 'section-about'].join(' ')}>
         <div className={styles.belt}>
 
           <h3>about.</h3>

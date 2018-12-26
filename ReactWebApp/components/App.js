@@ -48,6 +48,31 @@ export default class App extends Component {
 
   }
 
+  scrollTo = (section) => {
+
+    this.toggleNav(false);
+
+    let pos = 0;
+
+    switch (section){
+      case 'work':
+        pos = document.querySelector('.section-work').offsetTop;
+        break;
+      case 'skills':
+        pos = document.querySelector('.section-skills').offsetTop;
+         break;
+      case 'about':
+        pos = document.querySelector('.section-about').offsetTop;
+        break;
+    }
+
+    window.scroll({
+      top: pos,
+      behavior: 'smooth'
+    });
+
+  };
+
   getProjectIndexById = (id) => {
 
     for (let i = 0; i < projectData.length; i++) {
@@ -161,14 +186,14 @@ export default class App extends Component {
 
     return (<div>
       <NavToggle toggleNav={this.toggleNav} isOpenToggle={this.state.navToggleIsOpen} isOpen={this.state.navIsOpen}/>
-      {this.state.navIsOpen && <Nav ref={this.nav}/>}
+      {this.state.navIsOpen && <Nav ref={this.nav} scrollTo={this.scrollTo}/>}
       {this.state.project !== null && <ProjectModal
         project={this.state.project}
         ref={this.projectModal}
         close={() => mr.go('home')}
         onLoad={() => this.setState({isLoading: false})}
       />}
-      <Intro/>
+      <Intro scrollTo={this.scrollTo}/>
       <Projects
         projects={projectData}
         open={(id) => mr.go('project', {project: id})}

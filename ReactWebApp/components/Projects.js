@@ -9,7 +9,7 @@ export default class Projects extends React.Component {
   render() {
 
     return (
-      <div className={styles.default}>
+      <div className={[styles.default, 'section-work'].join(' ')}>
         <div className={styles.belt}>
           <h3>work.</h3>
           <div className={styles.container}>

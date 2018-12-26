@@ -14,22 +14,29 @@ export default class Nav extends React.Component {
 
   }
 
+  go = (e, section) => {
+
+    e.preventDefault();
+    this.props.scrollTo(section);
+
+  };
+
   render() {
 
     return (
       <div className={styles.default} ref={this.ref}>
         <ul>
           <li>
-            <a href="#">Work</a>
+            <a href="#" onClick={(e) => this.go(e, 'work')}>Work</a>
           </li>
           <li>
-            <a href="#">Skills</a>
+            <a href="#" onClick={(e) => this.go(e, 'skills')}>Skills</a>
           </li>
           <li>
-            <a href="#">About</a>
+            <a href="#" onClick={(e) => this.go(e, 'about')}>About</a>
           </li>
           <li>
-            <a href="#">Contact</a>
+            <a href="#" onClick={(e) => this.go(e, 'about')}>Contact</a>
           </li>
         </ul>
       </div>
