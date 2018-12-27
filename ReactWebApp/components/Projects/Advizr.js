@@ -22,7 +22,6 @@ export default class Advizr extends React.Component {
 
         <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
 
-        <h3><i className={c(['fa', 'fa-flag', styles.challenge])}/>The Challenge</h3>
         <p>When Advizr first launched their MVP in 2014, writing a financial plan was a time consuming and labor intensive process.
           Existing tools had many features but were difficult to use and didn't necessarily reflect the needs of advisors or their clients.</p>
         <p>Advizr wanted to lower the bar of entry while building an interactive experience that helped the client make the most out of their plan. However, the competition
@@ -30,7 +29,7 @@ export default class Advizr extends React.Component {
         </p>
 
         <section>
-          <h3><i className={c(['fa', 'fa-flask', styles.solution])}/>The Solution</h3>
+          <h3><i className={c(['fas', 'fa-chess-pawn', styles.solution])}/>Strategy</h3>
           <p>Advizr married robo-advising with a thoughtful design and solid performing application to
             create an unparalleled experience for both advisors and their clients. Features were (and continue to be) based on exhaustive
             user-research and iteration.</p>

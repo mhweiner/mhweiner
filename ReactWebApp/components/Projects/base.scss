@@ -4,7 +4,7 @@ $breakpoint: 1350;
 
 .base {
 
-  padding: 0 20px;
+  padding: 0 30px;
   max-width: 1200px;
   margin: 0 auto;
 
@@ -72,12 +72,17 @@ $breakpoint: 1350;
 
     margin: 30px 0 20px 0;
     position: relative;
-    font-size: 20px;
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #000;
+    letter-spacing: 0.05em;
+    line-height: 50px;
 
     i {
 
       font-size: 25px;
       margin: 0 8px 0 0;
+      line-height: 50px;
       display: inline-block;
       vertical-align: top;
 
@@ -101,13 +106,13 @@ $breakpoint: 1350;
 
       &.technology {
 
-        color: #800080;
+        color: #20019e;
 
       }
 
       &.solution {
 
-        color: $color-base;
+        color: #ff00b8;
 
       }
 

@@ -3,6 +3,7 @@
 .default {
 
   background: white;
+  position: relative;
 
   .belt {
 
@@ -12,13 +13,7 @@
 
   }
 
-  h3 {
-
-    color: black;
-    font-size: 33px;
-    margin: 0 0 40px 0;
-
-  }
+  @include sectionHeader;
 
 }
 

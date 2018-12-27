@@ -3,20 +3,15 @@
 .default {
 
   background:#eee;
+  position: relative;
+
+  @include sectionHeader;
 
   .belt {
 
     max-width: $gridWidth;
     padding: $gridPadding;
     margin: 0 auto;
-
-  }
-
-  h3 {
-
-    color: black;
-    font-size: 33px;
-    margin: 0 0 40px 0;
 
   }
 

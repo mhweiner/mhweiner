@@ -18,7 +18,7 @@
   bottom: 0;
   z-index: -1;
   backface-visibility: hidden;
-  background: white;
+  background: #f0f0f0;
   @include translateX(30px);
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.17, 0.67, 0.26, 1);
@@ -45,6 +45,7 @@
 
   border-bottom: 1px solid black;
   overflow: hidden;
+  background: white;
 
   h1 {
 

@@ -5,14 +5,44 @@
 
 //colors
 
-$color-base: #00b2ff;
+$color-base: #7e00ff;
+
 //fonts
 
 $font: 'Roboto', sans-serif;
-$font-header: 'Righteous', serif;
 $font-icons: 'Font Awesome 5 Free';
 
 //grid
 
 $gridWidth: 1200px;
-$gridPadding: 70px 40px;
+$gridPadding: 50px 40px;
+
+//section header
+
+@mixin sectionHeader {
+
+  h3 {
+
+    color: #3e3e3e;
+    font-size: 17px;
+    margin: 0 auto 40px auto;
+    position: relative;
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+
+    &:before, &:after {
+
+      content: '';
+      display: inline-block;
+      background: #929292;
+      width: 24px;
+      height: 1px;
+      vertical-align: middle;
+      margin: 0 10px;
+
+    }
+
+  }
+
+}

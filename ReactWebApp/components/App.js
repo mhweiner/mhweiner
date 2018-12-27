@@ -12,7 +12,6 @@ import Skills from "./Skills";
 import About from "./About";
 import ProjectModal from "./ProjectModal";
 
-
 export default class App extends Component {
 
   nav = React.createRef();

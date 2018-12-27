@@ -21,7 +21,7 @@ export default class NavToggle extends React.Component {
 
     }
 
-    return <a className={classes.join(' ')} href="#" onClick={this.onClick}><span/></a>;
+    return <a className={classes.join(' ')} href="#" onClick={this.onClick}><i className='fa fa-bars'/>Menu</a>;
 
   }
 
