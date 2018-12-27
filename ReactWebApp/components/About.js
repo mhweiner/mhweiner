@@ -22,19 +22,16 @@ export default class About extends React.Component {
               <li>
                 <a href="mailto:mhweiner234@gmail.com" className="email">
                   <i className='far fa-envelope' style={{fontSize: '26px'}}/>
-                  <span>Email</span>
                 </a>
               </li>
               <li>
                 <a href="http://linkedin.com/in/mhweiner" target="_blank" className="linkedin">
                   <i className='fab fa-linkedin-in' style={{fontSize: '26px'}}/>
-                  <span>LinkedIn</span>
                 </a>
               </li>
               <li>
                 <a href="http://github.com/mhweiner" target="_blank" className="github">
                   <i className='fab fa-github'/>
-                  <span>GitHub</span>
                 </a>
               </li>
           </ul>

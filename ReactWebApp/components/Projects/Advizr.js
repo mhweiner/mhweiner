@@ -18,14 +18,13 @@ export default class Advizr extends React.Component {
         borderBottom: '2px solid black',
         marginBottom: '30px',
         borderLeft: '1px solid #d0d0d0',
-        borderRight: '1px solid #d0d0d0'
+        borderRight: '1px solid #d0d0d0',
+        boxSizing: 'border-box'
       }}/>
 
       <div className={styles.text}>
 
         <h2>A well-executed product helped a small fintech startup take down a giant.</h2>
-
-        <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
 
         <p>When Advizr first launched their MVP in 2014, writing a financial plan was a time consuming and labor intensive process.
           Existing tools had many features but were difficult to use and didn't necessarily reflect the needs of advisors or their clients.</p>
@@ -46,7 +45,7 @@ export default class Advizr extends React.Component {
           <h3><i className={c(['fas', 'fa-cogs', styles.technology])}/>Technology</h3>
           <ul>
             <li>.NET REST API, <a href="https://github.com/mhweiner/hmjs" target='_blank'>HMJS</a>, React, Highcharts, oAuth</li>
-            <li>Mobile-friendly (responsive) HTML5 app</li>
+            <li>SPA Mobile-Friendly (responsive) HTML5 App</li>
             <li>3rd party integration with Quovo, Blueleaf, Riskalyze & more</li>
             <li>Custom node.js/npm build & release tooling</li>
           </ul>
@@ -71,6 +70,8 @@ export default class Advizr extends React.Component {
             <li>2018 "Best 401k Technology" Industry Award from WealthManagement.com</li>
           </ul>
         </section>
+
+        <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
 
       </div>
 

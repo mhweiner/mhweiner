@@ -22,25 +22,29 @@ export default class ElementalCognition extends React.Component {
         <h2>Teaching a system through "natural learning" will help machines understand the "why" behind their answers.</h2>
 
         <p>Modern AI leaves much to be desired. Although machines have become pretty good at recognizing patterns, faces, and roads, they cannot understand
-        something as simple as a children's bedtime story. They cannot reason and explain the "why" or the "how" behind the answers they give us. Their answers are either opaque or based on statistics.</p>
+        something as simple as a children's bedtime story. They are unable to explain the "why" or the "how" behind the answers they give us. Their answers are either opaque or based on statistics.</p>
 
         <p>To tackle the problem of "understanding", Elemental Cognition, founded and led by IBM Watson alum Dr. David Ferrucci, starts by attempting to teach the system children's stories.
-        To understand why something as seemingly simple as a children's story is so difficult, let's take one simple example:</p>
+        To understand why something as seemingly simple as a children's story is so difficult, let's take one example:</p>
 
-        <blockquote>John and Mary were running a race. John fell. He hurt his knee. Mary looked back. Mary wanted to win. If she kept running she would win. Mary stopped. She ran back. She helped John up.</blockquote>
+        <blockquote>The game was nearly over. The two teams were tied, one to one.  Alice kicked the ball. Oh no! She kicked it the wrong way. She kicked it toward the school building. "What a bad kick," Alice thought.</blockquote>
+
+        <p>Who kicked the ball towards the school building? Why was that bad? Why was Alice upset? What is going on in this story?</p>
+
+        <p>You might think you know the answers to these questions, but how do you know this? Did you picture a soccer game in your head? Did you picture where the goal might be in relation to the school building? Did you put yourself in Alice's shoes?</p>
+
+        <p><strong>Context, language, Culture, and Reasoning are the keys to understanding</strong>.</p>
+
+        <p>Elemental Cognition is betting that this knowledge can be acquired the same way that we do &mdash; something they call "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog.</p>
+
+      </div>
+
+      <div className={styles.text}>
 
         <h3><i className={c(['fa', 'fa-flag', styles.challenge])}/>The Challenge</h3>
-        <p>Existing tools are slow and painful. They either show too much information, or too little. Most importantly, they don't solve the biggest problem that teams face — too many interruptions. </p>
-        <p>Frustrated by existing project management tools, I decided to create my own. It had to:</p>
-        <ul>
-          <li><b>Have a smart queue notification system</b> that limits annoying disruptions in your chat channels. Slack is not a queue. Email isn't (a good one) either. Let's have a queue.</li>
-          <li><b>Be super fast</b>, intuitive, and easy to use. Keyboard shortcuts to quickly zip through forms.</li>
-          <li><b>Be flexible.</b> Every team works differently, and does Agile differently.</li>
-          <li><b>Have easy and powerful search tools.</b></li>
-          <li><b>Have automatic sorting</b> by priority and effort, as prescribed by Agile.</li>
-          <li><b>Clear head space.</b> Limit distractions and information overload.</li>
-          <li><b>Support concurrent multi-project and multi-sprint scenarios</b>.</li>
-        </ul>
+
+        <p>The challenge posed to me was to help them build a working application that could demonstrate the capabilities of their system, and have it in time for a live demo during a talk given by Dr. Ferrucci within a few months.</p>
+        <p>The application had to facilitate a dialog with the machine, show its introspective thinking, and demonstrate its understanding in a visual way. It had to be user-friendly and visually appealing.</p>
 
         <section>
           <h3><i className={c(['fa', 'fa-flask', styles.solution])}/>The Solution</h3>
