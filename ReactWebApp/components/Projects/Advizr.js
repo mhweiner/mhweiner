@@ -14,11 +14,16 @@ export default class Advizr extends React.Component {
 
     return (<div className={styles.base}>
 
-      <img src='/static/images/content/advizr/hero2.jpg' style={{borderBottom: '2px solid black', marginBottom: '30px'}}/>
+      <img src='/static/images/content/advizr/hero2.jpg' style={{
+        borderBottom: '2px solid black',
+        marginBottom: '30px',
+        borderLeft: '1px solid #d0d0d0',
+        borderRight: '1px solid #d0d0d0'
+      }}/>
 
       <div className={styles.text}>
 
-        <h2>How a well-executed product helped a small fintech startup take down a giant.</h2>
+        <h2>A well-executed product helped a small fintech startup take down a giant.</h2>
 
         <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
 

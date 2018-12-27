@@ -130,5 +130,6 @@
 
   overflow: auto;
   height: calc(100vh - 46px);
+  will-change: transform;
 
 }

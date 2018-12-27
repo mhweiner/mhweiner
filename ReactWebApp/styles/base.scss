@@ -12,5 +12,13 @@ html, body {
 a, a:visited {
 
   color: $color-base;
+  transition: color 0.1s ease-in-out;
+  text-decoration: underline;
+
+  &:hover {
+
+    color: lighten($color-base, 10%);
+
+  }
 
 }
