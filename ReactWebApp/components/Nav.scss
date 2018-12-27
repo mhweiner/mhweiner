@@ -18,48 +18,6 @@
   }
 }
 
-@include keyframes(animateLinkOpen) {
-  0% {
-    color: rgba(0,0,0,0);
-  }
-  33% {
-    color: rgba(0,0,0,1);
-  }
-  66% {
-    color: rgba(0,0,0,0.5);
-  }
-  100% {
-    color: rgba(0,0,0,1);
-  }
-}
-
-@include keyframes(animateLinkClose) {
-  0% {
-    color: rgba(0,0,0,1);
-  }
-  33% {
-    color: rgba(0,0,0,.5);
-  }
-  66% {
-    color: rgba(0,0,0,1);
-  }
-  100% {
-    color: rgba(0,0,0,0);
-  }
-}
-
-@include keyframes(animateInLinkChevron) {
-  from {
-    @include translateX(-10px);
-    opacity: 0;
-  }
-  to {
-    @include translateX(0);
-    opacity: 1;
-  }
-}
-
-
 .default {
 
   position: fixed;
@@ -110,15 +68,28 @@
         color: rgba(0, 0, 0, 0);
         position: relative;
         text-transform: uppercase;
-        transition: all 0.1s ease-in-out;
+        transition: all 0.3s ease-in-out;
         line-height: 90px;
         width: 400px;
         border: 5px black solid;
         font-weight: bold;
 
+        &.animateLinkOpen {
+
+          color: black;
+
+        }
+
+        &.animateLinkClose {
+
+          color: rgba(0,0,0,0);
+
+        }
+
         &:hover {
 
-          background: white;
+          background: black !important;
+          color: white !important;
 
         }
 
@@ -135,6 +106,9 @@
     @include animation(animateBackgroundOpen 0.2s ease-in-out);
     @include animation-fill-mode(forwards);
   }
+  ul {
+    @include animation(animateBackgroundOpen 0.1s ease-in-out);
+  }
 }
 
 .animateBackgroundClose {
@@ -142,14 +116,4 @@
     @include animation(animateBackgroundClose 0.1s ease-in-out);
     @include animation-fill-mode(forwards);
   }
-}
-
-.animateLinkOpen {
-  @include animation(animateLinkOpen 0.4s ease-in-out);
-  @include animation-fill-mode(forwards);
-}
-
-.animateLinkClose {
-  @include animation(animateLinkClose 0.2s ease-in-out);
-  @include animation-fill-mode(forwards);
 }

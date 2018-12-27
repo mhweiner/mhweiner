@@ -185,7 +185,7 @@ export default class App extends Component {
 
     return (<div>
       <NavToggle toggleNav={this.toggleNav} isOpenToggle={this.state.navToggleIsOpen} isOpen={this.state.navIsOpen}/>
-      {this.state.navIsOpen && <Nav ref={this.nav} scrollTo={this.scrollTo}/>}
+      {this.state.navIsOpen && <Nav ref={this.nav} scrollTo={this.scrollTo} close={() => this.toggleNav(false)}/>}
       {this.state.project !== null && <ProjectModal
         project={this.state.project}
         ref={this.projectModal}
