@@ -37,24 +37,17 @@ export default class ElementalCognition extends React.Component {
 
         <p>Elemental Cognition is betting that this knowledge can be acquired the same way that we do &mdash; something they call "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog.</p>
 
-      </div>
-
-      <div className={styles.text}>
-
         <h3><i className={c(['fa', 'fa-flag', styles.challenge])}/>The Challenge</h3>
 
-        <p>The challenge posed to me was to help them build a working application that could demonstrate the capabilities of their system, and have it in time for a live demo during a talk given by Dr. Ferrucci within a few months.</p>
-        <p>The application had to facilitate a dialog with the machine, show its introspective thinking, and demonstrate its understanding in a visual way. It had to be user-friendly and visually appealing.</p>
+        <p>The challenge posed to me was to help them build a working application that could demonstrate the capabilities of their system, with the first version
+          ready for a live demo during a talk given by Dr. Ferrucci within a few months.</p>
+        <p>The application had to facilitate a dialog with the machine, show its introspective thinking, and demonstrate its understanding
+          in a visual way. It had to be user-friendly and visually appealing.</p>
 
         <section>
-          <h3><i className={c(['fa', 'fa-flask', styles.solution])}/>The Solution</h3>
-          <p>Advizr marries robo-advising with a thoughtful user experience and solid performing application to
-            create an unparalleled experience for advisors and their clients. Features are based on exhaustive
-            user-research, iteration, and customer outreach programs.</p>
-          <p>We leveraged a component-based modular UI that allowed us to iterate quickly
-            while still allowing the application to scale (in terms of complexity without
-            major rewrites). This allowed us to hone-in on our features and iterate quickly with customer feedback
-            and data metrics.</p>
+          <h3><i className={c(['fa', 'fa-pawn', styles.solution])}/>Strategy</h3>
+          <p>The first thing I worked on was a way to visually demonstrate the system's understanding, which I called VKR (Visual Knowledge Representation).</p>
+          <p>This was an analog to a way the system already represented knowledge internally, but something more human readable.</p>
         </section>
 
         <section>

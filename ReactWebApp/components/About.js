@@ -10,7 +10,6 @@ export default class About extends React.Component {
     return (
       <div className={[styles.default, 'section-about'].join(' ')}>
         <div className={styles.belt}>
-          <h3>about</h3>
           <img src="/static/images/profile2.jpg"/>
             <p>I enjoy solving problems while embracing practicality and iteration. I am research-driven and excel at
               optimizing processes and making the most with constraints.</p>

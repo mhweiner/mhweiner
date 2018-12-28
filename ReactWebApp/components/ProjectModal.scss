@@ -9,7 +9,7 @@
   bottom: 0;
   z-index: -1;
   backface-visibility: hidden;
-  background: #f0f0f0;
+  background: white;
   @include translateX(30px);
   opacity: 0;
   transition: all 0.5s cubic-bezier(0.17, 0.67, 0.26, 1);
@@ -36,7 +36,6 @@
 
   border-bottom: 1px solid black;
   overflow: hidden;
-  background: white;
 
   h1 {
 
@@ -44,26 +43,14 @@
     margin: 0 0 0 9px;
     display: inline-block;
     vertical-align: top;
-    font-size: 20px;
-    position: relative;
-    padding: 0 0 0 20px;
-
-    &:before {
-
-      content: '';
-      display: block;
-      height: 30px;
-      background: #999;
-      width: 1px;
-      position: absolute;
-      left: 0;
-      top: 8px;
-
-    }
+    font-size: 22px;
+    position: absolute;
+    left: 50%;
+    @include translateX(-50%);
 
   }
 
-  button {
+  button.backButton, a.extLink {
 
     border: none;
     background: none;
@@ -76,6 +63,10 @@
     cursor: pointer;
     transition: all 0.1s ease-in-out;
     position: relative;
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    font-family: $font-header;
 
     &:after {
 
@@ -119,6 +110,19 @@
         opacity: 1;
 
       }
+
+    }
+
+  }
+
+  a.extLink {
+
+    position: absolute;
+    right: 0;
+
+    i {
+
+      margin: 0 0 0 5px;
 
     }
 

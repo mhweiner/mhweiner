@@ -24,7 +24,9 @@ const projects = [
       height: '59%'
     },
     award: true,
-    content: <Advizr/>
+    content: <Advizr/>,
+    years: '2014-2016',
+    website: 'https://advizr.com'
   },
 
   {
@@ -49,7 +51,9 @@ const projects = [
       bottom: '0',
       top: 'auto'
     },
-    content: <ElementalCognition/>
+    content: <ElementalCognition/>,
+    years: '2018-2019',
+    website: 'http://elementalcognition.com'
   },
 
   {
@@ -65,7 +69,9 @@ const projects = [
     imgStyle: {
       maxWidth: '75%'
     },
-    content: <Shutterstock/>
+    content: <Shutterstock/>,
+    years: '2017',
+    website: 'https://www.shutterstock.com'
   },
 
   {
@@ -78,7 +84,9 @@ const projects = [
       backgroundSize: 'cover'
     },
     imgSrc: '/static/images/logos/marvel-white.png',
-    content: <Marvel/>
+    content: <Marvel/>,
+    years: '2013',
+    website: 'https://marvel.com'
   },
 
   {
@@ -93,7 +101,9 @@ const projects = [
     imgStyle: {
       maxHeight:'70px'
     },
-    content: <Ciro/>
+    content: <Ciro/>,
+    years: '2015-2017',
+    website: 'https://ciroapp.com'
   },
 
   {
@@ -109,7 +119,9 @@ const projects = [
       maxHeight: '57%',
       maxWidth: '40%'
     },
-    content: <Devotify/>
+    content: <Devotify/>,
+    years: '2014-2015',
+    website: 'http://www.devotify.com'
   }
 
 ];

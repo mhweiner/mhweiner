@@ -2,11 +2,9 @@
 
 .default {
 
-  background: white;
-  padding: 0 0 40px 0;
+  padding: 40px 0;
   position: relative;
-
-  @include sectionHeader;
+  background: #3c3744;
 
   .belt {
 
@@ -18,10 +16,12 @@
 
   p {
 
-    color: black;
-    font-size: 21px;
+    color: white;
+    font-size: 23px;
     margin: 0 0 20px 0;
-    line-height: 1.3;
+    line-height: 1.4;
+    max-width: 740px;
+    display: block;
 
   }
 
@@ -31,6 +31,7 @@
     width: 32%;
     border-radius: 600px;
     margin: 0 0 0 40px;
+    border: 2px solid white;
 
   }
 
@@ -50,7 +51,6 @@ ul.contact {
     a {
 
       text-decoration: none;
-      color: $color-base;
       font-size: 13px;
       text-align: center;
       display: inline-block;
@@ -63,30 +63,22 @@ ul.contact {
         width: 45px;
         text-align: center;
         line-height: 45px;
-        background: $color-base;
         color: white;
         font-size: 41px;
         border-radius: 45px;
         transition: background-color 0.1s ease-in-out;
+        border: 2px solid white;
 
       }
 
       &:hover {
 
-        color: black;
-
         i {
 
-          background: black;
+          background: white;
+          color: black;
 
         }
-
-      }
-
-      span {
-
-        display: block;
-        line-height: 21px;
 
       }
 

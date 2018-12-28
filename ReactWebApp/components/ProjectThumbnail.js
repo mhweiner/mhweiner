@@ -11,7 +11,7 @@ export default class ProjectThumbnail extends React.Component {
     return <div className={styles.default} onClick={this.props.onClick}>
       <div className={styles.img} style={proj.imgContainerStyle}>
         {this.props.isLoading && <div className={styles.loading}><p><i className='fa fa-spin fa-spinner'/>Loading...</p></div>}
-        {!this.props.isLoading && <div className={styles.hover}><i className='fa fa-fighter-jet'/>Go to project</div>}
+        {!this.props.isLoading && <div className={styles.hover}><span>Go to project</span></div>}
         <img src={proj.imgSrc} style={proj.imgStyle} className={styles.fg}/>
       </div>
       <div className={styles.description}>

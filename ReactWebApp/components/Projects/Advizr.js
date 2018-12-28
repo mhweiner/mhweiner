@@ -15,10 +15,9 @@ export default class Advizr extends React.Component {
     return (<div className={styles.base}>
 
       <img src='/static/images/content/advizr/hero2.jpg' style={{
-        borderBottom: '2px solid black',
         marginBottom: '30px',
-        borderLeft: '1px solid #d0d0d0',
-        borderRight: '1px solid #d0d0d0',
+        border: '1px solid #d0d0d0',
+        borderTop: 'none',
         boxSizing: 'border-box'
       }}/>
 
@@ -26,19 +25,20 @@ export default class Advizr extends React.Component {
 
         <h2>A well-executed product helped a small fintech startup take down a giant.</h2>
 
-        <p>When Advizr first launched their MVP in 2014, writing a financial plan was a time consuming and labor intensive process.
-          Existing tools had many features but were difficult to use and didn't necessarily reflect the needs of advisors or their clients.</p>
-        <p>Advizr wanted to lower the bar of entry while building an interactive experience that helped the client make the most out of their plan. However, the competition
-          was tough&mdash;the industry was dominated by a few large players with nearly unlimited resources.
+        <p>Writing a financial plan was a time consuming and labor intensive process. Existing tools had many features but were
+          difficult to use and didn't reflect the needs of advisors or their clients, leaving a professional financial plan out of reach for many.</p>
+
+        <h3><i className={c(['fas', 'fa-flag', styles.challenge])}/>The Challenge</h3>
+
+        <p>Advizr wanted to lower the bar of entry while building an interactive experience that would help the client make the most out of their plan. However, the competition
+          was tough&mdash;the industry was dominated by a few large players with nearly unlimited resources. We started out as a small team of 5 with limited funding.
         </p>
 
         <section>
           <h3><i className={c(['fas', 'fa-chess-pawn', styles.solution])}/>Strategy</h3>
-          <p>Advizr married robo-advising with a thoughtful design and solid performing application to
-            create an unparalleled experience for both advisors and their clients. Features were (and continue to be) based on exhaustive
+          <p>Features were (and continue to be) based on exhaustive
             user-research and iteration.</p>
-          <p>In order to iterate quickly without technical hangups, we leveraged a modular component-based approach and an Agile development process. This also helped our application to scale (in terms of complexity and team size) while keeping technical debt managable and stability high.</p>
-          <p>Customers and their clients were not just happy, but became our biggest advocates.</p>
+          <p>In order to iterate quickly without technical hangups, we leveraged a modular component-based approach and an Agile development process. This also helped our application to scale (in terms of complexity and team size) while keeping technical debt manageable and stability high.</p>
         </section>
 
         <section>
@@ -54,11 +54,10 @@ export default class Advizr extends React.Component {
         <section>
           <h3><i className={c(['fa', 'fa-bomb', styles.involvement])}/>My Involvement</h3>
           <ul>
-            <li>Lead UX and UI Design. Worked closely with stakeholders to understand customer's needs and to better empathize with them. Requirement gathering, information architecture, wire-framing, and prototyping.</li>
-            <li>Helped transition company from legacy MVC .NET to modern REST API architecture.</li>
-            <li>Helped transition company to an iterative Agile development process.</li>
+            <li>Led UX and UI Design. Worked closely with stakeholders to understand customer's needs and to better empathize with them. Requirement gathering, information architecture, wire-framing, and prototyping.</li>
             <li>Led front-end architecture & development. Helped build a small team of front-end developers and
               freelancers. Made key hires.</li>
+            <li>Led in REST API design.</li>
           </ul>
         </section>
 
@@ -71,13 +70,12 @@ export default class Advizr extends React.Component {
           </ul>
         </section>
 
-        <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
 
       </div>
 
       <div className={styles.images}>
-        <img src="/static/images/content/advizr/13.png"/>
-        <img src="/static/images/content/advizr/8.png"/>
+        <img src="/static/images/content/advizr/13.png" style={{border: '1px solid #ccc'}}/>
+        <img src="/static/images/content/advizr/8.png" style={{border: '1px solid #ccc'}}/>
         <img src="/static/images/content/advizr/7.png"/>
         <img src="/static/images/content/advizr/11.png"/>
       </div>

@@ -9,7 +9,6 @@ export default class Skills extends React.Component {
     return (
       <div className={[styles.default, 'section-skills'].join(' ')}>
         <div className={styles.belt}>
-          <h3>skills</h3>
           <section>
             <h4>Technical</h4>
             <ul>

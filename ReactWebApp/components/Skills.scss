@@ -5,12 +5,10 @@
   background:#eee;
   position: relative;
 
-  @include sectionHeader;
-
   .belt {
 
     max-width: $gridWidth;
-    padding: $gridPadding;
+    padding: 50px 30px;
     margin: 0 auto;
 
   }
@@ -18,8 +16,10 @@
   section {
 
     display: inline-block;
-    width: 33%;
+    width: 33.333%;
     vertical-align: top;
+    padding: 0 10px;
+    box-sizing: border-box;
 
     h4 {
 
@@ -52,7 +52,7 @@
         padding: 0;
         line-height: 1.2em;
         font-size: 17px;
-        color: black;
+        color: #585858;
 
       }
 

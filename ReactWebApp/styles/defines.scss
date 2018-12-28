@@ -9,8 +9,9 @@ $color-base: #7e00ff;
 
 //fonts
 
-$font: 'Roboto', sans-serif;
 $font-icons: 'Font Awesome 5 Free';
+$font: 'Source Sans Pro', 'Roboto', sans-serif;
+$font-header: 'Roboto', sans-serif;
 
 //grid
 
@@ -23,27 +24,15 @@ $gridPadding: 50px 40px;
 
   h3 {
 
-    color: #3e3e3e;
-    font-size: 17px;
+    color: #505050;
+    font-size: 16px;
     margin: 0 auto 40px auto;
     position: relative;
     display: block;
     text-align: center;
-    text-transform: uppercase;
     letter-spacing: 0.05em;
-
-    &:before, &:after {
-
-      content: '';
-      display: inline-block;
-      background: #929292;
-      width: 24px;
-      height: 1px;
-      vertical-align: middle;
-      margin: 0 10px;
-
-    }
-
+    text-transform: uppercase;
+    font-family: $font-header;
   }
 
 }
