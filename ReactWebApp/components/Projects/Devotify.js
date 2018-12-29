@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './base.scss';
 import devotifyStyles from './Devotify.scss';
 
-export default class Devotify extends React.Component {
+export default class Devotify extends React.PureComponent {
 
   render() {
 

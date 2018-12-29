@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './base.scss';
 import ciroStyles from './Ciro.scss';
 
-export default class Ciro extends React.Component {
+export default class Ciro extends React.PureComponent {
 
   render() {
 

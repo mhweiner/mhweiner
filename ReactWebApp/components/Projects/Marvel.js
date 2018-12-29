@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './base.scss';
 import marvelStyles from './Marvel.scss';
 
-export default class Marvel extends React.Component {
+export default class Marvel extends React.PureComponent {
 
   render() {
 

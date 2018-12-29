@@ -5,7 +5,7 @@ import imagesLoaded from 'images-loaded';
 
 import styles from './ProjectModal.scss';
 
-export default class ProjectModal extends React.Component {
+export default class ProjectModal extends React.PureComponent {
 
   ref = React.createRef();
   contentRef = React.createRef();

@@ -3,7 +3,7 @@ import React from 'react';
 
 import styles from './About.scss';
 
-export default class About extends React.Component {
+export default class About extends React.PureComponent {
 
   render() {
 

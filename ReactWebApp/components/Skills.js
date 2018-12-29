@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Skills.scss';
 
-export default class Skills extends React.Component {
+export default class Skills extends React.PureComponent {
 
   render() {
 

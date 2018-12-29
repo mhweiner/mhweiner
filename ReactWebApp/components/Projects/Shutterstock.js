@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './base.scss';
 import ssStyles from './Shutterstock.scss';
 
-export default class Shutterstock extends React.Component {
+export default class Shutterstock extends React.PureComponent {
 
   render() {
 

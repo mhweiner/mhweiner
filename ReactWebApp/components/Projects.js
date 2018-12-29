@@ -4,7 +4,7 @@ import ProjectThumbnail from "./ProjectThumbnail";
 
 import styles from './Projects.scss';
 
-export default class Projects extends React.Component {
+export default class Projects extends React.PureComponent {
 
   render() {
 

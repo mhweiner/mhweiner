@@ -3,7 +3,7 @@ import {addClass} from "../utils/DOM";
 
 import styles from './Nav.scss';
 
-export default class Nav extends React.Component {
+export default class Nav extends React.PureComponent {
 
   ref = React.createRef();
   closeAnimationDuration = 350; //in ms

@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './Intro.scss';
 
-export default class Intro extends React.Component {
+export default class Intro extends React.PureComponent {
 
   render() {
 

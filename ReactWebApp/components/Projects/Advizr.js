@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './base.scss';
 
-export default class Advizr extends React.Component {
+export default class Advizr extends React.PureComponent {
 
   render() {
 

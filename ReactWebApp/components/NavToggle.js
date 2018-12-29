@@ -2,7 +2,7 @@ import React from 'react';
 
 import styles from './NavToggle.scss';
 
-export default class NavToggle extends React.Component {
+export default class NavToggle extends React.PureComponent {
 
   onClick = (e) => {
 

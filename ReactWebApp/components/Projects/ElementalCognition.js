@@ -3,7 +3,7 @@ import React from 'react';
 import styles from './base.scss';
 import ecStyles from './ElementalCognition.scss';
 
-export default class ElementalCognition extends React.Component {
+export default class ElementalCognition extends React.PureComponent {
 
   render() {
 
