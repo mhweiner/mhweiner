@@ -66,7 +66,7 @@ const projects = [
   {
     id: 'Marvel.com',
     title: 'Marvel.com',
-    description: 'The official website of Marvel Entertainment.',
+    description: 'The official website of Marvel Entertainment, and one of the first responsive websites.',
     tags: ['R&D', 'Front-End', 'Process Design'],
     bgSrc: '/static/images/project-thumbs/marvel-bg.jpg',
     imgSrc: '/static/images/project-thumbs/logos/marvel-white.png',

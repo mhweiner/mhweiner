@@ -33,9 +33,11 @@ export default class ElementalCognition extends React.PureComponent {
 
         <p>You might think you know the answers to these questions, but how do you know this? Did you picture a soccer game in your head? Did you picture where the goal might be in relation to the school building? Did you put yourself in Alice's shoes?</p>
 
-        <p><strong>Context, language, Culture, and Reasoning are the keys to understanding</strong>.</p>
-
-        <p>Elemental Cognition is betting that this knowledge can be acquired the same way that we do &mdash; something they call "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog.</p>
+        <p>
+          As you can see, <strong>context, language, Culture, and Reasoning are the keys to understanding</strong>.
+        Elemental Cognition is betting that this knowledge can be acquired the same way that we do &mdash;
+        something they call "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog.
+        </p>
 
         <h3><i className={c(['fa', 'fa-flag', styles.challenge])}/>The Challenge</h3>
 
@@ -45,43 +47,59 @@ export default class ElementalCognition extends React.PureComponent {
           in a visual way. It had to be user-friendly and visually appealing.</p>
 
         <section>
-          <h3><i className={c(['fa', 'fa-pawn', styles.solution])}/>Strategy</h3>
+          <h3><i className={c(['fas', 'fa-chess-pawn', styles.solution])}/>Strategy</h3>
           <p>The first thing I worked on was a way to visually demonstrate the system's understanding, which I called VKR (Visual Knowledge Representation).</p>
-          <p>This was an analog to a way the system already represented knowledge internally, but something more human readable.</p>
+        </section>
+
+        <div className={styles.images} style={{margin: '30px -80px 0'}}>
+          <img src='/static/images/content/ec/VKR.png'/>
+        </div>
+
+        <section>
+          <p>VKR is a collection of pages that are a designed around a pivot on the data, such as "Motivation", "Objects", "Events", "Timeline", etc.</p>
+          <p>Then I had to design an application where the user can "chat" with the system, see what it's "thinking", and be able to see the VKR and Summary.
+            The user also needs to see the story on the left to have common reference with the system.</p>
+        </section>
+
+        <div className={styles.images} style={{margin: '30px -80px 0'}}>
+          <img src='/static/images/content/ec/chat.jpg'/>
+          <img src='/static/images/content/ec/thinking.jpg'/>
+        </div>
+
+        <section>
+          <p>Last, I had to help design a REST API to power the app, and start building the app itself. We used Swagger and SwaggerHub to collaborate
+          with the team to help build the API, while simultaneously building the app, for which we chose React and a Flux-like state management design.</p>
+          <p>The development of the "backend" API and web app were built in parallel, and again, SwaggerHub helped keep us all on the same page during the process.</p>
         </section>
 
         <section>
           <h3><i className={c(['fas', 'fa-cogs', styles.technology])}/>Technology</h3>
           <ul>
-            <li>HTML5/CSS3/Javascript/ZeptoJS/PHP</li>
-            <li>Newfangled "device agnostic feature based responsive design" methodology</li>
-            <li>Custom sass extension CSS Variant Export Script written in Ruby</li>
+            <li>HTML5/CSS3/ES6/Typescript/React/Flux</li>
+            <li>REST API (Java)</li>
+            <li>Swagger, SwaggerHub</li>
+            <li>Super-top-secret stuff I cannot disclose</li>
           </ul>
         </section>
 
         <section>
           <h3><i className={c(['fa', 'fa-bomb', styles.involvement])}/>Involvement</h3>
           <ul>
-            <li>Led R&D and front-end architecture.</li>
-            <li>Worked with team to create solutions to major challenges, such as payload size, performance, legacy, maint. costs</li>
-            <li>Co-invented innovative build process &mdash; a CSS variant export technique to battle CSS file size.</li>
-            <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Inventory, in partnership with the Design team, specifically the Art Director.</li>
-            <li>Wrote an automated testing suite specially designed for Marvel and responsive websites. This cut down on our QA turnaround significantly and kept quality high.</li>
-            <li>Development and promotion of interactive Style Guide with the help of the Design team. The Style Guide was used by Marvel's business partners, such as ABC and app development vendors.</li>
-            <li>Almost met Robert Downy, Jr.</li>
+            <li>Led UX strategy and conceptual design of "VKR" design system</li>
+            <li>Led R&D, front-end architecture and development</li>
+            <li>Worked closely with researchers and reported directly to Dr. Ferrucci</li>
           </ul>
         </section>
 
         <section>
           <h3><i className={c(['fa', 'fa-trophy', styles.achievements])}/>Achievements & Awards</h3>
           <ul>
-            <li>Recognized as Best Client-Facing Technology of 2015 by FPPad.</li>
-            <li>Pre-revenue to over $2MM/yr within 2 years.</li>
+            <li>Successfully delivered first version by tight deadline and was well received</li>
+            <li>Used in talks by Dr. Ferrucci and continues to be used as one of the main ways to test and judge our progress as a company</li>
+            <li>Used to show investors and demonstrate our IP</li>
           </ul>
         </section>
-
-        <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
-
+        
       </div>
 
       <div className={styles.images}>
