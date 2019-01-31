@@ -41,7 +41,7 @@ export default class ElementalCognition extends React.PureComponent {
 
         <h3>The Challenge</h3>
 
-        <p>The challenge posed to me was to help them build a working application that could demonstrate the capabilities of their system, with the first version
+        <p>The challenge posed to me was to help them build a working front-end application that could demonstrate the capabilities of their system, with the first version
           ready for a live demo during a talk given by Dr. Ferrucci within a few months.</p>
         <p>The application had to facilitate a dialog with the machine, show its introspective thinking, and demonstrate its understanding
           in a visual way. It had to be user-friendly and visually appealing.</p>
