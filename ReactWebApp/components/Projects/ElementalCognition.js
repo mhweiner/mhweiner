@@ -39,7 +39,7 @@ export default class ElementalCognition extends React.PureComponent {
         something they call "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog.
         </p>
 
-        <h3><i className={c(['fa', 'fa-flag', styles.challenge])}/>The Challenge</h3>
+        <h3>The Challenge</h3>
 
         <p>The challenge posed to me was to help them build a working application that could demonstrate the capabilities of their system, with the first version
           ready for a live demo during a talk given by Dr. Ferrucci within a few months.</p>
@@ -47,7 +47,7 @@ export default class ElementalCognition extends React.PureComponent {
           in a visual way. It had to be user-friendly and visually appealing.</p>
 
         <section>
-          <h3><i className={c(['fas', 'fa-chess-pawn', styles.solution])}/>Strategy</h3>
+          <h3>Strategy</h3>
           <p>The first thing I worked on was a way to visually demonstrate the system's understanding, which I called VKR (Visual Knowledge Representation).</p>
         </section>
 
@@ -73,7 +73,7 @@ export default class ElementalCognition extends React.PureComponent {
         </section>
 
         <section>
-          <h3><i className={c(['fas', 'fa-cogs', styles.technology])}/>Technology</h3>
+          <h3>Technology</h3>
           <ul>
             <li>HTML5/CSS3/ES6/Typescript/React/Flux</li>
             <li>REST API (Java)</li>
@@ -83,7 +83,7 @@ export default class ElementalCognition extends React.PureComponent {
         </section>
 
         <section>
-          <h3><i className={c(['fa', 'fa-bomb', styles.involvement])}/>Involvement</h3>
+          <h3>My Involvement</h3>
           <ul>
             <li>Led UX strategy and conceptual design of "VKR" design system</li>
             <li>Led R&D, front-end architecture and development</li>
@@ -92,14 +92,14 @@ export default class ElementalCognition extends React.PureComponent {
         </section>
 
         <section>
-          <h3><i className={c(['fa', 'fa-trophy', styles.achievements])}/>Achievements & Awards</h3>
+          <h3>Achievements & Awards</h3>
           <ul>
             <li>Successfully delivered first version by tight deadline and was well received</li>
             <li>Used in talks by Dr. Ferrucci and continues to be used as one of the main ways to test and judge our progress as a company</li>
             <li>Used to show investors and demonstrate our IP</li>
           </ul>
         </section>
-        
+
       </div>
 
       <div className={styles.images}>

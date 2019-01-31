@@ -23,9 +23,6 @@ export default class Marvel extends React.PureComponent {
 
         <h2>Marvel.com broke new ground in 2013 to become one of the first large-scale, media-rich, high-traffic fully-responsive websites.</h2>
 
-        <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
-
-        <h3><i className={c(['fa', 'fa-flag', styles.challenge])}/>The Challenge</h3>
         <p>Marvel's audience is increasingly mobile. To support the shifting device landscape, the website required a complete overhaul to become fully-responsive. In addition, the scope of the website was increased, unifying all of Marvel's business verticals under one domain.</p>
         <p>To make the challenge even more difficult, the designers wanted a bold, "on-brand" design, instead of a compromised watered-down experience typical of responsive websites at the time. We were given a 9 month deadline, and to top it off, we needed to support IE8!</p>
         <p>The biggest technical challenges were:</p>
@@ -37,7 +34,7 @@ export default class Marvel extends React.PureComponent {
         </ul>
 
         <section>
-          <h3><i className={c(['fa', 'fa-flask', styles.solution])}/>The Solution</h3>
+          <h3>STATEGY</h3>
           <p>Advizr marries robo-advising with a thoughtful user experience and solid performing application to
             create an unparalleled experience for advisors and their clients. Features are based on exhaustive
             user-research, iteration, and customer outreach programs.</p>
@@ -48,7 +45,7 @@ export default class Marvel extends React.PureComponent {
         </section>
 
         <section>
-          <h3><i className={c(['fas', 'fa-cogs', styles.technology])}/>Technology</h3>
+          <h3>Technology</h3>
           <ul>
             <li>HTML5/CSS3/Javascript/ZeptoJS/PHP</li>
             <li>Newfangled "device agnostic feature based responsive design" methodology</li>
@@ -57,7 +54,7 @@ export default class Marvel extends React.PureComponent {
         </section>
 
         <section>
-          <h3><i className={c(['fa', 'fa-bomb', styles.involvement])}/>Involvement</h3>
+          <h3>My Involvement</h3>
           <ul>
             <li>Led R&D and front-end architecture.</li>
             <li>Worked with team to create solutions to major challenges, such as payload size, performance, legacy, maint. costs</li>
@@ -70,7 +67,7 @@ export default class Marvel extends React.PureComponent {
         </section>
 
         <section>
-          <h3><i className={c(['fa', 'fa-trophy', styles.achievements])}/>Achievements & Awards</h3>
+          <h3>Achievements & Awards</h3>
           <ul>
             <li>Recognized as Best Client-Facing Technology of 2015 by FPPad.</li>
             <li>Pre-revenue to over $2MM/yr within 2 years.</li>

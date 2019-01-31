@@ -11,11 +11,7 @@ export default class About extends React.PureComponent {
       <div className={[styles.default, 'section-about'].join(' ')}>
         <div className={styles.belt}>
           <img src="/static/images/profile2.jpg"/>
-            <p>I enjoy solving problems while embracing practicality and iteration. I am research-driven and excel at
-              optimizing processes and making the most with constraints.</p>
-            <p>As a team player who enjoys collaboration, I have helped start several successful start-ups and worked on
-              award-winning, disruptive products.</p>
-            <p>When I'm not programming, I'm usually snowboarding, rock climbing, or watching "Beat Bobby Flay."</p>
+          <p>Marc is a lifelong programmer, UX designer, tinkerer, and space nerd. He built computer games when he was eight and started his first web development company when he was fifteen. After studying Aerospace Engineering and Computer Science at the University at Buffalo, he helped launch a handful of successful startups, including the first user-friendly web-based medical record application. His specialties are in systems architecture, scalability, and API and UX design and development. When he is not working, he is snowboarding, skateboarding, or flying acrobatic tailwheel aircraft.</p>
 
           <ul className={styles.contact}>
               <li>

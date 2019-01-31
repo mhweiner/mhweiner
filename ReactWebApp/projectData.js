@@ -26,7 +26,7 @@ const projects = [
     award: true,
     content: <Advizr/>,
     years: '2014-2016',
-    website: 'https://advizr.com'
+    website: 'https://www.advizr.com/'
   },
 
   {
@@ -44,7 +44,7 @@ const projects = [
     },
     content: <ElementalCognition/>,
     years: '2018-2019',
-    website: 'http://elementalcognition.com'
+    website: 'http://www.elementalcognition.com'
   },
 
   {
@@ -72,7 +72,7 @@ const projects = [
     imgSrc: '/static/images/project-thumbs/logos/marvel-white.png',
     content: <Marvel/>,
     years: '2013',
-    website: 'https://marvel.com'
+    website: 'https://www.marvel.com'
   },
 
   {
