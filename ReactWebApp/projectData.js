@@ -81,7 +81,7 @@ const projects = [
     description: 'Helping development teams communicate more effectively.',
     tags: ['Full-Stack', 'UX', 'Founder'],
     containerStyle: {
-      background: 'linear-gradient(to bottom right, #dcd9d9, #d8d8d8)'
+      background: '#393546'
     },
     imgSrc: '/static/images/project-thumbs/logos/ciro.png',
     imgStyle: {

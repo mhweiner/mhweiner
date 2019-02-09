@@ -13,11 +13,11 @@ a, a:visited {
 
   color: $color-base;
   transition: color 0.1s ease-in-out;
-  text-decoration: underline;
 
   &:hover {
 
-    color: lighten($color-base, 10%);
+    color: white;
+    background: $color-base;
 
   }
 

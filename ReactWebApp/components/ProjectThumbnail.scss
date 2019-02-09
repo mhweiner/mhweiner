@@ -1,16 +1,5 @@
 @import "../styles/defines";
 
-@include keyframes(appear) {
-  from {
-    opacity: 0;
-    @include scale(0.8,0.8);
-  }
-  to {
-    opacity: 1;
-    @include scale(1,1);
-  }
-}
-
 .default {
 
   box-sizing: border-box;
@@ -20,16 +9,17 @@
   vertical-align: top;
   overflow: hidden;
   transition: all 0.1s ease-in-out;
-  box-shadow: rgba(0,0,0,0.2) 0 0 0 1px inset;
+  background: #e0e0e0;
   max-width: 500px;
   margin: 0 auto 20px auto;
+  border-radius: 5px;
 
   @include media(800){
 
     display: inline-block;
     width: 47%;
     margin: 0 1.5% 40px 1.5%;
-    height: 350px;
+    height: 280px;
     max-width: 800px;
 
   }
@@ -39,25 +29,6 @@
     .hover {
 
       opacity: 1;
-
-      span i {
-
-        @include translateX(0);
-
-      }
-
-    }
-
-    .fg {
-
-      filter: blur(3px);
-      -webkit-filter: blur(3px);
-
-    }
-
-    .description h4 {
-
-      color: $color-base;
 
     }
 
@@ -73,39 +44,39 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: #7e00ffaa;
+  background: rgba(126, 0, 255, 0.87);
   z-index: 2;
   color: white;
   font-size: 20px;
   text-align: center;
-  line-height: 189px;
-  transition: opacity 0.3s ease-in-out;
-  font-family: $font-header;
-  font-weight: 700;
-  text-transform: uppercase;
-  will-change: opacity;
+  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+
+  p {
+
+    @include translateY(-50%);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    font-size: 18px;
+
+  }
 
   span {
 
-    display: inline-block;
-    line-height: 45px;
+    display: block;
     padding: 0 20px;
-    font-family: $font-header;
     letter-spacing: 0.03em;
-    font-size: 16px;
-    transition: all 0.3s ease-in-out;
-
-    i {
-
-      margin: -4px 8px 0 0;
-      font-size: 27px;
-      display: inline-block;
-      vertical-align: middle;
-      @include translateX(-20px);
-      transition: 0.3s ease-in-out;
-      will-change: transform;
-
-    }
+    font-size: 15px;
+    font-family: $font-header;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 20px auto 0 auto;
+    width: 141px;
+    line-height: 36px;
+    border: 2px solid;
 
   }
 
@@ -120,7 +91,6 @@
   bottom: 0;
   background: rgba(0,0,0,0.8);
   z-index: 2;
-  will-change: opacity;
 
   p {
 
@@ -163,9 +133,6 @@
     display: inline-block;
     vertical-align: middle;
     position: relative;
-    transition: all 0.1s ease-in-out;
-    will-change: transform;
-    @include translate3d(0,0,0);
 
   }
 
@@ -177,7 +144,6 @@
     left: 0;
     top: 0;
     min-height: 100%;
-    @include translate3d(0,0,0);
 
   }
 
@@ -193,8 +159,7 @@
 
     font-size: 22px;
     margin: 0 0 10px 0;
-    color: black;
-    transition: color 0.1s ease-in-out;
+    color: #252525;
 
   }
 
@@ -211,41 +176,20 @@
 
 ul.tags {
 
-  margin: 0 0 10px 0;
+  margin: 0;
   padding: 0;
 
   li {
 
     display: inline-block;
     vertical-align: top;
-    line-height: 25px;
-    font-size: 13px;
-    text-transform: uppercase;
-    margin: 0 7px 0 0;
-    color: #a7a7a7;
-    padding: 0;
-
-    &:after {
-
-      content: '';
-      display: inline-block;
-      width: 1px;
-      height: 12px;
-      vertical-align: top;
-      background: #8c8c8c;
-      margin: 7px 0 0 7px;
-
-    }
-
-    &:last-child {
-
-      &:after {
-
-        display: none;
-
-      }
-
-    }
+    line-height: 27px;
+    font-size: 14px;
+    margin: 0 4px 0 0;
+    padding: 0 10px;
+    color: #6f6f6f;
+    border-radius: 50px;
+    background: white;
 
   }
 

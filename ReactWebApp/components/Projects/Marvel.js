@@ -7,12 +7,6 @@ export default class Marvel extends React.PureComponent {
 
   render() {
 
-    let c = (classes) => {
-
-      return classes.join(' ');
-
-    };
-
     return (<div className={styles.base}>
 
       <div className={marvelStyles.hero}>
@@ -23,33 +17,36 @@ export default class Marvel extends React.PureComponent {
 
         <h2>Marvel.com broke new ground in 2013 to become one of the first large-scale, media-rich, high-traffic fully-responsive websites.</h2>
 
-        <p>Marvel's audience is increasingly mobile. To support the shifting device landscape, the website required a complete overhaul to become fully-responsive. In addition, the scope of the website was increased, unifying all of Marvel's business verticals under one domain.</p>
-        <p>To make the challenge even more difficult, the designers wanted a bold, "on-brand" design, instead of a compromised watered-down experience typical of responsive websites at the time. We were given a 9 month deadline, and to top it off, we needed to support IE8!</p>
+        <p>In early 2013, Marvel realized it had a problem. They noticed a trend in how people consumed Marvel content. Soon, mobile would actually overtake desktop.</p>
+        <p>In addition for the need for a better mobile experience, they realized that they would not have the budget to support separate mobile, tablet, and desktop websites. Large phones like the Note were gaining in popularity, and the Microsoft Surface had just launched.</p>
+        <img src='/static/images/content/marvel/devices.jpg' />
+        <p><em>Responsive Design</em> was an emerging technology. In theory, it allowed for one single codebase to support <em>any</em> device.
+          However, there were many unsolved problems and approaches. Only a few popular websites had adopted Responsive Design in some fashion, so there weren't that many examples or articles on the topic. Most examples seemed to be simplified or "watered down," and in most cases, were "off-brand." </p>
+        <p>Marvel wasn't satisfied with this. They insisted on having a bold "on-brand" design and an immersive user-experience. They wanted high-resolution images and videos to support the new high-dpi devices such as Apple's "Retina" iPhone 4. They wanted interactive elements that were difficult to implement while supporting slower devices and cellular data speeds typical at the time. They wanted it all in a short 9 month deadline, and to top it off, they needed to still support IE8!</p>
+        <p>While under contract, Marvel asked me to help do the initial R&D into a technical strategy for building a "responsive" website, by their deadline, and with their requirements.</p>
         <p>The biggest technical challenges were:</p>
         <ul>
           <li>Payload size of CSS, HTML, Javascript, hi-res images, and other assets.</li>
           <li>Older mobile connection speeds in 2013 (3G at best).</li>
           <li>Performance, especially on mobile devices. Double especially older mobile devices.</li>
-          <li>The scope of the website, deadline, and lack of examples. We were breaking new ground.</li>
+          <li>Lack of examples and existing tooling.</li>
+          <li>The scope of the website and tight deadline.</li>
         </ul>
 
         <section>
-          <h3>STATEGY</h3>
-          <p>Advizr marries robo-advising with a thoughtful user experience and solid performing application to
-            create an unparalleled experience for advisors and their clients. Features are based on exhaustive
-            user-research, iteration, and customer outreach programs.</p>
-          <p>We leveraged a component-based modular UI that allowed us to iterate quickly
-            while still allowing the application to scale (in terms of complexity without
-            major rewrites). This allowed us to hone-in on our features and iterate quickly with customer feedback
-            and data metrics.</p>
+          <h3>STRATEGY: Responsive Module System</h3>
+          <p>The original designs called for dozens of graphical and interactive components across the new website. Building and testing all of the pages as designed were
+            estimated to blow past our deadline by months.
+          </p>
         </section>
 
-        <section>
-          <h3>Technology</h3>
+        <section className={marvelStyles.tech}>
+          <h3>Technology & Methodology</h3>
           <ul>
-            <li>HTML5/CSS3/Javascript/ZeptoJS/PHP</li>
-            <li>Newfangled "device agnostic feature based responsive design" methodology</li>
-            <li>Custom sass extension CSS Variant Export Script written in Ruby</li>
+            <li>HTML5/CSS3/Javascript/ZeptoJS/PHP/Ruby</li>
+            <li>Device-Agnostic Feature-Based Responsive Design (320px - 2200px+), vertical and horizontal</li>
+            <li>Custom <code>sass</code> extension CSS Variant Export Script written in Ruby, served by a device-detection Disney service WALT</li>
+            <li>Atomic-design "module" system</li>
           </ul>
         </section>
 
@@ -62,15 +59,14 @@ export default class Marvel extends React.PureComponent {
             <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Inventory, in partnership with the Design team, specifically the Art Director.</li>
             <li>Wrote an automated testing suite specially designed for Marvel and responsive websites. This cut down on our QA turnaround significantly and kept quality high.</li>
             <li>Development and promotion of interactive Style Guide with the help of the Design team. The Style Guide was used by Marvel's business partners, such as ABC and app development vendors.</li>
-            <li>Almost met Robert Downy, Jr.</li>
           </ul>
         </section>
 
         <section>
-          <h3>Achievements & Awards</h3>
+          <h3>Achievements</h3>
           <ul>
-            <li>Recognized as Best Client-Facing Technology of 2015 by FPPad.</li>
-            <li>Pre-revenue to over $2MM/yr within 2 years.</li>
+            <li>Successfully launched by deadline with 2 weeks to spare and to an excellent reception.</li>
+            <li>One of the first large-scale, media-rich, high-traffic fully-responsive websites.</li>
           </ul>
         </section>
 
