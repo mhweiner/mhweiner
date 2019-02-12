@@ -10,8 +10,7 @@ export default class Advizr extends React.PureComponent {
 
       <img src='/static/images/content/advizr/hero2.jpg' style={{
         marginBottom: '30px',
-        border: '1px solid #d0d0d0',
-        borderTop: 'none',
+        border: '2px solid #e6e6e6',
         boxSizing: 'border-box'
       }}/>
 
@@ -67,8 +66,8 @@ export default class Advizr extends React.PureComponent {
       </div>
 
       <div className={styles.images}>
-        <img src="/static/images/content/advizr/13.png" style={{border: '1px solid #ccc'}}/>
-        <img src="/static/images/content/advizr/8.png" style={{border: '1px solid #ccc'}}/>
+        <img src="/static/images/content/advizr/13.png" style={{border: '2px solid #e6e6e6'}}/>
+        <img src="/static/images/content/advizr/8.png" style={{border: '2px solid #e6e6e6'}}/>
         <img src="/static/images/content/advizr/7.png"/>
         <img src="/static/images/content/advizr/11.png"/>
       </div>

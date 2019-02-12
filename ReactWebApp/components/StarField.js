@@ -5,27 +5,34 @@ export default class StarField extends React.Component {
 
   ref = React.createRef();
   currentAnimations = [];
+  scrollListener = throttle(() => {
+
+    this.stop();
+    clearTimeout(this.restartTimeout);
+
+    if (window.scrollY < 400) {
+
+      if (!this.isPlaying) {
+
+        this.restartTimeout = setTimeout(this.start, 200);
+
+      }
+
+    }
+
+  }, 100, {leading: true});
 
   componentDidMount() {
 
     this.start();
 
-    window.addEventListener('scroll', throttle(() => {
+    window.addEventListener('scroll', this.scrollListener);
 
-      this.stop();
-      clearTimeout(this.restartTimeout);
+  }
 
-      if (window.scrollY < 400) {
+  componentWillUnmount() {
 
-        if (!this.isPlaying) {
-
-          this.restartTimeout = setTimeout(this.start, 200);
-
-        }
-
-      }
-
-    }, 100, {leading: true}));
+    window.removeEventListener('scroll', this.scrollListener);
 
   }
 

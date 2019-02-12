@@ -1,6 +1,6 @@
 @import "../styles/defines";
 
-@include keyframes(animateBackgroundOpen) {
+@include keyframes(animateOpen) {
   from {
     opacity: 0;
   }
@@ -9,7 +9,7 @@
   }
 }
 
-@include keyframes(animateBackgroundClose) {
+@include keyframes(animateClose) {
   from {
     opacity: 1;
   }
@@ -26,20 +26,7 @@
   right: 0;
   bottom: 0;
   z-index: 100;
-
-  &:before {
-
-    content: '';
-    display: block;
-    background: #fffff3d4;
-    position: absolute;
-    left: 0;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    opacity: 0;
-
-  }
+  background: linear-gradient(0deg, #aad6fb, #d4a7ff);
 
   ul {
 
@@ -62,34 +49,42 @@
       a {
 
         font-family: $font;
-        font-size: 49px;
+        font-size: 70px;
         text-decoration: none;
         display: inline-block;
-        color: rgba(0, 0, 0, 0);
+        color: black;
         position: relative;
-        text-transform: uppercase;
-        transition: all 0.3s ease-in-out;
-        line-height: 90px;
+        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+        line-height: 80px;
         width: 400px;
-        border: 5px black solid;
         font-weight: bold;
+        opacity: 0;
+        @include translateY(20px);
 
         &.animateLinkOpen {
 
-          color: black;
+          opacity: 1;
+          @include translateY(0);
 
         }
 
         &.animateLinkClose {
 
-          color: rgba(0,0,0,0);
+          opacity: 0;
+          @include translateY(20px);
+
+        }
+
+        &:after {
+
+          content: '';
+          display: block;
 
         }
 
         &:hover {
 
-          background: black !important;
-          color: white !important;
+          color: $color-base;
 
         }
 
@@ -101,19 +96,16 @@
 
 }
 
-.animateBackgroundOpen {
-  &:before {
-    @include animation(animateBackgroundOpen 0.2s ease-in-out);
-    @include animation-fill-mode(forwards);
-  }
-  ul {
-    @include animation(animateBackgroundOpen 0.1s ease-in-out);
-  }
+.animateOpen {
+
+  @include animation(animateOpen 0.1s ease-in-out);
+  @include animation-fill-mode(forwards);
+
 }
 
-.animateBackgroundClose {
-  &:before {
-    @include animation(animateBackgroundClose 0.1s ease-in-out);
-    @include animation-fill-mode(forwards);
-  }
+.animateClose {
+
+  @include animation(animateClose 0.1s ease-in-out);
+  @include animation-fill-mode(forwards);
+
 }

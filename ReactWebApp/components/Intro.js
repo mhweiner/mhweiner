@@ -1,6 +1,6 @@
 import React from 'react';
 
-import CapsuleIcon from "./CapsuleIcon";
+import StarryBackground from "./StarryBackground";
 
 import styles from './Intro.scss';
 
@@ -10,9 +10,9 @@ export default class Intro extends React.PureComponent {
 
     return (
       <div className={styles.default}>
+        <StarryBackground/>
         <div className={styles.text}>
-          <CapsuleIcon/>
-          <p>I'm Marc Weiner, a software engineer and UX architect based in NYC.</p>
+          <p>I'm <span style={{color: '#ab59ff'}}>Marc Weiner</span>, a software engineer and UX architect based in NYC.</p>
           <p>I build award-winning products used by millions of people and some of the world's largest companies.</p>
           <button className={styles.seeWork} onClick={() => this.props.scrollTo('work')}>
             <i className='fa fa-arrow-down'/>See Work

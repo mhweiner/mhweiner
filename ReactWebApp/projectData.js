@@ -32,7 +32,7 @@ const projects = [
   {
     id: 'Elemental_Cognition',
     title: 'Elemental Cognition',
-    description: 'Public-facing and internal applications for a leading Artificial Intelligence research company.',
+    description: 'Public-facing and internal applications for a stealth Artificial Intelligence research startup.',
     tags: ['Front-End', 'UX', 'API Design'],
     bgSrc: '/static/images/project-thumbs/ec-bg.png',
     imgSrc: '/static/images/project-thumbs/ec-robot.png',
@@ -66,7 +66,7 @@ const projects = [
   {
     id: 'Marvel.com',
     title: 'Marvel.com',
-    description: 'The official website of Marvel Entertainment, and one of the first responsive websites.',
+    description: 'The official website of Marvel Entertainment.',
     tags: ['R&D', 'Front-End', 'Process Design'],
     bgSrc: '/static/images/project-thumbs/marvel-bg.jpg',
     imgSrc: '/static/images/project-thumbs/logos/marvel-white.png',
@@ -85,7 +85,7 @@ const projects = [
     },
     imgSrc: '/static/images/project-thumbs/logos/ciro.png',
     imgStyle: {
-      maxHeight:'70px'
+      maxHeight:'45%'
     },
     content: <Ciro/>,
     years: '2015-2017',
@@ -102,7 +102,7 @@ const projects = [
     },
     imgSrc: '/static/images/project-thumbs/logos/devotify.png',
     imgStyle: {
-      maxHeight: '57%',
+      maxHeight: '50%',
       maxWidth: '40%'
     },
     content: <Devotify/>,

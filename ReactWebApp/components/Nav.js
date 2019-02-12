@@ -1,6 +1,8 @@
 import React from 'react';
 import {addClass} from "../utils/DOM";
 
+import StarryBackground from "./StarryBackground";
+
 import styles from './Nav.scss';
 
 export default class Nav extends React.PureComponent {
@@ -26,6 +28,7 @@ export default class Nav extends React.PureComponent {
 
     return (
       <div className={styles.default} ref={this.ref} onClick={this.props.close}>
+        <StarryBackground/>
         <ul>
           <li>
             <a href="#" onClick={(e) => this.go(e, 'work')}>Work</a>
@@ -47,7 +50,7 @@ export default class Nav extends React.PureComponent {
 
   animateOpen() {
 
-    addClass(this.ref.current, styles.animateBackgroundOpen);
+    addClass(this.ref.current, styles.animateOpen);
 
     let links = this.ref.current.querySelectorAll('a');
 
@@ -57,7 +60,7 @@ export default class Nav extends React.PureComponent {
 
         addClass(v, styles.animateLinkOpen);
 
-      }, 100 * k);
+      }, 200 * (k + 1));
 
     });
 
@@ -65,23 +68,7 @@ export default class Nav extends React.PureComponent {
 
   animateClose(callback) {
 
-    addClass(this.ref.current, styles.animateBackgroundClose);
-
-    let links = this.ref.current.querySelectorAll('a');
-    let count = 0;
-
-    for (let i = links.length - 1; i >= 0; i--) {
-
-      setTimeout(() => {
-
-        addClass(links[i], styles.animateLinkClose);
-
-      }, 50 * count);
-
-      count++;
-
-    }
-
+    addClass(this.ref.current, styles.animateClose);
     setTimeout(callback, this.closeAnimationDuration);
 
   }

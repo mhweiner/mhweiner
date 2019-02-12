@@ -9,17 +9,15 @@
   vertical-align: top;
   overflow: hidden;
   transition: all 0.1s ease-in-out;
-  background: #e0e0e0;
   max-width: 500px;
   margin: 0 auto 20px auto;
-  border-radius: 5px;
 
   @include media(800){
 
     display: inline-block;
     width: 47%;
     margin: 0 1.5% 40px 1.5%;
-    height: 280px;
+    height: 285px;
     max-width: 800px;
 
   }
@@ -29,6 +27,22 @@
     .hover {
 
       opacity: 1;
+
+      p {
+
+        @include transform(translateY(-50%) scale(1));
+
+      }
+
+    }
+
+    .description {
+
+      h4 {
+
+        color: #555;
+
+      }
 
     }
 
@@ -49,18 +63,20 @@
   color: white;
   font-size: 20px;
   text-align: center;
-  transition: opacity 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9);
+  transition: opacity 0.3s ease-in-out;
+  line-height: 1.2em;
 
   p {
 
-    @include translateY(-50%);
+    @include transform(translateY(-50%) scale(1.03));
     margin: 0;
     position: absolute;
     top: 50%;
     width: 100%;
     box-sizing: border-box;
-    padding: 20px;
+    padding: 30px;
     font-size: 18px;
+    transition: all 0.5s ease-in-out;
 
   }
 
@@ -119,12 +135,12 @@
 
 .img{
 
-  height: 175px;
-  line-height: 175px;
+  height: 225px;
+  line-height: 225px;
   text-align: center;
   position: relative;
-  background: #3a3a3a;
   overflow: hidden;
+  border-radius: 5px;
 
   img.fg {
 
@@ -200,7 +216,7 @@ img.awardBadge {
   height: 84px;
   width: 72.41px;
   position: absolute;
-  top: -20px;
+  top: -62px;
   right: 15px;
   z-index: 10;
 

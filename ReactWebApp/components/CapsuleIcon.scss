@@ -27,9 +27,11 @@
   background: $color-base;
   height: 200px;
   border-radius: 200px;
-  position: relative;
+  position: absolute;
   overflow: hidden;
-  will-change: transform;
+  left: 10%;
+  top: 50%;
+  transform: translateY(-50%);
 
   object {
 

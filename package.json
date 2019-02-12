@@ -40,6 +40,7 @@
     "express": "^4.16.4",
     "fs-readfile-promise": "^3.0.1",
     "images-loaded": "^1.0.0",
+    "js-ordered-dict": "^2.3.0",
     "mr-router": "1.3.0",
     "node-sass": "4.10.0",
     "react": "16.6.0",
