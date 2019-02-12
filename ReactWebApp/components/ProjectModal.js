@@ -3,24 +3,37 @@ import {addClass, removeClass} from "../utils/DOM";
 import projectData from '../projectData';
 import imagesLoaded from 'images-loaded';
 import throttle from "../utils/throttle";
+import {DOMEvent} from "../utils/DOMEvent";
+import LoaderAnimation from "./LoaderAnimation";
 
 import styles from './ProjectModal.scss';
-import {DOMEvent} from "../utils/DOMEvent";
+import loaderStyles from './LoaderAnimation.scss';
 
 export default class ProjectModal extends React.PureComponent {
 
   ref = React.createRef();
   headerRef = React.createRef();
   contentRef = React.createRef();
-  closeAnimationDuration = 350; //in ms
+  closeAnimationDuration = 300; //in ms
   scrollListenerId = 0;
+  state = {
+    isLoading: true
+  };
 
   componentDidMount() {
 
+    setTimeout(() => {
+
+      this.ref.current.querySelector(`.${loaderStyles.default}`).style.display = 'block';
+
+    }, 50);
+
     imagesLoaded(this.contentRef.current).then(() => {
 
-      this.animateOpen();
-      this.props.onLoad();
+      return;
+      this.setState({
+        isLoading: false
+      });
 
     });
 
@@ -37,6 +50,16 @@ export default class ProjectModal extends React.PureComponent {
       }
 
     }, 100, {leading: true}));
+
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+
+    if (!this.state.isLoading) {
+
+      this.showContent();
+
+    }
 
   }
 
@@ -60,16 +83,29 @@ export default class ProjectModal extends React.PureComponent {
         <div className={styles.content} ref={this.contentRef}>
           {proj.content}
         </div>
+        <LoaderAnimation/>
       </div>
     );
 
   }
 
-  animateOpen() {
+  showContent = () => {
 
-    setTimeout(() => addClass(this.ref.current, styles.animateOpen), 0);
+    setTimeout(() => {
 
-  }
+      let header = this.ref.current.querySelector(`.${styles.title}`);
+
+      header.style.display = 'block';
+
+    }, 300);
+
+    setTimeout(() => {
+
+      this.contentRef.current.style.display = 'block';
+
+    }, 500);
+
+  };
 
   animateClose(callback) {
 

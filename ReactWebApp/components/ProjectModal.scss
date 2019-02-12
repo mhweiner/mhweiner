@@ -1,5 +1,49 @@
 @import "../styles/defines";
 
+@include keyframes(animateIn) {
+  0% {
+    opacity: 0;
+    @include translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    @include translateX(0);
+  }
+}
+
+@include keyframes(animateOut) {
+  0% {
+    opacity: 1;
+    @include translateX(0);
+  }
+  100% {
+    opacity: 0;
+    @include translateX(20px);
+  }
+}
+
+@include keyframes(titleAnimateIn) {
+  0% {
+    opacity: 0;
+    @include translate(-50%, 10px);
+  }
+  100% {
+    opacity: 1;
+    @include translate(-50%, 0);
+  }
+}
+
+@include keyframes(contentAnimateIn) {
+  0% {
+    opacity: 0;
+    @include translate(0, 10px);
+  }
+  100% {
+    opacity: 1;
+    @include translate(0, 0);
+  }
+}
+
 .default {
 
   position: fixed;
@@ -7,39 +51,38 @@
   top: 0;
   right: 0;
   bottom: 0;
-  z-index: -1;
   backface-visibility: hidden;
   background: white;
   overflow-scrolling: touch;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
-  opacity: 0;
-  padding: 75px 0 0 0;
-
-}
-
-.animateOpen {
-
-  opacity: 1;
+  padding: 90px 0 0 0;
   z-index: 200;
+  @include animation(animateIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
 }
 
 .animateClose {
 
   opacity: 0;
-  z-index: 200;
+  @include animation(animateOut 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9));
+  @include animation-fill-mode(forwards);
 
 }
 
 h1.title {
 
+  display: none;
   position: absolute;
   margin: 0;
   left: 50%;
   top: 20px;
+  text-align: center;
+  line-height: 1;
+  font-size: 50px;
+  max-width: calc(100% - 200px);
   @include translateX(-50%);
-  font-size: 55px;
+  @include animation(titleAnimateIn 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
 }
 
@@ -61,20 +104,6 @@ h1.title {
       box-shadow: rgba(0, 0, 0, 0.5) 0 0 1px;
 
     }
-
-  }
-
-  h1 {
-
-    line-height: 45px;
-    margin: 0 0 0 9px;
-    display: inline-block;
-    vertical-align: top;
-    font-size: 22px;
-    position: absolute;
-    color: black;
-    left: 50%;
-    @include translateX(-50%);
 
   }
 
@@ -136,5 +165,12 @@ h1.title {
     }
 
   }
+
+}
+
+.content {
+
+  display: none;
+  @include animation(contentAnimateIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
 }

@@ -12,16 +12,10 @@ import Skills from "./Skills";
 import About from "./About";
 import ProjectModal from "./ProjectModal";
 
-/* Styles */
-
-import styles from './App.scss';
-import {removeClass} from "../utils/DOM";
-
 export default class App extends Component {
 
   nav = React.createRef();
   projectModal = React.createRef();
-  pageRef = React.createRef();
   state = {
     project: null
   };
@@ -159,8 +153,7 @@ export default class App extends Component {
       this.allowBodyScroll(false);
 
       this.setState({
-        project: projectIndex,
-        isLoading: true
+        project: projectIndex
       });
 
     } else if (this.projectModal.current) {
@@ -183,8 +176,6 @@ export default class App extends Component {
         project: null
       });
 
-      removeClass(this.pageRef.current, styles.transition);
-
     }
 
   };
@@ -198,19 +189,15 @@ export default class App extends Component {
         project={this.state.project}
         ref={this.projectModal}
         close={() => mr.go('home')}
-        onLoad={() => this.setState({isLoading: false})}
       />}
-      <div className={styles.page} ref={this.pageRef}>
-        <Intro scrollTo={this.scrollTo}/>
-        <Projects
-            projects={projectData}
-            open={(id) => mr.go('project', {project: id})}
-            isLoading={this.state.isLoading}
-            project={this.state.project}
-        />
-        <Skills/>
-        <About/>
-      </div>
+      <Intro scrollTo={this.scrollTo}/>
+      <Projects
+          projects={projectData}
+          open={(id) => mr.go('project', {project: id})}
+          project={this.state.project}
+      />
+      <Skills/>
+      <About/>
     </div>;
 
   }

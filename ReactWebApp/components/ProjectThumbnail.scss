@@ -98,41 +98,6 @@
 
 }
 
-.loading {
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0,0,0,0.8);
-  z-index: 2;
-
-  p {
-
-    margin: 0;
-    color: white;
-    font-size: 20px;
-    text-align: center;
-    line-height: 189px;
-    @include animation(appear 0.2s ease-in-out);
-    font-family: $font-header;
-    font-weight: 700;
-    text-transform: uppercase;
-
-    i {
-
-      font-size: 30px;
-      margin: -6px 5px 0 0;
-      display: inline-block;
-      vertical-align: middle;
-
-    }
-
-  }
-
-}
-
 .img{
 
   height: 225px;

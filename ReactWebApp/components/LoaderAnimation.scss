@@ -1,0 +1,113 @@
+@import "../styles/defines";
+
+@include keyframes(mainFlame) {
+  0% {
+    transform: translate(0,16px) scaleY(1.05);
+  }
+  50% {
+    transform: translate(0,0) scaleY(1);
+  }
+  90% {
+    transform: translate(0,10px) scaleY(1);
+  }
+  100% {
+    transform: translate(0,16px) scaleY(1.05);
+  }
+}
+
+@include keyframes(mainFlameInside) {
+  0% {
+    transform: translate(0,55px) scaleY(1.25);
+  }
+  50% {
+    transform: translate(0,0) scaleY(1);
+  }
+  90% {
+    transform: translate(0,50px) scaleY(1.14);
+  }
+  100% {
+    transform: translate(0,55px) scaleY(1.25);
+  }
+}
+
+@include keyframes(sideFlame) {
+  0% {
+    transform: translate(0,-41px) scaleY(1.15);
+  }
+  50% {
+    transform: translate(0,0) scaleY(1);
+  }
+  100% {
+    transform: translate(0,-41px) scaleY(1.15);
+  }
+}
+
+@include keyframes(appear) {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.default {
+
+  display: none;
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  background: #444444;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  margin: -200px 0 0 -200px;
+  border-radius: 50px;
+  @include animation(appear 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9));
+
+  p {
+
+    margin: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 20px;
+    bottom: 8%;
+    color: #8e8e8e;
+
+  }
+
+  svg {
+
+    height: 50%;
+    position: absolute;
+    left: 50%;
+    @include translateX(-50%);
+    top: 18%;
+    z-index: 1;
+
+    .mainFlame {
+
+      transform-origin: bottom;
+      @include animation(mainFlame 0.3s ease-in-out infinite);
+
+    }
+
+    .mainFlameInside {
+
+      transform-origin: bottom;
+      @include animation(mainFlameInside 0.3s ease-in-out infinite);
+
+    }
+
+    .sideFlame {
+
+      transform-origin: top;
+      @include animation(sideFlame 0.3s ease-in-out infinite);
+
+    }
+
+  }
+
+}

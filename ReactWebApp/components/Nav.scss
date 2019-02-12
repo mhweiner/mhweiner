@@ -43,7 +43,6 @@
       margin: 0 0 10px;
       padding: 0;
       text-align: center;
-      overflow: hidden;
 
 
       a {
@@ -56,7 +55,6 @@
         position: relative;
         transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.9);
         line-height: 80px;
-        width: 400px;
         font-weight: bold;
         opacity: 0;
         @include translateY(20px);
@@ -79,12 +77,27 @@
 
           content: '';
           display: block;
+          height: 9px;
+          position: absolute;
+          left: 0;
+          background: black;
+          bottom: 0;
+          width: 100%;
+          @include transitionTransform(0.2s ease-in-out);
+          @include scaleX(0);
 
         }
 
         &:hover {
 
-          color: $color-base;
+          color: black;
+          background: none;
+
+          &:after {
+
+            @include scaleX(1);
+
+          }
 
         }
 

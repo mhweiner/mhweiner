@@ -1,21 +1,14 @@
 import React from 'react';
 
 import styles from './base.scss';
-import ecStyles from './ElementalCognition.scss';
 
 export default class ElementalCognition extends React.PureComponent {
 
   render() {
 
-    let c = (classes) => {
+    return (<div className={[styles.base].join(' ')}>
 
-      return classes.join(' ');
-
-    };
-
-    return (<div className={[styles.base, ecStyles.default].join(' ')}>
-
-      <div className={ecStyles.hero}/>
+      <img src='/static/images/content/ec/tracks.jpg'/>
 
       <div className={styles.text}>
 
