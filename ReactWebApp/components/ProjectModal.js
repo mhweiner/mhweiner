@@ -1,8 +1,7 @@
 import React from 'react';
-import {addClass, removeClass} from "../utils/DOM";
+import {addClass} from "../utils/DOM";
 import projectData from '../projectData';
 import imagesLoaded from 'images-loaded';
-import throttle from "../utils/throttle";
 import {DOMEvent} from "../utils/DOMEvent";
 import LoaderAnimation from "./LoaderAnimation";
 
@@ -16,9 +15,12 @@ export default class ProjectModal extends React.PureComponent {
   contentRef = React.createRef();
   closeAnimationDuration = 300; //in ms
   scrollListenerId = 0;
+  titleRef = React.createRef();
   state = {
     isLoading: true
   };
+  lastKnownScrollY = 0;
+  ticking = false;
 
   componentDidMount() {
 
@@ -30,28 +32,47 @@ export default class ProjectModal extends React.PureComponent {
 
     imagesLoaded(this.contentRef.current).then(() => {
 
-      return;
       this.setState({
         isLoading: false
       });
 
     });
 
-    this.scrollListenerId = DOMEvent.addListener(this.ref.current, 'scroll', throttle(() => {
-
-      if (this.ref.current.scrollTop > 20) {
-
-        addClass(this.headerRef.current, styles.shadowed);
-
-      } else {
-
-        removeClass(this.headerRef.current, styles.shadowed);
-
-      }
-
-    }, 100, {leading: true}));
+    this.scrollListenerId = DOMEvent.addListener(this.ref.current, 'scroll', this.onScroll);
 
   }
+
+  onScroll = () => {
+
+    this.lastKnownScrollY = this.ref.current.scrollTop;
+    this.requestTick();
+
+  };
+
+  requestTick = () => {
+
+    if (!this.ticking) {
+
+      requestAnimationFrame(this.update);
+
+    }
+
+    this.ticking = true;
+
+  };
+
+  update = () => {
+
+    // reset the tick so we can
+    // capture the next onScroll
+    this.ticking = false;
+
+    let currentScrollY = this.lastKnownScrollY;
+
+    this.titleRef.current.style.transform = `translate(-50%, ${currentScrollY * 0.9}px`;
+    this.titleRef.current.style.webkitTransform = `translate(-50%, ${currentScrollY * 0.9}px`;
+
+  };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
 
@@ -75,7 +96,7 @@ export default class ProjectModal extends React.PureComponent {
 
     return (
       <div className={styles.default} ref={this.ref}>
-        <h1 className={styles.title}>{proj.title}</h1>
+        <h1 className={styles.title} ref={this.titleRef}>{proj.title}</h1>
         <div className={styles.header} ref={this.headerRef}>
           <button className={styles.backButton} onClick={this.props.close}><i className='fa fa-arrow-left'/>Back<span> to Work</span></button>
           <a className={styles.extLink} href={proj.website} target='_blank'><span>Visit </span>Website<i className='fa fa-external-link-alt'/></a>
@@ -83,7 +104,7 @@ export default class ProjectModal extends React.PureComponent {
         <div className={styles.content} ref={this.contentRef}>
           {proj.content}
         </div>
-        <LoaderAnimation/>
+        {!!this.state.isLoading && <LoaderAnimation/>}
       </div>
     );
 
@@ -93,9 +114,7 @@ export default class ProjectModal extends React.PureComponent {
 
     setTimeout(() => {
 
-      let header = this.ref.current.querySelector(`.${styles.title}`);
-
-      header.style.display = 'block';
+      this.titleRef.current.style.display = 'block';
 
     }, 300);
 

@@ -83,6 +83,7 @@ h1.title {
   max-width: calc(100% - 200px);
   @include translateX(-50%);
   @include animation(titleAnimateIn 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9));
+  z-index: 1;
 
 }
 
@@ -97,13 +98,9 @@ h1.title {
   height: 45px;
   transition: box-shadow 0.4s ease-in-out;
 
-  &.shadowed {
+  button.backButton {
 
-    button.backButton {
-
-      box-shadow: rgba(0, 0, 0, 0.5) 0 0 1px;
-
-    }
+    box-shadow: rgba(0, 0, 0, 0.5) 0 0 1px;
 
   }
 
