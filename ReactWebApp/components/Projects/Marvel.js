@@ -14,10 +14,10 @@ export default class Marvel extends React.PureComponent {
 
         <h2>Marvel.com broke new ground in 2013 to become one of the first large-scale, media-rich, high-traffic fully-responsive websites.</h2>
 
-        <p>In early 2013, Marvel realized it had a problem. People were increasingly using their mobile devices to consume Marvel content. Soon, mobile would actually overtake desktop.</p>
-        <p><em>Responsive Design,</em> which is today a popular methodology for building websites and web-based applications to support any device (mobile, tablet, desktop, etc.) with a single codebase &mdash; was still an emerging technology. Most popular websites still used device detection and entirely separate mobile experiences. Large phones and tablets typically
-          fell between the cracks and resulted in a sub-par user experience for many. There was also added overhead of maintaining separate applications, and were not future-proof (relatively speaking). Newer devices could be expected to require additional updates and patches.
-          Responsive Design promised to fix all of this. In early 2013, however, many technical challenges remained, and a single unified "responsive design" method had yet to be proven. Only a few popular websites had adopted what today might be considered "modern Responsive Design" approaches. There weren't many examples or real use-case studies. Most examples seemed to be simplified or "watered down," and in most cases, were "off-brand." </p>
+        <p>In early 2013, Marvel realized it had a problem. People were increasingly using their mobile devices to consume Marvel content. Soon, mobile-use would actually overtake desktop-use.</p>
+        <p>While today <em>responsive design</em> is a popular methodology for building websites and web-based applications to support any device (mobile, tablet, desktop, etc.) with a single codebase, it was still an emerging technology then. Most popular websites still used device detection, which would take consumers to an entirely separate mobile experience. Large phones and tablets typically
+          fell between the cracks and resulted in a sub-par user experience for many. There was also added overhead of maintaining separate applications, and often required changes for newer devices.
+          Responsive design promised to fix all of this. In early 2013, however, many technical challenges remained, and a single unified method had yet to be proven. Only a few popular websites had adopted what today might be considered "modern responsive" approaches. There weren't many examples or real use-case studies. Most examples seemed to be simplified or "watered down," and in some cases, were considered "off-brand" by our designers, such as Disney's own first attempt at a responsive website. </p>
         <p>Marvel wasn't satisfied with this. They insisted on having a bold "on-brand" design and an immersive user-experience. They wanted high-resolution images and videos to support the new high-dpi devices such as Apple's "Retina" iPhone 4. They wanted engaging interactive elements. They wanted it all in a short nine month deadline, and to top it off, they needed to still support older mobile devices and even IE8!</p>
         <p>While under contract, Marvel asked me to help do the initial R&D into a technical strategy for building a "responsive" website, by their deadline, and with their requirements.</p>
         <p>The biggest technical challenges were:</p>
@@ -40,12 +40,19 @@ export default class Marvel extends React.PureComponent {
 
         <h3><i className='fa fa-chess-rook'/>Strategy: Responsive Module Library</h3>
         <p>One of my first suggestions was to create what I called a "Responsive Module Library", what today could be called a modern Component library. Each of these components
-        would be full-width across the page, responsive and tested individually. Any page that is composed of these modules exclusively would itself be guaranteed to be fully-responsive and also fully-tested without having to test each page individually.</p>
+        would be full-width across the page, responsive and tested in isolation. Any page that is composed of these modules exclusively would itself be guaranteed to be fully-responsive and also fully-tested without having to test each page individually.</p>
         <p>I worked closely with the super-talented Art Director <a href='http://ellenbutters.com' target='_blank'>Ellen Butters</a> <i className='fa fa-external-link-alt' style={{fontSize: '13px'}}/> (I also built her site! ;-) and others in the Art Department
-          to pair down the number of Modules that we would have to build.</p>
+          to pair down the number of Modules that we would have to build. Not only did this dramatically reduce development time, it also helped with our filesize concerns, as we were able to increase code re-use.</p>
 
         <h3><i className='fa fa-chess-rook'/>Strategy: CSS Variant Export Script</h3>
-        <p>Our biggest technical challenge was solving the CSS file-size problem (see Challenge #1). Our unique solution was something that none of us had ever heard or read about before. In fact, it actually violated some of the idealistic theory of "device agnostic responsive design" at the time. Our solution was to have an automated build process that intelligently broke apart the CSS code only required by specific devices or browsers, and packaged them into different files we called "variants." Then, using a device-detection service provided to us by Disney, we were able to send only the code to the device that needs it. For example, only IE8 got all of the IE8 hacks. Only Safari and Chrome got the WebKit specific code. Smaller devices only got the CSS styles for smaller devices, since smaller devices cannot physically become bigger (unlike a desktop that can become smaller by making the window smaller). The biggest advantage of this was the file savings for iPhones and other small mobile devices, and not forcing all our modern-device users to suffer from having to support legacy IE and Android browsers.</p>
+        <p>Our biggest technical challenge was solving the CSS file-size problem. Our unique solution actually violated
+          some of the idealistic theory of "device agnostic responsive design" at the time. We designed an automated
+          build process that intelligently broke apart the CSS code only required by specific devices or browsers, and
+          packaged them into different files we called "variants." Then, using a device-detection service, we were able
+          to send only the code each device actually used. For example, only IE8 got all of the
+          IE8 hacks. Smaller devices only got the CSS styles for smaller devices, since smaller devices cannot
+          physically become bigger (unlike a desktop that can become smaller by making the window smaller). We saw
+          massive filesize savings across the board, especially for iPhones and other small mobile devices.</p>
 
         <h3><i className='fa fa-chess-rook'/>Strategy: Mobile First CSS</h3>
         <p>We discovered that by coding our default styles for the smallest devices and then progressively enhancing our way up to large desktop browsers, we could save about 33% of filesize. However, this created problems for IE8, which did not recognize the required "media queries".
@@ -64,16 +71,17 @@ export default class Marvel extends React.PureComponent {
         <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
         <ul>
           <li>Led R&D and front-end architecture.</li>
-          <li>Worked with team to create solutions to major challenges, such as payload size, performance, legacy, maint. costs</li>
+          <li>Worked with team to solve major challenges, such as payload size, performance, legacy, maintenance costs, and others.</li>
           <li>Co-invented innovative build process &mdash; a CSS variant export technique to battle CSS file size.</li>
-          <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Inventory, in partnership with the Design team, specifically the Art Director.</li>
-          <li>Wrote an automated testing suite specially designed for Marvel and responsive websites. This cut down on our QA turnaround significantly and kept quality high.</li>
-          <li>Development and promotion of interactive Style Guide with the help of the Design team. The Style Guide was used by Marvel's business partners, such as ABC and app development vendors.</li>
+          <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Inventory.</li>
+          <li>Wrote an automated testing suite specially designed for Marvel.com.</li>
+          <li>Development and promotion of interactive Style Guide with the help of the Design team.</li>
         </ul>
 
         <h3><i className='fa fa-award'/>Achievements</h3>
         <ul>
-          <li>Successfully launched by deadline with 2 weeks to spare and to an excellent reception.</li>
+          <li>Website lasted from 2013 - 2018!</li>
+          <li>Successfully launched by deadline with 2 weeks to spare and to excellent reception.</li>
           <li>One of the first large-scale, media-rich, high-traffic fully-responsive websites.</li>
         </ul>
 

@@ -58,6 +58,7 @@
   -webkit-overflow-scrolling: touch;
   padding: 90px 0 0 0;
   z-index: 200;
+  will-change: transform;
   @include animation(animateIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
 }

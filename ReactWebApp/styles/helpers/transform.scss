@@ -43,6 +43,10 @@
   @include transform(translateY(#{$y}));
 }
 
+@mixin translateZ($y){
+  @include transform(translateZ(#{$y}));
+}
+
 /* rotate */
 
 @mixin rotate($val){

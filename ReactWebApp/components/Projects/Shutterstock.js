@@ -1,81 +1,74 @@
 import React from 'react';
 
 import styles from './base.scss';
-import ssStyles from './Shutterstock.scss';
 
 export default class Shutterstock extends React.PureComponent {
 
   render() {
 
-    let c = (classes) => {
-
-      return classes.join(' ');
-
-    };
-
     return (<div className={styles.base}>
 
-      <div className={ssStyles.hero}/>
+      <img src='/static/images/content/shutterstock/img.jpg'/>
 
       <div className={styles.text}>
 
-        <h2>Teaching a system through "natural learning" will help machines understand the "why" behind their answers.</h2>
+        <h2>One of the world's largest stock photography companies was leaving millions of dollars on the table.</h2>
 
-        <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
+        <p>In Spring '17, Shutterstock recognized it had a problem costing them millions. Enterprise customers such as Google, Simon &amp; Schuster, and National Geographic were not able to view or pay their invoices online. They weren't able to export their data, either. They had to call a service
+        representative or mail a physical check. As a result, there were millions of dollars of unpaid invoices. This also resulted in a poor user experience for both clients and Shutterstock sales reps, who were straddled with a slow legacy system.</p>
 
-        <h3><i className={c(['fa', 'fa-flag', styles.challenge])}/>The Challenge</h3>
-        <p>Existing tools are slow and painful. They either show too much information, or too little. Most importantly, they don't solve the biggest problem that teams face — too many interruptions. </p>
-        <p>Frustrated by existing project management tools, I decided to create my own. It had to:</p>
+        <p>Enterprise customers want to be able to view, pay, and export their invoices by themselves on the
+          Shutterstock website. The sales team needs to take payments over the phone with a modern interface that better
+          supported customer needs. This means two different teams (Enterprise and Sales) need to build similar systems.</p>
+
+        <p>Shutterstock's financial data was tied up a legacy system that was not easy to work with and had severe
+          technical limitations. We also needed to tie into many other different Shutterstock systems to validate requests,
+          capture payment, and apply it to the user's account. We have two different stakeholders with different
+          needs, and go live in a short 4 month deadline.</p>
+
+        <p>Another requirement was to put in place an architecture that would make it easy to transition away from legacy systems.
+        This means that Shutterstock engineers building interfaces could not directly integrate with the legacy systems themselves.
+          Thus, those systems would be insulated from any legacy migrations.</p>
+
+        <h3><i className='fa fa-chess-rook'/>Strategy</h3>
+        <p>The solution was to build an internal service — a REST API orchestrating layer. This service would do all of
+          the heavy lifting to get around the technical limitations with the legacy system, and offer a single easy,
+          well-documented and well-tested API that any Shutterstock development team can take advantage of without
+          headaches.</p>
+        <p>Since our system had to handle billions of dollars of transactions annually by some of the world's largest
+          companies, security and reliability were a top concern. We employed a 100% code and branch coverage testing
+          policy, and a multi-tier automated testing policy including unit, integration, and contract tests. Peer code
+          reviews were also used to ensure code quality.</p>
+
+        <img src='/static/images/content/shutterstock/shutterstock-unity-invoice.png' />
+
+        <section className={styles.tech}>
+          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+          <ul>
+            <li>NodeJS ES6, Express REST API</li>
+            <li>Behavior Driven Development (BDD) with 100% unit test coverage using Mocha</li>
+            <li>OpenAPI (Swagger) & <a href='http://jsonapi.org' target='_blank'>JSON API</a> Compliant</li>
+            <li>Reporting using Bunyan, New Relic, & Sumologic</li>
+            <li>Docker, Kuberneties, AWS</li>
+          </ul>
+        </section>
+
+        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
         <ul>
-          <li><b>Have a smart queue notification system</b> that limits annoying disruptions in your chat channels. Slack is not a queue. Email isn't (a good one) either. Let's have a queue.</li>
-          <li><b>Be super fast</b>, intuitive, and easy to use. Keyboard shortcuts to quickly zip through forms.</li>
-          <li><b>Be flexible.</b> Every team works differently, and does Agile differently.</li>
-          <li><b>Have easy and powerful search tools.</b></li>
-          <li><b>Have automatic sorting</b> by priority and effort, as prescribed by Agile.</li>
-          <li><b>Clear head space.</b> Limit distractions and information overload.</li>
-          <li><b>Support concurrent multi-project and multi-sprint scenarios</b>.</li>
+          <li>Led architecture &amp; development of backend API orchestration service.</li>
+          <li>Worked with other stakeholder teams to understand and gather technical requirements.</li>
+          <li>Worked with legacy system team to help design a solution to the performance issues.</li>
+          <li>Worked closely with other internal teams to integrate with their services.</li>
+          <li>Led in writing technical documentation and API specification.</li>
+          <li>Established design patterns throughout the application, including testing procedures and philosophy.</li>
+          <li>Worked closely with QA team to help enable them to help enable them to write a test plan and ensure the highest possible quality.</li>
+          <li>Helped identify potential security issues and design solutions.</li>
         </ul>
 
-        <section>
-          <h3><i className={c(['fa', 'fa-flask', styles.solution])}/>The Solution</h3>
-          <p>Advizr marries robo-advising with a thoughtful user experience and solid performing application to
-            create an unparalleled experience for advisors and their clients. Features are based on exhaustive
-            user-research, iteration, and customer outreach programs.</p>
-          <p>We leveraged a component-based modular UI that allowed us to iterate quickly
-            while still allowing the application to scale (in terms of complexity without
-            major rewrites). This allowed us to hone-in on our features and iterate quickly with customer feedback
-            and data metrics.</p>
-        </section>
-
-        <section>
-          <h3><i className={c(['fas', 'fa-cogs', styles.technology])}/>Technology</h3>
-          <ul>
-            <li>HTML5/CSS3/Javascript/ZeptoJS/PHP</li>
-            <li>Newfangled "device agnostic feature based responsive design" methodology</li>
-            <li>Custom sass extension CSS Variant Export Script written in Ruby</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3><i className={c(['fa', 'fa-bomb', styles.involvement])}/>Involvement</h3>
-          <ul>
-            <li>Led R&D and front-end architecture.</li>
-            <li>Worked with team to create solutions to major challenges, such as payload size, performance, legacy, maint. costs</li>
-            <li>Co-invented innovative build process &mdash; a CSS variant export technique to battle CSS file size.</li>
-            <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Inventory, in partnership with the Design team, specifically the Art Director.</li>
-            <li>Wrote an automated testing suite specially designed for Marvel and responsive websites. This cut down on our QA turnaround significantly and kept quality high.</li>
-            <li>Development and promotion of interactive Style Guide with the help of the Design team. The Style Guide was used by Marvel's business partners, such as ABC and app development vendors.</li>
-            <li>Almost met Robert Downy, Jr.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3><i className={c(['fa', 'fa-trophy', styles.achievements])}/>Achievements & Awards</h3>
-          <ul>
-            <li>Recognized as Best Client-Facing Technology of 2015 by FPPad.</li>
-            <li>Pre-revenue to over $2MM/yr within 2 years.</li>
-          </ul>
-        </section>
+        <h3><i className='fa fa-award'/>Achievements &amp; Awards</h3>
+        <ul>
+          <li>The project enjoyed a smooth, successful, on-time launch and was well received by users.</li>
+        </ul>
 
       </div>
 

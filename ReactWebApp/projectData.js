@@ -55,8 +55,8 @@ const projects = [
     bgSrc: '/static/images/project-thumbs/shutterstock-bg.jpg',
     imgSrc: '/static/images/project-thumbs/logos/shutterstock.png',
     imgStyle: {
-      maxWidth: '75%',
-      maxHeight: '20%'
+      maxWidth: '60%',
+      maxHeight: '30%'
     },
     content: <Shutterstock/>,
     years: '2017',

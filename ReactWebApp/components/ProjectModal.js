@@ -19,7 +19,6 @@ export default class ProjectModal extends React.PureComponent {
   state = {
     isLoading: true
   };
-  lastKnownScrollY = 0;
   ticking = false;
 
   componentDidMount() {
@@ -44,7 +43,6 @@ export default class ProjectModal extends React.PureComponent {
 
   onScroll = () => {
 
-    this.lastKnownScrollY = this.ref.current.scrollTop;
     this.requestTick();
 
   };
@@ -63,14 +61,18 @@ export default class ProjectModal extends React.PureComponent {
 
   update = () => {
 
+    let y = this.ref.current.scrollTop;
+
+    if (y < 500) {
+
+      this.titleRef.current.style.transform = `translate(-50%, ${y * 0.9}px`;
+      this.titleRef.current.style.webkitTransform = `translate(-50%, ${y * 0.9}px`;
+
+    }
+
     // reset the tick so we can
     // capture the next onScroll
     this.ticking = false;
-
-    let currentScrollY = this.lastKnownScrollY;
-
-    this.titleRef.current.style.transform = `translate(-50%, ${currentScrollY * 0.9}px`;
-    this.titleRef.current.style.webkitTransform = `translate(-50%, ${currentScrollY * 0.9}px`;
 
   };
 
