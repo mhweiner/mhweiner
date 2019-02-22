@@ -2,23 +2,16 @@
 
 .default {
 
-  box-sizing: border-box;
   cursor: pointer;
   position: relative;
-  display: block;
-  vertical-align: top;
   overflow: hidden;
-  transition: all 0.1s ease-in-out;
-  max-width: 500px;
-  margin: 0 auto 20px auto;
+  margin: 0 0 15px 0;
+  width: 48%;
+  max-width: 550px;
 
-  @include media(800){
+  @include media(0, 850) {
 
-    display: inline-block;
-    width: 47%;
-    margin: 0 1.5% 40px 1.5%;
-    height: 285px;
-    max-width: 800px;
+    width: 100%;
 
   }
 
@@ -28,21 +21,11 @@
 
       opacity: 1;
 
-      p {
-
-        @include transform(translateY(-50%) scale(1));
-
-      }
-
     }
 
     .description {
 
-      h4 {
-
-        color: $color-base;
-
-      }
+      color: $color-base;
 
     }
 
@@ -59,7 +42,6 @@
   right: 0;
   bottom: 0;
   background: rgba(126, 0, 255, 0.87);
-  z-index: 2;
   color: white;
   font-size: 20px;
   text-align: center;
@@ -68,7 +50,7 @@
 
   p {
 
-    @include transform(translateY(-50%) scale(1.03));
+    @include translateY(-50%);
     margin: 0;
     position: absolute;
     top: 50%;
@@ -76,7 +58,7 @@
     box-sizing: border-box;
     padding: 30px;
     font-size: 18px;
-    transition: all 0.5s ease-in-out;
+    transition: color 0.3s ease-in-out;
 
   }
 
@@ -105,7 +87,6 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-radius: 5px;
 
   img.fg {
 
@@ -132,57 +113,25 @@
 
 .description{
 
-  padding: 20px;
   box-sizing: border-box;
   position: relative;
-
-  h4 {
-
-    font-size: 22px;
-    margin: 0 0 10px 0;
-    color: #252525;
-
-  }
-
-  p{
-
-    margin: 0;
-    color: #7b7b7b;
-    font-size: 17px;
-    line-height: 1.3;
-
-  }
-
-}
-
-ul.tags {
-
-  margin: 0;
-  padding: 0;
-
-  li {
-
-    display: inline-block;
-    vertical-align: top;
-    line-height: 27px;
-    font-size: 14px;
-    margin: 0 4px 0 0;
-    padding: 0 10px;
-    color: #6f6f6f;
-    border-radius: 50px;
-    background: white;
-
-  }
+  height: 53px;
+  font-size: 21px;
+  color: #252525;
+  @include singleLineTruncate;
+  font-family: $font-header;
+  font-weight: bold;
+  padding: 15px 20px;
+  transition: color 0.1s ease-in-out;
 
 }
 
 img.awardBadge {
 
+  position: absolute;
   height: 84px;
   width: 72.41px;
-  position: absolute;
-  top: -62px;
+  bottom: 22px;
   right: 15px;
-  z-index: 10;
 
 }

@@ -10,12 +10,6 @@ export default class Nav extends React.PureComponent {
   ref = React.createRef();
   closeAnimationDuration = 350; //in ms
 
-  componentDidMount() {
-
-    this.animateOpen();
-
-  }
-
   go = (e, section) => {
 
     e.preventDefault();
@@ -48,29 +42,11 @@ export default class Nav extends React.PureComponent {
 
   }
 
-  animateOpen() {
-
-    addClass(this.ref.current, styles.animateOpen);
-
-    let links = this.ref.current.querySelectorAll('a');
-
-    links.forEach((v,k) => {
-
-      setTimeout(() => {
-
-        addClass(v, styles.animateLinkOpen);
-
-      }, 200 * (k + 1));
-
-    });
-
-  }
-
-  animateClose(callback) {
+  animateClose = (callback) => {
 
     addClass(this.ref.current, styles.animateClose);
     setTimeout(callback, this.closeAnimationDuration);
 
-  }
+  };
 
 }

@@ -1,6 +1,11 @@
 import React, {Component} from 'react';
 import projectData from '../projectData';
 import mr from 'mr-router';
+import sso from 'smooth-scroll-operator';
+
+/* Styles */
+
+import styles from './App.scss';
 
 /* Components */
 
@@ -65,10 +70,7 @@ export default class App extends Component {
         break;
     }
 
-    window.scroll({
-      top: pos,
-      behavior: 'smooth'
-    });
+    sso.scrollY(window, pos);
 
   };
 
@@ -182,7 +184,7 @@ export default class App extends Component {
 
   render() {
 
-    return <div>
+    return <div className={styles.default}>
       <NavToggle toggleNav={this.toggleNav} isOpenToggle={this.state.navToggleIsOpen} isOpen={this.state.navIsOpen}/>
       {this.state.navIsOpen && <Nav ref={this.nav} scrollTo={this.scrollTo} close={() => this.toggleNav(false)}/>}
       {this.state.project !== null && <ProjectModal

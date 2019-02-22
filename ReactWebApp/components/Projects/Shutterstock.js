@@ -15,20 +15,15 @@ export default class Shutterstock extends React.PureComponent {
         <h2>One of the world's largest stock photography companies was leaving millions of dollars on the table.</h2>
 
         <p>In Spring '17, Shutterstock recognized it had a problem costing them millions. Enterprise customers such as Google, Simon &amp; Schuster, and National Geographic were not able to view or pay their invoices online. They weren't able to export their data, either. They had to call a service
-        representative or mail a physical check. As a result, there were millions of dollars of unpaid invoices. This also resulted in a poor user experience for both clients and Shutterstock sales reps, who were straddled with a slow legacy system.</p>
+        representative or mail a physical check. For some reason, this was never priortized and resulted in a poor user experience for both clients and Shutterstock sales reps, who were straddled with a slow legacy system. There were also millions of dollars of unpaid corporate invoices, and this was believed by management to be part of the problem.</p>
 
-        <p>Enterprise customers want to be able to view, pay, and export their invoices by themselves on the
-          Shutterstock website. The sales team needs to take payments over the phone with a modern interface that better
-          supported customer needs. This means two different teams (Enterprise and Sales) need to build similar systems.</p>
-
-        <p>Shutterstock's financial data was tied up a legacy system that was not easy to work with and had severe
+        <p>Shutterstock's enterprise billing data was tied up a legacy system that was not easy to work with and had severe
           technical limitations. We also needed to tie into many other different Shutterstock systems to validate requests,
           capture payment, and apply it to the user's account. We have two different stakeholders with different
           needs, and go live in a short 4 month deadline.</p>
 
-        <p>Another requirement was to put in place an architecture that would make it easy to transition away from legacy systems.
-        This means that Shutterstock engineers building interfaces could not directly integrate with the legacy systems themselves.
-          Thus, those systems would be insulated from any legacy migrations.</p>
+        <p>Another requirement was that Shutterstock engineers building interfaces could not directly integrate with the
+          legacy systems themselves, thus insulating those projects from legacy migrations.</p>
 
         <h3><i className='fa fa-chess-rook'/>Strategy</h3>
         <p>The solution was to build an internal service — a REST API orchestrating layer. This service would do all of

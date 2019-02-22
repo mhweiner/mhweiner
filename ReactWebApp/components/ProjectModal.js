@@ -20,12 +20,19 @@ export default class ProjectModal extends React.PureComponent {
     isLoading: true
   };
   ticking = false;
+  lastKnownScrollY = 0;
 
   componentDidMount() {
 
     setTimeout(() => {
 
-      this.ref.current.querySelector(`.${loaderStyles.default}`).style.display = 'block';
+      let loader =  this.ref.current.querySelector(`.${loaderStyles.default}`);
+
+      if (loader) {
+
+        loader.style.display = 'block';
+
+      }
 
     }, 50);
 
@@ -51,6 +58,7 @@ export default class ProjectModal extends React.PureComponent {
 
     if (!this.ticking) {
 
+      this.lastKnownScrollY = this.ref.current.scrollTop;
       requestAnimationFrame(this.update);
 
     }
@@ -61,18 +69,14 @@ export default class ProjectModal extends React.PureComponent {
 
   update = () => {
 
-    let y = this.ref.current.scrollTop;
-
-    if (y < 500) {
-
-      this.titleRef.current.style.transform = `translate(-50%, ${y * 0.9}px`;
-      this.titleRef.current.style.webkitTransform = `translate(-50%, ${y * 0.9}px`;
-
-    }
-
     // reset the tick so we can
     // capture the next onScroll
     this.ticking = false;
+
+    let y = this.lastKnownScrollY;
+
+    this.titleRef.current.style.transform = `translate3d(-50%, -${y * 0.2}px, 0)`;
+    this.titleRef.current.style.webkitTransform = `translate3d(-50%, -${y * 0.2}px, 0)`;
 
   };
 

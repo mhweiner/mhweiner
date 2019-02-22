@@ -4,7 +4,7 @@
 
   padding: 40px 0;
   position: relative;
-  background: #3c3744;
+  background: #232323;
 
   .belt {
 
@@ -16,11 +16,11 @@
 
   p {
 
-    color: white;
+    color: rgba(255,255,255,0.9);
     font-size: 23px;
     margin: 0 0 20px 0;
     line-height: 1.4;
-    max-width: 740px;
+    max-width: 700px;
     display: block;
 
   }
@@ -31,7 +31,6 @@
     width: 32%;
     border-radius: 600px;
     margin: 0 0 0 40px;
-    border: 2px solid white;
 
   }
 

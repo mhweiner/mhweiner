@@ -1,6 +1,6 @@
 @import "../styles/defines";
 
-@include keyframes(animateOpen) {
+@include keyframes(fadeIn) {
   from {
     opacity: 0;
   }
@@ -9,7 +9,7 @@
   }
 }
 
-@include keyframes(animateClose) {
+@include keyframes(fadeOut) {
   from {
     opacity: 1;
   }
@@ -27,23 +27,22 @@
   bottom: 0;
   z-index: 100;
   background: linear-gradient(0deg, #aad6fb, #d4a7ff);
+  display: flex;
+  align-content: space-around;
+  @include animation(fadeIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
   ul {
 
-    margin: 0;
+    margin: auto;
     padding: 0;
-    position: absolute;
-    top: 50%;
-    width: 100%;
-    @include translateY(-50%);
+    display: block;
 
     li {
 
-      display: block;
       margin: 0 0 10px;
       padding: 0;
       text-align: center;
-
+      display: block;
 
       a {
 
@@ -53,25 +52,9 @@
         display: inline-block;
         color: black;
         position: relative;
-        transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.9);
         line-height: 80px;
         font-weight: bold;
-        opacity: 0;
-        @include translateY(20px);
-
-        &.animateLinkOpen {
-
-          opacity: 1;
-          @include translateY(0);
-
-        }
-
-        &.animateLinkClose {
-
-          opacity: 0;
-          @include translateY(20px);
-
-        }
+        border: none;
 
         &:after {
 
@@ -83,7 +66,7 @@
           background: black;
           bottom: 0;
           width: 100%;
-          @include transitionTransform(0.2s ease-in-out);
+          @include transitionTransform(0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9));
           @include scaleX(0);
 
         }
@@ -92,6 +75,7 @@
 
           color: black;
           background: none;
+          border: none;
 
           &:after {
 
@@ -109,16 +93,9 @@
 
 }
 
-.animateOpen {
-
-  @include animation(animateOpen 0.1s ease-in-out);
-  @include animation-fill-mode(forwards);
-
-}
-
 .animateClose {
 
-  @include animation(animateClose 0.1s ease-in-out);
+  @include animation(fadeOut 0.3s ease-in-out);
   @include animation-fill-mode(forwards);
 
 }

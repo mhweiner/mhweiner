@@ -54,14 +54,14 @@
 .default {
 
   display: none;
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   text-align: center;
   background: #444444;
   position: fixed;
   left: 50%;
   top: 50%;
-  margin: -200px 0 0 -200px;
+  margin: -150px 0 0 -150px;
   border-radius: 50px;
   @include animation(appear 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
@@ -72,19 +72,20 @@
     left: 0;
     right: 0;
     text-align: center;
-    font-size: 20px;
+    font-size: 22px;
     bottom: 8%;
-    color: #8e8e8e;
+    color: white;
+    font-weight: bold;
 
   }
 
   svg {
 
-    height: 50%;
+    height: 60%;
     position: absolute;
     left: 50%;
     @include translateX(-50%);
-    top: 18%;
+    top: 17%;
     z-index: 1;
 
     .mainFlame {

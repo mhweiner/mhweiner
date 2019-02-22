@@ -7,39 +7,23 @@
 
   .belt {
 
+    position: relative;
     max-width: $gridWidth;
-    padding: 50px 30px;
+    padding: $gridPadding;
     margin: 0 auto;
 
   }
 
   h3 {
 
-    font-size: 25px;
-    margin: 0 auto 40px auto;
+    font-size: 35px;
+    margin: 0 auto 39px auto;
     position: relative;
     display: block;
     text-align: center;
-    letter-spacing: 0.05em;
-    font-family: $font-header;
+    letter-spacing: 0.03em;
+    color: #353535;
 
-    span {
-
-      position: relative;
-
-      &:after {
-
-        content: '';
-        display: block;
-        position: absolute;
-        height: 3px;
-        background: black;
-        left: 0;
-        right: 0;
-
-      }
-
-    }
   }
 
   section {

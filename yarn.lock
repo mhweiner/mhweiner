@@ -1966,10 +1966,10 @@ diffie-hellman@^5.0.0:
     miller-rabin "^4.0.0"
     randombytes "^2.0.0"
 
-dom-animate-property@^1.4.0:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/dom-animate-property/-/dom-animate-property-1.4.2.tgz#2f1baef93311b9ee1b4081417584d78294ac03c4"
-  integrity sha512-SntFAjpxH7NHnWv+vABQH6GO45cDUD5NGXBuax/5o+zMkhRAREhewajWMay5dhr44ut3sT7gkTAkH4mxzYVbfg==
+dom-animate-property@1.4.3:
+  version "1.4.3"
+  resolved "https://registry.yarnpkg.com/dom-animate-property/-/dom-animate-property-1.4.3.tgz#7db17b471182d8dc0b2579837450949758b4e0f6"
+  integrity sha512-wc2IP3mO2SOgtvIP58GrXacHlBc9q935pjjDOyGXwczEZp7M/rNRFhLOeI/hgJsPaOivGtmYWu8MQ1Xj/UhaeQ==
   dependencies:
     bezier-easing "^2.0.3"
 
@@ -4817,12 +4817,12 @@ slash@^1.0.0:
   resolved "https://registry.yarnpkg.com/slash/-/slash-1.0.0.tgz#c41f2f6c39fc16d1cd17ad4b5d896114ae470d55"
   integrity sha1-xB8vbDn8FtHNF61LXYlhFK5HDVU=
 
-smooth-scroll-operator@3.1.6:
-  version "3.1.6"
-  resolved "https://registry.yarnpkg.com/smooth-scroll-operator/-/smooth-scroll-operator-3.1.6.tgz#86e633bd33823b352b1866a4bdfd06dc58790900"
-  integrity sha512-pOeU355mhReXzz7sQ2v3O7CfJzfnxqHiiWSV86GGXAm3WlmeuCKBZfw4/QfXyDehjpYFTuD9qAFDptF5EBNuUA==
+smooth-scroll-operator@^4.0.2:
+  version "4.0.2"
+  resolved "https://registry.yarnpkg.com/smooth-scroll-operator/-/smooth-scroll-operator-4.0.2.tgz#7400713deb03dfd0a9b636db3dd0c1445e4ee7bd"
+  integrity sha512-PzsfKVxrx5zxKaKAWG4vojU2MDUrgY8cZdzbZGrQpqrDOF9mYDV+19i56FoMUrZUqUmrcPhLavye2VVx9X4aKg==
   dependencies:
-    dom-animate-property "^1.4.0"
+    dom-animate-property "1.4.3"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"

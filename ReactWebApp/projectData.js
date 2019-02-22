@@ -49,7 +49,7 @@ const projects = [
 
   {
     id: 'Shutterstock_Invoice_API',
-    title: 'Shutterstock Invoice API',
+    title: 'Shutterstock',
     description: 'Microservice that powers Shutterstock\'s enterprise e-commerce systems.',
     tags: ['Back-End', 'API Design'],
     bgSrc: '/static/images/project-thumbs/shutterstock-bg.jpg',

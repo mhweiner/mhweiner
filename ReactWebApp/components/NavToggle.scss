@@ -20,6 +20,7 @@ a.default{
   border-radius: 40px;
   line-height: 40px;
   color: black;
+  border: none;
 
   i {
 
@@ -30,6 +31,7 @@ a.default{
   &:hover {
 
     color: $color-base;
+    border: none;
 
   }
 
