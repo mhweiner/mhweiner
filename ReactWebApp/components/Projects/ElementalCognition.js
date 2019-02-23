@@ -29,7 +29,7 @@ export default class ElementalCognition extends React.PureComponent {
 
     return (<div className={[styles.base].join(' ')}>
 
-      <img src='/static/images/content/ec/tracks.jpg'/>
+      <img src='/static/images/content/ec/car.jpg'/>
 
       <div className={styles.text}>
 

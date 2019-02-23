@@ -49,12 +49,12 @@
         font-family: $font;
         font-size: 70px;
         text-decoration: none;
-        display: inline-block;
         color: black;
         position: relative;
         line-height: 80px;
         font-weight: bold;
         border: none;
+        will-change: transform;
 
         &:after {
 
@@ -67,7 +67,7 @@
           bottom: 0;
           width: 100%;
           @include transitionTransform(0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9));
-          @include scaleX(0);
+          @include scale3d(0,1,1);
 
         }
 
@@ -79,7 +79,7 @@
 
           &:after {
 
-            @include scaleX(1);
+            @include scale3d(1,1,1);
 
           }
 
@@ -95,7 +95,7 @@
 
 .animateClose {
 
-  @include animation(fadeOut 0.3s ease-in-out);
+  @include animation(fadeOut 0.2s ease-in-out);
   @include animation-fill-mode(forwards);
 
 }

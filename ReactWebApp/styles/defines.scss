@@ -17,3 +17,19 @@ $font-header: 'Roboto', sans-serif;
 
 $gridWidth: 1200px;
 $gridPadding: 60px 40px;
+$smallGridPadding: 30px 20px;
+
+@mixin grid {
+
+  max-width: $gridWidth;
+  padding: $gridPadding;
+  margin: 0 auto;
+  position: relative;
+
+  @include media(0,600) {
+
+    padding: $smallGridPadding;
+
+  }
+
+}

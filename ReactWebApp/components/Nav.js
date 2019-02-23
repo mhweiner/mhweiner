@@ -8,13 +8,18 @@ import styles from './Nav.scss';
 export default class Nav extends React.PureComponent {
 
   ref = React.createRef();
-  closeAnimationDuration = 350; //in ms
+  closeAnimationDuration = 200; //in ms
 
   go = (e, section) => {
 
     e.preventDefault();
     e.stopPropagation();
-    this.props.scrollTo(section);
+
+    this.animateClose(() => {
+
+      this.props.scrollTo(section);
+
+    });
 
   };
 

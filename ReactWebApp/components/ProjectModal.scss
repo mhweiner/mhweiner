@@ -60,6 +60,12 @@
   z-index: 200;
   @include animation(animateIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
+  @include media(0, 700) {
+
+    padding: 140px 0 0 0;
+
+  }
+
 }
 
 .animateClose {
@@ -85,6 +91,15 @@ h1.title {
   max-width: calc(100% - 200px);
   @include animation(titleAnimateIn 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9));
   z-index: 1;
+
+  @include media(0, 700) {
+
+    max-width: none;
+    top: 65px;
+    width: 100%;
+    padding: 0 20px;
+
+  }
 
 }
 

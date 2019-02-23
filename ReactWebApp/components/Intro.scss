@@ -30,6 +30,26 @@
 
   }
 
+  @include media(0, 600, 0, 460) {
+
+    @include transform(none);
+    left: auto;
+    top: auto;
+    width: auto;
+    position: relative;
+
+  }
+
+  @include media(0, 800, 0, 600) {
+
+    @include transform(none);
+    left: auto;
+    top: auto;
+    width: auto;
+    position: relative;
+
+  }
+
 }
 
 .seeWork {

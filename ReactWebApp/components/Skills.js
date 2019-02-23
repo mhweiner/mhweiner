@@ -9,7 +9,7 @@ export default class Skills extends React.PureComponent {
     return (
       <div className={[styles.default, 'section-skills'].join(' ')}>
         <div className={styles.belt}>
-          <h3>Skills</h3>
+          <h3><span>Skills</span></h3>
           <section>
             <h4>Technical</h4>
             <ul>
@@ -22,7 +22,7 @@ export default class Skills extends React.PureComponent {
               <li>Documentation &amp; Specifications</li>
             </ul>
           </section>
-          <section className="cont">
+          <section className={styles.cont}>
             <h4 className={styles.empty}>&nbsp;</h4>
             <ul>
               <li>Automated Testing</li>

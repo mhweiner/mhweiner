@@ -4,10 +4,7 @@
 
   .belt {
 
-    position: relative;
-    max-width: $gridWidth;
-    padding: $gridPadding;
-    margin: 0 auto;
+    @include grid;
 
   }
 
