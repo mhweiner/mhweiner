@@ -1,7 +1,6 @@
 import React from 'react';
 
 import styles from './base.scss';
-import devotifyStyles from './Devotify.scss';
 
 export default class Devotify extends React.PureComponent {
 
@@ -15,69 +14,50 @@ export default class Devotify extends React.PureComponent {
 
     return (<div className={styles.base}>
 
-      <div className={devotifyStyles.hero}>
-        <img src='/static/images/content/devotify/1.jpg'/>
-      </div>
+      <img src='/static/images/content/devotify/1.jpg'/>
 
       <div className={styles.text}>
 
-        <h2>Project management and collaboration tools should speed up communication, not slow it down.</h2>
+        <h2>When solutions-driven technology serves business needs, engineering decisions become easier.</h2>
 
-        <a className={styles.extLink} href="https://www.advizr.com/" target="_blank">Visit Website<i className='fa fa-external-link-alt'/></a>
+        <p>Devotify's mission is to build true loyalty and breed advocacy for every business.
+          The Devotify platform is a gamified and engaging loyalty program for local and small businesses. Businesses
+          receive their own fully-branded, customized app, in both the Google Play and App Store. The platform offers
+          features such as gamification with different rewards levels, push notifications, blog,
+          coupons and special events, geo-location, event calendar, QR code scan system, and more.</p>
 
-        <h3><i className={c(['fa', 'fa-flag', styles.challenge])}/>The Challenge</h3>
-        <p>Existing tools are slow and painful. They either show too much information, or too little. Most importantly, they don't solve the biggest problem that teams face — too many interruptions. </p>
-        <p>Frustrated by existing project management tools, I decided to create my own. It had to:</p>
+        <p>The challenge was to build a cross-platform MVP in a short timeline, under a tight budget. Each customer gets their own white-labled iOS and Android apps.</p>
+
+        <h3><i className='fa fa-chess-rook'/>Strategy</h3>
+        <p>
+          In order to deliver a cross-platform (iOS and Android) MVP under a tight budget, I decided to use <a href="https://cordova.apache.org/" target="_blank">Cordova</a>
+          &nbsp;(formerly PhoneGap). This allowed for the core of the application to be a single project, instead of
+          two entirely separate projects (iOS and Android). The core would be an HTML5/Javascript app, with Cordova
+          providing the bridge to the native environments, including native plugins where necessary.
+        </p>
+        <p>
+          The disadvantages of using Cordova is usually sacrifice in performance and "native-like" UX. Since this application didn't
+          require much in terms of performance like an interactive game would, it was a good candidate for this option.
+          Still, great care was taken to mitigate these issues, with the end result feeling very close to a native
+          experience, at nowhere near the cost of developing two separate native apps.
+        </p>
+
+        <section className={styles.tech}>
+          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+          <ul>
+            <li>REST API, built with a lightweight, modular custom PHP HMVC framework</li>
+            <li>White-labeled apps are a cross-platform hybrid HTML5/Javascript application with <a href="https://cordova.apache.org/" target="_blank">Cordova</a> (formerly PhoneGap), running a custom UI Component framework built with <a href="http://github.com/mhweiner/hmjs" target="_blank">HMJS</a></li>
+            <li>Custom CI/CD pipeline and build process (nodeJS) to quickly create new white-labeled apps for both iOS and Android</li>
+          </ul>
+        </section>
+
+        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
+        <p>I was hired as a consultant to develop the MVP, which launched in late 2014. Devotify has since added new features and built their own <i>Devotify</i> app which is a hyper-local discovery app.</p>
         <ul>
-          <li><b>Have a smart queue notification system</b> that limits annoying disruptions in your chat channels. Slack is not a queue. Email isn't (a good one) either. Let's have a queue.</li>
-          <li><b>Be super fast</b>, intuitive, and easy to use. Keyboard shortcuts to quickly zip through forms.</li>
-          <li><b>Be flexible.</b> Every team works differently, and does Agile differently.</li>
-          <li><b>Have easy and powerful search tools.</b></li>
-          <li><b>Have automatic sorting</b> by priority and effort, as prescribed by Agile.</li>
-          <li><b>Clear head space.</b> Limit distractions and information overload.</li>
-          <li><b>Support concurrent multi-project and multi-sprint scenarios</b>.</li>
+          <li>Architecture and development of hybrid HTML5/native cross-platform app and backend REST API.</li>
+          <li>Business analysis & requirement gathering.</li>
+          <li>Dev-ops: Custom build process for white-label app production that scales easily with optimal performance.</li>
         </ul>
-
-        <section>
-          <h3><i className={c(['fa', 'fa-flask', styles.solution])}/>The Solution</h3>
-          <p>Advizr marries robo-advising with a thoughtful user experience and solid performing application to
-            create an unparalleled experience for advisors and their clients. Features are based on exhaustive
-            user-research, iteration, and customer outreach programs.</p>
-          <p>We leveraged a component-based modular UI that allowed us to iterate quickly
-            while still allowing the application to scale (in terms of complexity without
-            major rewrites). This allowed us to hone-in on our features and iterate quickly with customer feedback
-            and data metrics.</p>
-        </section>
-
-        <section>
-          <h3><i className={c(['fas', 'fa-cogs', styles.technology])}/>Technology</h3>
-          <ul>
-            <li>HTML5/CSS3/Javascript/ZeptoJS/PHP</li>
-            <li>Newfangled "device agnostic feature based responsive design" methodology</li>
-            <li>Custom sass extension CSS Variant Export Script written in Ruby</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3><i className={c(['fa', 'fa-bomb', styles.involvement])}/>Involvement</h3>
-          <ul>
-            <li>Led R&D and front-end architecture.</li>
-            <li>Worked with team to create solutions to major challenges, such as payload size, performance, legacy, maint. costs</li>
-            <li>Co-invented innovative build process &mdash; a CSS variant export technique to battle CSS file size.</li>
-            <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Inventory, in partnership with the Design team, specifically the Art Director.</li>
-            <li>Wrote an automated testing suite specially designed for Marvel and responsive websites. This cut down on our QA turnaround significantly and kept quality high.</li>
-            <li>Development and promotion of interactive Style Guide with the help of the Design team. The Style Guide was used by Marvel's business partners, such as ABC and app development vendors.</li>
-            <li>Almost met Robert Downy, Jr.</li>
-          </ul>
-        </section>
-
-        <section>
-          <h3><i className={c(['fa', 'fa-trophy', styles.achievements])}/>Achievements & Awards</h3>
-          <ul>
-            <li>Recognized as Best Client-Facing Technology of 2015 by FPPad.</li>
-            <li>Pre-revenue to over $2MM/yr within 2 years.</li>
-          </ul>
-        </section>
 
       </div>
 
