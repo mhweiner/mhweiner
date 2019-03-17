@@ -16,6 +16,7 @@ import Projects from "./Projects";
 import Skills from "./Skills";
 import About from "./About";
 import ProjectModal from "./ProjectModal";
+import ProjectModalHeader from "./ProjectModalHeader";
 
 export default class App extends Component {
 
@@ -24,6 +25,7 @@ export default class App extends Component {
   state = {
     project: null
   };
+  projectModalHeaderRef = React.createRef();
 
   componentDidMount() {
 
@@ -97,11 +99,15 @@ export default class App extends Component {
         navToggleIsOpen: true
       });
 
+      this.allowBodyScroll(false);
+
     } else if (this.nav.current) {
 
       this.setState({
         navToggleIsOpen: false
       });
+
+      this.allowBodyScroll(true);
 
       this.nav.current.animateClose(() => {
 
@@ -117,6 +123,8 @@ export default class App extends Component {
         navIsOpen: false,
         navToggleIsOpen: false
       });
+
+      this.allowBodyScroll(true);
 
     }
 
@@ -135,12 +143,18 @@ export default class App extends Component {
       s.left = null;
       s.right = null;
 
+      document.documentElement.style.height = '';
+      document.body.style.height = '';
+
     } else {
+
+      let vpH = window.innerHeight;
+
+      document.documentElement.style.height = vpH.toString() + "px";
+      document.body.style.height = vpH.toString() + "px";
 
       s.position = 'absolute';
       s.overflow = 'hidden';
-      s.overflowX = 'hidden';
-      s.overflowY = 'scroll !important';
       s.left = '0';
       s.right = '0';
 
@@ -158,7 +172,13 @@ export default class App extends Component {
         project: projectIndex
       });
 
+      //show header
+      this.projectModalHeaderRef.current.setProject(projectIndex);
+
     } else if (this.projectModal.current) {
+
+      //hide header
+      this.projectModalHeaderRef.current.animateClose();
 
       this.projectModal.current.animateClose(() => {
 
@@ -178,6 +198,9 @@ export default class App extends Component {
         project: null
       });
 
+      //hide header
+      this.projectModalHeaderRef.current.animateClose();
+
     }
 
   };
@@ -185,12 +208,12 @@ export default class App extends Component {
   render() {
 
     return <div className={styles.default}>
+      <ProjectModalHeader ref={this.projectModalHeaderRef} close={() => mr.go('home')}/>
       <NavToggle toggleNav={this.toggleNav} isOpenToggle={this.state.navToggleIsOpen} isOpen={this.state.navIsOpen}/>
       {this.state.navIsOpen && <Nav ref={this.nav} scrollTo={this.scrollTo} close={() => this.toggleNav(false)}/>}
       {this.state.project !== null && <ProjectModal
         project={this.state.project}
         ref={this.projectModal}
-        close={() => mr.go('home')}
       />}
       <Intro scrollTo={this.scrollTo}/>
       <Projects

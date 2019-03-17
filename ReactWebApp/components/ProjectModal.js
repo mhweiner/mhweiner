@@ -11,7 +11,6 @@ import loaderStyles from './LoaderAnimation.scss';
 export default class ProjectModal extends React.PureComponent {
 
   ref = React.createRef();
-  headerRef = React.createRef();
   contentRef = React.createRef();
   closeAnimationDuration = 300; //in ms
   scrollListenerId = 0;
@@ -44,7 +43,15 @@ export default class ProjectModal extends React.PureComponent {
 
     });
 
-    this.scrollListenerId = DOMEvent.addListener(this.ref.current, 'scroll', this.onScroll);
+    if (window.innerWidth > 600) {
+
+      this.scrollListenerId = DOMEvent.addListener(this.ref.current, 'scroll', this.onScroll);
+
+    } else {
+
+      this.titleRef.current.style.position = 'absolute';
+
+    }
 
   }
 
@@ -92,7 +99,11 @@ export default class ProjectModal extends React.PureComponent {
 
   componentWillUnmount() {
 
-    DOMEvent.removeListener(this.scrollListenerId);
+    if (this.scrollListenerId) {
+
+      DOMEvent.removeListener(this.scrollListenerId);
+
+    }
 
   }
 
@@ -103,10 +114,6 @@ export default class ProjectModal extends React.PureComponent {
     return (
       <div className={styles.default} ref={this.ref}>
         <h1 className={styles.title} ref={this.titleRef}>{proj.title}</h1>
-        <div className={styles.header} ref={this.headerRef}>
-          <button className={styles.backButton} onClick={this.props.close}><i className='fa fa-arrow-left'/>Back<span> to Work</span></button>
-          <a className={styles.extLink} href={proj.website} target='_blank'><span>Visit </span>Website<i className='fa fa-external-link-alt'/></a>
-        </div>
         <div className={styles.content} ref={this.contentRef}>
           {proj.content}
         </div>

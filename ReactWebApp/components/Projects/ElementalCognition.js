@@ -38,15 +38,7 @@ export default class ElementalCognition extends React.PureComponent {
         <p>Modern AI leaves much to be desired. Although machines have become pretty good at recognizing patterns, faces, and roads, they cannot understand
         something as simple as a children's bedtime story. They are unable to explain the "why" or the "how" behind the answers they give us. Their answers are either opaque or based on statistics.</p>
 
-        <p>To tackle the problem of "understanding", Elemental Cognition, founded and led by IBM Watson alum Dr. David Ferrucci, starts by attempting to teach the system children's stories.
-        To understand why something as seemingly simple as a children's story is so difficult, let's take one example:</p>
-
-        <blockquote>The game was nearly over. The two teams were tied, one to one.  Alice kicked the ball. Oh no! She kicked it the wrong way. She kicked it toward the school building. "What a bad kick," Alice thought.</blockquote>
-
-        <p>Who kicked the ball towards the school building? Why was that bad? Why was Alice upset? What is going on in this story?</p>
-
-        <p>
-          EC believes that <strong>context, language, culture, and reasoning are the keys to understanding</strong>.
+        <p>To tackle the problem of "understanding", Elemental Cognition, founded and led by IBM Watson alum Dr. David Ferrucci, starts by attempting to teach the system children's stories. EC believes that <strong>context, language, culture, and reasoning are the keys to understanding</strong>.
         They are also betting that this knowledge can be acquired the same way that we do &mdash; something they call
           "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog.
         </p>

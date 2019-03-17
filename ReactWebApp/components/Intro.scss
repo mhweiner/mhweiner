@@ -20,6 +20,22 @@
   width: 80%;
   max-width: 600px;
 
+  @include media(0, 600) {
+
+    position: relative;
+    @include transform(none);
+    left: auto;
+    top: auto;
+    width: 100%;
+
+    p {
+
+      line-height: 1.2;
+
+    }
+
+  }
+
   p {
 
     color: white;
@@ -27,26 +43,6 @@
     font-size: 35px;
     font-weight: bold;
     margin: 0 0 30px 0;
-
-  }
-
-  @include media(0, 600, 0, 460) {
-
-    @include transform(none);
-    left: auto;
-    top: auto;
-    width: auto;
-    position: relative;
-
-  }
-
-  @include media(0, 800, 0, 600) {
-
-    @include transform(none);
-    left: auto;
-    top: auto;
-    width: auto;
-    position: relative;
 
   }
 

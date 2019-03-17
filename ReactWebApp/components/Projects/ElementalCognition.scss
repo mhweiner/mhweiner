@@ -1,3 +1,5 @@
+@import "../../styles/defines";
+
 p.nda {
 
   margin: 40px 0 0;
@@ -16,5 +18,21 @@ p.nda {
     top: 50%;
 
   }
+
+  @include media(0,550) {
+
+    padding: 20px;
+
+    img {
+
+      position: static;
+      margin: 0 auto 20px;
+      display: block;
+
+    }
+
+  }
+
+
 
 }
