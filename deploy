@@ -11,7 +11,7 @@ then
 	echo "----------------------------------------------------"
     echo "Pushing files to mhweiner.com...";
     echo "----------------------------------------------------"
-	rsync -avH --delete --exclude --exclude '.htaccess' --exclude '.idea' --exclude 'yarn.lock' --exclude 'webpack.config.js' --exclude 'raw_assets' --exclude '.git' --exclude 'node_modules' --exclude 'devServer.js' --exclude 'npm-debug*' --exclude 'deploy' --exclude 'ReactWebApp' ./ root@mhweiner.com:/var/www/mhweiner/
+	rsync -avH --delete --exclude '.htaccess' --exclude '.idea' --exclude 'yarn.lock' --exclude 'webpack.config.js' --exclude 'raw_assets' --exclude '.git' --exclude 'node_modules' --exclude 'devServer.js' --exclude 'npm-debug*' --exclude 'deploy' --exclude 'ReactWebApp' ./ root@mhweiner.com:/var/www/mhweiner/
     echo "----------------------------------------------------"
     echo "Build complete. ^_^";
     echo "----------------------------------------------------"

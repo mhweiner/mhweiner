@@ -11,7 +11,7 @@ export default class Projects extends React.PureComponent {
     return (
       <div className={[styles.default, 'section-work'].join(' ')}>
         <div className={styles.belt}>
-          <h3>Recent Projects</h3>
+          <h3>Work</h3>
           <div className={styles.container}>
 
             {this.props.projects.map((project, k) => <ProjectThumbnail

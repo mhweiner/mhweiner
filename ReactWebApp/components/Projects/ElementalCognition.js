@@ -29,7 +29,7 @@ export default class ElementalCognition extends React.PureComponent {
 
     return (<div className={[styles.base].join(' ')}>
 
-      <img src='/static/images/content/ec/car.jpg'/>
+      <img src='/static/images/content/ec/shapes.jpg'/>
 
       <div className={styles.text}>
 
@@ -69,7 +69,7 @@ export default class ElementalCognition extends React.PureComponent {
           <img src='/static/images/content/ec/thinking.jpg'/>
         </div>}
 
-        <p>Last, I had to help design a REST API to power the app, and start building the app itself. We used Swagger and SwaggerHub to collaborate
+        <p>Last, I helped design a REST API and then started building the front-end application itself. We used Swagger and SwaggerHub to collaborate
         with the team to help build the API, while simultaneously building the app, for which we chose React and a Flux-like state management design.</p>
         <p>The development of the "backend" API and web app were built in parallel, and again, SwaggerHub helped keep us all on the same page during the process.</p>
 
@@ -100,9 +100,7 @@ export default class ElementalCognition extends React.PureComponent {
         <p className={ECStyles.nda}>
           <img src='/static/images/content/ec/system-broken.png'/>
           Unfortunately, due to a non-disclosure agreement, I am not able to currently post pictures or videos of the
-          app publicly on this website, but I have  been given permission to show them in person. EC is still
-          currently operating in "stealth" mode, and although the ECX app has been used in talks at conferences and at
-          Universities, it is not currently available online.
+          app publicly on this website, but I have been given permission to show them in person.
         </p>
 
       </div>

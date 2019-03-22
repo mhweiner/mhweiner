@@ -16,7 +16,7 @@ export default class Ciro extends React.PureComponent {
 
       <img src='/static/images/content/ciro/lockup.png' style={{
         maxWidth: '800px',
-        margin: '0 auto 38px',
+        margin: '22px auto 56px',
         display: 'block'
       }}/>
 

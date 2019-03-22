@@ -1,0 +1,11 @@
+@import "../../styles/defines";
+
+.hero {
+
+  @include media(1000) {
+
+    margin: -30px 0;
+
+  }
+
+}
