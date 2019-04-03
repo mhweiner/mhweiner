@@ -21,7 +21,7 @@ export default class NavToggle extends React.PureComponent {
 
     }
 
-    return <a className={classes.join(' ')} href="#" onClick={this.onClick}><i className='fa fa-bars'/>Menu</a>;
+    return <a className={classes.join(' ')} href="#" onClick={this.onClick}>Menu<span>//</span></a>;
 
   }
 

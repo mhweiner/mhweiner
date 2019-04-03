@@ -18,6 +18,24 @@
   }
 }
 
+@include keyframes(slideUp) {
+  from {
+    @include transform(translateY(30px) scale(0.96,0.96));
+  }
+  to {
+    @include transform(translateY(0) scale(1,1));
+  }
+}
+
+@include keyframes(slideDown) {
+  from {
+    @include transform(translateY(0) scale(1,1));
+  }
+  to {
+    @include transform(translateY(30px) scale(0.96,0.96));
+  }
+}
+
 .default {
 
   position: fixed;
@@ -26,35 +44,35 @@
   right: 0;
   bottom: 0;
   z-index: 100;
-  background: linear-gradient(0deg, #aad6fb, #d4a7ff);
+  background: linear-gradient(0deg, #85bae6, #be7aff);
   display: flex;
   align-content: space-around;
-  @include animation(fadeIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.9));
+  @include animation(fadeIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
   ul {
 
     margin: auto;
     padding: 0;
     display: block;
+    @include animation(slideUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
     li {
 
-      margin: 0 0 10px;
-      padding: 0;
+      margin: 0;
+      padding: 10px 20px;
       text-align: center;
       display: block;
 
       a {
 
-        font-family: $font;
-        font-size: 70px;
+        font-size: 88px;
         text-decoration: none;
         color: black;
         position: relative;
         line-height: 80px;
-        font-weight: bold;
+        font-weight: 900;
         border: none;
-        will-change: transform;
+        font-family: $font-header;
 
         &:after {
 
@@ -97,5 +115,12 @@
 
   @include animation(fadeOut 0.2s ease-in-out);
   @include animation-fill-mode(forwards);
+
+  ul {
+
+    @include animation(slideDown 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.9));
+    @include animation-fill-mode(forwards);
+
+  }
 
 }

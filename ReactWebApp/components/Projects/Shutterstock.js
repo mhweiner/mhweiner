@@ -25,29 +25,6 @@ export default class Shutterstock extends React.PureComponent {
         <p>Another requirement was that Shutterstock engineers building interfaces could not directly integrate with the
           legacy systems themselves, thus insulating those projects from legacy migrations.</p>
 
-        <h3><i className='fa fa-chess-rook'/>Strategy</h3>
-        <p>The solution was to build an internal service — a REST API orchestrating layer. This service would do all of
-          the heavy lifting to get around the technical limitations with the legacy system, and offer a single easy,
-          well-documented and well-tested API that any Shutterstock development team can take advantage of without
-          headaches.</p>
-        <p>Since our system had to handle billions of dollars of transactions annually by some of the world's largest
-          companies, security and reliability were a top concern. We employed a 100% code and branch coverage testing
-          policy, and a multi-tier automated testing policy including unit, integration, and contract tests. Peer code
-          reviews were also used to ensure code quality.</p>
-
-        <img src='/static/images/content/shutterstock/shutterstock-unity-invoice.png' />
-
-        <section className={styles.tech}>
-          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
-          <ul>
-            <li>NodeJS ES6, Express REST API</li>
-            <li>Behavior Driven Development (BDD) with 100% unit test coverage using Mocha</li>
-            <li>OpenAPI (Swagger) & <a href='http://jsonapi.org' target='_blank'>JSON API</a> Compliant</li>
-            <li>Reporting using Bunyan, New Relic, & Sumologic</li>
-            <li>Docker, Kuberneties, AWS</li>
-          </ul>
-        </section>
-
         <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
         <ul>
           <li>Led architecture &amp; development of backend API orchestration service.</li>
@@ -60,10 +37,35 @@ export default class Shutterstock extends React.PureComponent {
           <li>Helped identify potential security issues and design solutions.</li>
         </ul>
 
-        <h3><i className='fa fa-award'/>Achievements &amp; Awards</h3>
+        <h3><i className='fa fa-star'/>The Solution</h3>
+
+        <p>The solution was to build an internal service — a REST API orchestrating layer. This service would do all of
+          the heavy lifting to get around the technical limitations with the legacy system, and offer a single easy,
+          well-documented and well-tested API that any Shutterstock development team can take advantage of without
+          headaches.</p>
+
+        <p>Since our system had to handle billions of dollars of transactions annually by some of the world's largest
+          companies, security and reliability were a top concern. We employed a 100% code and branch coverage testing
+          policy, and a multi-tier automated testing policy including unit, integration, and contract tests. Peer code
+          reviews were also used to ensure code quality.</p>
+
+        <img src='/static/images/content/shutterstock/shutterstock-unity-invoice.png' />
+
+        <h3><i className='fa fa-award'/>Outcome</h3>
         <ul>
           <li>The project enjoyed a smooth, successful, on-time launch and was well received by users.</li>
         </ul>
+
+        <section className={styles.tech}>
+          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+          <ul>
+            <li>NodeJS ES6, Express REST API</li>
+            <li>Behavior Driven Development (BDD) with 100% unit test coverage using Mocha</li>
+            <li>OpenAPI (Swagger) & <a href='http://jsonapi.org' target='_blank'>JSON API</a> Compliant</li>
+            <li>Reporting using Bunyan, New Relic, & Sumologic</li>
+            <li>Docker, Kuberneties, AWS</li>
+          </ul>
+        </section>
 
       </div>
 

@@ -27,13 +27,13 @@ export default class ElementalCognition extends React.PureComponent {
 
   render() {
 
-    return (<div className={[styles.base].join(' ')}>
+    return (<div className={styles.base}>
 
-      <img src='/static/images/content/ec/shapes.jpg'/>
+      <img src='/static/images/content/ec/symbolic-reasoning.jpg' className={ECStyles.hero}/>
 
       <div className={styles.text}>
 
-        <h2>Teaching a system through "natural learning" will help machines understand the "why" behind their answers.</h2>
+        <h2>Elemental Cognition needed a UI to enable a human to know what an AI machine is "thinking."</h2>
 
         <p>Modern AI leaves much to be desired. Although machines have become pretty good at recognizing patterns, faces, and roads, they cannot understand
         something as simple as a children's bedtime story. They are unable to explain the "why" or the "how" behind the answers they give us. Their answers are either opaque or based on statistics.</p>
@@ -43,14 +43,21 @@ export default class ElementalCognition extends React.PureComponent {
           "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog.
         </p>
 
-        <h3>The Challenge</h3>
+        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
+        <ul>
+          <li>Led R&D, front-end architecture and development</li>
+          <li>Led UX strategy and conceptual design of "VKR" design system</li>
+          <li>Worked closely with researchers and reported directly to Dr. Ferrucci</li>
+        </ul>
+
+        <h3><i className='fa fa-bolt'/>The Challenge</h3>
         <p>The challenge posed to me was to help them build a working front-end application that could demonstrate the capabilities of their system, with the first version
           ready for a live demo during a talk given by Dr. Ferrucci within a few months.</p>
         <p>The application had to facilitate a dialog with the machine, show its introspective thinking, and demonstrate its understanding
           in a visual way. It had to be user-friendly and visually appealing.</p>
 
         <section>
-          <h3><i className='fa fa-chess-rook'/>Strategy</h3>
+          <h3><i className='fa fa-star'/>The Solution</h3>
           <p>The first thing I worked on was a way to visually demonstrate the system's understanding, which I called VKR (Visual Knowledge Representation).</p>
         </section>
 
@@ -73,29 +80,21 @@ export default class ElementalCognition extends React.PureComponent {
         with the team to help build the API, while simultaneously building the app, for which we chose React and a Flux-like state management design.</p>
         <p>The development of the "backend" API and web app were built in parallel, and again, SwaggerHub helped keep us all on the same page during the process.</p>
 
-        <section className={styles.tech}>
-          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
-          <ul>
-            <li>HTML5/CSS3/ES6/Typescript/React/Flux</li>
-            <li>REST API (Java)</li>
-            <li>Swagger, SwaggerHub</li>
-            <li>Super-top-secret stuff I cannot disclose</li>
-          </ul>
-        </section>
-
-        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
-        <ul>
-          <li>Led UX strategy and conceptual design of "VKR" design system</li>
-          <li>Led R&D, front-end architecture and development</li>
-          <li>Worked closely with researchers and reported directly to Dr. Ferrucci</li>
-        </ul>
-
-        <h3><i className='fa fa-award'/>Achievements</h3>
+        <h3><i className='fa fa-award'/>Outcome & Achievements</h3>
         <ul>
           <li>Successfully delivered first version by tight deadline and to excellent reception.</li>
           <li>Used in talks by Dr. Ferrucci and continues to be used as one of the main ways to test and judge our progress as a company</li>
           <li>Used to show investors and demonstrate our IP</li>
         </ul>
+
+        <section className={styles.tech}>
+          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+          <ul>
+            <li>HTML5, ES6, Typescript, React, Flux</li>
+            <li>REST API (Java)</li>
+            <li>Swagger, SwaggerHub</li>
+          </ul>
+        </section>
 
         <p className={ECStyles.nda}>
           <img src='/static/images/content/ec/system-broken.png'/>

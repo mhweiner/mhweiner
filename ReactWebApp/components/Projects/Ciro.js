@@ -36,6 +36,16 @@ export default class Ciro extends React.PureComponent {
           <li><b>Support concurrent multi-project and multi-sprint scenarios</b>.</li>
         </ul>
 
+        <h3>Outcome</h3>
+        <p>Although Ciro is currently still running, I am no longer actively involved or building this into a company. I have learned many valuable lessons,
+          such as market conditions and something called "market fit." After launching the website at <a href="https://propelify.com/">Propelify</a>, and working on this
+        for almost a year, I learned that it is currently a very tough market to crack. The amount of money to market this properly and build all of the features
+        that companies would willing to switch for is simply immense. This means I would have to take on outside investment, something I would only have done if I
+        saw this as something I would want to do for the long-term. As it turns out, I didn't have the passion necessary for what would have certainly been a long, uphill battle.</p>
+
+        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
+        <p>I am the <strong>sole founder</strong> and did all of the design, architecture, strategy, development, and dev-ops for the MVP.</p>
+
         <section className={styles.tech}>
           <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
           <ul>
@@ -46,9 +56,6 @@ export default class Ciro extends React.PureComponent {
             <li>Custom build & CI process with node.js</li>
           </ul>
         </section>
-
-        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
-        <p>I am the <strong>sole founder</strong> and did all of the design, architecture, strategy, development, and dev-ops for the MVP.</p>
 
       </div>
 

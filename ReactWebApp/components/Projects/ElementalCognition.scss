@@ -36,3 +36,13 @@ p.nda {
 
 
 }
+
+img.hero {
+
+  @include media(0, 910) {
+
+    margin-top: 50px;
+
+  }
+
+}

@@ -30,16 +30,16 @@ export default class Nav extends React.PureComponent {
         <StarryBackground/>
         <ul>
           <li>
-            <a href="#" onClick={(e) => this.go(e, 'work')}>Work</a>
+            <a href="#" onClick={(e) => this.go(e, 'work')}>work</a>
           </li>
           <li>
-            <a href="#" onClick={(e) => this.go(e, 'skills')}>Skills</a>
+            <a href="#" onClick={(e) => this.go(e, 'skills')}>skills</a>
           </li>
           <li>
-            <a href="#" onClick={(e) => this.go(e, 'about')}>About</a>
+            <a href="#" onClick={(e) => this.go(e, 'about')}>about</a>
           </li>
           <li>
-            <a href="#" onClick={(e) => this.go(e, 'about')}>Contact</a>
+            <a href="#" onClick={(e) => this.go(e, 'about')}>contact</a>
           </li>
         </ul>
       </div>
