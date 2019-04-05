@@ -1,78 +1,57 @@
 @import "../styles/defines";
 
-@include keyframes(fadeIn) {
+@include keyframes(animateIn) {
   from {
-    opacity: 0;
+    @include translateX(100%);
   }
   to {
-    opacity: 1;
+    @include translateX(0);
   }
 }
 
-@include keyframes(fadeOut) {
+@include keyframes(animateOut) {
   from {
-    opacity: 1;
+    @include translateX(0);
   }
   to {
-    opacity: 0;
+    @include translateX(100%);
   }
 }
-
-@include keyframes(slideUp) {
-  from {
-    @include transform(translateY(30px) scale(0.96,0.96));
-  }
-  to {
-    @include transform(translateY(0) scale(1,1));
-  }
-}
-
-@include keyframes(slideDown) {
-  from {
-    @include transform(translateY(0) scale(1,1));
-  }
-  to {
-    @include transform(translateY(30px) scale(0.96,0.96));
-  }
-}
-
 .default {
 
   position: fixed;
-  left: 0;
   top: 0;
   right: 0;
   bottom: 0;
   z-index: 100;
-  background: linear-gradient(0deg, #85bae6, #be7aff);
-  display: flex;
-  align-content: space-around;
-  @include animation(fadeIn 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9));
+  background: linear-gradient(90deg, #00000000, #000000);
+  padding: 60px 9px 0 0;
+  width: 100%;
+  max-width: 800px;
+  text-align: right;
+  @include animation(animateIn 0.6s cubic-bezier(0,1.17,1,.96));
 
   ul {
 
     margin: auto;
     padding: 0;
     display: block;
-    @include animation(slideUp 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
     li {
 
       margin: 0;
-      padding: 10px 20px;
-      text-align: center;
+      padding: 0;
       display: block;
 
       a {
 
         font-size: 88px;
         text-decoration: none;
-        color: black;
+        color: $color-base;
         position: relative;
         line-height: 80px;
         font-weight: 900;
         border: none;
-        font-family: $font-header;
 
         &:after {
 
@@ -81,23 +60,23 @@
           height: 9px;
           position: absolute;
           left: 0;
-          background: black;
+          background: white;
           bottom: 0;
           width: 100%;
-          @include transitionTransform(0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9));
-          @include scale3d(0,1,1);
+          @include transitionTransform(0.2s cubic-bezier(0,1.17,1,.96));
+          @include transform(scale(0,1) translateX(100%))
 
         }
 
         &:hover {
 
-          color: black;
+          color: white;
           background: none;
           border: none;
 
           &:after {
 
-            @include scale3d(1,1,1);
+            @include transform(scale(1,1) translateX(0))
 
           }
 
@@ -113,14 +92,7 @@
 
 .animateClose {
 
-  @include animation(fadeOut 0.2s ease-in-out);
+  @include animation(animateOut 0.4s cubic-bezier(0,1.17,1,.96));
   @include animation-fill-mode(forwards);
-
-  ul {
-
-    @include animation(slideDown 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.9));
-    @include animation-fill-mode(forwards);
-
-  }
 
 }

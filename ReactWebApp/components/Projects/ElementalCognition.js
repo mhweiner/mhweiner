@@ -11,9 +11,9 @@ export default class ElementalCognition extends React.PureComponent {
 
   componentDidMount() {
 
-    window._expImg = (pw) => {
+    window._unlock = (pw) => {
 
-      if (pw === 'ec002') {
+      if (pw === 'password') {
 
         this.setState({
           h: false
@@ -87,14 +87,12 @@ export default class ElementalCognition extends React.PureComponent {
           <li>Used to show investors and demonstrate our IP</li>
         </ul>
 
-        <section className={styles.tech}>
-          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
-          <ul>
-            <li>HTML5, ES6, Typescript, React, Flux</li>
-            <li>REST API (Java)</li>
-            <li>Swagger, SwaggerHub</li>
-          </ul>
-        </section>
+        <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+        <ul>
+          <li>HTML5, ES6, Typescript, React, Flux</li>
+          <li>REST API (Java)</li>
+          <li>Swagger, SwaggerHub</li>
+        </ul>
 
         <p className={ECStyles.nda}>
           <img src='/static/images/content/ec/system-broken.png'/>

@@ -34,8 +34,8 @@ export default class ProjectModalHeader extends React.PureComponent {
     render() {
 
         return <div className={styles.default} style={{display: 'none'}} ref={this.ref}>
-            <button className={styles.backButton} onClick={this.props.close}><i className='fa fa-arrow-left'/>Back<span> to Work</span></button>
-            <a className={styles.extLink} target='_blank'>Visit<span> Website</span><i className='fa fa-external-link-alt'/></a>
+            <button className={styles.backButton} onClick={this.props.close}><i className='fa fa-arrow-left'/>Back</button>
+            <a className={styles.extLink} target='_blank'>Visit<i className='fa fa-external-link-alt'/></a>
         </div>;
 
     }

@@ -56,14 +56,12 @@ export default class Devotify extends React.PureComponent {
           <li>Company was able to successfully receive funding.</li>
         </ul>
 
-        <section className={styles.tech}>
-          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
-          <ul>
-            <li>REST API, built with a lightweight, modular custom PHP HMVC framework</li>
-            <li>White-labeled apps are a cross-platform hybrid HTML5/Javascript application with <a href="https://cordova.apache.org/" target="_blank">Cordova</a> (formerly PhoneGap), running a custom UI Component framework built with <a href="http://github.com/mhweiner/hmjs" target="_blank">HMJS</a></li>
-            <li>Custom CI/CD pipeline and build process (nodeJS) to quickly create new white-labeled apps for both iOS and Android</li>
-          </ul>
-        </section>
+        <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+        <ul>
+          <li>REST API, built with a lightweight, modular custom PHP HMVC framework</li>
+          <li>White-labeled apps are a cross-platform hybrid HTML5/Javascript application with <a href="https://cordova.apache.org/" target="_blank">Cordova</a> (formerly PhoneGap), running a custom UI Component framework built with <a href="http://github.com/mhweiner/hmjs" target="_blank">HMJS</a></li>
+          <li>Custom CI/CD pipeline and build process (nodeJS) to quickly create new white-labeled apps for both iOS and Android</li>
+        </ul>
 
       </div>
 

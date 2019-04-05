@@ -84,15 +84,13 @@ export default class Marvel extends React.PureComponent {
           <li>Website lasted from 2013 - 2018! Even the new site still borrows from the old.</li>
         </ul>
 
-        <section className={styles.tech}>
-          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
-          <ul>
-            <li>HTML5/CSS3, Javascript, ZeptoJS, PHP, Ruby</li>
-            <li>Device-Agnostic Feature-Based Responsive Design (320px - 2200px+), vertical and horizontal</li>
-            <li>Custom <code>sass</code> extension CSS Variant Export Script written in Ruby, served by an internal device-detection Disney service</li>
-            <li>Atomic-design "module/component" system, similar to React</li>
-          </ul>
-        </section>
+        <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+        <ul>
+          <li>HTML5/CSS3, Javascript, ZeptoJS, PHP, Ruby</li>
+          <li>Device-Agnostic Feature-Based Responsive Design (320px - 2200px+), vertical and horizontal</li>
+          <li>Custom <code>sass</code> extension CSS Variant Export Script written in Ruby, served by an internal device-detection Disney service</li>
+          <li>Atomic-design "module/component" system, similar to React</li>
+        </ul>
 
       </div>
 

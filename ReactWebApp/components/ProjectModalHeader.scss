@@ -30,19 +30,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: 45px;
-  will-change: transform;
   @include animation(animateOpen 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.9));
-
-  @include media(0, 450) {
-
-    span {
-
-      display: none !important;
-
-    }
-
-  }
 
   &.animateClose {
 
@@ -57,9 +45,9 @@
     background: white;
     font-weight: 700;
     text-transform: uppercase;
-    padding: 0 10px;
+    padding: 0 15px;
     line-height: 40px;
-    font-size: 13px;
+    font-size: 15px;
     outline: none;
     cursor: pointer;
     transition: all 0.1s ease-in-out;
@@ -67,7 +55,9 @@
     display: inline-block;
     text-decoration: none;
     color: #333;
-    font-family: $font-header;
+    border-radius: 3px;
+    margin: 5px;
+    box-shadow: rgba(0,0,0,0.2) 0 0 2px 1px;
 
     i {
 
@@ -90,7 +80,7 @@
     right: 0;
     color: white;
     text-decoration: none;
-    background: $color-base;
+    background: #ff2776;
 
     &:hover {
 

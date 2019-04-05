@@ -70,7 +70,7 @@ $breakpoint: 1350;
   h3 {
 
     font-size: 21px;
-    font-weight: normal;
+    font-weight: 700;
     color: #ff2776;
     margin: 40px 0 30px;
     text-transform: uppercase;
@@ -139,51 +139,6 @@ $breakpoint: 1350;
       border: 2px solid black;
       background: black;
       color: white;
-
-    }
-
-  }
-
-}
-
-.tech {
-
-  background: #353535;
-  margin: 35px -10px 0;
-  padding: 25px;
-
-  h3 {
-
-    color: white;
-    margin: 0 0 20px 0;
-    font-size: 21px;
-
-    i {
-
-      font-size: 24px;
-      margin: 0 14px 0 0;
-      display: inline-block;
-      vertical-align: middle;
-
-    }
-
-  }
-
-  ul {
-
-    margin: 0;
-
-    li {
-
-      color: white;
-      margin: 0 0 10px;
-      font-size: 20px;
-
-      a, a:hover {
-
-        color: #e9ceff;
-
-      }
 
     }
 

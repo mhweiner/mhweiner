@@ -15,13 +15,13 @@ export default class NavToggle extends React.PureComponent {
 
     let classes = [styles.default];
 
-    if (this.props.isOpenToggle) {
+    if (this.props.isOpen) {
 
-      classes.push(styles.isOpen);
+      classes.push(styles.open);
 
     }
 
-    return <a className={classes.join(' ')} href="#" onClick={this.onClick}>Menu<span>//</span></a>;
+    return <a className={classes.join(' ')} onClick={this.onClick}><span/></a>;
 
   }
 

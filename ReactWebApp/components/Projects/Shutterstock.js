@@ -56,16 +56,14 @@ export default class Shutterstock extends React.PureComponent {
           <li>The project enjoyed a smooth, successful, on-time launch and was well received by users.</li>
         </ul>
 
-        <section className={styles.tech}>
-          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
-          <ul>
-            <li>NodeJS ES6, Express REST API</li>
-            <li>Behavior Driven Development (BDD) with 100% unit test coverage using Mocha</li>
-            <li>OpenAPI (Swagger) & <a href='http://jsonapi.org' target='_blank'>JSON API</a> Compliant</li>
-            <li>Reporting using Bunyan, New Relic, & Sumologic</li>
-            <li>Docker, Kuberneties, AWS</li>
-          </ul>
-        </section>
+        <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+        <ul>
+          <li>NodeJS ES6, Express REST API</li>
+          <li>Behavior Driven Development (BDD) with 100% unit test coverage using Mocha</li>
+          <li>OpenAPI (Swagger) & <a href='http://jsonapi.org' target='_blank'>JSON API</a> Compliant</li>
+          <li>Reporting using Bunyan, New Relic, & Sumologic</li>
+          <li>Docker, Kuberneties, AWS</li>
+        </ul>
 
       </div>
 

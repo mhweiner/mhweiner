@@ -46,16 +46,14 @@ export default class Ciro extends React.PureComponent {
         <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
         <p>I am the <strong>sole founder</strong> and did all of the design, architecture, strategy, development, and dev-ops for the MVP.</p>
 
-        <section className={styles.tech}>
-          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
-          <ul>
-            <li>Fully responsive, custom component-based Javascript SPA MVVM framework built with <a href="http://github.com/mhweiner/hmjs" target="_blank">HMJS</a></li>
-            <li>PHP7 REST API, built with a lightweight, modular custom HMVC framework</li>
-            <li>Real-time via <a href="http://pubnub.com" target="_blank">PubNub</a></li>
-            <li>CentOS / Apache / DigitalOcean / Docker / Kubernetes</li>
-            <li>Custom build & CI process with node.js</li>
-          </ul>
-        </section>
+        <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+        <ul>
+          <li>Fully responsive, custom component-based Javascript SPA MVVM framework built with <a href="http://github.com/mhweiner/hmjs" target="_blank">HMJS</a></li>
+          <li>PHP7 REST API, built with a lightweight, modular custom HMVC framework</li>
+          <li>Real-time via <a href="http://pubnub.com" target="_blank">PubNub</a></li>
+          <li>CentOS / Apache / DigitalOcean / Docker / Kubernetes</li>
+          <li>Custom build & CI process with node.js</li>
+        </ul>
 
       </div>
 
