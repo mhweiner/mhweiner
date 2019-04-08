@@ -28,15 +28,7 @@ export default class Devotify extends React.PureComponent {
 
         <p>The challenge was to build a cross-platform MVP in a short timeline, under a tight budget. Each customer gets their own white-labled iOS and Android apps.</p>
 
-        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
-        <p>I was hired as a consultant to develop the MVP, which launched in late 2014. Devotify has since added new features and built their own <i>Devotify</i> app which is a hyper-local discovery app.</p>
-        <ul>
-          <li>Architecture and development of hybrid HTML5/native cross-platform app and backend REST API.</li>
-          <li>Business analysis & requirement gathering.</li>
-          <li>Dev-ops: Custom build process for white-label app production that scales easily with optimal performance.</li>
-        </ul>
-
-        <h3><i className='fa fa-star'/>The Solution</h3>
+        <h3><i className='fa fa-flask'/>The Solution</h3>
         <p>
           In order to deliver a cross-platform (iOS and Android) MVP under a tight budget, I decided to use <a href="https://cordova.apache.org/" target="_blank">Cordova</a>
           &nbsp;(formerly PhoneGap). This allowed for the core of the application to be a single project, instead of
@@ -54,6 +46,14 @@ export default class Devotify extends React.PureComponent {
         <ul>
           <li>Successfully delivered MVP by tight deadline and to excellent reception.</li>
           <li>Company was able to successfully receive funding.</li>
+        </ul>
+
+        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
+        <p>I was hired as a consultant to develop the MVP, which launched in late 2014. Devotify has since added new features and built their own <i>Devotify</i> app which is a hyper-local discovery app.</p>
+        <ul>
+          <li>Architecture and development of hybrid HTML5/native cross-platform app and backend REST API.</li>
+          <li>Business analysis & requirement gathering.</li>
+          <li>Dev-ops: Custom build process for white-label app production that scales easily with optimal performance.</li>
         </ul>
 
         <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>

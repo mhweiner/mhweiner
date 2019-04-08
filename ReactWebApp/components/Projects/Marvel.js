@@ -15,17 +15,16 @@ export default class Marvel extends React.PureComponent {
 
         <h2>Marvel.com broke new ground in 2013 to become one of the first media-rich, high-traffic, fully-responsive websites.</h2>
 
-        <p>In early 2013, Marvel realized it had a problem. Mobile device usage was on an sharply upward trend, but their
-          website was not mobile-friendly. Marvel had two options &mdash; build a "mobile" version of their website, which
+        <p>In early 2013, Marvel realized it had a problem. Mobile device usage had exploded, but their
+          website was still not mobile-friendly. Marvel had two options &mdash; build a "mobile" version of their website, which
           was still standard practice for the time, or take a gamble on a new and relatively unproven "responsive design"
           methodology that was gaining buzz. Marvel's digital department lacked the budget and resources for supporting
           two separate websites (a story for another day), and also didn't want mobile users to have a lesser experience.
           They decided to take a gamble.</p>
           <p>Today, <em>responsive design</em> is a well understood "standard practice" methodology for building websites and
             web-based applications to support any device with a single codebase. But back then, it was still an emerging technology.
-          There were several competing ideologies, and had yet to be proven for a large-scale, media-rich and highly
-            interactive product like Marvel.com. There simply weren't many examples. Most responsive
-            sites at the time were highly simplified (sacrificing features, design, and interactivity) and in some cases,
+          There were several competing ideologies, and there weren't many examples. Existing large-scale responsive
+            sites we saw at the time were found to be highly simplified (sacrificing features, design, and interactivity) and in some cases,
             were considered "off-brand" by our designers. Marvel insisted on having a bold "on-brand" design and an
             immersive user-experience. They wanted high-res images and videos to support the new high-dpi
             devices. They wanted it all in a short nine month deadline, and
@@ -39,31 +38,21 @@ export default class Marvel extends React.PureComponent {
           <li>The scope of the website and tight deadline.</li>
         </ul>
 
-        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
-        <ul>
-          <li>Led R&D and front-end architecture.</li>
-          <li>Worked with team to solve major challenges, such as payload size, performance, legacy, maintenance costs, and others.</li>
-          <li>Co-invented innovative build process &mdash; a CSS variant export technique to battle CSS file size.</li>
-          <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Inventory.</li>
-          <li>Wrote an automated testing suite specially designed for Marvel.com.</li>
-          <li>Development and promotion of interactive Style Guide with the help of the Design team.</li>
-        </ul>
-
         <h3>Challenges: Payload Size, Download/Startup Performance, and Tight Deadline</h3>
 
         <p>One of the biggest challenges we had was payload size. This means the total file size of all of the require assets, including CSS, HTML, images, and javascript. Our first attempts resulted in HUGE filesizes.
-        Not only does this result in unacceptable download times, but it slowed down and often crashed most mobile devices of the time! If we didn't solve this problem, we would have failed.</p>
+        Not only did this result in unacceptable download times, but it slowed down and often crashed mobile devices of the time!</p>
 
         <p>The second biggest challenge was the timeline. None of us at Marvel had ever built a responsive website before. Building this project required an entirely new project management strategy. Our PM relied on developers and designers collaborating to figure out a viable strategy that worked for everyone. One thing was clear &mdash;
         building a responsive website was going to require more work than we had previously thought. Every single page required expensive, exhaustive testing, and we had many.</p>
 
-        <h3><i className='fa fa-star'/>Solution 1: Responsive Module Library</h3>
-        <p>One of my first suggestions was to create what I called a "Responsive Module Library". Each of these components
+        <h3><i className='fa fa-flask'/>Solution 1: Responsive Module Library</h3>
+        <p>One of my first suggestions was to create what I called a "Responsive Module Library". Each of these reusable components
         would be full-width across the page, responsive and tested in isolation. Any page that is composed of these modules
           exclusively would itself be guaranteed to be fully-responsive and also fully-tested without having to test each page individually.</p>
-        <p>I worked closely with the design team to pair down the number of Modules that we would have to build. Not only did this dramatically reduce development time, it also helped with our filesize concerns, as we were able to increase code re-use.</p>
+        <p>I worked closely with the design team to pair down the number of modules that we would have to build. Not only did this reduce development time, it also helped with our filesize concerns as well.</p>
 
-        <h3><i className='fa fa-star'/>Solution 2: CSS Variant Export Script</h3>
+        <h3><i className='fa fa-flask'/>Solution 2: CSS Variant Export Script</h3>
         <p>Our biggest technical challenge was solving the CSS file-size problem. Our unique solution actually violated
           some of the idealistic theory of "device agnostic responsive design" at the time. We designed an automated
           build process that intelligently broke apart the CSS code only required by specific devices or browsers, and
@@ -73,7 +62,7 @@ export default class Marvel extends React.PureComponent {
           physically become bigger (unlike a desktop that can become smaller by making the window smaller). We saw
           massive filesize savings across the board, especially for iPhones and other small mobile devices.</p>
 
-        <h3><i className='fa fa-star'/>Solution 3: Mobile First CSS</h3>
+        <h3><i className='fa fa-flask'/>Solution 3: Mobile First CSS</h3>
         <p>We discovered that by coding our default styles for the smallest devices and then progressively enhancing our way up to large desktop browsers, we could save about 33% of filesize. However, this created problems for IE8, which did not recognize the required "media queries".
           We were able to get around this problem by leveraging our CSS Variant Export Script and using <a href='https://sass-lang.com/' target='_blank'>sass</a> <i className='fa fa-external-link-alt' style={{fontSize: '13px'}}/> mixins.</p>
 
@@ -81,7 +70,17 @@ export default class Marvel extends React.PureComponent {
         <ul>
           <li>Successfully launched by deadline with 2 weeks to spare and to excellent reception.</li>
           <li>One of the first large-scale, media-rich, high-traffic fully-responsive websites.</li>
-          <li>Website lasted from 2013 - 2018! Even the new site still borrows from the old.</li>
+          <li>Website lasted from 2013 - 2018!</li>
+        </ul>
+
+        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
+        <ul>
+          <li>Led R&D and front-end architecture.</li>
+          <li>Worked with team to solve major challenges, such as payload size, performance, legacy, maintenance costs, and others.</li>
+          <li>Co-invented innovative CSS build process technique to reduce filesize.</li>
+          <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Library.</li>
+          <li>Wrote an automated testing suite specially designed for Marvel.com.</li>
+          <li>Development and promotion of interactive Style Guide with the help of the Design team.</li>
         </ul>
 
         <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>

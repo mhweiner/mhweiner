@@ -33,22 +33,15 @@ export default class ElementalCognition extends React.PureComponent {
 
       <div className={styles.text}>
 
-        <h2>Elemental Cognition needed a UI to enable a human to know what an AI machine is "thinking."</h2>
+        <h2>AI research company Elemental Cognition needed to build a user-friendly interface to their machine.</h2>
 
         <p>Modern AI leaves much to be desired. Although machines have become pretty good at recognizing patterns, faces, and roads, they cannot understand
-        something as simple as a children's bedtime story. They are unable to explain the "why" or the "how" behind the answers they give us. Their answers are either opaque or based on statistics.</p>
+        something as simple as a children's bedtime story. They are unable to explain the "why" or the "how" behind the answers they give us.</p>
 
         <p>To tackle the problem of "understanding", Elemental Cognition, founded and led by IBM Watson alum Dr. David Ferrucci, starts by attempting to teach the system children's stories. EC believes that <strong>context, language, culture, and reasoning are the keys to understanding</strong>.
         They are also betting that this knowledge can be acquired the same way that we do &mdash; something they call
           "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog.
         </p>
-
-        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
-        <ul>
-          <li>Led R&D, front-end architecture and development</li>
-          <li>Led UX strategy and conceptual design of "VKR" design system</li>
-          <li>Worked closely with researchers and reported directly to Dr. Ferrucci</li>
-        </ul>
 
         <h3><i className='fa fa-bolt'/>The Challenge</h3>
         <p>The challenge posed to me was to help them build a working front-end application that could demonstrate the capabilities of their system, with the first version
@@ -57,7 +50,7 @@ export default class ElementalCognition extends React.PureComponent {
           in a visual way. It had to be user-friendly and visually appealing.</p>
 
         <section>
-          <h3><i className='fa fa-star'/>The Solution</h3>
+          <h3><i className='fa fa-flask'/>The Solution</h3>
           <p>The first thing I worked on was a way to visually demonstrate the system's understanding, which I called VKR (Visual Knowledge Representation).</p>
         </section>
 
@@ -83,8 +76,15 @@ export default class ElementalCognition extends React.PureComponent {
         <h3><i className='fa fa-award'/>Outcome & Achievements</h3>
         <ul>
           <li>Successfully delivered first version by tight deadline and to excellent reception.</li>
-          <li>Used in talks by Dr. Ferrucci and continues to be used as one of the main ways to test and judge our progress as a company</li>
-          <li>Used to show investors and demonstrate our IP</li>
+          <li>Used in talks by Dr. Ferrucci and continues to be used as one of the main ways to test and judge our progress as a company.</li>
+          <li>Used to show investors and demonstrate our IP.</li>
+        </ul>
+
+        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
+        <ul>
+          <li>Led R&D, front-end architecture and development.</li>
+          <li>Led UX strategy and conceptual design of "VKR" design system.</li>
+          <li>Worked closely with researchers and reported directly to Dr. Ferrucci.</li>
         </ul>
 
         <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>

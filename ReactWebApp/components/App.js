@@ -99,15 +99,11 @@ export default class App extends Component {
         navToggleIsOpen: true
       });
 
-      this.allowBodyScroll(false);
-
     } else if (this.nav.current) {
 
       this.setState({
         navToggleIsOpen: false
       });
-
-      this.allowBodyScroll(true);
 
       this.nav.current.animateClose(() => {
 
@@ -123,8 +119,6 @@ export default class App extends Component {
         navIsOpen: false,
         navToggleIsOpen: false
       });
-
-      this.allowBodyScroll(true);
 
     }
 
