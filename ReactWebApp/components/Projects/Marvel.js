@@ -94,10 +94,10 @@ export default class Marvel extends React.PureComponent {
       </div>
 
       <div className={styles.images}>
-        <img src="/static/images/content/marvel/2.jpg" style={{border: '1px solid #999'}}/>
-        <img src="/static/images/content/marvel/3.jpg" style={{border: '1px solid #999', maxWidth: '320px', margin: '0 auto 20px auto', display: 'block'}}/>
-        <img src="/static/images/content/marvel/4.jpg" style={{border: '1px solid #999'}}/>
-        <img src="/static/images/content/marvel/4.gif" style={{border: '1px solid #999'}}/>
+        <img src="/static/images/content/marvel/2.jpg"/>
+        <img src="/static/images/content/marvel/3.jpg" className={MarvelStyles.mobileScreenshot}/>
+        <img src="/static/images/content/marvel/4.jpg"/>
+        <img src="/static/images/content/marvel/4.gif"/>
       </div>
 
     </div>);

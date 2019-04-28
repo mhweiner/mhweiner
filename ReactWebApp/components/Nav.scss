@@ -3,18 +3,22 @@
 @include keyframes(animateIn) {
   from {
     @include translateX(100%);
+    opacity: 0;
   }
   to {
     @include translateX(0);
+    opacity: 1;
   }
 }
 
 @include keyframes(animateOut) {
   from {
     @include translateX(0);
+    opacity: 1;
   }
   to {
     @include translateX(100%);
+    opacity: 0;
   }
 }
 .default {
@@ -100,7 +104,7 @@
 
 .animateClose {
 
-  @include animation(animateOut 0.4s cubic-bezier(0,1.17,1,.96));
+  @include animation(animateOut 0.6s cubic-bezier(0,1.17,1,.96));
   @include animation-fill-mode(forwards);
 
 }

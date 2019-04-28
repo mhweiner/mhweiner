@@ -61,6 +61,7 @@
     font-size: 40px;
     font-weight: 500;
     margin: 0 0 30px 0;
+    font-family: $font-header;
 
     &.subtext {
 
@@ -90,9 +91,19 @@
 
     }
 
-    .greeting {
+  }
 
-      display: none;
+  @include media(375, 450) {
+
+    p {
+
+      font-size: 30px;
+
+      &.subtext {
+
+        font-size: 26px;
+
+      }
 
     }
 

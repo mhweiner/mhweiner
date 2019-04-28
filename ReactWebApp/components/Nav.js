@@ -6,7 +6,7 @@ import styles from './Nav.scss';
 export default class Nav extends React.PureComponent {
 
   ref = React.createRef();
-  closeAnimationDuration = 400; //in ms
+  closeAnimationDuration = 600; //in ms
 
   go = (e, section) => {
 
