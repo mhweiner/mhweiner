@@ -7,7 +7,7 @@ import ElementalCognition from "./components/Projects/ElementalCognition";
 import Shutterstock from "./components/Projects/Shutterstock";
 import Devotify from "./components/Projects/Devotify";
 
-const projects = [
+export const projects = [
 
   {
     id: 'Shutterstock_Invoice_API',
@@ -44,7 +44,7 @@ const projects = [
     id: 'Marvel.com',
     title: 'Marvel.com',
     description: 'The official website of Marvel Entertainment.',
-    tags: ['R&D', 'Front-End', 'Process Design'],
+    tags: ['R&D', 'Front-End'],
     imgSrc: '/static/images/project-thumbs/logos/marvel-white.png',
     content: <Marvel/>,
     containerStyle: {
@@ -57,7 +57,7 @@ const projects = [
   {
     id: 'Elemental_Cognition',
     title: 'Elemental Cognition',
-    description: 'Public-facing and internal applications for a stealth Artificial Intelligence research startup.',
+    description: 'Making an AI robot human-friendly.',
     tags: ['Front-End', 'UX', 'API Design'],
     bgSrc: '/static/images/project-thumbs/ec-bg.png',
     imgSrc: '/static/images/project-thumbs/ec-robot.png',
@@ -76,7 +76,7 @@ const projects = [
     id: 'Ciro',
     title: 'Ciro',
     description: 'Helping development teams communicate more effectively.',
-    tags: ['Full-Stack', 'UX', 'Founder'],
+    tags: ['Full-Stack', 'UX'],
     containerStyle: {
       background: '#393546'
     },
@@ -93,7 +93,7 @@ const projects = [
     id: 'Devotify',
     title: 'Devotify',
     description: 'Hyper-local loyalty platform for iOS and Android.',
-    tags: ['Front-End', 'UX'],
+    tags: ['Full-Stack'],
     containerStyle: {
       background: '#3e9391'
     },
@@ -109,4 +109,11 @@ const projects = [
 
 ];
 
-export default projects;
+export const tags = [
+  'R&D',
+  'Back-End',
+  'Front-End',
+  'Full-Stack',
+  'API Design',
+  'UX'
+];

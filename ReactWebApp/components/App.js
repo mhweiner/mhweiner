@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import projectData from '../projectData';
+import {projects, tags} from '../projectData';
 import mr from 'mr-router';
-import sso from 'smooth-scroll-operator';
+import clone from "../utils/clone";
 
 /* Styles */
 
@@ -9,21 +9,19 @@ import styles from './App.scss';
 
 /* Components */
 
-import NavToggle from "./NavToggle";
-import Nav from "./Nav";
-import Intro from "./Intro";
-import Projects from "./Projects";
-import Skills from "./Skills";
-import About from "./About";
+import Intro from "./Home/Intro";
+import Projects from "./Home/Projects";
+import Skills from "./Home/Skills";
+import About from "./Home/About";
 import ProjectModal from "./ProjectModal";
 import ProjectModalHeader from "./ProjectModalHeader";
 
 export default class App extends Component {
 
-  nav = React.createRef();
   projectModal = React.createRef();
   state = {
-    project: null
+    project: null,
+    filter: []
   };
   projectModalHeaderRef = React.createRef();
 
@@ -54,71 +52,15 @@ export default class App extends Component {
 
   }
 
-  scrollTo = (section) => {
-
-    this.toggleNav(false);
-
-    let pos = 0;
-
-    switch (section){
-      case 'work':
-        pos = document.querySelector('.section-work').offsetTop;
-        break;
-      case 'skills':
-        pos = document.querySelector('.section-skills').offsetTop;
-         break;
-      case 'about':
-        pos = document.querySelector('.section-about').offsetTop;
-        break;
-    }
-
-    sso.scrollY(window, pos);
-
-  };
-
   getProjectIndexById = (id) => {
 
-    for (let i = 0; i < projectData.length; i++) {
+    for (let i = 0; i < projects.length; i++) {
 
-      if (projectData[i].id === id) {
+      if (projects[i].id === id) {
 
         return i;
 
       }
-
-    }
-
-  };
-
-  toggleNav = (open) => {
-
-    if (open) {
-
-      this.setState({
-        navIsOpen: true,
-        navToggleIsOpen: true
-      });
-
-    } else if (this.nav.current) {
-
-      this.setState({
-        navToggleIsOpen: false
-      });
-
-      this.nav.current.animateClose(() => {
-
-        this.setState({
-          navIsOpen: false
-        });
-
-      });
-
-    } else {
-
-      this.setState({
-        navIsOpen: false,
-        navToggleIsOpen: false
-      });
 
     }
 
@@ -199,21 +141,56 @@ export default class App extends Component {
 
   };
 
+  addTagToFilter = (tag) => {
+
+    let i = this.props.filter.indexOf(tag);
+
+    if (i !== -1) {
+
+      return;
+
+    }
+
+    this.setState({
+      filter: this.state.filter.push(tag)
+    })
+
+  };
+
+  removeTagFromFilter = (tag) => {
+
+    let i = this.props.filter.indexOf(tag);
+
+    if (i !== -1) {
+
+      let filter = clone(this.props.filter);
+
+      filter.splice(i, 1);
+
+      this.setState({
+        filter: filter
+      });
+
+    }
+
+  };
+
   render() {
 
     return <div className={styles.default}>
       <ProjectModalHeader ref={this.projectModalHeaderRef} close={() => mr.go('home')}/>
-      <NavToggle toggleNav={this.toggleNav} isOpenToggle={this.state.navToggleIsOpen} isOpen={this.state.navIsOpen}/>
-      {this.state.navIsOpen && <Nav ref={this.nav} scrollTo={this.scrollTo} close={() => this.toggleNav(false)}/>}
       {this.state.project !== null && <ProjectModal
         project={this.state.project}
         ref={this.projectModal}
       />}
       <Intro scrollTo={this.scrollTo}/>
       <Projects
-          projects={projectData}
-          open={(id) => mr.go('project', {project: id})}
-          project={this.state.project}
+        projects={projects}
+        tags={tags}
+        filter={this.state.filter}
+        addTagToFilter={this.addTagToFilter}
+        removeTagFromFilter={this.removeTagFromFilter}
+        open={(id) => mr.go('project', {project: id})}
       />
       <Skills/>
       <About/>

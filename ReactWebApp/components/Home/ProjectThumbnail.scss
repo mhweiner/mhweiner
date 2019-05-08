@@ -1,4 +1,4 @@
-@import "../styles/defines";
+@import "../../styles/defines";
 
 .default {
 
@@ -23,12 +23,6 @@
 
     }
 
-    .description {
-
-      color: $color-base;
-
-    }
-
   }
 
 }
@@ -41,7 +35,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(100, 5, 197, 0.9);
+  background: black;
   transition: opacity 0.3s ease-in-out;
 
   p {
@@ -71,7 +65,6 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  border-radius: 5px;
 
   img.fg {
 
@@ -93,30 +86,5 @@
     min-height: 100%;
 
   }
-
-}
-
-.description{
-
-  box-sizing: border-box;
-  position: relative;
-  height: 53px;
-  font-size: 21px;
-  color: #252525;
-  @include singleLineTruncate;
-  font-family: $font-header;
-  font-weight: 500;
-  padding: 15px 20px;
-  transition: color 0.1s ease-in-out;
-
-}
-
-img.awardBadge {
-
-  position: absolute;
-  height: 84px;
-  width: 72.41px;
-  bottom: 22px;
-  right: 15px;
 
 }

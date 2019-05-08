@@ -16,10 +16,6 @@ export default class ProjectThumbnail extends React.Component {
           <p>{project.description}</p>
         </div>
       </div>
-      {project.award && <img src='/static/images/project-thumbs/award.png' className={styles.awardBadge} alt={'Award Winner'}/>}
-      <div className={styles.description}>
-        {project.title}
-      </div>
     </div>;
 
   }

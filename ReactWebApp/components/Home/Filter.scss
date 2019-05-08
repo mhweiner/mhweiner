@@ -1,0 +1,130 @@
+@import "../../styles/defines";
+
+.default {
+
+  margin: -10px 0 20px 0;
+  position: relative;
+
+  button {
+
+    cursor: pointer;
+    background: #333;
+    color: white;
+    border: none;
+    font-size: 20px;
+    line-height: 35px;
+    padding: 0 25px;
+    margin: 0 10px 10px 0;
+    border-radius: 40px;
+    outline: none;
+    transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
+    font-family: $font-header;
+
+    i {
+
+      margin: 0 0 0 6px;
+      font-size: 15px;
+      transition: color 0.1s ease-in-out;
+
+    }
+
+    &:hover {
+
+      background: black;
+
+    }
+
+    &[disabled] {
+
+      opacity: 0.5;
+      cursor: auto;
+
+      &:hover {
+
+        background: #333;
+
+      }
+
+    }
+
+  }
+
+  .tags {
+
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+
+    button {
+
+      background: #ddd;
+      color: #444;
+      padding: 0 30px 0 20px;
+      position: relative;
+      font-size: 18px;
+
+      i {
+
+        position: absolute;
+        right: 11px;
+        line-height: 35px;
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: top;
+
+      }
+
+      &:hover {
+
+        color: #000;
+
+        i {
+
+          color: red;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  ul {
+
+    padding: 10px 15px;
+    background: white;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 49px;
+    margin: 0;
+    z-index: 10;
+    border: 1px solid #b6b6b6;
+    box-shadow: rgba(0,0,0,0.2) 5px 5px 14px;
+
+
+    li {
+
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      padding: 4px 10px;
+      font-size: 20px;
+      line-height: 30px;
+      color: #555;
+      font-family: $font-header;
+      border-radius: 3px;
+
+      &:hover {
+
+        background: #eee;
+        color: black;
+
+      }
+
+    }
+
+  }
+
+}
