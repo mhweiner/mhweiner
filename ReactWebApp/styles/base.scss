@@ -13,16 +13,14 @@ html, body {
 
 a, a:visited {
 
-  color: $color-base;
-  transition: all 0.1s ease-in-out;
-  border-bottom: 2px solid;
+  color: black;
+  transition: all 0.2s ease-in-out;
+  border-bottom: 3px solid;
   text-decoration: none;
 
   &:hover {
 
     color: darken($color-base, 5%);
-    border-bottom: 2px dotted;
-    text-decoration: none;
 
   }
 

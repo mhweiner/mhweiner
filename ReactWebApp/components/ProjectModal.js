@@ -1,6 +1,6 @@
 import React from 'react';
 import {addClass} from "../utils/DOM";
-import {projects, tags} from '../projectData';
+import {projects} from '../projectData';
 import imagesLoaded from 'images-loaded';
 
 import LoaderAnimation from "./LoaderAnimation";
@@ -13,7 +13,6 @@ export default class ProjectModal extends React.PureComponent {
   ref = React.createRef();
   contentRef = React.createRef();
   closeAnimationDuration = 300; //in ms
-  titleRef = React.createRef();
   state = {
     isLoading: true
   };
@@ -58,7 +57,8 @@ export default class ProjectModal extends React.PureComponent {
 
     return (
       <div className={styles.default} ref={this.ref}>
-        <h1 className={styles.title} ref={this.titleRef}>{proj.title}</h1>
+        <h1>{proj.title}</h1>
+        {proj.website && <a className={styles.extLink} target='_blank' href={proj.website}>Visit<i className='fa fa-external-link-alt'/></a>}
         <div className={styles.content} ref={this.contentRef}>
           {proj.content}
         </div>
@@ -69,12 +69,6 @@ export default class ProjectModal extends React.PureComponent {
   }
 
   showContent = () => {
-
-    setTimeout(() => {
-
-      this.titleRef.current.style.display = 'block';
-
-    }, 300);
 
     setTimeout(() => {
 

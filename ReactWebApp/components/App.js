@@ -169,9 +169,9 @@ export default class App extends Component {
 
     let proj;
 
-    if (this.state.project) {
+    if (this.state.project !== null) {
 
-      proj = projects[this.getProjectIndexById(this.state.project)];
+      proj = projects[this.state.project];
 
     }
 
@@ -179,8 +179,6 @@ export default class App extends Component {
       {proj && <ProjectModalHeader
         ref={this.projectModalHeaderRef}
         close={() => mr.go('home')}
-        title={proj.title}
-        website={proj.website}
       />}
       {proj && <ProjectModal
         project={this.state.project}

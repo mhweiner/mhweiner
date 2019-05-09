@@ -15,9 +15,10 @@ export default class Ciro extends React.PureComponent {
     return (<div className={styles.base}>
 
       <img src='/static/images/content/ciro/lockup.png' style={{
+        display: 'block',
+        margin: '0 auto 30px auto',
         maxWidth: '800px',
-        margin: '22px auto 56px',
-        display: 'block'
+        width: '100%'
       }}/>
 
       <div className={styles.text}>
@@ -43,10 +44,10 @@ export default class Ciro extends React.PureComponent {
         that companies would willing to switch for is simply immense. This means I would have to take on outside investment, something I would only have done if I
         saw this as something I would want to do for the long-term. As it turns out, I didn't have the passion necessary for what would have certainly been a long, uphill battle.</p>
 
-        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
+        <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
         <p>I am the <strong>sole founder</strong> and did all of the design, architecture, strategy, development, and dev-ops for the MVP.</p>
 
-        <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+        <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology & Methodology</h3>
         <ul>
           <li>Fully responsive, custom component-based Javascript SPA MVVM framework built with <a href="http://github.com/mhweiner/hmjs" target="_blank">HMJS</a></li>
           <li>PHP7 REST API, built with a lightweight, modular custom HMVC framework</li>

@@ -10,7 +10,8 @@ export default class Advizr extends React.PureComponent {
 
       <img src='/static/images/content/advizr/hero2.jpg' style={{
         marginBottom: '30px',
-        border: '2px solid #e6e6e6',
+        borderTop: '2px solid #e6e6e6',
+        borderBottom: '2px solid #e6e6e6',
         boxSizing: 'border-box'
       }}/>
 
@@ -25,9 +26,9 @@ export default class Advizr extends React.PureComponent {
           was tough&mdash;the industry was dominated by a few large players with nearly unlimited resources. We started out as a small team of 5 with limited funding.
         </p>
 
-        <h3><i className='fa fa-flask'/>Solution</h3>
+        <h3>Strategy</h3>
         <p>As a very small early stage startup, the ability to iterate and scale quickly while mitigating risk was crucial. For this, I wanted to make things as modular
-          and "componentized" as possible. Component libraries like React had yet to become popular (and didn't support legacy browsers), so I used my own lightweight
+          and "componentized" as possible. Component libraries like React had yet to become popular, so I used my own homegrown lightweight
           tool called <a href='http://github.com/mhweiner/hmjs' target='_blank'>HMJS</a>, built around the ubiquitous <a href="https://mustache.github.io/" target='_blank'>Mustache</a> templating library.
           This same tool was previously used successfully in high performance hybrid iOS and Android applications.
         </p>
@@ -36,14 +37,14 @@ export default class Advizr extends React.PureComponent {
           preventative investment into managing technical debt, this helped our application to scale while keeping up
           velocity and with minimal resources.</p>
 
-        <h3><i className='fa fa-award'/>Achievements &amp; Awards</h3>
+        <h3 className={styles.awards}><i className='fa fa-award'/>Achievements &amp; Awards</h3>
         <ul>
           <li>Recognized as Best Client-Facing Technology of 2015 by FPPad</li>
           <li>Pre-revenue to over $2MM/yr within 2 years</li>
           <li>2018 "Best 401k Technology" Industry Award from WealthManagement.com</li>
         </ul>
 
-        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
+        <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
         <ul>
           <li>The first in-house full-time developer hire.</li>
           <li>Led UX and UI Design. Worked closely with stakeholders to understand customer's needs and to better empathize with them. Requirement gathering, information architecture, wire-framing, and prototyping.</li>
@@ -54,7 +55,7 @@ export default class Advizr extends React.PureComponent {
         </ul>
 
         <section className={styles.tech}>
-          <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology & Methodology</h3>
           <ul>
             <li>SPA Mobile-Friendly (responsive) HTML5 App</li>
             <li>.NET REST API, <a href="https://github.com/mhweiner/hmjs" target='_blank'>HMJS</a>, Highcharts, oAuth</li>
@@ -66,8 +67,8 @@ export default class Advizr extends React.PureComponent {
       </div>
 
       <div className={styles.images}>
-        <img src="/static/images/content/advizr/13.png" style={{border: '2px solid #e6e6e6'}}/>
-        <img src="/static/images/content/advizr/8.png" style={{border: '2px solid #e6e6e6'}}/>
+        <img src="/static/images/content/advizr/13.png" style={{borderTop: '2px solid #e6e6e6'}}/>
+        <img src="/static/images/content/advizr/8.png" style={{borderTop: '2px solid #e6e6e6'}}/>
         <img src="/static/images/content/advizr/7.png"/>
         <img src="/static/images/content/advizr/11.png"/>
       </div>

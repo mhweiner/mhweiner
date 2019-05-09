@@ -10,27 +10,8 @@ $breakpoint: 1350;
 
   img {
 
-    width: 100%;
-    margin: 0 0 25px 0;
-
-    @include media(0, 499) {
-
-      margin: 0 -15px 25px -15px;
-      width: calc(100% + 30px);
-
-    }
-
-  }
-
-  @include media(500, 700) {
-
-    padding: 0 20px;
-
-  }
-
-  @include media(0, 499) {
-
-    padding: 0 15px;
+    width: calc(100% + 60px);
+    margin: 0 -30px 25px -30px;
 
   }
 
@@ -53,10 +34,10 @@ $breakpoint: 1350;
 
     line-height: 1.5;
     font-size: 21px;
-    color: #222;
+    color: #333;
     margin: 0 0 25px 0;
 
-    @include media(0, 499) {
+    @include media(0, 550) {
 
       font-size: 19px;
 
@@ -64,29 +45,17 @@ $breakpoint: 1350;
 
   }
 
-  blockquote {
-
-    font-family: "Roboto Slab";
-    margin: 0 0 30px 0;
-    padding: 30px;
-    color: #444;
-    font-size: 21px;
-    line-height: 1.4;
-    border-left: 4px solid #cccccc;
-
-  }
-
   h2 {
-    font-size: 27px;
+
+    font-size: 30px;
     margin: 0 0 30px 0;
     position: relative;
-    line-height: 1.2;
-    font-family: $font;
-    color: #ef4377;
+    line-height: 1.3;
+    color: #333;
 
-    @include media(0, 499) {
+    @include media(0, 550) {
 
-      font-size: 24px;
+      font-size: 25px;
 
     }
 
@@ -96,7 +65,7 @@ $breakpoint: 1350;
 
     font-size: 21px;
     font-weight: 700;
-    color: #ff2776;
+    color: #333;
     margin: 40px 0 30px;
     text-transform: uppercase;
 
@@ -109,16 +78,21 @@ $breakpoint: 1350;
 
     }
 
-    @include media(0, 499) {
+    &.awards {
 
-      font-size: 18px;
+      color: #ffac00;
 
-      i {
+    }
 
-        font-size: 24px;
-        margin: 0 8px 0 0;
+    &.involvement {
 
-      }
+      color: #7504c1;
+
+    }
+
+    &.tech {
+
+      color: #25c5b4;
 
     }
 
@@ -133,44 +107,8 @@ $breakpoint: 1350;
 
       line-height: 1.5;
       font-size: 21px;
-      color: #222;
+      color: #333;
       margin: 0 0 10px 0;
-
-      @include media(0, 499) {
-
-        font-size: 19px;
-
-      }
-
-    }
-
-  }
-
-  a.extLink {
-
-    color: black;
-    padding: 0 10px;
-    line-height: 40px;
-    display: inline-block;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 14px;
-    font-weight: bold;
-    transition: all 0.1s ease-in-out;
-    border: 2px solid;
-    margin: 20px 0 0 0;
-
-    i {
-
-      margin: 0 0 0 7px;
-
-    }
-
-    &:hover {
-
-      border: 2px solid black;
-      background: black;
-      color: white;
 
     }
 

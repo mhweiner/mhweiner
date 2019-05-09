@@ -11,7 +11,7 @@ export const projects = [
 
   {
     id: 'Shutterstock_Invoice_API',
-    title: 'Shutterstock',
+    title: 'Shutterstock Invoice API',
     description: 'Microservice that powers Shutterstock\'s enterprise e-commerce systems.',
     tags: ['Back-End', 'API Design'],
     bgSrc: '/static/images/shutterstock-bg.jpg',

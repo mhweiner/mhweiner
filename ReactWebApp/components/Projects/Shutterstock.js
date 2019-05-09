@@ -27,7 +27,7 @@ export default class Shutterstock extends React.PureComponent {
         <p>Another requirement was that Shutterstock engineers building interfaces could not directly integrate with the
           legacy systems themselves, thus insulating those projects from legacy migrations.</p>
 
-        <h3><i className='fa fa-flask'/>The Solution</h3>
+        <h3>Strategy</h3>
 
         <p>The solution was to build an internal service — a REST API orchestrating layer. This service would do all of
           the heavy lifting to get around the technical limitations with the legacy system, and offer a single easy,
@@ -40,12 +40,12 @@ export default class Shutterstock extends React.PureComponent {
 
         <img src='/static/images/content/shutterstock/shutterstock-unity-invoice.png' />
 
-        <h3><i className='fa fa-award'/>Outcome</h3>
+        <h3 className={styles.awards}><i className='fa fa-award'/>Outcome & Achievements</h3>
         <ul>
           <li>The project enjoyed a smooth, successful, on-time launch and was well received by users.</li>
         </ul>
 
-        <h3><i className='fa fa-user-astronaut'/>My Involvement</h3>
+        <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
         <ul>
           <li>Led architecture &amp; development of backend API orchestration service.</li>
           <li>Worked with other stakeholder teams to understand and gather technical requirements.</li>
@@ -57,7 +57,7 @@ export default class Shutterstock extends React.PureComponent {
           <li>Helped identify potential security issues and design solutions.</li>
         </ul>
 
-        <h3><i className='fa fa-cogs'/>Technology & Methodology</h3>
+        <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology & Methodology</h3>
         <ul>
           <li>NodeJS ES6, Express REST API</li>
           <li>Behavior Driven Development (BDD) with 100% unit test coverage using Mocha</li>
