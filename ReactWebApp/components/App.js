@@ -11,7 +11,6 @@ import styles from './App.scss';
 
 import Intro from "./Home/Intro";
 import Projects from "./Home/Projects";
-import Skills from "./Home/Skills";
 import About from "./Home/About";
 import ProjectModal from "./ProjectModal";
 import ProjectModalHeader from "./ProjectModalHeader";
@@ -196,7 +195,6 @@ export default class App extends Component {
         removeTagFromFilter={this.removeTagFromFilter}
         open={(id) => mr.go('project', {project: id})}
       />
-      <Skills/>
       <About/>
     </div>;
 
