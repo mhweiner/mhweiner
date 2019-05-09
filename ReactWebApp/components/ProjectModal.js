@@ -1,8 +1,8 @@
 import React from 'react';
 import {addClass} from "../utils/DOM";
-import projectData from '../projectData';
+import {projects, tags} from '../projectData';
 import imagesLoaded from 'images-loaded';
-import {DOMEvent} from "../utils/DOMEvent";
+
 import LoaderAnimation from "./LoaderAnimation";
 
 import styles from './ProjectModal.scss';
@@ -13,13 +13,10 @@ export default class ProjectModal extends React.PureComponent {
   ref = React.createRef();
   contentRef = React.createRef();
   closeAnimationDuration = 300; //in ms
-  scrollListenerId = 0;
   titleRef = React.createRef();
   state = {
     isLoading: true
   };
-  ticking = false;
-  lastKnownScrollY = 0;
 
   componentDidMount() {
 
@@ -43,49 +40,7 @@ export default class ProjectModal extends React.PureComponent {
 
     });
 
-    if (window.innerWidth > 600) {
-
-      this.scrollListenerId = DOMEvent.addListener(this.ref.current, 'scroll', this.onScroll);
-
-    } else {
-
-      this.titleRef.current.style.position = 'absolute';
-
-    }
-
   }
-
-  onScroll = () => {
-
-    this.requestTick();
-
-  };
-
-  requestTick = () => {
-
-    if (!this.ticking) {
-
-      this.lastKnownScrollY = this.ref.current.scrollTop;
-      requestAnimationFrame(this.update);
-
-    }
-
-    this.ticking = true;
-
-  };
-
-  update = () => {
-
-    // reset the tick so we can
-    // capture the next onScroll
-    this.ticking = false;
-
-    let y = this.lastKnownScrollY;
-
-    this.titleRef.current.style.transform = `translate3d(-50%, -${y * 0.2}px, 0)`;
-    this.titleRef.current.style.webkitTransform = `translate3d(-50%, -${y * 0.2}px, 0)`;
-
-  };
 
   componentDidUpdate(prevProps, prevState, snapshot) {
 
@@ -97,19 +52,9 @@ export default class ProjectModal extends React.PureComponent {
 
   }
 
-  componentWillUnmount() {
-
-    if (this.scrollListenerId) {
-
-      DOMEvent.removeListener(this.scrollListenerId);
-
-    }
-
-  }
-
   render() {
 
-    const proj = projectData[this.props.project];
+    const proj = projects[this.props.project];
 
     return (
       <div className={styles.default} ref={this.ref}>

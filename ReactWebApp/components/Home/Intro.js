@@ -19,7 +19,6 @@ export default class Intro extends React.PureComponent {
 
     if (this.ticking) return;
 
-    this.lastKnownScrollY = window.scrollY;
     requestAnimationFrame(this.update);
     this.ticking = true;
 
@@ -27,13 +26,15 @@ export default class Intro extends React.PureComponent {
 
   update = () => {
 
-    setTimeout(() => {
-      this.ticking = false;
-    }, 10);
+    this.ticking = false;
+    let opacity = Math.max(0, 1 - ( window.scrollY / 400));
 
-    if (this.lastKnownScrollY > 400) return;
+    if (opacity !== this.lastOpacity) {
 
-    this.textRef.current.style.opacity = 1 - (this.lastKnownScrollY / 400);
+      this.textRef.current.style.opacity = opacity;
+      this.lastOpacity = opacity;
+
+    }
 
   };
 

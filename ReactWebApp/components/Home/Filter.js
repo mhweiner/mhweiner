@@ -29,7 +29,7 @@ export default class Filter extends React.PureComponent {
       e.preventDefault();
       e.stopPropagation();
 
-      this.props.selectTag(e.target.innerHTML);
+      this.props.selectTag(e.target.dataset.tag);
       this.setState({
         showMenu: !this.state.showMenu
       });
@@ -89,7 +89,7 @@ export default class Filter extends React.PureComponent {
 
       if (this.props.selected.indexOf(option) === -1) {
 
-        filterOptions.push(<li key={k.toString()}>{option}</li>);
+        filterOptions.push(<li key={k.toString()} data-tag={option}>{option}</li>);
 
       }
 

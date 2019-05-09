@@ -29,7 +29,6 @@ export default class Projects extends React.PureComponent {
 
   render() {
 
-
     let projects = [];
 
     this.props.projects.map((project, k) => {

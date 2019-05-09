@@ -1,41 +1,38 @@
 import React from 'react';
-import styles from "./ProjectModalHeader.scss";
 import {addClass, removeClass} from "../utils/DOM";
-import projectData from '../projectData';
+import animations from '../animations.scss';
+
+import styles from "./ProjectModalHeader.scss";
 
 export default class ProjectModalHeader extends React.PureComponent {
 
     ref = React.createRef();
 
-    setProject = (project) => {
+    animateIn  = () => {
 
-        this.ref.current.style.display = 'block';
-        this.ref.current.querySelector('a').href = projectData[project].website;
-
-    };
-
-    animateClose = () => {
-
-        addClass(this.ref.current, styles.animateClose);
+        addClass(this.ref.current, animations.animateInFromBottom);
 
         setTimeout(() => {
 
-            removeClass(this.ref.current, styles.animateClose);
-            this.ref.current.style.display = 'none';
+            removeClass(this.ref.current, animations.animateInFromBottom);
 
         }, 300);
 
-        this.setState({
-            project: null
-        });
+    };
+
+
+    animateOut = () => {
+
+        addClass(this.ref.current, animations.animateOutToTop);
 
     };
 
     render() {
 
-        return <div className={styles.default} style={{display: 'none'}} ref={this.ref}>
-            <button className={styles.backButton} onClick={this.props.close}><i className='fa fa-arrow-left'/>Back</button>
-            <a className={styles.extLink} target='_blank'>Visit<i className='fa fa-external-link-alt'/></a>
+        return <div className={styles.default} ref={this.ref}>
+            <button className={styles.backButton} onClick={this.props.close}><i className='fa fa-arrow-left'/><span>Back to projects</span></button>
+            <h1>{this.props.title}</h1>
+            {this.props.website && <a className={styles.extLink} target='_blank'><span>Visit Website</span><i className='fa fa-external-link-alt'/></a>}
         </div>;
 
     }

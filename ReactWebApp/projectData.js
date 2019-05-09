@@ -14,7 +14,7 @@ export const projects = [
     title: 'Shutterstock',
     description: 'Microservice that powers Shutterstock\'s enterprise e-commerce systems.',
     tags: ['Back-End', 'API Design'],
-    bgSrc: '/static/images/project-thumbs/shutterstock-bg.jpg',
+    bgSrc: '/static/images/shutterstock-bg.jpg',
     imgSrc: '/static/images/project-thumbs/logos/shutterstock.png',
     imgStyle: {
       maxWidth: '60%',
@@ -31,7 +31,7 @@ export const projects = [
     description: 'Financial Planning, reinvented.',
     tags: ['Front-End', 'UX', 'API Design'],
     containerStyle: {
-      background: 'linear-gradient(90deg, rgb(21, 36, 64), rgb(72, 69, 86))'
+      background: '#20416f'
     },
     imgSrc: '/static/images/project-thumbs/logos/advizr.png',
     award: true,
@@ -78,7 +78,7 @@ export const projects = [
     description: 'Helping development teams communicate more effectively.',
     tags: ['Full-Stack', 'UX'],
     containerStyle: {
-      background: '#393546'
+      background: '#ddd'
     },
     imgSrc: '/static/images/project-thumbs/logos/ciro.png',
     imgStyle: {

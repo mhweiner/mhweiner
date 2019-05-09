@@ -4,7 +4,7 @@
 
   padding: 40px 0;
   position: relative;
-  background: #232323;
+  background: $color-dark;
 
   .belt {
 
@@ -110,6 +110,7 @@ ul.contact {
       &:hover {
 
         border: none;
+        @include scale(1.1,1.1);
 
         span {
 

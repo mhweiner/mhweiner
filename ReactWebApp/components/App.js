@@ -108,13 +108,7 @@ export default class App extends Component {
         project: projectIndex
       });
 
-      //show header
-      this.projectModalHeaderRef.current.setProject(projectIndex);
-
     } else if (this.projectModal.current) {
-
-      //hide header
-      this.projectModalHeaderRef.current.animateClose();
 
       this.projectModal.current.animateClose(() => {
 
@@ -134,16 +128,13 @@ export default class App extends Component {
         project: null
       });
 
-      //hide header
-      this.projectModalHeaderRef.current.animateClose();
-
     }
 
   };
 
   addTagToFilter = (tag) => {
 
-    let i = this.props.filter.indexOf(tag);
+    let i = this.state.filter.indexOf(tag);
 
     if (i !== -1) {
 
@@ -152,18 +143,18 @@ export default class App extends Component {
     }
 
     this.setState({
-      filter: this.state.filter.push(tag)
-    })
+      filter: this.state.filter.concat([tag])
+    });
 
   };
 
   removeTagFromFilter = (tag) => {
 
-    let i = this.props.filter.indexOf(tag);
+    let i = this.state.filter.indexOf(tag);
 
     if (i !== -1) {
 
-      let filter = clone(this.props.filter);
+      let filter = clone(this.state.filter);
 
       filter.splice(i, 1);
 
@@ -177,9 +168,22 @@ export default class App extends Component {
 
   render() {
 
+    let proj;
+
+    if (this.state.project) {
+
+      proj = projects[this.getProjectIndexById(this.state.project)];
+
+    }
+
     return <div className={styles.default}>
-      <ProjectModalHeader ref={this.projectModalHeaderRef} close={() => mr.go('home')}/>
-      {this.state.project !== null && <ProjectModal
+      {proj && <ProjectModalHeader
+        ref={this.projectModalHeaderRef}
+        close={() => mr.go('home')}
+        title={proj.title}
+        website={proj.website}
+      />}
+      {proj && <ProjectModal
         project={this.state.project}
         ref={this.projectModal}
       />}
