@@ -29,7 +29,7 @@ export const projects = [
     id: 'Advizr',
     title: 'Advizr',
     description: 'Financial Planning, reinvented.',
-    tags: ['Front-End', 'UX', 'API Design'],
+    tags: ['Front-End', 'UX', 'API Design', 'Dev-Ops'],
     containerStyle: {
       background: 'rgb(50, 66, 89)'
     },
@@ -44,7 +44,7 @@ export const projects = [
     id: 'Marvel.com',
     title: 'Marvel.com',
     description: 'The official website of Marvel Entertainment.',
-    tags: ['R&D', 'Front-End'],
+    tags: ['R&D', 'Front-End', 'Dev-Ops'],
     imgSrc: '/static/images/project-thumbs/logos/marvel-white.png',
     content: <Marvel/>,
     containerStyle: {
@@ -76,7 +76,7 @@ export const projects = [
     id: 'Ciro',
     title: 'Ciro',
     description: 'Helping development teams communicate more effectively.',
-    tags: ['Full-Stack', 'UX'],
+    tags: ['Full-Stack', 'UX', 'Dev-Ops'],
     containerStyle: {
       background: '#ddd'
     },
@@ -93,7 +93,7 @@ export const projects = [
     id: 'Devotify',
     title: 'Devotify',
     description: 'Hyper-local loyalty platform for iOS and Android.',
-    tags: ['Full-Stack'],
+    tags: ['Full-Stack', 'Dev-Ops', 'API Design'],
     containerStyle: {
       background: 'rgb(17, 72, 114)'
     },
@@ -114,6 +114,7 @@ export const tags = [
   'Back-End',
   'Front-End',
   'Full-Stack',
+  'Dev-Ops',
   'API Design',
   'UX'
 ];
