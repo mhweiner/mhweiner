@@ -47,10 +47,10 @@ export default class Advizr extends React.PureComponent {
         <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
         <ul>
           <li>The first in-house full-time developer hire.</li>
-          <li>Led UX and UI Design. Worked closely with stakeholders to understand customer's needs and to better empathize with them. Requirement gathering, information architecture, wire-framing, and prototyping.</li>
           <li>Led front-end architecture & development. Helped build a small team of front-end developers and
             freelancers. Made key hires.</li>
-          <li>Led in REST API design.</li>
+          <li>Led REST API design and transition to MoA.</li>
+          <li>Led UX and UI Design. Worked closely with stakeholders to understand customer's needs and to better empathize with them. Requirement gathering, information architecture, wire-framing, and prototyping.</li>
           <li>Helped transition company to Agile.</li>
         </ul>
 

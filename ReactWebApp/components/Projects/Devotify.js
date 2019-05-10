@@ -17,9 +17,7 @@ export default class Devotify extends React.PureComponent {
       <img src='/static/images/content/devotify/1.jpg'/>
 
       <div className={styles.text}>
-
-        <h2>When solutions-driven technology serves business needs, engineering decisions become easier.</h2>
-
+        
         <p>Devotify's mission is to build true loyalty and breed advocacy for every business.
           The Devotify platform is a gamified and engaging loyalty program for local and small businesses. Businesses
           receive their own fully-branded, customized app, in both the Google Play and App Store. The platform offers
