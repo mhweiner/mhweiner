@@ -78,8 +78,8 @@ export default class Marvel extends React.PureComponent {
           <li>Worked with team to solve major challenges, such as payload size, performance, legacy, maintenance costs, and others.</li>
           <li>Co-invented innovative CSS build process technique to reduce filesize.</li>
           <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Library.</li>
-          <li>Wrote an automated testing suite specially designed for Marvel.com.</li>
-          <li>Development and promotion of interactive Style Guide with the help of the Design team.</li>
+          <li>Wrote a highly performant multi-process automated testing program specially designed for responsive websites
+            (<a href="https://github.com/mhweiner/jdiff" target='_blank'>jdiff</a>).</li>
         </ul>
 
         <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology & Methodology</h3>
@@ -88,6 +88,7 @@ export default class Marvel extends React.PureComponent {
           <li>Device-Agnostic Feature-Based Responsive Design (320px - 2200px+), vertical and horizontal</li>
           <li>Custom <code>sass</code> extension CSS Variant Export Script written in Ruby, served by an internal device-detection Disney service</li>
           <li>Atomic-design "module/component" system, similar to React</li>
+          <li>Multi-Process PHP automated visual diff tool with <a href='https://www.seleniumhq.org/' target='_blank'>Selenium</a> (<a href="https://github.com/mhweiner/jdiff" target='_blank'>jdiff</a>)</li>
         </ul>
 
       </div>

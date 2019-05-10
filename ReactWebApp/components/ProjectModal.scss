@@ -113,6 +113,7 @@ a.extLink {
   text-decoration: none;
   border: none;
   top: 0;
+  background: none;
 
   i {
 
@@ -121,6 +122,12 @@ a.extLink {
     display: inline-block;
     vertical-align: top;
     line-height: 71px;
+
+  }
+
+  &:hover {
+
+    color: $color-base;
 
   }
 

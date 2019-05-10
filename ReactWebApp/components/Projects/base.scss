@@ -15,6 +15,19 @@ $breakpoint: 1350;
 
   }
 
+  @include media(0, 450) {
+
+    padding: 0 15px;
+
+    img {
+
+      width: calc(100% + 30px);
+      margin: 0 -15px 25px -15px;
+
+    }
+
+  }
+
 }
 
 .images {
@@ -96,6 +109,12 @@ $breakpoint: 1350;
 
     }
 
+    @include media(0, 550) {
+
+      font-size: 19px;
+
+    }
+
   }
 
   ul {
@@ -109,6 +128,12 @@ $breakpoint: 1350;
       font-size: 21px;
       color: #333;
       margin: 0 0 10px 0;
+
+      @include media(0, 550) {
+
+        font-size: 19px;
+
+      }
 
     }
 

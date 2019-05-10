@@ -14,18 +14,19 @@ export default class Shutterstock extends React.PureComponent {
 
         <h2>One of the world's largest stock photography companies was leaving millions of dollars on the table.</h2>
 
-        <p>In Spring '17, Shutterstock recognized it had a problem costing them millions. Enterprise customers were still not able to view or pay their invoices online. They had to call a service
-        representative or mail a physical check. They weren't able to export their data, either. For some reason, this was never prioritized
-          and resulted in a poor user experience for both clients and Shutterstock sales reps. There were also millions of
-          dollars of unpaid corporate invoices, and this was believed by management to be part of the problem.</p>
+        <p>In Spring '17, Shutterstock recognized it had a problem potentially costing them millions. Enterprise customers were not
+          able to view or pay their invoices online &mdash; they had to call a service representative or mail a physical check.
+          They weren't able to export their data, either. Not only was this a sub-par experience for clients, but was
+          thought to be part of reason for millions of dollars in unpaid invoices.
+        </p>
 
-        <p>Shutterstock's enterprise billing data was tied up a legacy system that was not easy to work with and had severe
-          technical limitations. We also needed to tie into many other different Shutterstock systems to validate requests,
+        <p>Unfortunately, Shutterstock's enterprise billing data was tied up a legacy system that was not easy to work with and had severe
+          technical limitations. We also needed to tie into many other different systems to validate requests,
           capture payment, and apply it to the user's account. We have two different stakeholders with different
           needs, and go live in a short 4 month deadline.</p>
 
-        <p>Another requirement was that Shutterstock engineers building interfaces could not directly integrate with the
-          legacy systems themselves, thus insulating those projects from legacy migrations.</p>
+        <p>It was decided that new projects should could not directly integrate with the legacy systems themselves, thus
+          insulating those projects from legacy migrations.</p>
 
         <h3>Strategy</h3>
 
