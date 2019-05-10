@@ -32,10 +32,9 @@ export default class Advizr extends React.PureComponent {
           tool called <a href='http://github.com/mhweiner/hmjs' target='_blank'>HMJS</a>, built around the ubiquitous <a href="https://mustache.github.io/" target='_blank'>Mustache</a> templating library.
           This same tool was previously used successfully in high performance hybrid iOS and Android applications.
         </p>
-        <p>We also moved to a stateless REST API micro-services architecture and an Agile development process. Although
-          not news-worthy today, this was forward thinking for a small startup at the time. Along with a healthy dose of
-          preventative investment into managing technical debt, this helped our application to scale while keeping up
-          velocity and with minimal resources.</p>
+        <p>We also moved to a stateless REST API micro-services architecture and an Agile development process. Along
+          with a healthy dose of preventative investment into managing technical debt, this helped our application to
+          scale while keeping up velocity and with minimal resources.</p>
 
         <h3 className={styles.awards}><i className='fa fa-award'/>Achievements &amp; Awards</h3>
         <ul>
