@@ -31,7 +31,7 @@ export const projects = [
     description: 'Financial Planning, reinvented.',
     tags: ['Front-End', 'UX', 'API Design'],
     containerStyle: {
-      background: '#20416f'
+      background: 'rgb(50, 66, 89)'
     },
     imgSrc: '/static/images/project-thumbs/logos/advizr.png',
     award: true,
@@ -95,7 +95,7 @@ export const projects = [
     description: 'Hyper-local loyalty platform for iOS and Android.',
     tags: ['Full-Stack'],
     containerStyle: {
-      background: '#3e9391'
+      background: 'rgb(17, 72, 114)'
     },
     imgSrc: '/static/images/project-thumbs/logos/devotify.png',
     imgStyle: {
