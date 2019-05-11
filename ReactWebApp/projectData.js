@@ -58,7 +58,7 @@ export const projects = [
     id: 'Elemental_Cognition',
     title: 'Elemental Cognition',
     description: 'Making an AI robot human-friendly.',
-    tags: ['Front-End', 'UX', 'API Design'],
+    tags: ['Front-End', 'UX', 'API Design', 'R&D'],
     bgSrc: '/static/images/project-thumbs/ec-bg.png',
     imgSrc: '/static/images/project-thumbs/ec-robot.png',
     imgStyle: {
