@@ -77,7 +77,11 @@ ul.contact {
       display: inline-block;
       border: none;
       position: relative;
-      background-image: none;
+      background: none;
+      -webkit-background-clip: initial;
+      -webkit-text-fill-color: initial;
+      text-shadow: none;
+      transition: all 0.2s ease-in-out;
 
       i {
 

@@ -58,7 +58,7 @@ export default class ProjectModal extends React.PureComponent {
     return (
       <div className={styles.default} ref={this.ref}>
         <h1>{proj.title}</h1>
-        {proj.website && <a className={styles.extLink} target='_blank' href={proj.website}>Visit<i className='fa fa-external-link-alt'/></a>}
+        {proj.website && <a className={styles.extLink} target='_blank' href={proj.website}>Visit</a>}
         <div className={styles.content} ref={this.contentRef}>
           {proj.content}
         </div>
