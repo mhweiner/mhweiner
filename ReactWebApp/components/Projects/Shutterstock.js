@@ -8,7 +8,7 @@ export default class Shutterstock extends React.PureComponent {
 
     return (<div className={styles.base}>
 
-      <img src='/static/images/content/shutterstock/img.jpg'/>
+      <img src='/static/images/content/shutterstock/hero.jpg'/>
 
       <div className={styles.text}>
 

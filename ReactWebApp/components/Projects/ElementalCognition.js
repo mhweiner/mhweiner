@@ -29,7 +29,7 @@ export default class ElementalCognition extends React.PureComponent {
 
     return (<div className={styles.base}>
 
-      <img src='/static/images/content/ec/symbolic-reasoning.jpg'/>
+      <img src='/static/images/content/ec/hero.jpg'/>
 
       <div className={styles.text}>
 
