@@ -4,7 +4,7 @@
 
   padding: 40px 0;
   position: relative;
-  background: #eee;
+  background: linear-gradient(0deg, #261e36, #1d1d1d);
 
   .belt {
 
@@ -14,7 +14,7 @@
 
   p {
 
-    color: #333;
+    color: #cccacf;
     font-size: 23px;
     margin: 0 0 20px 0;
     line-height: 1.4;
@@ -79,7 +79,7 @@ ul.contact {
       position: relative;
       background: none;
       text-shadow: none;
-      transition: all 0.2s ease-in-out;
+      transition: all 0.1s ease-in-out;
 
       i {
 
@@ -88,10 +88,12 @@ ul.contact {
         width: 45px;
         text-align: center;
         line-height: 45px;
-        color: white;
         font-size: 26px;
         border-radius: 45px;
-        background: black;
+        background: none;
+        color: #aaa0bc;
+        box-shadow: rgba(255,255,255,0.2) 0 0 0 2px;
+        transition: all 0.1s ease-in-out;
 
       }
 
@@ -104,16 +106,22 @@ ul.contact {
         left: -20px;
         right: -20px;
         font-size: 16px;
-        color: black;
+        color: white;
         font-weight: 700;
-        transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.1s ease-in-out;
 
       }
 
       &:hover {
 
-        border: none;
         @include scale(1.1,1.1);
+
+        i {
+
+          color: white;
+          box-shadow: rgba(255,255,255,0.6) 0 0 0 2px;
+
+        }
 
         span {
 

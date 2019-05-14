@@ -8,7 +8,7 @@ export default class About extends React.PureComponent {
   render() {
 
     return (
-      <div className={styles.default}>
+      <div className={styles.default} id='about'>
         <div className={styles.belt}>
           <img src="/static/images/profile2.jpg"/>
           <p>
