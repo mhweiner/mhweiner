@@ -78,8 +78,6 @@ ul.contact {
       border: none;
       position: relative;
       background: none;
-      -webkit-background-clip: initial;
-      -webkit-text-fill-color: initial;
       text-shadow: none;
       transition: all 0.2s ease-in-out;
 
@@ -90,11 +88,10 @@ ul.contact {
         width: 45px;
         text-align: center;
         line-height: 45px;
-        color: black;
+        color: white;
         font-size: 26px;
         border-radius: 45px;
-        transition: all 0.1s ease-in-out;
-        border: 2px solid black;
+        background: black;
 
       }
 
@@ -121,13 +118,6 @@ ul.contact {
         span {
 
           opacity: 1;
-
-        }
-
-        i {
-
-          background: white;
-          color: black;
 
         }
 

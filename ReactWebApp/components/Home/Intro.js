@@ -44,8 +44,8 @@ export default class Intro extends React.PureComponent {
       <div className={styles.default}>
         <StarryBackground/>
         <div className={styles.text} ref={this.textRef}>
-            <p>Hello! I'm <span>Marc</span>. I'm a software engineer currently based in NYC.</p>
-            <p className={styles.subtext}>I've built award-winning products used by millions of people and some of the world's largest companies.</p>
+            <p>Hello! I'm <span>Marc</span>. I'm a software engineer, snowboarder, and builder of things.</p>
+            <p className={styles.subtext}>I enjoy building things that solve problems.</p>
         </div>
         <div className={styles.arrow}/>
       </div>

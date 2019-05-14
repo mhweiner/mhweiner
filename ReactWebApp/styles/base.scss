@@ -19,11 +19,7 @@ a, a:visited {
 
   &:hover {
 
-    background: linear-gradient(to right, darken($color-base, 10%), #da1b60);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+    color: #da1b60;
     text-shadow: none;
     border-bottom: 2px solid #ccc;
 
