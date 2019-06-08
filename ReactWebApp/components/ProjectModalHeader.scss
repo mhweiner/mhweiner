@@ -1,29 +1,28 @@
 @import "../styles/defines";
 
-@include keyframes(animateClose) {
-  form {
-    opacity: 1;
-    @include translateX(0);
+@include keyframes(animateOpen) {
+  from {
+    opacity: 0;
+    @include scale(0.5, 0.5);
   }
   to {
-    opacity: 0;
-    @include translateX(20px);
+    opacity: 1;
+    @include scale(1, 1);
   }
 }
 
-@include keyframes(animateOpen) {
-  to {
+@include keyframes(animateClose) {
+  form {
     opacity: 1;
-    @include translateX(0);
+    @include translate(0,0);
   }
-  from {
+  to {
     opacity: 0;
-    @include translateX(20px);
+    @include translate(10px,0);
   }
 }
 
 .default {
-
 
   button.backButton {
 
@@ -45,6 +44,14 @@
     text-shadow: rgba(255, 255, 255, 0.5) 0 0 5px, rgba(255, 255, 255, 0.5) 0 0 10px, rgba(255, 255, 255, 0.5) 0 0 48px, white 0 0 40px;
     position: fixed;
     z-index: 2001;
+    @include animation(animateOpen 0.2s ease-in-out);
+
+    &.animateClose {
+
+      @include animation(animateClose 0.3s ease-in-out);
+      @include animation-fill-mode(forwards);
+
+    }
 
     span {
 

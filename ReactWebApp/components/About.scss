@@ -1,10 +1,17 @@
-@import "../../styles/defines";
+@import "../styles/defines";
 
 .default {
 
   padding: 40px 0;
   position: relative;
-  background: linear-gradient(0deg, #261e36, #1d1d1d);
+
+  h2 {
+
+    margin: 0 0 20px 0;
+    font-size: 30px;
+    color: white;
+
+  }
 
   .belt {
 

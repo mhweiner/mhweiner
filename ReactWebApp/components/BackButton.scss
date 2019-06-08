@@ -1,0 +1,59 @@
+@import "../styles/defines";
+
+@include keyframes(animate) {
+
+  0%{
+
+    background-position: 12px center;
+
+  }
+
+  50% {
+
+    background-position: -38px center;
+
+  }
+
+  51% {
+
+    background-position: 50px center;
+
+  }
+
+  100% {
+
+    background-position: 12px center;
+
+  }
+
+
+}
+
+.default {
+
+  border: none;
+  color: black;
+  padding: 0;
+  outline: none;
+  cursor: pointer;
+  margin: 0;
+  transition: all 0.1s ease-in-out;
+  left: 10px;
+  position: fixed;
+  box-sizing: border-box;
+  top: 10px;
+  z-index: 1000;
+  width: 55px;
+  height: 45px;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 17.7' fill='none' stroke='%23000' stroke-width='2'%3e%3cpath d='M2 8.8h38.3M8.5 17.3l-7-8.5 7-7.3'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-size: 38px;
+  background-position: 12px center;
+
+  &:hover {
+
+    @include animation(animate 0.6s cubic-bezier(0.13, 0.62, 0.16, 0.93));
+
+  }
+
+}

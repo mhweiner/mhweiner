@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './Filter.scss';
-import animations from '../../animations.scss';
-import {DOMEvent} from "../../utils/DOMEvent";
+import animations from '../styles/animations.scss';
+import {DOMEvent} from "../utils/DOMEvent";
 
 export default class Filter extends React.PureComponent {
 
