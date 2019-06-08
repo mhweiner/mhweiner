@@ -28,8 +28,7 @@ export default class App extends React.Component {
       home: 'home',
       project: 'project/:id',
       projects: 'projects',
-      about: 'about',
-      skills: 'skills'
+      about: 'about'
     });
 
     // Set controller

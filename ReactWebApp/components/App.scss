@@ -6,3 +6,21 @@
   min-height: 100vh;
 
 }
+
+a, a:visited {
+
+  color: $color-base;
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 2px solid transparent;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+
+    color: #da1b60;
+    text-shadow: none;
+    border-bottom: 2px solid #da1b60;
+
+  }
+
+}

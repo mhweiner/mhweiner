@@ -6,6 +6,7 @@ import StarryBackground from "./StarryBackground";
 
 import styles from './Home.scss';
 import animations from '../styles/animations.scss';
+import Nav from "./Nav";
 
 export default class Home extends React.PureComponent {
 
@@ -52,12 +53,17 @@ export default class Home extends React.PureComponent {
 
     return (
       <div className={styles.default}>
+        <Nav/>
         <StarryBackground ref={this.stars}/>
         <div className={styles.text}>
             <p ref={this.text}>Hello! I'm <a href='#' onClick={(e) => {
               e.preventDefault();
               mr.go('about');
-            }}>Marc</a>. I'm a software engineer, snowboarder, and builder of things.</p>
+            }}>Marc</a>. I'm a software engineer, snowboarder, and builder of things.
+
+              <a href='#' className={styles.seeProjects}>See my projects</a>
+
+            </p>
         </div>
       </div>
     )

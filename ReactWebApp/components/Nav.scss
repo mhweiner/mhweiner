@@ -1,0 +1,34 @@
+.default {
+
+  position: absolute;
+  left: 10px;
+  top: 10px;
+
+  a {
+
+    margin: 0 18px 0 0;
+    color: white;
+    font-size: 19px;
+    padding: 3px 0;
+    display: inline-block;
+    vertical-align: top;
+
+    &.logo {
+
+      border: 2px solid white;
+      padding: 0 10px;
+      line-height: 31px;
+
+      &:hover {
+
+        border-color: #da1b60;
+        color: white;
+        background: #da1b60;
+
+      }
+
+    }
+
+  }
+
+}

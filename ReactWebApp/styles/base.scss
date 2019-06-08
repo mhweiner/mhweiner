@@ -10,22 +10,6 @@ html, body {
 
 }
 
-a, a:visited {
-
-  color: $color-base;
-  text-decoration: none;
-  font-weight: 700;
-
-  &:hover {
-
-    color: #da1b60;
-    text-shadow: none;
-    border-bottom: 2px solid #ccc;
-
-  }
-
-}
-
 h1, h2, h3, h4, h5, h6 {
 
   font-family: $font-header;
