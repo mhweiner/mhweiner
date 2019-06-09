@@ -70,3 +70,25 @@ $breakpoint: 450;
   }
 
 }
+
+.rocket {
+
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+  width: 100px;
+
+}
+
+.planet {
+
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  opacity: 0;
+
+}
