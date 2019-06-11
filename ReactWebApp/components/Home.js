@@ -1,9 +1,8 @@
 import React from 'react';
 import mr from 'mr-router';
-import {addClass} from "../utils/DOM";
+import {addClass, removeClass} from "../utils/DOM";
 
 import StarryBackground from "./StarryBackground";
-import Nav from "./Nav";
 import Rocket from "./Rocket";
 
 import styles from './Home.scss';
@@ -15,6 +14,7 @@ export default class Home extends React.PureComponent {
   text = React.createRef();
   rocket = React.createRef();
   planet = React.createRef();
+  planet2 = React.createRef();
 
   componentDidMount() {
 
@@ -22,7 +22,7 @@ export default class Home extends React.PureComponent {
     this.rocketInterval = setInterval(this.launchRocket, 20000);
     this.rocketTimeout = setTimeout(this.launchRocket, 5000);
     this.planetInterval = setInterval(this.flyByPlanet, 46000);
-    this.planetTimeout = setTimeout(this.flyByPlanet, 100);
+    this.flyByPlanet();
 
   }
 
@@ -31,7 +31,6 @@ export default class Home extends React.PureComponent {
     clearTimeout(this.timeout);
     clearTimeout(this.rocketTimeout);
     clearInterval(this.rocketInterval);
-    clearTimeout(this.planetTimeout);
     clearInterval(this.planetInterval);
 
   }
@@ -44,19 +43,38 @@ export default class Home extends React.PureComponent {
       addClass(this.text.current, animations.animateInFromBottom);
       this.text.current.style.display = 'block';
 
+      setTimeout(() => {
+
+        removeClass(this.text.current, animations.animateInFromBottom);
+
+      }, 300);
+
     }, 200);
 
   };
 
   animateOut = (callback) => {
 
+    this.fadeOutObjects();
     this.stars.current.fadeOut();
-    setTimeout(() => {
+    addClass(this.text.current, animations.animateOutToTop);
+    setTimeout(callback, 300);
 
-      addClass(this.text.current, animations.animateOutToTop);
-      setTimeout(callback, 300);
+  };
 
-    }, 200);
+  fadeOutObjects = () => {
+
+    if (this.rocketInTransit) {
+
+      this.rocket.current.style.opacity = 0;
+
+    }
+
+    if (this.planetInView) {
+
+      this.planet.current.style.opacity = 0;
+
+    }
 
   };
 
@@ -81,7 +99,7 @@ export default class Home extends React.PureComponent {
 
     //turn on transitioning
     setTimeout(() => {
-      rocket.style.transition = 'transform 10s linear, webkitTransform 10s linear';
+      rocket.style.transition = 'transform 10s linear, webkitTransform 10s linear, opacity 0.2s ease-in-out';
     }, 10);
 
     //animate to top
@@ -141,8 +159,8 @@ export default class Home extends React.PureComponent {
 
     //animate to top
     setTimeout(() => {
-      planet.style.transform = `translate(${x}px, -400px)`;
-      planet.style.webkitTransform = `translate(${x}px, -400px)`;
+      planet.style.transform = `translate(${x}px, -300px)`;
+      planet.style.webkitTransform = `translate(${x}px, -300px)`;
       planet.style.opacity = 1;
 
       //clear when done
@@ -165,7 +183,6 @@ export default class Home extends React.PureComponent {
 
     return (
       <div className={styles.default}>
-        <Nav/>
         <div className={styles.rocket} ref={this.rocket}><Rocket/></div>
         <img src='/static/images/planet.svg' className={styles.planet} ref={this.planet}/>
         <StarryBackground ref={this.stars}/>

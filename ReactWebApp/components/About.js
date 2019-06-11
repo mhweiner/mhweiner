@@ -10,17 +10,18 @@ export default class About extends React.PureComponent {
     return (
       <div className={styles.default}>
         <div className={styles.belt}>
-          <h2>My Story</h2>
-          <img src="/static/images/profile2.jpg"/>
-          <p>
+          <div className={styles.image}><img src="/static/images/profile2.jpg"/></div>
+          <div className={styles.text}>
+            <p className={styles.subtext}>Engineer, Entrepreneur, Creative Technologist.</p>
+            <h2>Marc H. Weiner</h2>
+            <p>
               Marc is a lifelong programmer, creative technologist, builder, and space nerd. He built computer games when he was
               eight and started his first web development company when he was fifteen. After studying Aerospace
               Engineering and Computer Science at the University at Buffalo, he helped launch a handful of successful
               startups. His specialties are in systems architecture, scalability, and process optimization.
               When he is not working, he is snowboarding, rock climbing, or watching "Beat Bobby Flay".
-          </p>
-
-          <ul className={styles.contact}>
+            </p>
+            <ul className={styles.contact}>
               <li>
                 <a href="mailto:mhweiner234@gmail.com" className="email">
                   <i className='far fa-envelope'/>
@@ -30,17 +31,17 @@ export default class About extends React.PureComponent {
               <li>
                 <a href="http://linkedin.com/in/mhweiner" target="_blank" className="linkedin">
                   <i className='fab fa-linkedin-in'/>
-                    <span>LinkedIn</span>
+                  <span>LinkedIn</span>
                 </a>
               </li>
               <li>
                 <a href="http://github.com/mhweiner" target="_blank" className="github">
                   <i className='fab fa-github-alt'/>
-                    <span>GitHub</span>
+                  <span>GitHub</span>
                 </a>
               </li>
-          </ul>
-
+            </ul>
+          </div>
         </div>
       </div>
     )

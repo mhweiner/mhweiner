@@ -12,6 +12,7 @@ import ProjectDetails from "./ProjectDetails";
 import About from "./About";
 import Home from "./Home";
 import Projects from './Projects';
+import Nav from "./Nav";
 
 export default class App extends React.Component {
 
@@ -71,6 +72,7 @@ export default class App extends React.Component {
     };
 
     return <div className={styles.default}>
+      <Nav/>
       <Transition
         routes={routes}
         page={this.state.page}
