@@ -1,6 +1,7 @@
 import React from 'react';
 import clone from "../utils/clone";
 import {addClass, removeClass} from "../utils/DOM";
+import mr from 'mr-router';
 
 import {projects, tags} from '../projectData';
 
@@ -104,7 +105,7 @@ export default class Projects extends React.PureComponent {
         proj.push(<ProjectThumbnail
           key={k.toString()}
           project={project}
-          onClick={() => this.props.open(project.id)}
+          onClick={() => mr.go('project', {id: project.id})}
         />);
 
       }
