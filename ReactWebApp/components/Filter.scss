@@ -1,5 +1,27 @@
 @import "../styles/defines";
 
+@include keyframes(animateIn) {
+  0% {
+    opacity: 0;
+    @include translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    @include translateY(0);
+  }
+}
+
+@include keyframes(animateInButton) {
+  0% {
+    opacity: 0;
+    @include scale(0.9,0.9);
+  }
+  100% {
+    opacity: 1;
+    @include scale(1,1);
+  }
+}
+
 .default {
 
   margin: -10px 0 20px 0;
@@ -8,17 +30,17 @@
   button {
 
     cursor: pointer;
-    background: #444;
+    background: none;
     color: white;
-    border: none;
-    font-size: 20px;
+    border: 1px solid;
+    font-size: 18px;
     line-height: 35px;
-    padding: 0 25px;
+    padding: 0 20px;
     margin: 0 10px 10px 0;
     border-radius: 40px;
     outline: none;
-    transition: background 0.1s ease-in-out, color 0.1s ease-in-out;
-    font-family: $font-header;
+    transition: all 0.3s cubic-bezier(0.64, 0.38, 0.03, 1.65);
+    font-family: $font-condensed;
 
     i {
 
@@ -30,7 +52,7 @@
 
     &:hover {
 
-      background: black;
+      @include scale(1.1,1.1);
 
     }
 
@@ -57,11 +79,11 @@
 
     button {
 
-      background: #ddd;
+      background: #fff;
       color: #444;
       padding: 0 30px 0 20px;
       position: relative;
-      font-size: 18px;
+      @include animation(animateInButton .3s cubic-bezier(0.64, 0.38, 0.03, 1.65));
 
       i {
 
@@ -100,8 +122,8 @@
     top: 49px;
     margin: 0;
     z-index: 10;
-    border: 1px solid #b6b6b6;
-    box-shadow: rgba(0,0,0,0.2) 5px 5px 14px;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 33px;
+    @include animation(animateIn .15s cubic-bezier(0.25, 0.46, 0.45, 0.9));
 
 
     li {
@@ -110,10 +132,10 @@
       display: block;
       margin: 0;
       padding: 4px 10px;
-      font-size: 20px;
+      font-size: 18px;
       line-height: 30px;
       color: #555;
-      font-family: $font-header;
+      font-family: $font-condensed;
       border-radius: 3px;
 
       &:hover {

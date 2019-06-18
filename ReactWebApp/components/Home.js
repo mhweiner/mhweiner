@@ -42,7 +42,7 @@ export default class Home extends React.PureComponent {
 
       removeClass(this.ref.current, animations.animateInFromBottom);
 
-    }, 300);
+    }, 600);
 
   };
 
@@ -184,7 +184,7 @@ export default class Home extends React.PureComponent {
               mr.go('about');
             }}>Marc</a>. I'm a software engineer, snowboarder, and builder of things.
 
-              <a href='#' className={styles.seeProjects}>See my projects</a>
+              <a href='#projects' className={styles.seeProjects}>See my projects</a>
 
             </p>
         </div>

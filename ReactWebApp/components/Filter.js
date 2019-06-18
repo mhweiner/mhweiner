@@ -30,9 +30,6 @@ export default class Filter extends React.PureComponent {
       e.stopPropagation();
 
       this.props.selectTag(e.target.dataset.tag);
-      this.setState({
-        showMenu: !this.state.showMenu
-      });
 
     }
 

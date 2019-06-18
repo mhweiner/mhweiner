@@ -10,10 +10,25 @@ import Devotify from "./components/Projects/Devotify";
 export const projects = [
 
   {
+    id: 'Advizr',
+    title: 'Advizr',
+    description: 'Financial Planning, reinvented.',
+    tags: ['Full-Stack', 'UX', 'Dev-Ops'],
+    containerStyle: {
+      background: 'url(/static/images/project-thumbs/advizr-screenshot.png) no-repeat top center',
+      backgroundSize: 'cover'
+    },
+    award: true,
+    content: <Advizr/>,
+    years: '2014-2016',
+    website: 'https://www.advizr.com/'
+  },
+
+  {
     id: 'Shutterstock_Invoice_API',
     title: 'Shutterstock Invoice API',
     description: 'Microservice that powers Shutterstock\'s enterprise e-commerce systems.',
-    tags: ['Back-End', 'API Design'],
+    tags: ['Back-End'],
     bgSrc: '/static/images/shutterstock-bg.jpg',
     imgSrc: '/static/images/project-thumbs/logos/shutterstock.png',
     imgStyle: {
@@ -26,30 +41,13 @@ export const projects = [
   },
 
   {
-    id: 'Advizr',
-    title: 'Advizr',
-    description: 'Financial Planning, reinvented.',
-    tags: ['Front-End', 'UX', 'API Design', 'Dev-Ops'],
-    containerStyle: {
-      background: 'rgb(50, 66, 89)'
-    },
-    imgSrc: '/static/images/project-thumbs/logos/advizr.png',
-    award: true,
-    content: <Advizr/>,
-    years: '2014-2016',
-    website: 'https://www.advizr.com/'
-  },
-
-  {
     id: 'Marvel.com',
     title: 'Marvel.com',
     description: 'The official website of Marvel Entertainment.',
     tags: ['R&D', 'Front-End', 'Dev-Ops'],
     imgSrc: '/static/images/project-thumbs/logos/marvel-white.png',
+    bgSrc: '/static/images/project-thumbs/marvel-bg.jpg',
     content: <Marvel/>,
-    containerStyle: {
-      background: '#e62429'
-    },
     years: '2013',
     website: 'https://www.marvel.com'
   },
@@ -57,9 +55,11 @@ export const projects = [
   {
     id: 'Elemental_Cognition',
     title: 'Elemental Cognition',
-    description: 'Making an AI robot human-friendly.',
-    tags: ['Front-End', 'UX', 'API Design', 'R&D'],
-    bgSrc: '/static/images/project-thumbs/ec-bg.png',
+    description: 'Making AI human-friendly.',
+    tags: ['Full-Stack', 'UX', 'R&D'],
+    containerStyle: {
+      background: 'linear-gradient(90deg, #6c34a6, #407477)'
+    },
     imgSrc: '/static/images/project-thumbs/ec-robot.png',
     imgStyle: {
       maxWidth: 'none',
@@ -95,7 +95,7 @@ export const projects = [
     description: 'Hyper-local loyalty platform for iOS and Android.',
     tags: ['Full-Stack', 'Dev-Ops', 'API Design'],
     containerStyle: {
-      background: 'rgb(17, 72, 114)'
+      background: 'rgb(34, 68, 96)'
     },
     imgSrc: '/static/images/project-thumbs/logos/devotify.png',
     imgStyle: {
@@ -115,6 +115,5 @@ export const tags = [
   'Front-End',
   'Full-Stack',
   'Dev-Ops',
-  'API Design',
   'UX'
 ];

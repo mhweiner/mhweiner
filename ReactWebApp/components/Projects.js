@@ -1,21 +1,53 @@
 import React from 'react';
+import clone from "../utils/clone";
+import {addClass, removeClass} from "../utils/DOM";
+
+import {projects, tags} from '../projectData';
 
 import ProjectThumbnail from "./ProjectThumbnail";
 import Filter from "./Filter";
 
 import styles from './Projects.scss';
+import animations from "../styles/animations.scss";
 
 export default class Projects extends React.PureComponent {
 
-  filterMatch = tags => {
+  state = {
+    filter: []
+  };
 
-    if (!this.props.filter || !this.props.filter.length) return true;
+  ref = React.createRef();
 
-    if (!tags || !tags.length) return false;
+  componentDidMount() {
 
-    for (let i = 0; i < tags.length; i++) {
+    this.animateIn();
 
-      if (this.props.filter.indexOf(tags[i]) !== -1) {
+  }
+
+  animateIn = () => {
+
+    addClass(this.ref.current, animations.animateInFromBottom);
+    this.ref.current.style.display = 'block';
+    setTimeout(() => {
+      removeClass(this.ref.current, animations.animateInFromBottom);
+    }, 600);
+
+  };
+
+  animateOut = callback => {
+
+    addClass(this.ref.current, animations.animateOutToTop);
+    setTimeout(callback, 300);
+
+  };
+
+  filterMatch = testTags => {
+
+    if (!this.state.filter.length) return true;
+
+    for (let i = 0; i < testTags.length; i++) {
+
+      if (this.state.filter.indexOf(testTags[i]) !== -1) {
 
         return true;
 
@@ -27,15 +59,49 @@ export default class Projects extends React.PureComponent {
 
   };
 
+  addTagToFilter = tag => {
+
+    let i = this.state.filter.indexOf(tag);
+
+    if (i !== -1) {
+
+      return;
+
+    }
+
+    this.setState({
+      filter: this.state.filter.concat([tag])
+    });
+
+  };
+
+  removeTagFromFilter = tag => {
+
+    let i = this.state.filter.indexOf(tag);
+
+    if (i !== -1) {
+
+      let filter = clone(this.state.filter);
+
+      filter.splice(i, 1);
+
+      this.setState({
+        filter: filter
+      });
+
+    }
+
+  };
+
   render() {
 
-    let projects = [];
+    let proj = [];
 
-    this.props.projects.map((project, k) => {
+    projects.map((project, k) => {
 
-      if (this.filterMatch(project.tags)) {
+      if (this.filterMatch(project.tags || [])) {
 
-        projects.push(<ProjectThumbnail
+        proj.push(<ProjectThumbnail
           key={k.toString()}
           project={project}
           onClick={() => this.props.open(project.id)}
@@ -46,17 +112,17 @@ export default class Projects extends React.PureComponent {
     });
 
     return (
-      <div className={styles.default}>
+      <div className={styles.default} ref={this.ref}>
         <div className={styles.belt}>
           <Filter
-            options={this.props.tags}
-            selected={this.props.filter}
-            selectTag={this.props.addTagToFilter}
-            removeTag={this.props.removeTagFromFilter}
+            options={tags}
+            selected={this.state.filter}
+            selectTag={this.addTagToFilter}
+            removeTag={this.removeTagFromFilter}
           />
           <div className={styles.container}>
-            {!projects.length && <div>There are no projects that match your filter.</div>}
-            {projects}
+            {!proj.length && <div>There are no projects that match your filter.</div>}
+            {proj}
           </div>
         </div>
       </div>
