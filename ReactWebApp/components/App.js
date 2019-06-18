@@ -72,7 +72,7 @@ export default class App extends React.Component {
     };
 
     return <div className={styles.default}>
-      <Nav/>
+      <Nav page={this.state.page}/>
       <Transition
         routes={routes}
         page={this.state.page}

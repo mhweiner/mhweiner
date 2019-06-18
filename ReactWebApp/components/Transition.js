@@ -6,13 +6,25 @@ export default class Transition extends React.Component {
 
     super(props);
     this.component = React.createRef();
+    this.state = {
+      page: this.props.page,
+      nextPage: null
+    }
 
   }
 
-  /**
-   * Animate out the current Component.
-   */
-  animateOut = () => {
+  shouldComponentUpdate(nextProps, nextState) {
+
+    if (nextProps.page === this.state.page && !this.state.nextPage) return false; // no change, no transition
+    if (nextState.page !== this.state.page) return true; //next page/state update
+
+    this.transitionTo(nextProps.page);
+
+    return false;
+
+  }
+
+  transitionTo = (page) => {
 
     let out = this.component.current.animateOut;
 
@@ -20,52 +32,37 @@ export default class Transition extends React.Component {
 
       out.call(undefined, () => {
 
-        this.animateIn();
+        this.setPage(page);
 
       });
 
     } else {
 
-      this.animateIn();
+      this.setPage(page);
 
     }
 
   };
 
-  /**
-   * Animate in new component.
-   */
-  animateIn = () => {
+  setPage = page => {
 
-    this.page = this.props.page;
-    this.forceUpdate();
+    this.setState({
+      page: page
+    });
 
   };
 
   render() {
 
-    if (!this.page) {
-
-      this.page = this.props.page;
-
-    } else if (this.props.page !== this.page && this.component.current) {
-
-      //new page!
-      this.animateOut();
-
-    }
-
-    let Component = this.props.routes[this.page];
+    let Component = this.props.routes[this.state.page];
 
     if (Component) {
 
-      return <div>
-        <Component params={this.props.params} {...this.props.passthrough} ref={this.component}/>
-      </div>;
+      return <Component params={this.props.params} {...this.props.passthrough} ref={this.component}/>;
 
     } else {
 
-      throw (`cannot find Component '${this.page}'`)
+      throw (`cannot find Component '${this.state.page}'`)
 
     }
 

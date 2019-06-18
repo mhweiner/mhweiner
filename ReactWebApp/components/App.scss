@@ -9,17 +9,17 @@
 
 a, a:visited {
 
-  color: $color-base;
+  color: $color-primary;
   text-decoration: none;
   font-weight: 700;
-  border-bottom: 2px solid transparent;
+  border-bottom: 2px solid black;
   transition: all 0.2s ease-in-out;
 
   &:hover {
 
-    color: #da1b60;
+    color: $color-secondary;
     text-shadow: none;
-    border-bottom: 2px solid #da1b60;
+    border-bottom: 2px solid $color-secondary;
 
   }
 

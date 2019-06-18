@@ -1,7 +1,9 @@
+@import "../styles/defines";
+
 .default {
 
   position: absolute;
-  left: 10px;
+  left: 20px;
   top: 10px;
   z-index: 20;
 
@@ -13,20 +15,51 @@
     padding: 3px 0;
     display: inline-block;
     vertical-align: top;
+    border-color: transparent;
 
     &.logo {
 
-      border: 2px solid white;
-      padding: 0 10px;
-      line-height: 31px;
+      border: none;
+      padding: 7px 0;
+      line-height: 0;
+      margin: 0 30px 0 0;
+
+      svg {
+
+        width: 60px;
+
+        g {
+
+          fill: #fff;
+          transition: all 0.2s ease-in-out;
+
+        }
+
+      }
 
       &:hover {
 
-        border-color: #da1b60;
-        color: white;
-        background: #da1b60;
+        svg g {
+
+          fill: $color-secondary;
+
+        }
 
       }
+
+    }
+
+    &:hover {
+
+      border-color: transparent;
+
+    }
+
+    &.selected {
+
+      color: #da1b60;
+      text-shadow: none;
+      border-bottom: 2px solid #da1b60;
 
     }
 
