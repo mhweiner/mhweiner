@@ -46,7 +46,7 @@ $breakpoint: 1350;
   p {
 
     line-height: 1.5;
-    font-size: 21px;
+    font-size: 19px;
     color: #333;
     margin: 0 0 25px 0;
 
@@ -65,6 +65,7 @@ $breakpoint: 1350;
     position: relative;
     line-height: 1.3;
     color: #333;
+    font-weight: 300;
 
     @include media(0, 550) {
 
@@ -76,10 +77,12 @@ $breakpoint: 1350;
 
   h3 {
 
-    font-size: 21px;
-    font-weight: 700;
     color: #333;
     margin: 40px 0 30px;
+    text-transform: uppercase;
+    font-size: 18px;
+    font-family: $font-condensed;
+    letter-spacing: 0.04em;
 
     i {
 
@@ -124,7 +127,7 @@ $breakpoint: 1350;
     li {
 
       line-height: 1.5;
-      font-size: 21px;
+      font-size: 19px;
       color: #333;
       margin: 0 0 10px 0;
 

@@ -40,8 +40,15 @@ $breakpoint: 450;
 
     a {
 
+      color: #07ff71;
       border: none;
       text-decoration: underline;
+
+      &:hover {
+
+        color: $color-secondary;
+
+      }
 
     }
 

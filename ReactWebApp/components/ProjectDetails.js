@@ -1,12 +1,16 @@
 import React from 'react';
-import {addClass} from "../utils/DOM";
+import {addClass, removeClass} from "../utils/DOM";
 import mr from "mr-router";
+import imagesLoaded from "images-loaded";
+
 import {projects} from '../projectData';
 
 import BackButton from "./BackButton";
+import LoaderAnimation from "./LoaderAnimation";
 
 import styles from './ProjectDetails.scss';
 import animations from '../styles/animations.scss';
+import loaderStyles from "./LoaderAnimation.scss";
 
 export default class ProjectDetails extends React.PureComponent {
 
@@ -14,8 +18,12 @@ export default class ProjectDetails extends React.PureComponent {
 
     super(props);
 
+    this.ref = React.createRef();
     this.contentRef = React.createRef();
     this.abort = false;
+    this.state = {
+      isLoading: true
+    };
 
     function getProjectIndexById(id) {
 
@@ -42,9 +50,31 @@ export default class ProjectDetails extends React.PureComponent {
 
   }
 
-  componentDidMount() {
+  animateIn = () => {
 
     window.scrollTo(0,0);
+    window.nav.animateOut();
+    addClass(this.ref.current, animations.animateInFromBottom);
+    this.ref.current.style.display = 'block';
+
+    setTimeout(() => {
+
+      removeClass(this.ref.current, animations.animateInFromBottom);
+
+    }, 300);
+
+  };
+
+  animateOut = callback => {
+
+    window.nav.animateIn();
+    window.document.body.style.backgroundColor = this.origBgColor;
+    addClass(this.ref.current, animations.animateOutToTop);
+    setTimeout(callback, 300);
+
+  };
+
+  componentDidMount() {
 
     if (this.abort) {
 
@@ -52,19 +82,31 @@ export default class ProjectDetails extends React.PureComponent {
 
     }
 
-    setTimeout(() => {
+    let loader = this.ref.current.querySelector(`.${loaderStyles.default}`);
 
-      addClass(this.contentRef.current, animations.animateInFromBottom);
+    if (loader) {
 
-    }, 300);
+      loader.style.display = 'block';
+
+    }
+
+    imagesLoaded(this.contentRef.current).then(() => {
+
+      setTimeout(() => {
+
+        this.setState({
+          isLoading: false
+        });
+
+        addClass(this.contentRef.current, animations.animateInFromBottom);
+
+      }, 100);
+
+    });
+
+    this.animateIn();
 
   }
-
-  close = () => {
-
-    mr.go('home');
-
-  };
 
   render() {
 
@@ -78,12 +120,13 @@ export default class ProjectDetails extends React.PureComponent {
     let tags = this.project.tags.join(', ');
 
     return (
-      <div className={styles.default}>
-        <BackButton onClick={this.close}/>
+      <div className={styles.default} ref={this.ref}>
+        <BackButton onClick={() => mr.go('projects')}/>
         <h1 className={styles.title}>{this.project.title}<p className={styles.tags}>{tags}</p></h1>
         <div className={styles.content} ref={this.contentRef}>
           {this.project.content}
         </div>
+        {!!this.state.isLoading && <LoaderAnimation/>}
       </div>
     );
 
