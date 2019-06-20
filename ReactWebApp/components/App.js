@@ -71,8 +71,14 @@ export default class App extends React.Component {
 
     };
 
+    let navProps = {
+      page: this.state.page,
+      hidden: this.state.page === 'project',
+      opaque: this.state.page !== 'home'
+    };
+
     return <div className={styles.default}>
-      <Nav page={this.state.page} hidden={this.state.page !== 'projects'}/>
+      <Nav {...navProps}/>
       <Transition
         routes={routes}
         page={this.state.page}

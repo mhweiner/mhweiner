@@ -84,7 +84,7 @@ export default class ProjectDetails extends React.PureComponent {
 
         addClass(this.contentRef.current, animations.animateInFromBottom);
 
-      }, 100);
+      }, 200);
 
     });
 

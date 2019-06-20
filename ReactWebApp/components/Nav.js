@@ -9,44 +9,13 @@ export default class Nav extends React.Component {
 
   ref = React.createRef();
 
-  state = {
-    opaque: false
-  };
-
-  /**
-   * To make nav have a dark background when scrolling.
-   */
-  initScrollListner = () => {
-
-    this.scrollListener = DOMEvent.addListener(window, 'scroll', throttle(() => {
-
-      if (window.scrollY > 50 && !this.props.hidden && !this.state.opaque) {
-
-        this.setState({
-          opaque: true
-        });
-
-      } else if (window.scrollY <= 50 && this.state.opaque) {
-
-        this.setState({
-          opaque: false
-        });
-
-      }
-
-    }, 200));
-
-  };
-
   componentDidMount() {
 
-    this.initScrollListner();
+    if (this.props.hidden) {
 
-  }
+      this.hide();
 
-  componentWillUnmount() {
-
-    DOMEvent.removeListener(this.scrollListener);
+    }
 
   }
 
@@ -79,8 +48,17 @@ export default class Nav extends React.Component {
 
   show = () => {
 
-    this.ref.current.style.display = 'block';
-    this.ref.current.style.opacity = 1;
+    setTimeout(() => {
+
+      this.ref.current.style.display = 'block';
+
+      setTimeout(() => {
+
+        this.ref.current.style.opacity = 1;
+
+      }, 100);
+
+    }, 200);
 
   };
 
@@ -88,7 +66,7 @@ export default class Nav extends React.Component {
 
     let classes = [styles.default];
 
-    if (this.state.opaque) {
+    if (this.props.opaque) {
 
       classes.push(styles.opaque);
 
