@@ -1,46 +1,100 @@
 import React from 'react';
 import Logo from "./Logo";
+import throttle from "../utils/throttle";
+import {DOMEvent} from "../utils/DOMEvent";
 
 import styles from './Nav.scss';
-import {addClass, removeClass} from "../utils/DOM";
 
 export default class Nav extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.ref = React.createRef();
-  }
+  ref = React.createRef();
 
-  componentDidMount() {
+  state = {
+    opaque: false
+  };
 
-    this.animateIn();
-    window.nav = this;
+  /**
+   * To make nav have a dark background when scrolling.
+   */
+  initScrollListner = () => {
 
-  }
+    this.scrollListener = DOMEvent.addListener(window, 'scroll', throttle(() => {
 
-  animateIn = () => {
+      if (window.scrollY > 50 && !this.props.hidden && !this.state.opaque) {
 
-    addClass(this.ref.current, styles.animateIn);
-    this.ref.current.style.display = 'block';
-    setTimeout(() => {
-      removeClass(this.ref.current, styles.animateIn);
-    }, 600);
+        this.setState({
+          opaque: true
+        });
+
+      } else if (window.scrollY <= 50 && this.state.opaque) {
+
+        this.setState({
+          opaque: false
+        });
+
+      }
+
+    }, 200));
 
   };
 
-  animateOut = () => {
+  componentDidMount() {
 
-    addClass(this.ref.current, styles.animateOut);
+    this.initScrollListner();
+
+  }
+
+  componentWillUnmount() {
+
+    DOMEvent.removeListener(this.scrollListener);
+
+  }
+
+  componentWillUpdate(nextProps, nextState, nextContext) {
+
+    if (nextProps.hidden && !this.props.hidden) {
+
+      this.hide();
+      return false;
+
+    } else if (!nextProps.hidden && this.props.hidden) {
+
+      this.show();
+      return false;
+
+    }
+
+    return true;
+
+  }
+
+  hide = () => {
+
+    this.ref.current.style.opacity = 0;
     setTimeout(() => {
-      removeClass(this.ref.current, styles.animateOut);
-      this.ref.current.style.display = '';
+      this.ref.current.style.display = 'none';
     }, 300);
+
+  };
+
+  show = () => {
+
+    this.ref.current.style.display = 'block';
+    this.ref.current.style.opacity = 1;
 
   };
 
   render() {
 
-    return <div className={styles.default} ref={this.ref}>
+    let classes = [styles.default];
+
+    if (this.state.opaque) {
+
+      classes.push(styles.opaque);
+
+    }
+
+    return <div className={classes.join(' ')} ref={this.ref}>
       <a href='#home' className={styles.logo}><Logo/></a>
       <a href='#projects' className={this.props.page === 'projects' ? styles.selected : null}>projects</a>
       <a href='http://github.com/mhweiner' target='_blank'>github</a>

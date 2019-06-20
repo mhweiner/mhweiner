@@ -20,11 +20,19 @@
 
 .default {
 
-  display: none;
-  position: absolute;
-  left: 20px;
-  top: 10px;
+  position: fixed;
+  left: 0;
+  top: 0;
   z-index: 20;
+  right: 0;
+  padding: 20px;
+  transition: opacity 0.3s ease-in-out, background 0.3s ease-in-out;
+
+  &.opaque {
+
+    background: #242424ee;
+
+  }
 
   &.animateIn {
 

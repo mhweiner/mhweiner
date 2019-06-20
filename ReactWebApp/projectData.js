@@ -7,6 +7,20 @@ import ElementalCognition from "./components/Projects/ElementalCognition";
 import Shutterstock from "./components/Projects/Shutterstock";
 import Devotify from "./components/Projects/Devotify";
 
+export function getProjectIndexById(id) {
+
+  for (let i = 0; i < projects.length; i++) {
+
+    if (projects[i].id === id) {
+
+      return i;
+
+    }
+
+  }
+
+}
+
 export const projects = [
 
   {

@@ -3,7 +3,7 @@ import {addClass, removeClass} from "../utils/DOM";
 import mr from "mr-router";
 import imagesLoaded from "images-loaded";
 
-import {projects} from '../projectData';
+import {projects, getProjectIndexById} from '../projectData';
 
 import BackButton from "./BackButton";
 import LoaderAnimation from "./LoaderAnimation";
@@ -25,20 +25,6 @@ export default class ProjectDetails extends React.PureComponent {
       isLoading: true
     };
 
-    function getProjectIndexById(id) {
-
-      for (let i = 0; i < projects.length; i++) {
-
-        if (projects[i].id === id) {
-
-          return i;
-
-        }
-
-      }
-
-    }
-
     this.project = projects[getProjectIndexById(props.params.id)];
 
     if (!this.project) {
@@ -53,7 +39,6 @@ export default class ProjectDetails extends React.PureComponent {
   animateIn = () => {
 
     window.scrollTo(0,0);
-    window.nav.animateOut();
     addClass(this.ref.current, animations.animateInFromBottom);
     this.ref.current.style.display = 'block';
 
@@ -67,7 +52,6 @@ export default class ProjectDetails extends React.PureComponent {
 
   animateOut = callback => {
 
-    window.nav.animateIn();
     window.document.body.style.backgroundColor = this.origBgColor;
     addClass(this.ref.current, animations.animateOutToTop);
     setTimeout(callback, 300);

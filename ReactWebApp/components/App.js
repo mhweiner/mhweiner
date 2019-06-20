@@ -72,7 +72,7 @@ export default class App extends React.Component {
     };
 
     return <div className={styles.default}>
-      <Nav page={this.state.page}/>
+      <Nav page={this.state.page} hidden={this.state.page !== 'projects'}/>
       <Transition
         routes={routes}
         page={this.state.page}

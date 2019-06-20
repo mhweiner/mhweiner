@@ -18,6 +18,7 @@ export default class Home extends React.PureComponent {
 
     this.animateIn();
 
+
   }
 
   componentWillUnmount() {
@@ -26,6 +27,12 @@ export default class Home extends React.PureComponent {
     clearTimeout(this.rocketTimeout);
     clearInterval(this.rocketInterval);
     clearInterval(this.planetInterval);
+
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+
+
 
   }
 
