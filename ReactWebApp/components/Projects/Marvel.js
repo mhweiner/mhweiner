@@ -20,14 +20,13 @@ export default class Marvel extends React.PureComponent {
 
         <p><span className={styles.highlight}>I was hired as a consultant to lead the R&D for the new responsive Marvel.com that would support all of Marvel's business verticals.</span></p>
 
-          <p>Today, <em>responsive design</em> is a well understood and relatively unified methodology for building websites and
+          <p>Today, <em>responsive design</em> is a well understood methodology for building websites and
             web-based applications to support any device with a single codebase. But back then, it was still an emerging technology.
-          There were several competing ideologies, and there weren't many examples. Existing large-scale responsive
+          There weren't many examples and we had to make up solutions as we went. Existing large-scale responsive
             sites we saw at the time were found to be highly simplified (sacrificing features, design, and interactivity) and in some cases,
             were considered "off-brand" by our designers. Marvel insisted on having a bold "on-brand" design and an
             immersive user-experience. They wanted high-res images and videos to support the new high-dpi
-            devices. They wanted it all in a short nine month deadline, and
-            to top it off, we needed to support IE8!</p>
+            devices. They wanted it all in a short nine month deadline, and to top it off, we needed to support IE8!</p>
         <p>The biggest technical challenges were:</p>
         <ul>
           <li>Payload size of CSS, HTML, Javascript, hi-res images, and other assets.</li>
