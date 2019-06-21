@@ -4,6 +4,7 @@ import {addClass, removeClass} from "../utils/DOM";
 
 import StarryBackground from "./StarryBackground";
 import Rocket from "./Rocket";
+import Planet from "./Planet";
 
 import styles from './Home.scss';
 import animations from '../styles/animations.scss';
@@ -18,30 +19,15 @@ export default class Home extends React.PureComponent {
 
     this.animateIn();
 
-
   }
 
   componentWillUnmount() {
 
-    clearTimeout(this.timeout);
-    clearTimeout(this.rocketTimeout);
-    clearInterval(this.rocketInterval);
-    clearInterval(this.planetInterval);
-
-  }
-
-  componentDidUpdate(prevProps, prevState, snapshot) {
-
-
+    this.destroyObjects();
 
   }
 
   animateIn = () => {
-
-    this.rocketInterval = setInterval(this.launchRocket, 20000);
-    this.rocketTimeout = setTimeout(this.launchRocket, 3500);
-    this.planetInterval = setInterval(this.flyByPlanet, 46000);
-    this.flyByPlanet();
 
     addClass(this.ref.current, animations.animateInFromBottom);
 
@@ -51,17 +37,32 @@ export default class Home extends React.PureComponent {
 
     }, 600);
 
+    this.createObjects();
+
   };
 
   animateOut = (callback) => {
 
-    this.fadeOutObjects();
+    this.destroyObjects();
     addClass(this.ref.current, animations.animateOutToTop);
     setTimeout(callback, 300);
 
   };
 
-  fadeOutObjects = () => {
+  createObjects = () => {
+
+    this.rocketInterval = setInterval(this.launchRocket, 20000);
+    this.rocketTimeout = setTimeout(this.launchRocket, 3500);
+    this.planetInterval = setInterval(this.flyByPlanet, 46000);
+    this.flyByPlanet();
+
+  };
+
+  destroyObjects = () => {
+
+    clearTimeout(this.rocketTimeout);
+    clearInterval(this.rocketInterval);
+    clearInterval(this.planetInterval);
 
     if (this.rocketInTransit) {
 
@@ -183,7 +184,7 @@ export default class Home extends React.PureComponent {
     return (
       <div className={styles.default} ref={this.ref}>
         <div className={styles.rocket} ref={this.rocket}><Rocket/></div>
-        <img src='/static/images/planet.svg' className={styles.planet} ref={this.planet}/>
+        <div className={styles.planet} ref={this.planet}><Planet/></div>
         <StarryBackground/>
         <div className={styles.text}>
             <p ref={this.text}>Hello! I'm <a href='#' onClick={(e) => {

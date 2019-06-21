@@ -38,9 +38,12 @@ export default class ElementalCognition extends React.PureComponent {
         <p>Modern AI leaves much to be desired. Although machines have become pretty good at recognizing patterns, faces, and roads, they cannot understand
         something as simple as a children's bedtime story. They are unable to explain the "why" or the "how" behind the answers they give us.</p>
 
-        <p>To tackle the problem of "understanding", Elemental Cognition, founded and led by IBM Watson alum Dr. David Ferrucci, starts by attempting to teach the system children's stories. EC believes that <strong>context, language, culture, and reasoning are the keys to understanding</strong>.
+        <p>To tackle the problem of "understanding", Elemental Cognition, founded and led by IBM Watson alum Dr. David Ferrucci, starts by attempting to teach the system children's stories. EC believes that context, language, culture, and reasoning are the keys to understanding.
         They are also betting that this knowledge can be acquired the same way that we do &mdash; something they call
           "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog.
+        </p>
+        <p>
+          <span className={styles.highlight}>I was hired as a senior full-stack engineer and UX designer to help design and build interfaces with this system, and to demonstrate its capabilities.</span>
         </p>
 
         <h3>The Challenge</h3>
@@ -70,7 +73,7 @@ export default class ElementalCognition extends React.PureComponent {
         </div>}
 
         <p>Last, I helped design a REST API and then started building the front-end application itself. We used Swagger and SwaggerHub to collaborate
-        with the team to help build the API, while simultaneously building the app, for which we chose React and a Flux-like state management design.</p>
+        with the team to help build the API, while simultaneously building the app, for which we chose React and a Flux state management design.</p>
         <p>The development of the "backend" API and web app were built in parallel, and again, SwaggerHub helped keep us all on the same page during the process.</p>
 
         <h3 className={styles.awards}><i className='fa fa-award'/>Outcome & Achievements</h3>

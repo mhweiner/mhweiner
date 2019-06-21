@@ -13,13 +13,13 @@ export default class Marvel extends React.PureComponent {
 
       <div className={styles.text}>
 
-        <h2>Marvel.com broke new ground in 2013 to become one of the first media-rich, high-traffic, fully-responsive websites.</h2>
-
         <p>In early 2013, mobile device usage had exploded, but Marvel.com was still not mobile-friendly. Marvel had two options &mdash; build a "mobile" version of their website, which
           was still standard practice for the time, or take a gamble on a new and relatively unproven "responsive design"
           methodology that was gaining buzz. Marvel's digital department lacked the budget and resources for supporting
-          two separate websites (a story for another day), and also didn't want mobile users to have a lesser experience.
-          They decided to take a gamble.</p>
+          two separate websites (don't ask), and also didn't want mobile users to have a lesser experience. They decided to take a gamble.</p>
+
+        <p><span className={styles.highlight}>I was hired as a consultant to lead the R&D for the new responsive Marvel.com that would support all of Marvel's business verticals.</span></p>
+
           <p>Today, <em>responsive design</em> is a well understood and relatively unified methodology for building websites and
             web-based applications to support any device with a single codebase. But back then, it was still an emerging technology.
           There were several competing ideologies, and there weren't many examples. Existing large-scale responsive

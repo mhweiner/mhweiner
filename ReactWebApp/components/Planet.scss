@@ -1,0 +1,58 @@
+@import "../styles/defines";
+
+svg.default {
+
+  circle {
+
+    fill: url(#grad1);
+
+  }
+
+  path {
+
+    fill: url(#grad2);
+    opacity: 0.8;
+
+  }
+
+  &.logo {
+
+    transition: all 0.3s cubic-bezier(0.64, 0.38, 0.03, 1.65);
+    cursor: pointer;
+
+    circle {
+
+      fill: white;
+      transition: fill 0.3s cubic-bezier(0.64, 0.38, 0.03, 1.65);
+
+    }
+
+    path {
+
+      fill: #aaa;
+      transition: fill 0.3s cubic-bezier(0.64, 0.38, 0.03, 1.65);
+
+    }
+
+    &:hover {
+
+      @include scale(1.2, 1.2);
+
+      circle {
+
+        fill: purple;
+
+      }
+
+      path {
+
+        fill: yellow;
+
+      }
+
+
+    }
+
+  }
+
+}
