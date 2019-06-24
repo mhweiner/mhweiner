@@ -1,5 +1,23 @@
+@import "../styles/defines";
+
 .default {
 
-  padding: 100vh 0 0 0;
+  background: #252525;
+  min-height: 100vh;
+
+}
+
+a, a:visited {
+
+  color: white;
+  text-decoration: underline;
+  font-weight: 700;
+  transition: color 0.2s ease-in-out;
+
+  &:hover {
+
+    color: $color-secondary;
+
+  }
 
 }

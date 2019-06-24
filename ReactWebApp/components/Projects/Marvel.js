@@ -13,21 +13,19 @@ export default class Marvel extends React.PureComponent {
 
       <div className={styles.text}>
 
-        <h2>Marvel.com broke new ground in 2013 to become one of the first media-rich, high-traffic, fully-responsive websites.</h2>
-
         <p>In early 2013, mobile device usage had exploded, but Marvel.com was still not mobile-friendly. Marvel had two options &mdash; build a "mobile" version of their website, which
           was still standard practice for the time, or take a gamble on a new and relatively unproven "responsive design"
-          methodology that was gaining buzz. Marvel's digital department lacked the budget and resources for supporting
-          two separate websites (a story for another day), and also didn't want mobile users to have a lesser experience.
-          They decided to take a gamble.</p>
-          <p>Today, <em>responsive design</em> is a well understood and relatively unified methodology for building websites and
+          methodology that was gaining buzz. Marvel's digital department didn't want mobile users to have a lesser experience, so they decided to take a gamble.</p>
+
+        <p><span className={styles.highlight}>I was hired as a consultant to lead the R&D for the new responsive Marvel.com that would support all of Marvel's business verticals.</span></p>
+
+          <p>Today, <em>responsive design</em> is a well understood methodology for building websites and
             web-based applications to support any device with a single codebase. But back then, it was still an emerging technology.
-          There were several competing ideologies, and there weren't many examples. Existing large-scale responsive
+          There weren't many examples and we had to make up solutions as we went. Existing large-scale responsive
             sites we saw at the time were found to be highly simplified (sacrificing features, design, and interactivity) and in some cases,
             were considered "off-brand" by our designers. Marvel insisted on having a bold "on-brand" design and an
             immersive user-experience. They wanted high-res images and videos to support the new high-dpi
-            devices. They wanted it all in a short nine month deadline, and
-            to top it off, we needed to support IE8!</p>
+            devices. They wanted it all in a short nine month deadline, and to top it off, we needed to support IE8!</p>
         <p>The biggest technical challenges were:</p>
         <ul>
           <li>Payload size of CSS, HTML, Javascript, hi-res images, and other assets.</li>

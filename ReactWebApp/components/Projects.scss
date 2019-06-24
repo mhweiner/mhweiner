@@ -1,0 +1,34 @@
+@import "../styles/defines";
+
+.default {
+
+  padding: 50px 0 0 0;
+
+  .belt {
+
+    @include grid;
+
+  }
+
+}
+
+.container{
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  margin: 0 -10px;
+
+  > div {
+
+    margin: 0 10px 20px;
+    width: calc(50% - 20px);
+
+    @include media(0, 800) {
+
+      width: 100%;
+
+    }
+
+  }
+}

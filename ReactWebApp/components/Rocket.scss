@@ -1,0 +1,68 @@
+@import "../styles/defines";
+
+@include keyframes(mainFlame) {
+  0% {
+    transform: translate(0,16px) scaleY(1.05);
+  }
+  50% {
+    transform: translate(0,0) scaleY(1);
+  }
+  90% {
+    transform: translate(0,10px) scaleY(1);
+  }
+  100% {
+    transform: translate(0,16px) scaleY(1.05);
+  }
+}
+
+@include keyframes(mainFlameInside) {
+  0% {
+    transform: translate(0,55px) scaleY(1.25);
+  }
+  50% {
+    transform: translate(0,0) scaleY(1);
+  }
+  90% {
+    transform: translate(0,50px) scaleY(1.14);
+  }
+  100% {
+    transform: translate(0,55px) scaleY(1.25);
+  }
+}
+
+@include keyframes(sideFlame) {
+  0% {
+    transform: translate(0,-41px) scaleY(1.15);
+  }
+  50% {
+    transform: translate(0,0) scaleY(1);
+  }
+  100% {
+    transform: translate(0,-41px) scaleY(1.15);
+  }
+}
+
+svg.default {
+
+  .mainFlame {
+
+    transform-origin: bottom;
+    @include animation(mainFlame 0.3s ease-in-out infinite);
+
+  }
+
+  .mainFlameInside {
+
+    transform-origin: bottom;
+    @include animation(mainFlameInside 0.3s ease-in-out infinite);
+
+  }
+
+  .sideFlame {
+
+    transform-origin: top;
+    @include animation(sideFlame 0.3s ease-in-out infinite);
+
+  }
+
+}

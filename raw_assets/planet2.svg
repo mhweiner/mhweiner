@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="313px" height="184px" viewBox="0 0 313 184" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.2 (78181) - https://sketchapp.com -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Artboard" transform="translate(-135.000000, -163.000000)">
+            <g id="Group" transform="translate(291.000000, 254.500000) rotate(-24.000000) translate(-291.000000, -254.500000) translate(122.000000, 163.000000)">
+                <path d="M169,141 C75.6638773,141 0,119.509668 0,93 C0,66.490332 75.6638773,45 169,45 C262.336123,45 338,66.490332 338,93 C338,119.509668 262.336123,141 169,141 Z M169.5,107 C243.230014,107 303,95.3594035 303,81 C303,66.6405965 243.230014,55 169.5,55 C95.7699859,55 36,66.6405965 36,81 C36,95.3594035 95.7699859,107 169.5,107 Z" id="Combined-Shape" fill="#391B61"></path>
+                <circle id="Oval" fill="#0F9D8F" cx="168.5" cy="91.5" r="91.5"></circle>
+                <path d="M5.32423875,81 L36,81 C36,95.3594035 95.7699859,107 169.5,107 C243.230014,107 303,95.3594035 303,81 L332.675761,81 C336.151436,84.8354391 338,88.8564052 338,93 C338,119.509668 262.336123,141 169,141 C75.6638773,141 0,119.509668 0,93 C0,88.8564052 1.84856438,84.8354391 5.32423875,81 Z" id="Combined-Shape" fill="#391B61"></path>
+            </g>
+        </g>
+    </g>
+</svg>

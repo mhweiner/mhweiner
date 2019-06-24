@@ -1,59 +1,7 @@
 @import "../styles/defines";
 
-@include keyframes(mainFlame) {
-  0% {
-    transform: translate(0,16px) scaleY(1.05);
-  }
-  50% {
-    transform: translate(0,0) scaleY(1);
-  }
-  90% {
-    transform: translate(0,10px) scaleY(1);
-  }
-  100% {
-    transform: translate(0,16px) scaleY(1.05);
-  }
-}
-
-@include keyframes(mainFlameInside) {
-  0% {
-    transform: translate(0,55px) scaleY(1.25);
-  }
-  50% {
-    transform: translate(0,0) scaleY(1);
-  }
-  90% {
-    transform: translate(0,50px) scaleY(1.14);
-  }
-  100% {
-    transform: translate(0,55px) scaleY(1.25);
-  }
-}
-
-@include keyframes(sideFlame) {
-  0% {
-    transform: translate(0,-41px) scaleY(1.15);
-  }
-  50% {
-    transform: translate(0,0) scaleY(1);
-  }
-  100% {
-    transform: translate(0,-41px) scaleY(1.15);
-  }
-}
-
-@include keyframes(appear) {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 .default {
 
-  display: none;
   width: 300px;
   height: 300px;
   text-align: center;
@@ -63,7 +11,9 @@
   top: 50%;
   margin: -150px 0 0 -150px;
   border-radius: 50px;
-  @include animation(appear 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.9));
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
 
   p {
 
@@ -75,7 +25,8 @@
     font-size: 22px;
     bottom: 8%;
     color: white;
-    font-weight: bold;
+    font-weight: 300;
+    font-family: $font-condensed;
 
   }
 
@@ -84,30 +35,9 @@
     height: 60%;
     position: absolute;
     left: 50%;
-    @include translateX(-50%);
     top: 17%;
     z-index: 1;
-
-    .mainFlame {
-
-      transform-origin: bottom;
-      @include animation(mainFlame 0.3s ease-in-out infinite);
-
-    }
-
-    .mainFlameInside {
-
-      transform-origin: bottom;
-      @include animation(mainFlameInside 0.3s ease-in-out infinite);
-
-    }
-
-    .sideFlame {
-
-      transform-origin: top;
-      @include animation(sideFlame 0.3s ease-in-out infinite);
-
-    }
+    @include translateX(-50%);
 
   }
 

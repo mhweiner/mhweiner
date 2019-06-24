@@ -1,0 +1,152 @@
+@import "../styles/defines";
+
+@include keyframes(animateIn) {
+  0% {
+    opacity: 0;
+    @include translateY(15px);
+  }
+  100% {
+    opacity: 1;
+    @include translateY(0);
+  }
+}
+
+@include keyframes(animateInButton) {
+  0% {
+    opacity: 0;
+    @include scale(0.9,0.9);
+  }
+  100% {
+    opacity: 1;
+    @include scale(1,1);
+  }
+}
+
+.default {
+
+  margin: -10px 0 20px 0;
+  position: relative;
+
+  button {
+
+    cursor: pointer;
+    background: none;
+    color: white;
+    border: 1px solid;
+    font-size: 18px;
+    line-height: 35px;
+    padding: 0 20px;
+    margin: 0 10px 10px 0;
+    border-radius: 40px;
+    outline: none;
+    transition: all 0.3s cubic-bezier(0.64, 0.38, 0.03, 1.65);
+    font-family: $font-condensed;
+
+    i {
+
+      margin: 0 0 0 6px;
+      font-size: 15px;
+      transition: color 0.1s ease-in-out;
+
+    }
+
+    &:hover {
+
+      @include scale(1.1,1.1);
+
+    }
+
+    &[disabled] {
+
+      opacity: 0.5;
+      cursor: auto;
+
+      &:hover {
+
+        background: #333;
+
+      }
+
+    }
+
+  }
+
+  .tags {
+
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+
+    button {
+
+      background: #fff;
+      color: #444;
+      padding: 0 30px 0 20px;
+      position: relative;
+      @include animation(animateInButton .3s cubic-bezier(0.64, 0.38, 0.03, 1.65));
+
+      i {
+
+        position: absolute;
+        right: 11px;
+        line-height: 35px;
+        font-size: 12px;
+        display: inline-block;
+        vertical-align: top;
+
+      }
+
+      &:hover {
+
+        color: #000;
+
+        i {
+
+          color: red;
+
+        }
+
+      }
+
+    }
+
+  }
+
+  ul {
+
+    padding: 10px 15px;
+    background: white;
+    width: 200px;
+    position: absolute;
+    left: 0;
+    top: 49px;
+    margin: 0;
+    z-index: 10;
+    box-shadow: rgba(0, 0, 0, 0.4) 3px 3px 33px;
+    @include animation(animateIn .15s cubic-bezier(0.25, 0.46, 0.45, 0.9));
+
+
+    li {
+
+      cursor: pointer;
+      display: block;
+      margin: 0;
+      padding: 4px 10px;
+      font-size: 18px;
+      line-height: 30px;
+      color: #555;
+      font-family: $font-condensed;
+      border-radius: 3px;
+
+      &:hover {
+
+        background: #eee;
+        color: black;
+
+      }
+
+    }
+
+  }
+
+}
