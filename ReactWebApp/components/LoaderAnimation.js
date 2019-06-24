@@ -16,7 +16,7 @@ export default class LoaderAnimation extends React.PureComponent {
       if (!this.ref) return;
       this.ref.current.style.opacity = 1;
 
-    }, 200);
+    }, 300);
 
   }
 
