@@ -1,0 +1,136 @@
+@import "../styles/defines";
+
+$breakpoint: 450;
+
+@include keyframes(animateObject) {
+  from {
+    @include translateY(calc(100vh));
+  }
+  to {
+    @include translateY(-100%);
+  }
+}
+
+.default {
+
+  position: absolute;
+  min-height: 100vh;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: hidden;
+
+}
+
+
+.text {
+
+  left: 50%;
+  top: 50%;
+  padding: 30px;
+  position: absolute;
+  max-width: 850px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  @include translate(-50%, -50%);
+  z-index: 2;
+
+  @include media(0, 450) {
+
+    padding: 30px 15px;
+
+  }
+
+  p {
+
+    color: white;
+    line-height: 1.2;
+    font-size: 43px;
+    font-weight: 700;
+    margin: 0 0 30px 0;
+    font-family: $font;
+
+    @include media(400, 450) {
+
+      font-size: 34px;
+
+    }
+
+    @include media(0, 399) {
+
+      font-size: 29px;
+
+    }
+
+
+    a {
+
+      color: #07ff71;
+      border: none;
+      text-decoration: underline;
+
+      &:hover {
+
+        color: $color-secondary;
+
+      }
+
+    }
+
+    a.seeProjects {
+
+      display: block;
+      font-size: 16px;
+      line-height: 40px;
+      margin: 25px auto;
+      width: 130px;
+      border: none;
+      color: black;
+      background: white;
+      padding: 0 20px;
+      text-decoration: none;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+
+        background: #da1b60;
+        color: white;
+
+      }
+
+    }
+
+  }
+
+}
+
+.rocket {
+
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 40;
+  width: 100px;
+  height: 178px;
+  @include animation(animateObject 9s linear);
+  @include animation-fill-mode(forwards);
+
+}
+
+.planet {
+
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 500px;
+  height: 300px;
+  @include animation(animateObject 45s linear);
+  @include animation-fill-mode(forwards);
+  z-index: 1;
+
+}

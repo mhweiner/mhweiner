@@ -1,7 +1,6 @@
-import React, {Component} from 'react';
-import {projects, tags} from '../projectData';
+import React from 'react';
 import mr from 'mr-router';
-import clone from "../utils/clone";
+import {Preloader} from '../utils/Preloader';
 
 /* Styles */
 
@@ -9,192 +8,118 @@ import styles from './App.scss';
 
 /* Components */
 
-import Intro from "./Home/Intro";
-import Projects from "./Home/Projects";
-import About from "./Home/About";
-import ProjectModal from "./ProjectModal";
-import ProjectModalHeader from "./ProjectModalHeader";
+import Transition from "./Transition";
+import ProjectDetails from "./ProjectDetails";
+import About from "./About";
+import Home from "./Home";
+import Projects from './Projects';
+import Nav from "./Nav";
+import LoaderAnimation from "./LoaderAnimation";
 
-export default class App extends Component {
+export default class App extends React.Component {
 
-  projectModal = React.createRef();
-  state = {
-    project: null,
-    filter: []
-  };
-  projectModalHeaderRef = React.createRef();
+  constructor(props) {
 
-  componentDidMount() {
+    super(props);
+
+    this.state = {
+      filter: [],
+      isLoading: true
+    };
 
     // Set routes
     mr.setRoutes({
-      home: '!',
-      project: 'project/:project'
+      home: 'home',
+      project: 'project/:id',
+      projects: 'projects',
+      about: 'about'
     });
 
-    // Set controllers
-    mr.setControllers({
-      home: () => this.openProject(null),
-      project: (opts) => {
+    // Set controller
+    mr.setController((page, params) => {
 
-        this.openProject(this.getProjectIndexById(opts.project));
+      this.setState({
+        page: page,
+        params: params
+      });
 
-      }
     });
 
-    // Route according to current hash or set to home
-    if(!mr.route()) {
+    //Route
+    let obj = mr.status();
 
-      mr.go('home');
+    if (obj.id) {
+
+      this.state.page = obj.id;
+      this.state.params = obj.params;
+
+    } else {
+
+      this.state.page = 'home';
+      window.history.replaceState(null, null, '#home');
 
     }
 
   }
 
-  getProjectIndexById = (id) => {
+  componentDidMount() {
 
-    for (let i = 0; i < projects.length; i++) {
-
-      if (projects[i].id === id) {
-
-        return i;
-
-      }
-
-    }
-
-  };
-
-  allowBodyScroll = (allowScroll) => {
-
-    let s = document.body.style;
-
-    if (allowScroll) {
-
-      s.position = null;
-      s.overflow = null;
-      s.overflowX = null;
-      s.overflowY = null;
-      s.left = null;
-      s.right = null;
-
-      document.documentElement.style.height = '';
-      document.body.style.height = '';
-
-    } else {
-
-      let vpH = window.innerHeight;
-
-      document.documentElement.style.height = vpH.toString() + "px";
-      document.body.style.height = vpH.toString() + "px";
-
-      s.position = 'absolute';
-      s.overflow = 'hidden';
-      s.left = '0';
-      s.right = '0';
-
-    }
-
-  };
-
-  openProject = (projectIndex) => {
-
-    if (projectIndex !== null) {
-
-      this.allowBodyScroll(false);
-
-      this.setState({
-        project: projectIndex
-      });
-
-    } else if (this.projectModal.current) {
-
-      this.projectModal.current.animateClose(() => {
-
-        this.allowBodyScroll(true);
+    new Preloader({
+      onDone: () => {
 
         this.setState({
-          project: null
+          isLoading: false,
+          numLoaded: 0,
+          numObjects: 0
         });
 
-      });
+      },
+      onProgress: (numLoaded, numObjects) => {
 
-    } else {
+        this.setState({
+          numLoaded: numLoaded,
+          numObjects: numObjects
+        });
 
-      this.allowBodyScroll(true);
-
-      this.setState({
-        project: null
-      });
-
-    }
-
-  };
-
-  addTagToFilter = (tag) => {
-
-    let i = this.state.filter.indexOf(tag);
-
-    if (i !== -1) {
-
-      return;
-
-    }
-
-    this.setState({
-      filter: this.state.filter.concat([tag])
+      }
     });
 
-  };
-
-  removeTagFromFilter = (tag) => {
-
-    let i = this.state.filter.indexOf(tag);
-
-    if (i !== -1) {
-
-      let filter = clone(this.state.filter);
-
-      filter.splice(i, 1);
-
-      this.setState({
-        filter: filter
-      });
-
-    }
-
-  };
+  }
 
   render() {
 
-    let proj;
+    if (!this.state.page) return null;
 
-    if (this.state.project !== null) {
+    let routes = {
+      home: Home,
+      about: About,
+      project: ProjectDetails,
+      projects: Projects
 
-      proj = projects[this.state.project];
+    };
+
+    let navProps = {
+      page: this.state.page,
+      hidden: this.state.page === 'project',
+      opaque: this.state.page !== 'home'
+    };
+
+    if (this.state.isLoading) {
+
+      return <LoaderAnimation text={`Loading... ${Math.floor((this.state.numLoaded / this.state.numObjects) * 100)}%`}/>
+
+    } else {
+
+      return <div className={styles.default}>
+        <Nav {...navProps}/>
+        <Transition
+          routes={routes}
+          page={this.state.page}
+          params={this.state.params}
+        />
+      </div>;
 
     }
-
-    return <div className={styles.default}>
-      {proj && <ProjectModalHeader
-        ref={this.projectModalHeaderRef}
-        close={() => mr.go('home')}
-      />}
-      {proj && <ProjectModal
-        project={this.state.project}
-        ref={this.projectModal}
-      />}
-      <Intro scrollTo={this.scrollTo}/>
-      <Projects
-        projects={projects}
-        tags={tags}
-        filter={this.state.filter}
-        addTagToFilter={this.addTagToFilter}
-        removeTagFromFilter={this.removeTagFromFilter}
-        open={(id) => mr.go('project', {project: id})}
-      />
-      <About/>
-    </div>;
 
   }
 
