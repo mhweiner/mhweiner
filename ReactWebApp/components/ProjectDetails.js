@@ -10,7 +10,6 @@ import LoaderAnimation from "./LoaderAnimation";
 
 import styles from './ProjectDetails.scss';
 import animations from '../styles/animations.scss';
-import loaderStyles from "./LoaderAnimation.scss";
 
 export default class ProjectDetails extends React.PureComponent {
 
@@ -52,7 +51,6 @@ export default class ProjectDetails extends React.PureComponent {
 
   animateOut = callback => {
 
-    window.document.body.style.backgroundColor = this.origBgColor;
     addClass(this.ref.current, animations.animateOutToTop);
     setTimeout(callback, 300);
 
@@ -63,14 +61,6 @@ export default class ProjectDetails extends React.PureComponent {
     if (this.abort) {
 
       return null;
-
-    }
-
-    let loader = this.ref.current.querySelector(`.${loaderStyles.default}`);
-
-    if (loader) {
-
-      loader.style.display = 'block';
 
     }
 

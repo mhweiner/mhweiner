@@ -38,7 +38,6 @@ export default class About extends React.PureComponent {
         <div className={styles.belt}>
           <div className={styles.image}><img src="/static/images/profile2.jpg"/></div>
           <div className={styles.text}>
-            <p className={styles.subtext}>Engineer, Entrepreneur, Creative Technologist.</p>
             <h2>Marc H. Weiner</h2>
             <p>
               Marc is a lifelong programmer, creative technologist, builder, and space nerd. He built computer games when he was

@@ -1,5 +1,6 @@
 import React from 'react';
 import mr from 'mr-router';
+import {Preloader} from '../utils/Preloader';
 
 /* Styles */
 
@@ -13,6 +14,7 @@ import About from "./About";
 import Home from "./Home";
 import Projects from './Projects';
 import Nav from "./Nav";
+import LoaderAnimation from "./LoaderAnimation";
 
 export default class App extends React.Component {
 
@@ -21,7 +23,8 @@ export default class App extends React.Component {
     super(props);
 
     this.state = {
-      filter: []
+      filter: [],
+      isLoading: true
     };
 
     // Set routes
@@ -59,6 +62,30 @@ export default class App extends React.Component {
 
   }
 
+  componentDidMount() {
+
+    new Preloader({
+      onDone: () => {
+
+        this.setState({
+          isLoading: false,
+          numLoaded: 0,
+          numObjects: 0
+        });
+
+      },
+      onProgress: (numLoaded, numObjects) => {
+
+        this.setState({
+          numLoaded: numLoaded,
+          numObjects: numObjects
+        });
+
+      }
+    });
+
+  }
+
   render() {
 
     if (!this.state.page) return null;
@@ -77,14 +104,22 @@ export default class App extends React.Component {
       opaque: this.state.page !== 'home'
     };
 
-    return <div className={styles.default}>
-      <Nav {...navProps}/>
-      <Transition
-        routes={routes}
-        page={this.state.page}
-        params={this.state.params}
-      />
-    </div>;
+    if (this.state.isLoading) {
+
+      return <LoaderAnimation text={`Loading... ${Math.floor((this.state.numLoaded / this.state.numObjects) * 100)}%`}/>
+
+    } else {
+
+      return <div className={styles.default}>
+        <Nav {...navProps}/>
+        <Transition
+          routes={routes}
+          page={this.state.page}
+          params={this.state.params}
+        />
+      </div>;
+
+    }
 
   }
 

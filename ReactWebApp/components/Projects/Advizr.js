@@ -32,8 +32,8 @@ export default class Advizr extends React.PureComponent {
           It had excellent performance and supported legacy browsers down to IE9, a business requirement at the time. This strategy succeeded in both embracing new techniques while minimizing the risk of being locked into
           large nascent frameworks and ecosystems. My library was only a couple dozen lines of code, and mostly relied on other proven libraries such as jQuery and Mustache. Later on, Advizr would migrate to React, once it became stable and our requirement to support legacy browsers was dropped.
         </p>
-        <p>We also moved to a stateless REST API micro-services architecture, fully responsive SPA (single page application), and an Agile development process. Although the backend was .NET, front-end engineers would be completely insulated from this. Along
-          with a healthy dose of preventative investment into managing technical debt, this helped our application to
+        <p>We also moved to a stateless REST API micro-services architecture, fully responsive SPA (single page application), and an Agile development process. Although the backend was .NET, front-end engineers would be completely insulated from this, making it easier
+          to hire more developers. Along with a healthy dose of preventative investment into managing technical debt, this helped our application to
           scale while keeping up velocity, all with minimal resources.</p>
 
         <h3>Design Strategy</h3>

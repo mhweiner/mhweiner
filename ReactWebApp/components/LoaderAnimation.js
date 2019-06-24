@@ -7,14 +7,33 @@ import styles from './LoaderAnimation.scss';
 
 export default class LoaderAnimation extends React.PureComponent {
 
-    render() {
+  ref = React.createRef();
 
-        return <div className={styles.default}>
-                <Rocket/>
-                <StarryBackground2/>
-                <p>Loading...</p>
-        </div>;
+  componentDidMount() {
 
-    }
+    this.timeout = setTimeout(() => {
+
+      if (!this.ref) return;
+      this.ref.current.style.opacity = 1;
+
+    }, 200);
+
+  }
+
+  componentWillUnmount() {
+
+    clearTimeout(this.timeout);
+
+  }
+
+  render() {
+
+      return <div className={styles.default} ref={this.ref}>
+              <Rocket/>
+              <StarryBackground2/>
+              <p>{this.props.text || 'Loading...'}</p>
+      </div>;
+
+  }
 
 }
