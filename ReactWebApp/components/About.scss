@@ -16,11 +16,44 @@
   justify-content: space-between;
   padding: 0 60px;
 
+  @include media(0, 850) {
+
+    display: block;
+    padding: 0;
+
+    .image {
+
+      margin: 0 auto 50px;
+      max-width: none;
+      width: 100%;
+
+      img {
+
+        display: block;
+        margin: 0 auto;
+        max-width: 300px;
+        border-radius: 300px;
+
+      }
+
+    }
+
+    .text {
+
+      padding: 0 30px;
+      margin: 0 auto;
+      text-align: center;
+
+    }
+
+  }
+
 }
 
 .image {
 
   max-width: 400px;
+  padding: 0 60px 0 0;
 
   img {
 

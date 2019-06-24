@@ -108,4 +108,22 @@
 
   }
 
+  @include media(0, 600) {
+
+    background: none !important;
+
+    a {
+
+      display: none;
+
+      &.logo {
+
+        display: inline-block;
+
+      }
+
+    }
+
+  }
+
 }
