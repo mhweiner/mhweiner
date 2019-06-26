@@ -43,7 +43,7 @@ export const projects = [
     title: 'Shutterstock Invoice API',
     description: 'Microservice that powers Shutterstock\'s enterprise e-commerce systems.',
     tags: ['Back-End'],
-    bgSrc: '/static/images/shutterstock-bg.jpg',
+    bgSrc: '/static/images/project-thumbs/shutterstock-bg.jpg',
     imgSrc: '/static/images/project-thumbs/logos/shutterstock.png',
     imgStyle: {
       maxWidth: '60%',

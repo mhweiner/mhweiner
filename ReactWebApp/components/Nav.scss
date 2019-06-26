@@ -95,14 +95,14 @@
     &:hover {
 
       border-color: transparent;
+      color: $color-secondary;
 
     }
 
     &.selected {
 
-      color: #da1b60;
-      text-shadow: none;
-      border-bottom: 2px solid #da1b60;
+      color: $color-secondary;
+      border-bottom: 2px solid $color-secondary;
 
     }
 
@@ -110,7 +110,17 @@
 
   @include media(0, 600) {
 
-    background: none !important;
+    &.opaque {
+
+      background: none;
+
+    }
+
+    &.homepage {
+
+      @include translateY(-100px);
+
+    }
 
     a {
 

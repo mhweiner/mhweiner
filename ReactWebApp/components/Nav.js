@@ -20,6 +20,8 @@ export default class Nav extends React.Component {
 
   componentWillUpdate(nextProps, nextState, nextContext) {
 
+    console.log(nextProps.page)
+
     if (nextProps.hidden && !this.props.hidden) {
 
       this.hide();
@@ -68,6 +70,12 @@ export default class Nav extends React.Component {
     if (this.props.opaque) {
 
       classes.push(styles.opaque);
+
+    }
+
+    if (this.props.page === 'home') {
+
+      classes.push(styles.homepage);
 
     }
 

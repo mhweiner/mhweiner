@@ -32,7 +32,7 @@ export function Preloader(props) {
   let images = [
     '/static/images/profile2.jpg',
     '/static/images/project-thumbs/advizr-screenshot.png',
-    '/static/images/shutterstock-bg.jpg',
+    '/static/images/project-thumbs/shutterstock-bg.jpg',
     '/static/images/project-thumbs/logos/shutterstock.png',
     '/static/images/project-thumbs/logos/marvel-white.png',
     '/static/images/project-thumbs/marvel-bg.jpg',

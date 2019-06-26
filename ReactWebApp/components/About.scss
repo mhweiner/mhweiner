@@ -6,6 +6,12 @@
   position: relative;
   display: none;
 
+  @include media(0, 600) {
+
+    padding: 85px 0 50px;
+
+  }
+
 }
 
 .belt {
@@ -42,9 +48,23 @@
 
     .text {
 
-      padding: 0 30px;
+      padding: 0 15px;
       margin: 0 auto;
       text-align: center;
+
+    }
+
+  }
+
+  @include media(0, 450) {
+
+    .text {
+
+      p {
+
+        font-size: 18px;
+
+      }
 
     }
 
