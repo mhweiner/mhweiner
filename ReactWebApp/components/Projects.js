@@ -4,11 +4,12 @@ import mr from 'mr-router';
 
 import {projects} from '../projectData';
 
-import ProjectThumbnail from "./ProjectThumbnail";
+import ProjectThumbnail from "./ProjectList/ProjectThumbnail";
 import LoaderAnimation from "./LoaderAnimation";
 
 import styles from './Projects.scss';
 import animations from "../styles/animations.scss";
+import ProjectListItem from "./ProjectList/ProjectListItem";
 
 export default class Projects extends React.PureComponent {
 
@@ -48,7 +49,7 @@ export default class Projects extends React.PureComponent {
 
     projects.map((project, k) => {
 
-      proj.push(<ProjectThumbnail
+      proj.push(<ProjectListItem
         key={k.toString()}
         project={project}
         onClick={() => mr.go('project', {id: project.id})}
