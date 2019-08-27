@@ -92,11 +92,8 @@ export const projects = [
     description: 'Helping development teams communicate more effectively.',
     tags: ['Founder', 'Everything'],
     containerStyle: {
-      background: '#ddd'
-    },
-    imgSrc: '/static/images/project-thumbs/logos/ciro.png',
-    imgStyle: {
-      maxHeight:'45%'
+      background: 'url(/static/images/project-thumbs/ciro-lockup.jpg) no-repeat top center',
+      backgroundSize: 'cover'
     },
     content: <Ciro/>,
     years: '2015-2017',
@@ -109,15 +106,11 @@ export const projects = [
     description: 'Hyper-local loyalty platform for iOS and Android.',
     tags: ['Full-Stack', 'Dev-Ops', 'API Design'],
     containerStyle: {
-      background: 'rgb(34, 68, 96)'
-    },
-    imgSrc: '/static/images/project-thumbs/logos/devotify.png',
-    imgStyle: {
-      maxHeight: '50%',
-      maxWidth: '40%'
+      background: 'url(/static/images/project-thumbs/devotify-phone.jpg) no-repeat top center',
+      backgroundSize: 'cover'
     },
     content: <Devotify/>,
-    years: '2014-2015',
+    years: '2013-2014',
     website: 'http://www.devotify.com'
   }
 

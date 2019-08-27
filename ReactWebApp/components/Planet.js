@@ -13,12 +13,8 @@ export default function Planet(props) {
     </g>
     {!props.logo && <defs>
       <linearGradient id="grad1">
-        <stop offset="0%" stopColor="#173532"/>
-        <stop offset="100%" stopColor="#0F9D8F"/>
-      </linearGradient>
-      <linearGradient id="grad2">
-        <stop offset="0%" stopColor="#391B61"/>
-        <stop offset="100%" stopColor="#7f42d6"/>
+        <stop offset="0%" stopColor="#25c5b4"/>
+        <stop offset="100%" stopColor="#0a59ea"/>
       </linearGradient>
     </defs>}
   </svg>;

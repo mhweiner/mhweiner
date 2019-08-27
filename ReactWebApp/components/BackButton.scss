@@ -32,24 +32,24 @@
 .default {
 
   border: none;
-  color: black;
   padding: 0;
   outline: none;
   cursor: pointer;
   margin: 0;
-  transition: all 0.1s ease-in-out;
-  left: 10px;
+  transition: all 0.2s ease-in-out;
+  left: 15px;
   position: fixed;
   box-sizing: border-box;
-  top: 10px;
+  top: 15px;
   z-index: 1000;
   width: 55px;
-  height: 45px;
+  height: 55px;
+  border-radius: 55px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 42 17.7' fill='none' stroke='%23fff' stroke-width='2'%3E%3Cpath d='M2 8.8h38.3M8.5 17.3l-7-8.5 7-7.3'/%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-size: 38px;
   background-position: 8px center;
-  background-color: #242424;;
+  background-color: black;
 
   &:hover {
 

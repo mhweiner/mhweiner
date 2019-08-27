@@ -4,12 +4,11 @@ import mr from 'mr-router';
 
 import {projects} from '../projectData';
 
-import ProjectThumbnail from "./ProjectList/ProjectThumbnail";
 import LoaderAnimation from "./LoaderAnimation";
+import ProjectListItem from "./ProjectList/ProjectListItem";
 
 import styles from './Projects.scss';
 import animations from "../styles/animations.scss";
-import ProjectListItem from "./ProjectList/ProjectListItem";
 
 export default class Projects extends React.PureComponent {
 
@@ -45,11 +44,11 @@ export default class Projects extends React.PureComponent {
 
   render() {
 
-    let proj = [];
+    let projectList = [];
 
     projects.map((project, k) => {
 
-      proj.push(<ProjectListItem
+      projectList.push(<ProjectListItem
         key={k.toString()}
         project={project}
         onClick={() => mr.go('project', {id: project.id})}
@@ -59,11 +58,9 @@ export default class Projects extends React.PureComponent {
 
     return (
       <div className={styles.default} ref={this.ref}>
-        <div className={styles.belt}>
-          <div className={styles.container} ref={this.contentRef}>
-            {!proj.length && <div>There are no projects that match your filter.</div>}
-            {proj}
-          </div>
+        <div ref={this.contentRef} className={styles.belt}>
+          {!projectList.length && <div>There are no projects that match your filter.</div>}
+          {projectList}
         </div>
         {!!this.state.isLoading && <LoaderAnimation/>}
       </div>

@@ -6,6 +6,24 @@ import styles from './ProjectListItem.scss';
 
 export default class ProjectListItem extends React.Component {
 
+  state = {};
+
+  onMouseOver = () => {
+
+    this.setState({
+      hover: true
+    });
+
+  };
+
+  onMouseOut = () => {
+
+    this.setState({
+      hover: false
+    });
+
+  };
+
   render() {
     
     let project = this.props.project;
@@ -13,8 +31,8 @@ export default class ProjectListItem extends React.Component {
       {tag}
     </div>);
     
-    return <div className={styles.default} onClick={this.props.onClick}>
-      <ProjectThumbnail project={project}/>
+    return <div className={styles.default} onClick={this.props.onClick} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
+      <ProjectThumbnail project={project} hover={this.state.hover}/>
       <div className={styles.text}>
         <h4>{project.title}</h4>
         <p>{project.description}</p>
