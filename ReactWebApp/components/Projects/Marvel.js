@@ -63,18 +63,22 @@ export default class Marvel extends React.PureComponent {
             immersive user-experience. They wanted high-res images and videos to support the new high-dpi
             devices. They wanted it all in a short nine month deadline, and to top it off, we needed to support IE8!</p>
 
+          <h3>Technical Challenges</h3>
+
           <p>The biggest technical challenges were:</p>
 
           <ul>
-            <li>Payload size of CSS, HTML, Javascript, hi-res images, and other assets.</li>
-            <li>Older mobile connection speeds in 2013 (3G at best).</li>
-            <li>Performance, especially on mobile devices &mdash; and even more so for older mobile devices.</li>
-            <li>Lack of examples and existing tooling.</li>
-            <li>The scope of the website and tight deadline.</li>
+            <li>Payload size of CSS, HTML, Javascript, hi-res images, and other assets</li>
+            <li>Older mobile connection speeds in 2013 (3G at best)</li>
+            <li>Performance, especially on mobile devices &mdash; and even more so for older mobile devices</li>
+            <li>Lack of examples and existing tooling</li>
+            <li>Testing</li>
+            <li>The scope of the website and tight deadline</li>
           </ul>
 
-          <p>One of the biggest challenges we had was payload size. This means the total file size of all of the require assets, including CSS, HTML, images, and javascript. Our first attempts resulted in HUGE filesizes.
-            Not only did this result in unacceptable download times, but it slowed down and often crashed mobile devices of the time!</p>
+          <p>One of the biggest challenges we had was payload size. This means the total file size of all of the
+            assets, including CSS, HTML, images, and javascript. Too large filesizes resulted in unacceptable download times
+            and slowed-down or crashed devices, especially mobile.</p>
 
           <p>The second biggest challenge was the timeline. None of us at Marvel had ever built a responsive website before. Building this project required an entirely new project management strategy. Our PM relied on developers and designers collaborating to figure out a viable strategy that worked for everyone. One thing was clear &mdash;
             building a responsive website was going to require more work than we had previously thought. Every single page required expensive, exhaustive testing, and we had many.</p>
