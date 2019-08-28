@@ -49,9 +49,10 @@ export default class Marvel extends React.PureComponent {
 
         <div className={styles.main}>
 
-          <p>In early 2013, mobile device usage had exploded, but Marvel.com was still not mobile-friendly. Marvel had two options &mdash; build a "mobile" version of their website, which
-            was still standard practice for the time, or take a gamble on a new and relatively unproven "responsive design"
-            methodology that was gaining buzz. Marvel's digital department didn't want mobile users to have a lesser experience, so they decided to take a gamble.</p>
+          <p>In early 2013, mobile device usage had exploded, but Marvel.com was still not mobile-friendly. Marvel had two options &mdash;
+            build a "mobile" version of their website, which was still standard practice for the time, or take a chance
+            on a new "responsive design" methodology that was gaining buzz. Marvel didn't want mobile users to have a
+            lesser experience, so they decided to take a gamble.</p>
 
           <p>I was hired as a consultant to lead the R&D for the new responsive Marvel.com that would support all of Marvel's business verticals.</p>
 

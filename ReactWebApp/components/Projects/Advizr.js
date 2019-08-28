@@ -20,13 +20,13 @@ export default class Advizr extends React.PureComponent {
 
           <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
 
-          <p>As the first full-time developer hire, I helped lead technical strategy, taking ownership UX and UI Development.</p>
+          <p>As the first full-time developer hire, I helped lead technical strategy, taking ownership of UX and UI Development.</p>
 
           <ul>
             <li>Led API Design, UX, and UI development.</li>
             <li>Helped build a small team.</li>
-            <li>Worked closely with stakeholders to understand customer's needs.</li>
             <li>Requirement gathering, information architecture, wireframing, and prototyping.</li>
+            <li>Helped transition to Agile and installed processes.</li>
           </ul>
 
           <h3 className={styles.awards}><i className='fa fa-award'/>Achievements &amp; Awards</h3>
@@ -36,6 +36,7 @@ export default class Advizr extends React.PureComponent {
             <li>Pre-revenue to $2MM in two years</li>
             <li>Recognized as Best Client-Facing Technology of 2015 by FPPad</li>
             <li>2018 "Best 401k Technology" Industry Award from WealthManagement.com</li>
+            <li>Customers loved our product!</li>
           </ul>
 
           <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
@@ -61,14 +62,15 @@ export default class Advizr extends React.PureComponent {
           <p>It was clear to me that as an early stage startup, <em style={{fontWeight: 'bold'}}>the ability to iterate
             and grow the application quickly while mitigating risk</em> was crucial. It's not like our clients had handed
             us specs &mdash; we didn't really know what we needed to build. To this end, I wanted to make things as modular and flexible
-            as possible, and adopt an Agile methodology.</p>
+            as possible, and adopt an Agile methodology. It was this philosophy of iteration, coupled with a tight consumer relationship, that would
+            end up being the key to our success.</p>
 
-          <p>My first priority was to move from a traditional .NET MVC application to a REST API powered SPA (single page application),
-            separating the the .NET backend from the UI. There were many benefits to this, but all impacted velocity, scalability, testability, and flexibility.
+          <p>When I first joined, my first priority was to move from a traditional .NET MVC application to a REST API powered SPA (single page application).
+            There were many benefits to this, but all contributed to increased velocity, scalability, testability, and flexibility.
           </p>
 
-          <p>My second priority was implementing a good Agile workflow process that allowed us to iterate and try out new features while still building in time
-          to manage tech debt and re-investing into our infrastructure.
+          <p>My second priority was implementing a good Agile workflow process that allowed us to iterate and try out new features while allocating time
+          to manage technical debt and re-investing into our infrastructure.
           </p>
 
           <p>Unfortunately, this was 2014, and front-end component libraries like React were not quite ready or met our requirements. I ended up writing a small simple library <a href='http://github.com/mhweiner/hmjs' target='_blank'>HMJS</a>, built around jQuery, vanilla Javascript, and the ubiquitous <a href="https://mustache.github.io/" target='_blank'>Mustache</a> templating library.
@@ -76,7 +78,7 @@ export default class Advizr extends React.PureComponent {
             large nascent frameworks and ecosystems. The tiny and well-tested HMJS library mostly relied on other proven libraries such as jQuery and Mustache. Later on, Advizr would migrate to React, once it became stable and our requirement to support legacy browsers was dropped.
           </p>
 
-          <p>The front-end UI was also responsive (mobile-friendly) down to tablet sizes. This was a requirement so that Advisors can run the software on a tablet/iPad while working with their clients, and hand it to them.</p>
+          <p>The front-end UI was also responsive (mobile-friendly) down to tablet sizes. This was a requirement so that Advisors can run the software on an iPad while working with their clients, and hand it to them.</p>
 
           <h3>Design Strategy</h3>
 

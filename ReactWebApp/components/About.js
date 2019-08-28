@@ -46,6 +46,7 @@ export default class About extends React.PureComponent {
               startups. His specialties are in systems architecture, scalability, and process optimization.
               When he is not working, he is snowboarding, rock climbing, or watching "Beat Bobby Flay".
             </p>
+            <h3>Get in touch:</h3>
             <ul className={styles.contact}>
               <li>
                 <a href="mailto:mhweiner234@gmail.com" className="email">
