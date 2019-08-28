@@ -1,0 +1,42 @@
+@import "../../styles/defines";
+
+.default {
+
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  height: 225px;
+  line-height: 225px;
+  text-align: center;
+  max-width: 600px;
+  transition: all 0.2s ease-in-out;
+
+  img.fg {
+
+    max-height: 37%;
+    max-width: 53%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+
+  }
+
+  img.bg {
+
+    position: absolute;
+    width: 100%;
+    display: block;
+    left: 0;
+    top: 0;
+    min-height: 100%;
+
+  }
+
+  &.hover {
+
+    box-shadow: rgba(0,0,0,0.5) 4px 4px 20px 0;
+    @include scale(1.02, 1.02);
+
+  }
+
+}

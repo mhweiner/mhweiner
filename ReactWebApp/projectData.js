@@ -27,7 +27,7 @@ export const projects = [
     id: 'Advizr',
     title: 'Advizr',
     description: 'Financial Planning, reinvented.',
-    tags: ['Full-Stack', 'UX', 'Dev-Ops'],
+    tags: ['Full-Stack', 'UX', 'Dev-Ops', 'Architecture', 'API Design'],
     containerStyle: {
       background: 'url(/static/images/project-thumbs/advizr-screenshot.png) no-repeat top center',
       backgroundSize: 'cover'
@@ -42,7 +42,7 @@ export const projects = [
     id: 'Shutterstock_Invoice_API',
     title: 'Shutterstock Invoice API',
     description: 'Microservice that powers Shutterstock\'s enterprise e-commerce systems.',
-    tags: ['Back-End'],
+    tags: ['Back-End', 'Architecture', 'API Design'],
     bgSrc: '/static/images/project-thumbs/shutterstock-bg.jpg',
     imgSrc: '/static/images/project-thumbs/logos/shutterstock.png',
     imgStyle: {
@@ -58,7 +58,7 @@ export const projects = [
     id: 'Marvel.com',
     title: 'Marvel.com',
     description: 'The official website of Marvel Entertainment.',
-    tags: ['R&D', 'Front-End', 'Dev-Ops'],
+    tags: ['R&D', 'Full-Stack', 'Dev-Ops'],
     imgSrc: '/static/images/project-thumbs/logos/marvel-white.png',
     bgSrc: '/static/images/project-thumbs/marvel-bg.jpg',
     content: <Marvel/>,
@@ -70,7 +70,7 @@ export const projects = [
     id: 'Elemental_Cognition',
     title: 'Elemental Cognition',
     description: 'Making AI human-friendly.',
-    tags: ['Full-Stack', 'UX', 'R&D'],
+    tags: ['R&D', 'Full-Stack', 'UX', 'API Design'],
     containerStyle: {
       background: 'linear-gradient(90deg, #6c34a6, #407477)'
     },
@@ -90,13 +90,10 @@ export const projects = [
     id: 'Ciro',
     title: 'Ciro',
     description: 'Helping development teams communicate more effectively.',
-    tags: ['Full-Stack', 'UX', 'Dev-Ops'],
+    tags: ['Founder', 'Everything'],
     containerStyle: {
-      background: '#ddd'
-    },
-    imgSrc: '/static/images/project-thumbs/logos/ciro.png',
-    imgStyle: {
-      maxHeight:'45%'
+      background: 'url(/static/images/project-thumbs/ciro-lockup.jpg) no-repeat top center',
+      backgroundSize: 'cover'
     },
     content: <Ciro/>,
     years: '2015-2017',
@@ -109,25 +106,12 @@ export const projects = [
     description: 'Hyper-local loyalty platform for iOS and Android.',
     tags: ['Full-Stack', 'Dev-Ops', 'API Design'],
     containerStyle: {
-      background: 'rgb(34, 68, 96)'
-    },
-    imgSrc: '/static/images/project-thumbs/logos/devotify.png',
-    imgStyle: {
-      maxHeight: '50%',
-      maxWidth: '40%'
+      background: 'url(/static/images/project-thumbs/devotify-phone.jpg) no-repeat top center',
+      backgroundSize: 'cover'
     },
     content: <Devotify/>,
-    years: '2014-2015',
+    years: '2013-2014',
     website: 'http://www.devotify.com'
   }
 
-];
-
-export const tags = [
-  'R&D',
-  'Back-End',
-  'Front-End',
-  'Full-Stack',
-  'Dev-Ops',
-  'UX'
 ];

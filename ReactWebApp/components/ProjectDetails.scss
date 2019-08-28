@@ -11,6 +11,7 @@
   right: 0;
   top: 0;
   z-index: 30;
+  background: #eee;
 
   @include media(0, 700) {
 
@@ -31,7 +32,7 @@ h1.title {
   font-weight: 400;
   padding: 0 30px;
   box-sizing: border-box;
-  color: white;
+  color: #333;
 
   @include media(700, 900) {
 
@@ -49,7 +50,7 @@ h1.title {
   .tags {
 
     margin: 10px 0 0 0;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: 400;
     color: #acacac;
 

@@ -7,28 +7,15 @@
   .belt {
 
     @include grid;
+    display: flex;
+    flex-wrap: wrap;
 
-  }
+    > div {
 
-}
-
-.container{
-
-  display: flex;
-  flex-flow: row wrap;
-  justify-content: start;
-  margin: 0 -10px;
-
-  > div {
-
-    margin: 0 10px 20px;
-    width: calc(50% - 20px);
-
-    @include media(0, 800) {
-
-      width: 100%;
+      width: 50%;
 
     }
 
   }
+
 }

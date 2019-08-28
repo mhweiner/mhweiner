@@ -7,7 +7,21 @@ $breakpoint: 1350;
   padding: 0 30px;
   max-width: 1200px;
   margin: 0 auto;
-  color: #eee;
+  color: #333;
+
+  a {
+
+    color: $color-secondary;
+    text-decoration: underline;
+    font-weight: bold;
+
+    &:hover {
+
+      color: black;
+
+    }
+
+  }
 
   img {
 
@@ -38,61 +52,61 @@ $breakpoint: 1350;
 
 }
 
-.text {
+.content {
 
   padding: 0 0 35px;
-  max-width: 700px;
+  max-width: 1000px;
   margin: 0 auto;
+  display: flex;
 
   p {
 
     line-height: 1.5;
     font-size: 19px;
     margin: 0 0 25px 0;
+    font-family: 'Lora', serif;;
 
-    @include media(0, 550) {
+  }
 
+  ul {
+
+    margin: 0 0 20px;
+    padding: 0 0 0 20px;
+
+    li {
+
+      line-height: 1.5;
       font-size: 19px;
-
-    }
-
-    .highlight {
-
-      background: #8600ff;
-      color: white;
-      padding: 0 5px;
+      margin: 0 0 10px 0;
+      font-family: 'Lora', serif;;
 
     }
 
   }
 
-  h2 {
+}
 
-    font-size: 30px;
-    margin: 0 0 30px 0;
-    position: relative;
-    line-height: 1.3;
-    font-weight: 300;
+.sidebar {
 
-    @include media(0, 550) {
+  width: 300px;
 
-      font-size: 25px;
+  p {
 
-    }
+    font-size: 17px;
 
   }
 
   h3 {
 
     margin: 40px 0 30px;
-    text-transform: uppercase;
     font-size: 18px;
+    line-height: 30px;
     font-family: $font-condensed;
-    letter-spacing: 0.04em;
+    text-transform: uppercase;
 
     i {
 
-      font-size: 30px;
+      font-size: 28px;
       margin: 0 14px 0 0;
       display: inline-block;
       vertical-align: middle;
@@ -101,25 +115,20 @@ $breakpoint: 1350;
 
     &.awards {
 
-      color: #ffac00;
+      color: #ff9400;
 
     }
 
     &.involvement {
 
-      color: #a43eff;
+      color: $color-secondary;
+      margin: 0 0 20px;
 
     }
 
     &.tech {
 
       color: #25c5b4;
-
-    }
-
-    @include media(0, 550) {
-
-      font-size: 19px;
 
     }
 
@@ -133,16 +142,29 @@ $breakpoint: 1350;
     li {
 
       line-height: 1.5;
-      font-size: 19px;
+      font-size: 17px;
       margin: 0 0 10px 0;
 
-      @include media(0, 550) {
-
-        font-size: 19px;
-
-      }
-
     }
+
+  }
+
+}
+
+.main {
+
+  width: 600px;
+  padding: 0 0 0 40px;
+
+  h3 {
+
+    margin: 15px 0 20px;
+    text-transform: uppercase;
+    font-size: 19px;
+    border-bottom: 2px solid;
+    display: inline-block;
+    line-height: 28px;
+    font-family: $font-condensed;
 
   }
 

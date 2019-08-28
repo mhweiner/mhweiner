@@ -14,8 +14,8 @@ svg.default {
 
   path {
 
-    opacity: 0.8;
-    fill: #aaa;
+    opacity: 1;
+    fill: white;
     transition: fill 0.3s cubic-bezier(0.64, 0.38, 0.03, 1.65);
 
   }
@@ -26,13 +26,13 @@ svg.default {
 
     circle {
 
-      fill: purple;
+      fill: $color-secondary;
 
     }
 
     path {
 
-      fill: yellow;
+      fill: $color-primary;
 
     }
 
