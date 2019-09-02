@@ -11,6 +11,13 @@
   max-width: 600px;
   transition: all 0.2s ease-in-out;
 
+  @include media(0, 400) {
+
+    height: 180px;
+    line-height: 180px;
+
+  }
+
   img.fg {
 
     max-height: 37%;

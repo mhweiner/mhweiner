@@ -59,6 +59,12 @@ $breakpoint: 1350;
   margin: 0 auto;
   display: flex;
 
+  @include media(0, 850) {
+
+    display: block;
+
+  }
+
   p {
 
     line-height: 1.5;
@@ -149,6 +155,21 @@ $breakpoint: 1350;
 
   }
 
+  @include media(0, 850) {
+
+    width: auto;
+    background: #1d1c1c;
+    padding: 30px;
+    box-shadow: $color-secondary 8px 8px 0;
+
+    p, li {
+
+      color: #eee;
+
+    }
+
+  }
+
 }
 
 .main {
@@ -165,6 +186,14 @@ $breakpoint: 1350;
     display: inline-block;
     line-height: 28px;
     font-family: $font-condensed;
+
+  }
+
+  @include media(0, 850) {
+
+    width: auto;
+    padding: 0;
+    margin: 50px 0 0 0;
 
   }
 

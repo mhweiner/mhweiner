@@ -7,6 +7,12 @@
   padding: 10px 20px;
   box-sizing: border-box;
 
+  @include media(0,600) {
+
+    padding: 10px 0;
+
+  }
+
   &:hover {
 
     .text {
@@ -39,6 +45,8 @@
   p {
 
     margin: 0 0 14px 0;
+    font: $font;
+    font-size: 17px;
 
   }
 
@@ -58,8 +66,10 @@
   font-weight: bold;
   line-height: 25px;
   text-transform: uppercase;
-  margin: 0 10px 0 0;
+  margin: 0 10px 10px 0;
   position: relative;
-  box-shadow: rgba(255,255,255,0.3) 0 0 0 1px;
+  box-shadow: rgba(255, 255, 255, 0.24) 0 0 0 1px;
+  color: #707070;
+  font-family: $font-condensed;
 
 }
