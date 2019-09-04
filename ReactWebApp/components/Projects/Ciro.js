@@ -30,13 +30,13 @@ export default class Ciro extends React.PureComponent {
           <p>Frustrated by existing project management tools, I decided to create my own. It had to:</p>
 
           <ul>
-            <li><b>Treat things you need to read or respond to like tasks.</b> It featured a "smart" queue notification system that track what you have read or responded to, based on underlying task prioritization and urgency. This limits annoying disruptions in your chat channel. Slack is not a queue. Email isn't (a good one) either.</li>
-            <li><b>Be super fast</b>, intuitive, and easy to use. Keyboard shortcuts to quickly zip through forms.</li>
-            <li><b>Be flexible.</b> Every team works differently, and does Agile differently.</li>
-            <li><b>Have easy and powerful search tools.</b></li>
-            <li><b>Have automatic sorting</b> by priority and effort, as prescribed by Agile.</li>
-            <li><b>Clear head space.</b> Limit distractions and information overload.</li>
-            <li><b>Support concurrent multi-project and multi-sprint scenarios</b>.</li>
+            <li>Treat things you need to read or respond to like tasks. It featured a "smart" queue notification system that track what you have read or responded to, based on underlying task prioritization and urgency. This limits annoying disruptions in your chat channel. Slack is not a queue. Email isn't (a good one) either.</li>
+            <li>Be super fast, intuitive, and easy to use. Keyboard shortcuts to quickly zip through forms.</li>
+            <li>Be flexible. Every team works differently, and does Agile differently.</li>
+            <li>Have easy and powerful search tools</li>
+            <li>Have automatic sorting by priority and effort, as prescribed by Agile.</li>
+            <li>Clear head space. Limit distractions and information overload.</li>
+            <li>Support concurrent multi-project and multi-sprint scenarios.</li>
           </ul>
 
         </div>
