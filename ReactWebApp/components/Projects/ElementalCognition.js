@@ -2,6 +2,7 @@ import React from 'react';
 
 import styles from './base.scss';
 import ECStyles from './ElementalCognition.scss';
+import ResponsiveImage from "../ResponsiveImage";
 
 export default class ElementalCognition extends React.PureComponent {
 
@@ -29,38 +30,24 @@ export default class ElementalCognition extends React.PureComponent {
 
     return (<div className={styles.base}>
 
-      <img src='/static/images/content/ec/hero.jpg' style={{marginBottom: '40px'}}/>
+      <ResponsiveImage src={[
+        {
+          minWidth: 0,
+          src: '/static/images/content/ec/hero_small.jpg'
+        },
+        {
+          minWidth: 700,
+          src: '/static/images/content/ec/hero.jpg'
+        }
+      ]} style={{
+        marginBottom: '40px'
+      }}/>
 
       <div className={styles.content}>
 
-        <div className={styles.sidebar}>
-
-          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
-
-          <ul>
-            <li>Led R&D, front-end architecture and development.</li>
-            <li>Led UX strategy and conceptual design of "VKR" design system.</li>
-            <li>Worked closely with researchers and reported directly to Dr. Ferrucci.</li>
-          </ul>
-
-          <h3 className={styles.awards}><i className='fa fa-award'/>Outcome &amp; Achievements</h3>
-
-          <ul>
-            <li>Successfully delivered first version by tight deadline and to excellent reception.</li>
-            <li>Used in talks by Dr. Ferrucci and continues to be used as one of the main ways to test and judge our progress as a company.</li>
-            <li>Used to show investors and demonstrate our IP.</li>
-          </ul>
-
-          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
-          <ul>
-            <li>HTML5, ES6, Typescript, React, Flux</li>
-            <li>REST API (Java)</li>
-            <li>Swagger, SwaggerHub</li>
-          </ul>
-
-        </div>
-
         <div className={styles.main}>
+
+          <h2>I designed and developed an interface to an experimental, revolutionary AI machine.</h2>
 
           <p>Today's AI falls short. Although AI has become pretty good at calculating odds and recognizing faces, it cannot understand
             something as simple as a children's bedtime story. It is unable to explain the "why" or the "how" behind the answers is gives us.</p>
@@ -110,6 +97,33 @@ export default class ElementalCognition extends React.PureComponent {
             Unfortunately, due to a non-disclosure agreement, I am not able to currently post pictures or videos of the
             app publicly on this website, but I have been given permission to show them in person.
           </p>
+
+        </div>
+
+        <div className={styles.sidebar}>
+
+          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
+
+          <ul>
+            <li>Led R&D, front-end architecture and development.</li>
+            <li>Led UX strategy and conceptual design of "VKR" design system.</li>
+            <li>Worked closely with researchers and reported directly to Dr. Ferrucci.</li>
+          </ul>
+
+          <h3 className={styles.awards}><i className='fa fa-award'/>Outcome &amp; Achievements</h3>
+
+          <ul>
+            <li>Successfully delivered first version by tight deadline and to excellent reception.</li>
+            <li>Used in talks by Dr. Ferrucci and continues to be used as one of the main ways to test and judge our progress as a company.</li>
+            <li>Used to show investors and demonstrate our IP.</li>
+          </ul>
+
+          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
+          <ul>
+            <li>HTML5, ES6, Typescript, React, Flux</li>
+            <li>REST API (Java)</li>
+            <li>Swagger, SwaggerHub</li>
+          </ul>
 
         </div>
 

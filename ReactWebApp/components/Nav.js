@@ -20,8 +20,6 @@ export default class Nav extends React.Component {
 
   componentWillUpdate(nextProps, nextState, nextContext) {
 
-    console.log(nextProps.page)
-
     if (nextProps.hidden && !this.props.hidden) {
 
       this.hide();
@@ -59,7 +57,7 @@ export default class Nav extends React.Component {
 
       }, 100);
 
-    }, 200);
+    }, 500);
 
   };
 

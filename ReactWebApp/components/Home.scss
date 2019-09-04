@@ -51,7 +51,7 @@ $breakpoint: 450;
     font-size: 43px;
     font-weight: 700;
     margin: 0 0 30px 0;
-    font-family: $font;
+    font-family: $font-header;
 
     @include media(400, 450) {
 
