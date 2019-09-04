@@ -20,6 +20,8 @@ export default class Devotify extends React.PureComponent {
 
         <div className={styles.main}>
 
+          <h2>I built an MVP for an early-stage startup that helped them raise funds.</h2>
+
           <p>Devotify's mission was to build true loyalty and breed advocacy for every business. The Devotify platform was a
             gamified and engaging loyalty program for local and small businesses. Businesses
             received their own fully-branded, customized app, in both the Google Play and App Store. The platform offered

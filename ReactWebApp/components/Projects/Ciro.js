@@ -25,19 +25,33 @@ export default class Ciro extends React.PureComponent {
 
         <div className={styles.main}>
 
+          <h2>I started my own company aimed at solving inefficiencies in the way teams communicate.</h2>
+
           <p>Existing tools are slow and painful. They either show too much information, or too little. Most importantly, they don't solve the biggest problem that teams face — too many interruptions. </p>
 
           <p>Frustrated by existing project management tools, I decided to create my own. It had to:</p>
 
           <ul>
-            <li>Treat things you need to read or respond to like tasks. It featured a "smart" queue notification system that track what you have read or responded to, based on underlying task prioritization and urgency. This limits annoying disruptions in your chat channel. Slack is not a queue. Email isn't (a good one) either.</li>
+            <li>Limit distractions and information overload.</li>
+            <li>Treat things you need to read or respond to like tasks. Slack is not a queue. Email isn't a good one either.</li>
             <li>Be super fast, intuitive, and easy to use. Keyboard shortcuts to quickly zip through forms.</li>
             <li>Be flexible. Every team works differently, and does Agile differently.</li>
-            <li>Have easy and powerful search tools</li>
+            <li>Have easy and powerful search tools.</li>
             <li>Have automatic sorting by priority and effort, as prescribed by Agile.</li>
-            <li>Clear head space. Limit distractions and information overload.</li>
             <li>Support concurrent multi-project and multi-sprint scenarios.</li>
+            <li>Support floating team members.</li>
           </ul>
+
+          <h3>Outcome</h3>
+
+          <p>Although Ciro is still operational, I am no longer actively maintaining it. I worked on Ciro full-time for
+            a year and a half, signing up thousands of users and taking hundreds of feature requests. There has certainly
+            been some validation from actual users. However, business-wise, the numbers told a different story.</p>
+
+          <p>There is a lot of friction in getting a team switched to a new platform, and the project management space
+          is incredibly crowded. Building all of the required features and marketing Ciro would require an enormous amount of
+            capital &mdash; and with it, a lot of responsibility to my investors and employees. Although as
+            an engineer, I think it's worth the effort, as an entrepreneur, one must have a deeper commitment.</p>
 
         </div>
 

@@ -41,8 +41,8 @@ export default class About extends React.PureComponent {
             <h2>Marc H. Weiner</h2>
             <p>
               Marc is a lifelong programmer, creative technologist, builder, and space nerd. He built computer games when he was
-              eight and started his first web development company when he was fifteen. After studying Aerospace
-              Engineering and Computer Science at the University at Buffalo, he helped launch several successful
+              eight and started his first web development company when he was fifteen. After studying Computer Science
+              at the University at Buffalo, he helped launch several successful
               startups. He now helps big and small companies alike in areas such as systems architecture,
               scalability, automated testing, process optimization, and user experience.  When he is not working, he is
               snowboarding, rock climbing, or watching "Beat Bobby Flay".
