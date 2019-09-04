@@ -18,6 +18,33 @@ export default class Devotify extends React.PureComponent {
 
       <div className={styles.content}>
 
+        <div className={styles.main}>
+
+          <p>Devotify's mission was to build true loyalty and breed advocacy for every business. The Devotify platform was a
+            gamified and engaging loyalty program for local and small businesses. Businesses
+            received their own fully-branded, customized app, in both the Google Play and App Store. The platform offered
+            gamification with different rewards levels, push notifications, blog, coupons and special events,
+            geo-location, event calendar, QR code scan system for payment and loyalty, and more.</p>
+
+          <p>The challenge was to build a cross-platform MVP in a short timeline, under a tight budget. Each customer
+            gets their own white-labled iOS and Android apps.</p>
+
+          <h3>Technical Strategy</h3>
+
+          <p>
+            In order to deliver a cross-platform (iOS and Android) MVP under a tight budget, I went with <a href="https://cordova.apache.org/" target="_blank">Cordova</a> (formerly PhoneGap).
+            The core would be an HTML5/Javascript app, with Cordova providing the bridge to the native environments, including native
+            plugins for iOS an Android where necessary (written in Objective-C and Java respectively, of course).
+          </p>
+          <p>
+            The main disadvantage of using something like Cordova is usually sacrifice in performance and "native-like" UX.
+            However, since this application didn't require much in terms of performance like a game might, it was a good
+            candidate for this option. Still, it was imperative that the end result felt as close to a native
+            experience as possible.
+          </p>
+
+        </div>
+
         <div className={styles.sidebar}>
 
           <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
@@ -43,33 +70,6 @@ export default class Devotify extends React.PureComponent {
             <li><a href="https://cordova.apache.org/" target="_blank">Cordova</a>, <a href="http://github.com/mhweiner/hmjs" target="_blank">HMJS</a>, HTML5, Javascript, Objective-C, Java</li>
             <li>Custom CI/CD pipeline and build process (nodeJS) to quickly create new white-labeled apps for both iOS and Android</li>
           </ul>
-
-        </div>
-
-        <div className={styles.main}>
-
-          <p>Devotify's mission was to build true loyalty and breed advocacy for every business. The Devotify platform was a
-            gamified and engaging loyalty program for local and small businesses. Businesses
-            received their own fully-branded, customized app, in both the Google Play and App Store. The platform offered
-            gamification with different rewards levels, push notifications, blog, coupons and special events,
-            geo-location, event calendar, QR code scan system for payment and loyalty, and more.</p>
-
-          <p>The challenge was to build a cross-platform MVP in a short timeline, under a tight budget. Each customer
-            gets their own white-labled iOS and Android apps.</p>
-
-          <h3>Technical Strategy</h3>
-
-          <p>
-            In order to deliver a cross-platform (iOS and Android) MVP under a tight budget, I went with <a href="https://cordova.apache.org/" target="_blank">Cordova</a> (formerly PhoneGap).
-            The core would be an HTML5/Javascript app, with Cordova providing the bridge to the native environments, including native
-            plugins for iOS an Android where necessary (written in Objective-C and Java respectively, of course).
-          </p>
-          <p>
-            The main disadvantage of using something like Cordova is usually sacrifice in performance and "native-like" UX.
-            However, since this application didn't require much in terms of performance like a game might, it was a good
-            candidate for this option. Still, it was imperative that the end result felt as close to a native
-            experience as possible.
-          </p>
 
         </div>
 

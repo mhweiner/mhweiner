@@ -1,5 +1,7 @@
 import React from 'react';
 
+import ResponsiveImage from "../ResponsiveImage";
+
 import styles from './base.scss';
 
 export default class Advizr extends React.PureComponent {
@@ -8,54 +10,25 @@ export default class Advizr extends React.PureComponent {
 
     return (<div className={styles.base}>
 
-      <img src='/static/images/content/advizr/hero2.jpg' style={{
-        marginBottom: '40px',
-        boxSizing: 'border-box',
-        boxShadow: 'rgba(0,0,0,0.1) 0 0 10px'
+      <img src="/static/images/content/advizr/7.png" style={{
+        width: '100%',
+        margin: '0 auto 40px',
+        maxWidth: '800px',
+        display: 'block'
       }}/>
 
       <div className={styles.content}>
 
-        <div className={styles.sidebar}>
-
-          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
-
-          <p>As the first full-time developer hire, I helped lead technical strategy, taking ownership of UX and UI Development.</p>
-
-          <ul>
-            <li>Led API Design, UX, and UI development.</li>
-            <li>Helped build a small team.</li>
-            <li>Requirement gathering, information architecture, wireframing, and prototyping.</li>
-            <li>Helped transition to Agile and installed processes.</li>
-          </ul>
-
-          <h3 className={styles.awards}><i className='fa fa-award'/>Achievements &amp; Awards</h3>
-
-          <ul>
-            <li>Acquired by Orion Advisor Services in 2019</li>
-            <li>Pre-revenue to $2MM in two years</li>
-            <li>Recognized as Best Client-Facing Technology of 2015 by FPPad</li>
-            <li>2018 "Best 401k Technology" Industry Award from WealthManagement.com</li>
-            <li>Customers loved our product!</li>
-          </ul>
-
-          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
-
-          <ul>
-            <li>SPA mobile-friendly (fully-responsive) HTML5 app</li>
-            <li>.NET REST API, vanilla Javascript, jQuery, <a href="https://github.com/mhweiner/hmjs" target='_blank'>HMJS</a>, Highcharts, oAuth. Later, ReactJS.</li>
-            <li>3rd party integration with Quovo, Blueleaf, Riskalyze & more</li>
-            <li>Custom node.js/npm build & release tooling</li>
-          </ul>
-
-        </div>
-
         <div className={styles.main}>
+
+          <h2>I helped a fledgling startup grow from pre-revenue to a profitable, industry-leading, award-winning application.</h2>
 
           <p>For professional Financial Advisors, writing a financial plan was a time consuming and labor intensive process. Existing tools were difficult to use
             and didn't reflect the needs of advisors or their clients, leaving a professional financial plan out of reach for many.</p>
 
           <p>Advizr, an early-stage 5-person startup, wanted to change all of that, making financial plans more accessible, and more useful.</p>
+
+          <p>As the first full-time developer hire, I helped lead technical strategy, taking ownership of UX and UI Development.</p>
 
           <h3>Technical Strategy</h3>
 
@@ -88,12 +61,45 @@ export default class Advizr extends React.PureComponent {
 
         </div>
 
+        <div className={styles.sidebar}>
+
+          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
+
+          <ul>
+            <li>Led API Design, UX, and UI development.</li>
+            <li>Helped build a small team.</li>
+            <li>Requirement gathering, information architecture, wireframing, and prototyping.</li>
+            <li>Helped transition to Agile and installed processes.</li>
+          </ul>
+
+          <h3 className={styles.awards}><i className='fa fa-award'/>Achievements &amp; Awards</h3>
+
+          <ul>
+            <li>Acquired by Orion Advisor Services in 2019</li>
+            <li>Pre-revenue to $2MM in two years</li>
+            <li>Recognized as Best Client-Facing Technology of 2015 by FPPad</li>
+            <li>2018 "Best 401k Technology" Industry Award from WealthManagement.com</li>
+            <li>Customers loved our product!</li>
+          </ul>
+
+          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
+
+          <ul>
+            <li>SPA mobile-friendly (fully-responsive) HTML5 app</li>
+            <li>.NET REST API, vanilla Javascript, jQuery, <a href="https://github.com/mhweiner/hmjs" target='_blank'>HMJS</a>, Highcharts, oAuth. Later, ReactJS.</li>
+            <li>3rd party integration with Quovo, Blueleaf, Riskalyze & more</li>
+            <li>Custom node.js/npm build & release tooling</li>
+          </ul>
+
+        </div>
+
       </div>
 
       <div className={styles.images}>
         <img src="/static/images/content/advizr/13.png" style={{boxShadow: 'rgba(0,0,0,0.1) 0 0 10px'}}/>
         <img src="/static/images/content/advizr/8.png"  style={{boxShadow: 'rgba(0,0,0,0.1) 0 0 10px'}}/>
-        <img src="/static/images/content/advizr/7.png"/>
+        <img src="/static/images/content/advizr/5.png"  style={{boxShadow: 'rgba(0,0,0,0.1) 0 0 10px'}}/>
+        <img src="/static/images/content/advizr/2.png"  style={{boxShadow: 'rgba(0,0,0,0.1) 0 0 10px'}}/>
         <img src="/static/images/content/advizr/11.png"/>
       </div>
 

@@ -94,7 +94,7 @@ export default class ProjectDetails extends React.PureComponent {
     return (
       <div className={styles.default} ref={this.ref}>
         <BackButton onClick={() => mr.go('projects')}/>
-        <h1 className={styles.title}>{this.project.title}<p className={styles.tags}>{this.project.years}</p></h1>
+        <h1 className={styles.title}>{this.project.title}</h1>
         <div className={styles.content} ref={this.contentRef}>
           {this.project.content}
         </div>

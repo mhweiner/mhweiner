@@ -59,7 +59,7 @@ $breakpoint: 1350;
   margin: 0 auto;
   display: flex;
 
-  @include media(0, 850) {
+  @include media(0, 900) {
 
     display: block;
 
@@ -95,6 +95,7 @@ $breakpoint: 1350;
 .sidebar {
 
   width: 300px;
+  order: -1;
 
   p {
 
@@ -155,12 +156,24 @@ $breakpoint: 1350;
 
   }
 
-  @include media(0, 850) {
+  @include media(0, 900) {
 
     width: auto;
     background: #1d1c1c;
     padding: 30px;
     box-shadow: $color-secondary 8px 8px 0;
+    margin: 40px auto 0;
+    max-width: 700px;
+
+    a, a:visited {
+
+      &:hover {
+
+        color: white;
+
+      }
+
+    }
 
     p, li {
 
@@ -177,6 +190,15 @@ $breakpoint: 1350;
   width: 600px;
   padding: 0 0 0 40px;
 
+  h2 {
+
+    font-family: $font;
+    font-size: 25px;
+    margin: 0 0 20px 0;
+    line-height: 1.5;
+
+  }
+
   h3 {
 
     margin: 15px 0 20px;
@@ -189,11 +211,12 @@ $breakpoint: 1350;
 
   }
 
-  @include media(0, 850) {
+  @include media(0, 900) {
 
     width: auto;
     padding: 0;
-    margin: 50px 0 0 0;
+    margin: 0 auto;
+    max-width: 700px;
 
   }
 
