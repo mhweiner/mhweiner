@@ -159,11 +159,10 @@ $breakpoint: 1350;
   @include media(0, 900) {
 
     width: auto;
-    background: #1d1c1c;
-    padding: 30px;
-    box-shadow: $color-secondary 8px 8px 0;
     margin: 40px auto 0;
     max-width: 700px;
+    border-top: 2px solid #cccccc;
+    padding: 40px 0;
 
     a, a:visited {
 
