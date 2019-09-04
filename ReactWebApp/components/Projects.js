@@ -21,6 +21,13 @@ export default class Projects extends React.PureComponent {
 
   componentDidMount() {
 
+    if (window.lastScrollY) {
+
+      window.scrollTo(0, window.lastScrollY);
+      window.lastScrollY = 0;
+
+    }
+
     this.animateIn();
 
   }
@@ -42,6 +49,13 @@ export default class Projects extends React.PureComponent {
 
   };
 
+  goToProject = (projectId) => {
+
+    window.lastScrollY = window.scrollY;
+    mr.go('project', {id: projectId});
+
+  };
+
   render() {
 
     let projectList = [];
@@ -51,7 +65,7 @@ export default class Projects extends React.PureComponent {
       projectList.push(<ProjectListItem
         key={k.toString()}
         project={project}
-        onClick={() => mr.go('project', {id: project.id})}
+        onClick={() => this.goToProject(project.id)}
       />);
 
     });
