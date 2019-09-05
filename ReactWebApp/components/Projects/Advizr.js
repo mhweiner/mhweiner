@@ -21,7 +21,7 @@ export default class Advizr extends React.PureComponent {
 
         <div className={styles.main}>
 
-          <h2>I helped a fledgling startup grow from pre-revenue to a profitable, industry-leading, award-winning application.</h2>
+          <h2>I helped a fledgling startup grow from pre-revenue to a profitable, industry-leading, award-winning business.</h2>
 
           <p>For professional Financial Advisors, writing a financial plan was a time consuming and labor intensive process. Existing tools were difficult to use
             and didn't reflect the needs of advisors or their clients, leaving a professional financial plan out of reach for many.</p>
