@@ -8,8 +8,7 @@
   height: 225px;
   line-height: 225px;
   text-align: center;
-  max-width: 600px;
-  transition: all 0.2s ease-in-out;
+  max-width: 650px;
 
   @include media(0, 400) {
 
@@ -39,10 +38,39 @@
 
   }
 
-  &.hover {
+  .seeDetails {
 
-    box-shadow: rgba(0,0,0,0.5) 4px 4px 20px 0;
-    @include scale(1.02, 1.02);
+    background: rgba(0, 0, 0, 0.8);
+    line-height: 40px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 200px;
+    margin: -20px 0 0 -100px;
+    color: white;
+    font-weight: 700;
+    border-radius: 40px;
+    font-size: 15px;
+    opacity: 0;
+    @include scale(0.93,0.93);
+    transition: all 0.4s cubic-bezier(.3,.71,.44,1.02);
+
+    i {
+
+      margin: 0 5px 0 0;
+
+    }
+
+  }
+
+  &.isHovering {
+
+    .seeDetails {
+
+      opacity: 1;
+      @include scale(1,1);
+
+    }
 
   }
 

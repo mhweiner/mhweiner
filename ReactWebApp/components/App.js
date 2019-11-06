@@ -99,10 +99,22 @@ export default class App extends React.Component {
     };
 
     let navProps = {
-      page: this.state.page,
       hidden: this.state.page === 'project',
-      opaque: this.state.page !== 'home'
+      opaque: this.state.page !== 'home',
+      page: this.state.page
     };
+
+    switch(this.state.page) {
+      case "project":
+        navProps.title = this.state.project;
+        break;
+      case "projects":
+        navProps.title = 'My Work';
+        break;
+      case "about":
+        navProps.title = 'My Story';
+        break;
+    }
 
     if (this.state.isLoading) {
 
@@ -111,7 +123,7 @@ export default class App extends React.Component {
     } else {
 
       return <div className={styles.default}>
-        <Nav {...navProps}/>
+        {this.state.page !== 'home' && <Nav {...navProps}/>}
         <Transition
           routes={routes}
           page={this.state.page}

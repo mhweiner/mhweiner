@@ -27,16 +27,12 @@ export default class ProjectListItem extends React.Component {
   render() {
     
     let project = this.props.project;
-    let tags = this.props.project.tags.map((tag, k) => <div className={styles.tag} key={k.toString()}>
-      {tag}
-    </div>);
     
     return <div className={styles.default} onClick={this.props.onClick} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
       <ProjectThumbnail project={project} hover={this.state.hover}/>
       <div className={styles.text}>
+        <h5>{this.props.project.industry}</h5>
         <h4>{project.title}</h4>
-        <p>{project.description}</p>
-        <div className={styles.tags}>{tags}</div>
       </div>
     </div>;
 

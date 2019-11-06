@@ -32,8 +32,8 @@ export default class Advizr extends React.PureComponent {
 
           <h3>Technical Strategy</h3>
 
-          <p>It was clear to me that as an early stage startup, <em style={{fontWeight: 'bold'}}>the ability to iterate
-            and grow the application quickly while mitigating risk</em> was crucial. It's not like our clients had handed
+          <p>It was clear to me that as an early stage startup, <mark>the ability to iterate
+            and grow the application quickly while mitigating risk</mark> was crucial. It's not like our clients had handed
             us specs &mdash; we didn't really know what we needed to build. To this end, I wanted to make things as modular and flexible
             as possible, and adopt an Agile methodology. It was this philosophy of iteration, coupled with a tight consumer relationship, that would
             end up being the key to our success.</p>

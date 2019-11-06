@@ -5,7 +5,7 @@ import logoStyles from './Planet-logo.scss';
 
 export default function Planet(props) {
 
-  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 313 184" className={props.logo ? logoStyles.default : styles.default}>
+  return <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 313 184">
     <g fill="none" fillRule="evenodd" transform="rotate(-24 162.5 122.08009571)">
       <path d="M169 141C75.6638773 141 0 119.509668 0 93s75.6638773-48 169-48c93.336123 0 169 21.490332 169 48s-75.663877 48-169 48zm.5-34C243.230014 107 303 95.3594035 303 81s-59.769986-26-133.5-26C95.7699859 55 36 66.6405965 36 81s59.7699859 26 133.5 26z"/>
       <circle cx="168.5" cy="91.5" r="91.5"/>

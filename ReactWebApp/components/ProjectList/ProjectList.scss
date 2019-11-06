@@ -1,0 +1,25 @@
+@import "../../styles/defines";
+
+.default {
+
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+
+  > div {
+
+    width: 50%;
+
+  }
+
+  @include media(0, 800) {
+
+    > div {
+
+      width: 100%;
+
+    }
+
+  }
+
+}

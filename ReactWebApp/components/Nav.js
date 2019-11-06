@@ -1,6 +1,7 @@
 import React from 'react';
 
 import Planet from "./Planet";
+import {addClass, removeClass} from "../utils/DOM";
 
 import styles from './Nav.scss';
 
@@ -10,78 +11,42 @@ export default class Nav extends React.Component {
 
   componentDidMount() {
 
-    if (this.props.hidden) {
-
-      this.hide();
-
-    }
+    this.timeout = setTimeout(this.animateIn, 200);
 
   }
 
-  componentWillUpdate(nextProps, nextState, nextContext) {
+  componentWillUnmount() {
 
-    if (nextProps.hidden && !this.props.hidden) {
-
-      this.hide();
-      return false;
-
-    } else if (!nextProps.hidden && this.props.hidden) {
-
-      this.show();
-      return false;
-
-    }
-
-    return true;
+    clearTimeout(this.timeout);
 
   }
 
-  hide = () => {
+  animateIn = () => {
 
-    this.ref.current.style.opacity = 0;
+    addClass(this.ref.current, styles.animateIn);
+    this.ref.current.style.display = 'block';
+
     setTimeout(() => {
-      this.ref.current.style.display = 'none';
-    }, 300);
+
+      removeClass(this.ref.current, styles.animateOut);
+
+    }, 600);
 
   };
 
-  show = () => {
+  animateOut = callback => {
 
-    setTimeout(() => {
-
-      this.ref.current.style.display = 'block';
-
-      setTimeout(() => {
-
-        this.ref.current.style.opacity = 1;
-
-      }, 100);
-
-    }, 500);
+    addClass(this.ref.current, animations.animateOutToTop);
+    setTimeout(callback, 600);
 
   };
 
   render() {
 
-    let classes = [styles.default];
-
-    if (this.props.opaque) {
-
-      classes.push(styles.opaque);
-
-    }
-
-    if (this.props.page === 'home') {
-
-      classes.push(styles.homepage);
-
-    }
-
-    return <div className={classes.join(' ')} ref={this.ref}>
+    return <div className={styles.default} ref={this.ref}>
       <a href='#home' className={styles.logo}><Planet logo={true}/></a>
-      <a href='#about' className={this.props.page === 'about' ? styles.selected : null}>about</a>
-      <a href='#projects' className={this.props.page === 'projects' ? styles.selected : null}>projects</a>
-      <a href='http://github.com/mhweiner' target='_blank'>github</a>
+      <a href='#about' className={this.props.page === 'about' ? styles.selected : ''}><i className='fa fa-user-astronaut'/></a>
+      <a href='#projects' className={this.props.page === 'projects' ? styles.selected : ''}><i className="fas fa-briefcase"/></a>
     </div>;
 
   }

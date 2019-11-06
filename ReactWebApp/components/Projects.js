@@ -2,19 +2,12 @@ import React from 'react';
 import {addClass, removeClass} from "../utils/DOM";
 import mr from 'mr-router';
 
-import {projects} from '../projectData';
-
-import LoaderAnimation from "./LoaderAnimation";
-import ProjectListItem from "./ProjectList/ProjectListItem";
+import ProjectList from "./ProjectList/ProjectList";
 
 import styles from './Projects.scss';
 import animations from "../styles/animations.scss";
 
 export default class Projects extends React.PureComponent {
-
-  state = {
-    filter: []
-  };
 
   ref = React.createRef();
   contentRef = React.createRef();
@@ -58,25 +51,14 @@ export default class Projects extends React.PureComponent {
 
   render() {
 
-    let projectList = [];
-
-    projects.map((project, k) => {
-
-      projectList.push(<ProjectListItem
-        key={k.toString()}
-        project={project}
-        onClick={() => this.goToProject(project.id)}
-      />);
-
-    });
-
     return (
       <div className={styles.default} ref={this.ref}>
         <div ref={this.contentRef} className={styles.belt}>
-          {!projectList.length && <div>There are no projects that match your filter.</div>}
-          {projectList}
+          <h2>My Work</h2>
+          <p>My work spans multiple industries and disciplines. Below are some projects where I have made substantial contributions in technical strategy,
+          architecture, full-stack development, UX, and leadership.</p>
+          <ProjectList onClick={this.goToProject}/>
         </div>
-        {!!this.state.isLoading && <LoaderAnimation/>}
       </div>
     )
 

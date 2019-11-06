@@ -26,8 +26,6 @@ export const projects = [
   {
     id: 'Advizr',
     title: 'Advizr',
-    description: 'Financial Planning, reinvented.',
-    tags: ['Full-Stack', 'UX', 'Dev-Ops', 'Architecture', 'API Design'],
     containerStyle: {
       background: 'url(/static/images/project-thumbs/advizr-screenshot.png) no-repeat top center',
       backgroundSize: 'cover'
@@ -35,14 +33,13 @@ export const projects = [
     award: true,
     content: <Advizr/>,
     years: '2014-2016',
-    website: 'https://www.advizr.com/'
+    website: 'https://www.advizr.com/',
+    industry: 'Fintech'
   },
 
   {
     id: 'Shutterstock_Invoice_API',
     title: 'Shutterstock Invoice API',
-    description: 'Microservice that powers Shutterstock\'s enterprise e-commerce systems.',
-    tags: ['Back-End', 'Architecture', 'API Design'],
     bgSrc: '/static/images/project-thumbs/shutterstock-bg.jpg',
     imgSrc: '/static/images/project-thumbs/logos/shutterstock.png',
     imgStyle: {
@@ -51,26 +48,24 @@ export const projects = [
     },
     content: <Shutterstock/>,
     years: '2017',
-    website: 'https://www.shutterstock.com'
+    website: 'https://www.shutterstock.com',
+    industry: 'E-Commerce'
   },
 
   {
     id: 'Marvel.com',
     title: 'Marvel.com',
-    description: 'The official website of Marvel Entertainment.',
-    tags: ['R&D', 'Full-Stack', 'Dev-Ops'],
     imgSrc: '/static/images/project-thumbs/logos/marvel-white.png',
     bgSrc: '/static/images/project-thumbs/marvel-bg.jpg',
     content: <Marvel/>,
     years: '2013',
-    website: 'https://www.marvel.com'
+    website: 'https://www.marvel.com',
+    industry: 'Entertainment'
   },
 
   {
     id: 'Elemental_Cognition',
     title: 'Elemental Cognition',
-    description: 'Making AI human-friendly.',
-    tags: ['R&D', 'Full-Stack', 'UX', 'API Design'],
     containerStyle: {
       background: 'linear-gradient(90deg, #6c34a6, #407477)'
     },
@@ -83,35 +78,34 @@ export const projects = [
     },
     content: <ElementalCognition/>,
     years: '2018-2019',
-    website: 'http://www.elementalcognition.com'
+    website: 'http://www.elementalcognition.com',
+    industry: 'Artificial Intelligence, R&D'
   },
 
   {
     id: 'Ciro',
     title: 'Ciro',
-    description: 'Helping development teams communicate more effectively.',
-    tags: ['Founder', 'Everything'],
     containerStyle: {
       background: 'url(/static/images/project-thumbs/ciro-lockup.jpg) no-repeat top center',
       backgroundSize: 'cover'
     },
     content: <Ciro/>,
     years: '2015-2017',
-    website: 'https://ciroapp.com'
+    website: 'https://ciroapp.com',
+    industry: 'Project Management, Collaboration'
   },
 
   {
     id: 'Devotify',
     title: 'Devotify',
-    description: 'Hyper-local loyalty platform for iOS and Android.',
-    tags: ['Full-Stack', 'Dev-Ops', 'API Design'],
     containerStyle: {
       background: 'url(/static/images/project-thumbs/devotify-phone.jpg) no-repeat top center',
       backgroundSize: 'cover'
     },
     content: <Devotify/>,
     years: '2013-2014',
-    website: 'http://www.devotify.com'
+    website: 'http://www.devotify.com',
+    industry: 'Loyalty, E-Commerce'
   }
 
 ];

@@ -51,7 +51,6 @@ $breakpoint: 450;
     font-size: 43px;
     font-weight: 700;
     margin: 0 0 30px 0;
-    font-family: $font-header;
 
     @include media(400, 450) {
 
@@ -68,7 +67,7 @@ $breakpoint: 450;
 
     a {
 
-      color: #07ff71;
+      color: $color-primary;
       border: none;
       text-decoration: underline;
 
@@ -83,16 +82,16 @@ $breakpoint: 450;
     a.seeProjects {
 
       display: block;
-      font-size: 16px;
-      line-height: 40px;
+      font-size: 17px;
+      line-height: 45px;
       margin: 25px auto;
-      width: 130px;
-      border: none;
+      width: 141px;
       color: black;
       background: white;
       padding: 0 20px;
       text-decoration: none;
       transition: all 0.2s ease-in-out;
+      border-radius: 3px;
 
       &:hover {
 
@@ -132,5 +131,21 @@ $breakpoint: 450;
   @include animation(animateObject 45s linear);
   @include animation-fill-mode(forwards);
   z-index: 1;
+
+  svg {
+
+    circle {
+
+      fill: url(#grad1);
+
+    }
+
+    path {
+
+      fill: #673AB7;
+
+    }
+
+  }
 
 }
