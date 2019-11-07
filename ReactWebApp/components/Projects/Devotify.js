@@ -49,7 +49,7 @@ export default class Devotify extends React.PureComponent {
 
         <div className={styles.sidebar}>
 
-          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
+          <h3 className={styles.involvement}>My Involvement</h3>
 
           <p>I was hired as a consultant to develop the MVP, which launched in early 2014.</p>
 
@@ -58,14 +58,14 @@ export default class Devotify extends React.PureComponent {
             <li>Dev-ops: Custom build process for white-label app production that scales easily with optimal performance.</li>
           </ul>
 
-          <h3 className={styles.awards}><i className='fa fa-award'/>Outcome &amp; Achievements</h3>
+          <h3 className={styles.awards}>Outcome</h3>
 
           <ul>
             <li>Successfully delivered MVP by tight deadline and to excellent reception.</li>
             <li>Company was able to use the MVP to raise funding.</li>
           </ul>
 
-          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
+          <h3 className={styles.tech}>Technology</h3>
 
           <ul>
             <li>REST API, built with a lightweight, modular custom PHP HMVC framework</li>

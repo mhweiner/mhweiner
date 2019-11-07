@@ -55,11 +55,10 @@ $breakpoint: 1350;
 .content {
 
   padding: 0 0 35px;
-  max-width: 1000px;
-  margin: 0 auto;
   display: flex;
+  justify-content: space-around;
 
-  @include media(0, 900) {
+  @include media(0, 1000) {
 
     display: block;
 
@@ -74,7 +73,6 @@ $breakpoint: 1350;
     mark {
 
       color: black;
-      font-weight: 700;
       background: #92ffe8;
       padding: 2px;
 
@@ -101,30 +99,21 @@ $breakpoint: 1350;
 
 .sidebar {
 
-  width: 300px;
+  width: 35%;
   order: -1;
+  max-width: 300px;
 
   p {
 
-    font-size: 17px;
+    font-size: 18px;
 
   }
 
   h3 {
 
     margin: 40px 0 30px;
-    font-size: 18px;
+    font-size: 22px;
     line-height: 30px;
-    text-transform: uppercase;
-
-    i {
-
-      font-size: 28px;
-      margin: 0 14px 0 0;
-      display: inline-block;
-      vertical-align: middle;
-
-    }
 
     &.awards {
 
@@ -155,14 +144,14 @@ $breakpoint: 1350;
     li {
 
       line-height: 1.5;
-      font-size: 17px;
+      font-size: 18px;
       margin: 0 0 10px 0;
 
     }
 
   }
 
-  @include media(0, 900) {
+  @include media(0, 1000) {
 
     width: auto;
     margin: 40px auto 0;
@@ -176,8 +165,8 @@ $breakpoint: 1350;
 
 .main {
 
-  width: 600px;
-  padding: 0 0 0 40px;
+  width: 65%;
+  max-width: 600px;
 
   h2 {
 
@@ -196,7 +185,7 @@ $breakpoint: 1350;
 
   }
 
-  @include media(0, 900) {
+  @include media(0, 1000) {
 
     width: auto;
     padding: 0;

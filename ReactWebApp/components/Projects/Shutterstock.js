@@ -62,26 +62,25 @@ export default class Shutterstock extends React.PureComponent {
 
         <div className={styles.sidebar}>
 
-          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
+          <h3 className={styles.involvement}>My Involvement</h3>
 
           <ul>
             <li>Led architecture &amp; development of backend API orchestration service.</li>
             <li>Worked with other stakeholder teams to understand and gather technical requirements.</li>
             <li>Worked with legacy system team to help design a solution to the performance issues.</li>
-            <li>Worked closely with other internal teams to integrate with their services.</li>
             <li>Led in writing technical documentation and API specification.</li>
             <li>Established design patterns throughout the application, including testing procedures and philosophy.</li>
             <li>Worked closely with QA team to help enable them to help enable them to write a test plan and ensure the highest possible quality.</li>
             <li>Helped identify potential security issues and design solutions.</li>
           </ul>
 
-          <h3 className={styles.awards}><i className='fa fa-award'/>Outcome &amp; Achievements</h3>
+          <h3 className={styles.awards}>Outcome</h3>
 
           <ul>
             <li>The project enjoyed a smooth, successful, on-time launch and was well received by users.</li>
           </ul>
 
-          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
+          <h3 className={styles.tech}>Technology</h3>
 
           <ul>
             <li>NodeJS ES6, Express REST API</li>

@@ -79,7 +79,7 @@ export default class Marvel extends React.PureComponent {
 
         <div className={styles.sidebar}>
 
-          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
+          <h3 className={styles.involvement}>My Involvement</h3>
 
           <ul>
             <li>Led R&D and front-end architecture.</li>
@@ -90,7 +90,7 @@ export default class Marvel extends React.PureComponent {
               (<a href="https://github.com/mhweiner/jdiff" target='_blank'>jdiff</a>).</li>
           </ul>
 
-          <h3 className={styles.awards}><i className='fa fa-award'/>Outcome &amp; Achievements</h3>
+          <h3 className={styles.awards}>Outcome</h3>
 
           <ul>
             <li>Successfully launched by deadline with two weeks to spare and to excellent reception.</li>
@@ -98,7 +98,7 @@ export default class Marvel extends React.PureComponent {
             <li>Website lasted from 2013 - 2018!</li>
           </ul>
 
-          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
+          <h3 className={styles.tech}>Technology</h3>
 
           <ul>
             <li>HTML5/CSS3, Javascript, ZeptoJS, PHP, Ruby</li>

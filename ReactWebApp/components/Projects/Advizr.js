@@ -38,17 +38,14 @@ export default class Advizr extends React.PureComponent {
             as possible, and adopt an Agile methodology. It was this philosophy of iteration, coupled with a tight consumer relationship, that would
             end up being the key to our success.</p>
 
-          <p>When I first joined, my first priority was to move from a traditional .NET MVC application to a REST API powered SPA (single page application).
-            There were many benefits to this, but all contributed to increased velocity, scalability, testability, and flexibility.
+          <p>My first priority was to move from a traditional .NET MVC application to a REST API powered SPA (single page application).
+            This improved velocity, scalability, testability, flexibility, and user experience. My second priority was implementing an Agile
+            workflow process that allowed us to iterate and try out new features while allocating time to manage technical debt and
+            re-investing in our infrastructure.
           </p>
 
-          <p>My second priority was implementing a good Agile workflow process that allowed us to iterate and try out new features while allocating time
-          to manage technical debt and re-investing into our infrastructure.
-          </p>
-
-          <p>Unfortunately, this was 2014, and front-end component libraries like React were not quite ready or met our requirements. I ended up writing a small simple library <a href='http://github.com/mhweiner/hmjs' target='_blank'>HMJS</a>, built around jQuery, vanilla Javascript, and the ubiquitous <a href="https://mustache.github.io/" target='_blank'>Mustache</a> templating library.
-            It had excellent performance (outperformed Angular) and supported legacy browsers down to IE9, a requirement at the time. This strategy succeeded in both embracing new techniques while minimizing the risk of being locked into
-            large nascent frameworks and ecosystems. The tiny and well-tested HMJS library mostly relied on other proven libraries such as jQuery and Mustache. Later on, Advizr would migrate to React, once it became stable and our requirement to support legacy browsers was dropped.
+          <p>In 2014, front-end component libraries like React were not yet available, so I used a simple component-driven library that I wrote, <a href='http://github.com/mhweiner/hmjs' target='_blank'>HMJS</a>. This strategy succeeded in both embracing new techniques while minimizing the risk of being locked into
+            large nascent frameworks and ecosystems. Later on, Advizr would migrate to React.
           </p>
 
           <p>The front-end UI was also responsive (mobile-friendly) down to tablet sizes. This was a requirement so that Advisors can run the software on an iPad while working with their clients, and hand it to them.</p>
@@ -63,26 +60,24 @@ export default class Advizr extends React.PureComponent {
 
         <div className={styles.sidebar}>
 
-          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
+          <h3 className={styles.involvement}>My Involvement</h3>
 
           <ul>
             <li>Led API Design, UX, and UI development.</li>
-            <li>Helped build a small team.</li>
+            <li>Helped build a small team and established Agile process.</li>
             <li>Requirement gathering, information architecture, wireframing, and prototyping.</li>
-            <li>Helped transition to Agile and installed processes.</li>
           </ul>
 
-          <h3 className={styles.awards}><i className='fa fa-award'/>Achievements &amp; Awards</h3>
+          <h3 className={styles.awards}>Outcome &amp; Awards</h3>
 
           <ul>
             <li>Acquired by Orion Advisor Services in 2019</li>
             <li>Pre-revenue to $2MM in two years</li>
             <li>Recognized as Best Client-Facing Technology of 2015 by FPPad</li>
             <li>2018 "Best 401k Technology" Industry Award from WealthManagement.com</li>
-            <li>Customers loved our product!</li>
           </ul>
 
-          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
+          <h3 className={styles.tech}>Technology</h3>
 
           <ul>
             <li>SPA mobile-friendly (fully-responsive) HTML5 app</li>

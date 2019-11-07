@@ -102,7 +102,7 @@ export default class ElementalCognition extends React.PureComponent {
 
         <div className={styles.sidebar}>
 
-          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
+          <h3 className={styles.involvement}>My Involvement</h3>
 
           <ul>
             <li>Led R&D, front-end architecture and development.</li>
@@ -110,7 +110,7 @@ export default class ElementalCognition extends React.PureComponent {
             <li>Worked closely with researchers and reported directly to Dr. Ferrucci.</li>
           </ul>
 
-          <h3 className={styles.awards}><i className='fa fa-award'/>Outcome &amp; Achievements</h3>
+          <h3 className={styles.awards}>Outcome</h3>
 
           <ul>
             <li>Successfully delivered first version by tight deadline and to excellent reception.</li>
@@ -118,7 +118,7 @@ export default class ElementalCognition extends React.PureComponent {
             <li>Used to show investors and demonstrate our IP.</li>
           </ul>
 
-          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
+          <h3 className={styles.tech}>Technology</h3>
           <ul>
             <li>HTML5, ES6, Typescript, React, Flux</li>
             <li>REST API (Java)</li>

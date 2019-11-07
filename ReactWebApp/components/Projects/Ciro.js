@@ -44,24 +44,21 @@ export default class Ciro extends React.PureComponent {
 
           <h3>Outcome</h3>
 
-          <p>Although Ciro is still operational, I am no longer actively maintaining it. I worked on Ciro full-time for
-            a year and a half, signing up thousands of users and taking hundreds of feature requests. There has certainly
-            been some validation from actual users. However, business-wise, the numbers told a different story.</p>
-
-          <p>There is a lot of friction in getting a team switched to a new platform, and the project management space
-          is incredibly crowded. Building all of the required features and marketing Ciro would require an enormous amount of
-            capital &mdash; and with it, a lot of responsibility to my investors and employees. Although as
-            an engineer, I think it's worth the effort, as an entrepreneur, one must have a deeper commitment.</p>
+          <p>I worked on Ciro full-time for
+            a year and a half, signing up thousands of users and taking hundreds of feature requests. Although there has been some user validation, it turned out to be a very
+            difficult market to penetrate. There is a lot of friction in getting a team switched to a new platform, and the project management space
+          is incredibly crowded. I also made several mistakes, including not finding a co-founder
+          soon enough. I take away a lot of lessons from this project.</p>
 
         </div>
 
         <div className={styles.sidebar}>
 
-          <h3 className={styles.involvement}><i className='fa fa-user-astronaut'/>My Involvement</h3>
+          <h3 className={styles.involvement}>My Involvement</h3>
 
           <p>I am the <strong>sole founder</strong> and did all of the design, architecture, strategy, development, and dev-ops for the MVP.</p>
 
-          <h3 className={styles.tech}><i className='fa fa-cogs'/>Technology</h3>
+          <h3 className={styles.tech}>Technology</h3>
 
           <ul>
             <li>Fully responsive, custom component-based Javascript SPA MVVM framework built with <a href="http://github.com/mhweiner/hmjs" target="_blank">HMJS</a></li>
