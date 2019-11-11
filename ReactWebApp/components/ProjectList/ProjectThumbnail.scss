@@ -53,7 +53,7 @@
     font-size: 15px;
     opacity: 0;
     @include scale(0.93,0.93);
-    transition: all 0.4s cubic-bezier(.3,.71,.44,1.02);
+    transition: all 0.3s cubic-bezier(.3,.71,.44,1.02);
 
     i {
 
