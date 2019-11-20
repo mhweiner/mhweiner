@@ -17,7 +17,7 @@ export default class ElementalCognition extends React.PureComponent {
       if (pw === 'password') {
 
         this.setState({
-          h: false
+          unlocked: true
         });
 
       }
@@ -72,7 +72,7 @@ export default class ElementalCognition extends React.PureComponent {
 
           <p>The first thing I worked on was a way to visually demonstrate the system's understanding, which I called VKR (Visual Knowledge Representation).</p>
 
-          {!this.state.h &&  <div className={styles.images} style={{margin: '30px -80px 0'}}>
+          {this.state.unlocked &&  <div className={ECStyles.img} style={{margin: '30px -80px 0'}}>
             <img src='/static/images/content/ec/VKR.png'/>
           </div>}
 
@@ -81,7 +81,7 @@ export default class ElementalCognition extends React.PureComponent {
           <p>Then I had to design an application where the user can "chat" with the system, see what it's "thinking", and be able to see the VKR and Summary.
             The user also needs to see the story on the left to have common reference with the system.</p>
 
-          {!this.state.h && <div className={styles.images} style={{margin: '30px -80px 0'}}>
+          {this.state.unlocked && <div className={ECStyles.img} style={{margin: '30px -80px 0'}}>
             <img src='/static/images/content/ec/chat.jpg'/>
             <img src='/static/images/content/ec/thinking.jpg'/>
           </div>}
@@ -130,7 +130,7 @@ export default class ElementalCognition extends React.PureComponent {
       </div>
 
       <div className={styles.images}>
-        {!this.state.h && <iframe
+        {!this.state.unlocked && <iframe
             src="https://player.vimeo.com/video/308217091"
             frameBorder="0"
             webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen
