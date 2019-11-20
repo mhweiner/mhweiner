@@ -130,7 +130,7 @@ export default class ElementalCognition extends React.PureComponent {
       </div>
 
       <div className={styles.images}>
-        {!this.state.unlocked && <iframe
+        {this.state.unlocked && <iframe
             src="https://player.vimeo.com/video/308217091"
             frameBorder="0"
             webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen
