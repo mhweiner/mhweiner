@@ -40,19 +40,22 @@
 
   .seeDetails {
 
-    background: rgba(0, 0, 0, 0.8);
+    background: $color-primary;
     line-height: 40px;
     position: absolute;
     left: 50%;
     top: 50%;
     width: 200px;
     margin: -20px 0 0 -100px;
-    color: white;
+    color: black;
     font-weight: 700;
-    border-radius: 40px;
     font-size: 15px;
     opacity: 0;
     transition: all 0.2s ease-in-out;
+    -webkit-transform: translateY(5px);
+    transform: translateY(5px);
+    border: 3px solid black;
+    box-shadow: 4px 4px #5898ff;
     @include translateY(5px);
 
     i {
