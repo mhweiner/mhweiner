@@ -21,7 +21,7 @@
     right: 0;
     bottom: 0;
     opacity: 0;
-    transition: opacity 0.2s ease-in-out;
+    transition: opacity 0.4s cubic-bezier(.3,.71,.44,1.02);
 
 
   }
@@ -65,7 +65,7 @@
     font-weight: 700;
     font-size: 19px;
     opacity: 0;
-    transition: all 0.2s ease-in-out;
+    transition: all 0.4s cubic-bezier(.3,.71,.44,1.02);
     border: none;
     box-shadow: 5px 5px black;
     z-index: 1;
