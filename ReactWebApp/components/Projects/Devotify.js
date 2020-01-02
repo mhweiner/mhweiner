@@ -28,8 +28,9 @@ export default class Devotify extends React.PureComponent {
             gamification with different rewards levels, push notifications, blog, coupons and special events,
             geo-location, event calendar, QR code scan system for payment and loyalty, and more.</p>
 
-          <p>The challenge was to build a cross-platform MVP in a short timeline, under a tight budget. Each customer
-            gets their own white-labled iOS and Android apps.</p>
+          <p>I was hired as a consultant to develop the MVP, which launched in early 2014. The challenge was to build a
+            cross-platform MVP in a short timeline, under a tight budget. Each customer gets their own white-labled iOS and Android apps.
+          </p>
 
           <h3>Technical Strategy</h3>
 
@@ -50,8 +51,6 @@ export default class Devotify extends React.PureComponent {
         <div className={styles.sidebar}>
 
           <h3 className={styles.involvement}>My Involvement</h3>
-
-          <p>I was hired as a consultant to develop the MVP, which launched in early 2014.</p>
 
           <ul>
             <li>Architecture and development of hybrid HTML5/native cross-platform app and backend REST API.</li>

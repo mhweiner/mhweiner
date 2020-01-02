@@ -7,7 +7,7 @@ $breakpoint: 1350;
   padding: 0 30px;
   max-width: 1200px;
   margin: 0 auto;
-  color: #333;
+  color: black;
 
   a {
 
@@ -72,7 +72,7 @@ $breakpoint: 1350;
 
     mark {
 
-      olor: black;
+      color: black;
       background: none;
       font-weight: 700;
       border-bottom: 2px solid #000000;
@@ -101,7 +101,6 @@ $breakpoint: 1350;
 .sidebar {
 
   width: 35%;
-  order: -1;
   max-width: 300px;
 
   p {
@@ -113,9 +112,10 @@ $breakpoint: 1350;
   h3 {
 
     margin: 0 0 15px;
-    border-bottom: 0.5px solid #b4b4b4;
-    padding: 0 0 15px;
     font-size: 22px;
+    color: #444;
+
+    /*
 
     &.awards {
 
@@ -135,6 +135,8 @@ $breakpoint: 1350;
 
     }
 
+    */
+
   }
 
   ul {
@@ -147,6 +149,7 @@ $breakpoint: 1350;
       line-height: 1.5;
       font-size: 18px;
       margin: 0 0 10px 0;
+      color: #444;
 
     }
 
@@ -182,7 +185,7 @@ $breakpoint: 1350;
   h3 {
 
     margin: 40px 0 20px 0;
-    font-size: 23px;
+    font-size: 25px;
     line-height: 28px;
 
   }
