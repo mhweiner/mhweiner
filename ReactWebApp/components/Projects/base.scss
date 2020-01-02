@@ -72,9 +72,10 @@ $breakpoint: 1350;
 
     mark {
 
-      color: black;
-      background: #92ffe8;
-      padding: 2px;
+      olor: black;
+      background: none;
+      font-weight: 700;
+      border-bottom: 2px solid #000000;
 
     }
 
@@ -111,26 +112,26 @@ $breakpoint: 1350;
 
   h3 {
 
-    margin: 40px 0 30px;
+    margin: 0 0 15px;
+    border-bottom: 0.5px solid #b4b4b4;
+    padding: 0 0 15px;
     font-size: 22px;
-    line-height: 30px;
 
     &.awards {
 
-      color: #ff9400;
+      color: #0056ff;
 
     }
 
     &.involvement {
 
-      color: $color-secondary;
-      margin: 0 0 20px;
+      color: #00ae8f;
 
     }
 
     &.tech {
 
-      color: #25c5b4;
+      color: #7425c5;
 
     }
 
@@ -138,7 +139,7 @@ $breakpoint: 1350;
 
   ul {
 
-    margin: 0;
+    margin: 0 0 35px 0;
     padding: 0 0 0 20px;
 
     li {
@@ -170,10 +171,11 @@ $breakpoint: 1350;
 
   h2 {
 
-    font-size: 27px;
+    font-size: 33px;
     margin: 0 0 20px 0;
-    line-height: 1.5;
+    line-height: 1.2;
     font-weight: 400;
+    font-style: italic;
 
   }
 

@@ -8,10 +8,42 @@ import styles from './Nav.scss';
 export default class Nav extends React.Component {
 
   ref = React.createRef();
+  isVisible = false;
+
+  shouldBeVisible = page => {
+
+    return page !== 'home';
+
+  };
+
+  updateVisibility = () => {
+
+    if (this.shouldBeVisible(this.props.page) && !this.isVisible) {
+
+      this.timeout = setTimeout(this.animateIn, 300);
+      this.isVisible = true;
+
+    } else if (!this.shouldBeVisible(this.props.page) && this.isVisible) {
+
+      this.animateOut(() => {
+
+        this.isVisible = false;
+
+      });
+
+    }
+
+  };
 
   componentDidMount() {
 
-    this.timeout = setTimeout(this.animateIn, 200);
+    this.updateVisibility();
+
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+
+    this.updateVisibility();
 
   }
 
@@ -28,16 +60,23 @@ export default class Nav extends React.Component {
 
     setTimeout(() => {
 
-      removeClass(this.ref.current, styles.animateOut);
+      removeClass(this.ref.current, styles.animateIn);
 
-    }, 600);
+    }, 605);
 
   };
 
   animateOut = callback => {
 
-    addClass(this.ref.current, animations.animateOutToTop);
-    setTimeout(callback, 600);
+    addClass(this.ref.current, styles.animateOut);
+
+    setTimeout(() => {
+
+      this.ref.current.style.display = 'none';
+      removeClass(this.ref.current, styles.animateOut);
+      callback();
+
+    }, 305);
 
   };
 

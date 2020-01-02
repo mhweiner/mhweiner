@@ -12,6 +12,11 @@
   animation: $stuff;
 }
 
+@mixin animation-direction($direction){
+  -webkit-animation-direction: $direction;
+  animation-direction: $direction;
+}
+
 @mixin animation-fill-mode($direction){
   -webkit-animation-fill-mode: $direction;
   animation-fill-mode: $direction;

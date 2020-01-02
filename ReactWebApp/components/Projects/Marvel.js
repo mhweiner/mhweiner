@@ -15,7 +15,7 @@ export default class Marvel extends React.PureComponent {
 
         <div className={styles.main}>
 
-          <h2>I led R&D for one of the first large-scale, media-rich, fully-responsive websites.</h2>
+          <h2>I led R&D for one of the first high-traffic, media-rich, responsive websites.</h2>
 
           <p>In early 2013, mobile device usage had exploded, but Marvel.com was still not mobile-friendly. Marvel had two options &mdash;
             build a "mobile" version of their website, which was still standard practice for the time, or take a chance
@@ -82,18 +82,18 @@ export default class Marvel extends React.PureComponent {
           <h3 className={styles.involvement}>My Involvement</h3>
 
           <ul>
-            <li>Led R&D and front-end architecture.</li>
-            <li>Worked with team to solve major challenges, such as payload size, performance, legacy, maintenance costs, and others.</li>
+            <li>Led R&D and front-end development.</li>
+            <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process and reduce QA workload, such as the innovative Responsive Module Library.</li>
             <li>Co-invented innovative CSS build process technique to reduce filesize.</li>
-            <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process, such as the Responsive Module Library.</li>
-            <li>Wrote a highly performant multi-process automated testing program specially designed for responsive websites
+            <li>Wrote a multi-process automated testing program specially designed for responsive websites
               (<a href="https://github.com/mhweiner/jdiff" target='_blank'>jdiff</a>).</li>
+            <li>Worked closely with Art Director and Art Department to align design and tech efforts.</li>
           </ul>
 
           <h3 className={styles.awards}>Outcome</h3>
 
           <ul>
-            <li>Successfully launched by deadline with two weeks to spare and to excellent reception.</li>
+            <li>Successfully launched two weeks early and to excellent reception.</li>
             <li>One of the first large-scale, media-rich, high-traffic fully-responsive websites.</li>
             <li>Website lasted from 2013 - 2018!</li>
           </ul>
@@ -104,7 +104,7 @@ export default class Marvel extends React.PureComponent {
             <li>HTML5/CSS3, Javascript, ZeptoJS, PHP, Ruby</li>
             <li>Device-Agnostic Feature-Based Responsive Design (320px - 2200px+), vertical and horizontal</li>
             <li>Custom <code>sass</code> extension CSS Variant Export Script written in Ruby, served by a device-detection Disney service</li>
-            <li>Atomic-design "module/component" system, similar to React</li>
+            <li>Atomic-design module and component-based system</li>
             <li>Custom multi-Process PHP automated visual diff tool with <a href='https://www.seleniumhq.org/' target='_blank'>Selenium</a> (<a href="https://github.com/mhweiner/jdiff" target='_blank'>jdiff</a>)</li>
           </ul>
 

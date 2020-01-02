@@ -123,7 +123,7 @@ export default class App extends React.Component {
     } else {
 
       return <div className={styles.default}>
-        {this.state.page !== 'home' && this.state.page !== 'project' && <Nav {...navProps}/>}
+        <Nav {...navProps}/>
         <Transition
           routes={routes}
           page={this.state.page}

@@ -25,9 +25,9 @@ export default class ProjectListItem extends React.Component {
   };
 
   render() {
-    
+
     let project = this.props.project;
-    
+
     return <div className={styles.default} onClick={this.props.onClick} onMouseOver={this.onMouseOver} onMouseOut={this.onMouseOut}>
       <ProjectThumbnail project={project} hover={this.state.hover}/>
       <div className={styles.text}>

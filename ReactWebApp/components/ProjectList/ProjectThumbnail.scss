@@ -14,7 +14,7 @@
 
     content: '';
     display: block;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, 0.31);
     position: absolute;
     top: 0;
     left: 0;
@@ -56,26 +56,26 @@
 
   .seeDetails {
 
-    background: $color-secondary;
     position: absolute;
     left: 50%;
     top: 50%;
     width: 200px;
     margin: -20px 0 0 -100px;
-    font-weight: 700;
-    font-size: 19px;
+    font-size: 20px;
     opacity: 0;
-    transition: all 0.4s cubic-bezier(.3,.71,.44,1.02);
+    transition: all 0.4s cubic-bezier(0.3, 0.71, 0.44, 1.02);
     border: none;
-    box-shadow: 5px 5px black;
     z-index: 1;
-    color: white;
-    line-height: 50px;
+    color: black;
+    line-height: 55px;
     @include translateY(5px);
+    font-weight: 700;
+    background: white;
+    border-radius: 50px;
 
     i {
 
-      margin: 0 5px 0 0;
+      margin: 0 9px 0 0;
 
     }
 
