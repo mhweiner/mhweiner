@@ -180,6 +180,12 @@ $breakpoint: 1350;
     font-weight: 400;
     font-style: italic;
 
+    @include media(0, 450) {
+
+      font-size: 28px;
+
+    }
+
   }
 
   h3 {
