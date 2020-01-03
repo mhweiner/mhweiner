@@ -38,7 +38,7 @@ export default class About extends React.PureComponent {
         <div className={styles.belt}>
           <div className={styles.image}><img src="/static/images/profile2.jpg"/></div>
           <div className={styles.text}>
-            <h2>Marc Howard Weiner</h2>
+            <h1>Marc Howard Weiner</h1>
             <p>
               Marc is a lifelong programmer, creative technologist, builder, and space nerd. He built computer games when he was
               eight and started his first web development company when he was fifteen. After studying Computer Science
@@ -47,6 +47,7 @@ export default class About extends React.PureComponent {
               scalability, automated testing, process optimization, and user experience.  When he is not working, he is
               snowboarding, rock climbing, or watching "Beat Bobby Flay".
             </p>
+            <h2>Want to hire me? Get in touch.</h2>
             <ul className={styles.contact}>
               <li>
                 <a href="mailto:mhweiner234@gmail.com" target="_blank">

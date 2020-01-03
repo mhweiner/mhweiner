@@ -96,8 +96,10 @@ $breakpoint: 450;
 
       &:hover {
 
-        background: #da1b60;
-        color: white;
+        background: #02ffde;
+        color: black;
+        transform: scale(1.05);
+        box-shadow: rgba(0,0,0,0.5) 0 0 5px;
 
       }
 
