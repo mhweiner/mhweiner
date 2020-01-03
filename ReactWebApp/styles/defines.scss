@@ -13,18 +13,3 @@ $color-dark: #26282b;
 
 $font-icons: 'Font Awesome 5 Free';
 $font: 'soleil', sans-serif;
-
-@mixin font_header {
-
-  font-family: $font;
-  font-weight: 700;
-  font-style: normal;
-
-}
-
-@mixin font_subheader {
-
-  font-family: $font;
-  font-weight: 300;
-
-}
