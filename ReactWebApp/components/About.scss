@@ -84,11 +84,12 @@ $break: 800;
   p {
 
     font-size: 23px;
-    line-height: 1.5;
     margin: 0;
-    color: #ccc;
+    color: #b6b6b6;
+    max-width: 800px;
+    line-height: 1.3;
 
-    @include media(801, 1000) {
+    @include media(0, 1000) {
 
       font-size: 20px;
 
