@@ -24,13 +24,12 @@ export default class Marvel extends React.PureComponent {
 
           <p>I was hired as a consultant to lead the R&D for the new responsive Marvel.com that would support all of Marvel's business verticals.</p>
 
-          <p>Today, <em>responsive design</em> is a well understood methodology for building websites and
+          <p>Today, responsive designis a well understood methodology for building websites and
             web-based applications to support any device with a single codebase. But back then, it was still an emerging technology.
             There weren't many examples and we had to make up solutions as we went. Existing large-scale responsive
             sites we saw at the time were found to be highly simplified (sacrificing features, design, and interactivity) and in some cases,
             were considered "off-brand" by our designers. Marvel insisted on having a bold "on-brand" design and an
-            immersive user-experience. They wanted high-res images and videos to support the new high-dpi
-            devices. They wanted it all in a short nine month deadline, and to top it off, we needed to support IE8!</p>
+            immersive user-experience. They wanted it all in a short nine month deadline, and to top it off, we needed to support IE8!</p>
 
           <h3>Technical Challenges</h3>
 
@@ -49,31 +48,30 @@ export default class Marvel extends React.PureComponent {
             and even slowed-down or crashed devices.</p>
 
           <p>The second biggest challenge was the timeline. None of us at Marvel had ever built a responsive website before. Building this project required an entirely new project management strategy. Our PM relied on developers and designers collaborating to figure out a viable strategy. One thing was clear &mdash;
-            building a responsive website was going to require more work than we had previously thought. Every single page required expensive, exhaustive testing, and we had many.</p>
+            building Marvel.com as a responsive website was going to be a lot of work. Every single page required expensive, exhaustive testing, and we had many.</p>
 
           <h3>Solution: Responsive Module Library</h3>
 
-          <p>One of my first suggestions was to create what I called a "Responsive Module Library". Each of these reusable components
-            would be full-width across the page, responsive and tested in isolation. Any page that is composed of these modules
-            exclusively would itself be guaranteed to be fully-responsive and also fully-tested without having to test each page individually.</p>
+          <p>One of my first contributions was to create what I called a "Responsive Module Library". Each of these reusable components
+            would be full-width across the page, fully-responsive, and tested in isolation. Any page that is composed of these modules
+            exclusively would itself be guaranteed to be fully-responsive and also fully-tested.</p>
 
-          <p>I worked closely with the design team to pair down the number of modules that we would have to build. Not only did this reduce development time, it also helped with our filesize concerns as well.</p>
-
-          <h3>Solution: CSS Variant Export Script</h3>
-
-          <p>Our biggest technical challenge was solving the CSS file-size problem. Our unique solution actually violated
-            some of the idealistic theory of "device agnostic responsive design" at the time. We designed an automated
-            build process that intelligently broke apart the CSS code only required by specific devices or browsers, and
-            packaged them into different files we called "variants." Then, using a device-detection service, we were able
-            to send only the code each device actually used. For example, only IE8 got all of the
-            IE8 hacks. Smaller devices only got the CSS styles for smaller devices, since smaller devices cannot
-            physically become bigger (unlike a desktop that can become smaller by making the window smaller). We saw
-            massive filesize savings across the board, especially for iPhones and other small mobile devices.</p>
+          <p>I worked closely with the design team to pair down the number of modules that we would have to build. Not only did this greatly reduce development and QA time, it also helped with our file size concerns as well, which turned out to be a really big deal.</p>
 
           <h3>Solution: Mobile First CSS</h3>
 
           <p>We discovered that by coding our default styles for the smallest devices and then progressively enhancing our way up to large desktop browsers, we could save about 33% of filesize. However, this created problems for IE8, which did not recognize the required "media queries".
             We were able to get around this problem by leveraging our CSS Variant Export Script and using <a href='https://sass-lang.com/' target='_blank'>sass</a> <i className='fa fa-external-link-alt' style={{fontSize: '13px'}}/> mixins.</p>
+
+          <h3>Solution: CSS Variant Export Script</h3>
+
+          <p>Our biggest technical challenge was solving the CSS file size problem. Co-invented with my colleague Andres Gallo,
+            we came up with a way to intelligently break apart the CSS code into "variants" automatically during the build process.
+            Using a backend device-detection service, we were able to send these variants only to the devices that needed it.
+            For example, only IE8 got all of the IE8 hacks. Smaller devices (ie, iPhone) only got the styles they required, nothing more.
+            Desktop would get smaller and larger variants. Devices with touch inputs would get that variant, and so on.
+            We saw massive filesize savings across the board, especially for small mobile devices. This drastically improved download speeds,
+          runtime performance, and stability.</p>
 
         </div>
 

@@ -49,16 +49,13 @@ export default class ElementalCognition extends React.PureComponent {
 
           <h2>I designed and developed an interface to an experimental, revolutionary AI machine.</h2>
 
-          <p>Today's AI falls short. Although AI has become pretty good at calculating odds and recognizing faces, it cannot understand
-            something as simple as a children's bedtime story. It is unable to explain the "why" or the "how" behind the answers is gives us.</p>
-
-          <p>To tackle the problem of "understanding", Elemental Cognition, founded and led by IBM Watson alum Dr. David Ferrucci, starts by attempting to
+          <p>Today's AI falls short. Although AI has become pretty good at calculating odds and recognizing faces, it struggles to understand language
+            the same way we do. To tackle this problem, Elemental Cognition, founded and led by IBM Watson alum Dr. David Ferrucci, starts by attempting to
             teach the system children's stories. EC believes that context, language, culture, and reasoning are the keys to this level of understanding.
-            They are also betting that this knowledge can be acquired the same way that we do &mdash; something they call
-            "Natural Learning." One of the main ways we interact with the system is with a "plain English" dialog or chat.
+            They are also betting that this knowledge can be acquired the same way that we do &mdash; by having the system learn from humans.
           </p>
 
-          <p>I was hired as a senior full-stack engineer and UX designer to help design and build interfaces with this system, and to demonstrate its capabilities.</p>
+          <p>I was hired as a software engineer and UX designer to help design and build interfaces with this system.</p>
 
           <h3>The Challenge</h3>
 

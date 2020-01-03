@@ -1,5 +1,7 @@
 @import "../styles/defines";
 
+$break: 800;
+
 .default {
 
   padding: 150px 0 50px;
@@ -22,57 +24,10 @@
   justify-content: left;
   padding: 0 60px;
 
-  @include media(0, 1000) {
+  @include media(0, $break) {
 
     display: block;
     padding: 0;
-
-    .image {
-
-      margin: 0 auto 50px;
-      max-width: none;
-      width: 100%;
-      box-sizing: border-box;
-      padding: 0;
-
-      img {
-
-        display: block;
-        margin: 0 auto;
-        max-width: 300px;
-        border-radius: 300px;
-
-      }
-
-    }
-
-    .text {
-
-      padding: 0 15px;
-      margin: 0 auto;
-      text-align: center;
-
-      p {
-
-        text-align: left;
-
-      }
-
-    }
-
-  }
-
-  @include media(0, 450) {
-
-    .text {
-
-      p {
-
-        font-size: 18px;
-
-      }
-
-    }
 
   }
 
@@ -83,9 +38,27 @@
   max-width: 500px;
   padding: 0 60px 0 0;
 
+  h1 {
+
+    margin: 0 0 40px 0;
+    font-size: 53px;
+    line-height: 0.9em;
+    color: white;
+    font-weight: 700;
+
+  }
+
   img {
 
     width: 100%;
+
+  }
+
+  @include media(0, $break) {
+
+    margin: 0 auto 50px;
+    max-width: 425px;
+    padding: 0 15px;
 
   }
 
@@ -98,35 +71,6 @@
   color: #ececec;
   padding: 0 0 0 40px;
   box-sizing: border-box;
-
-  h1 {
-
-    margin: 0 0 20px 0;
-    font-size: 48px;
-    line-height: 0.9em;
-    color: $color-primary;
-    font-style: italic;
-    font-weight: 300;
-
-    &:after {
-
-      content: '';
-      display: block;
-      height: 0.5px;
-      width: 30px;
-      background: #666;
-      margin: 30px 0;
-
-    }
-
-    @include media(0, 450) {
-
-      text-align: left;
-      font-size: 45px;
-
-    }
-
-  }
 
   h2 {
 
@@ -143,6 +87,19 @@
     line-height: 1.5;
     margin: 0;
     color: #ccc;
+
+    @include media(801, 1000) {
+
+      font-size: 20px;
+
+    }
+
+  }
+
+  @include media(0, $break) {
+
+    margin: 0 auto 50px;
+    padding: 0 15px;
 
   }
 

@@ -14,7 +14,7 @@
 
     content: '';
     display: block;
-    background: rgba(0, 0, 0, 0.31);
+    background: rgba(0, 0, 0, 0.4);
     position: absolute;
     top: 0;
     left: 0;
@@ -61,13 +61,13 @@
     top: 50%;
     width: 200px;
     margin: -20px 0 0 -100px;
-    font-size: 20px;
+    font-size: 19px;
     opacity: 0;
     transition: all 0.4s cubic-bezier(0.3, 0.71, 0.44, 1.02);
     border: none;
     z-index: 1;
     color: black;
-    line-height: 55px;
+    line-height: 50px;
     @include translateY(5px);
     font-weight: 700;
     background: white;

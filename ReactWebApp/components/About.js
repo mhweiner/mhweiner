@@ -36,15 +36,17 @@ export default class About extends React.PureComponent {
     return (
       <div className={styles.default} ref={this.ref}>
         <div className={styles.belt}>
-          <div className={styles.image}><img src="/static/images/profile2.jpg"/></div>
-          <div className={styles.text}>
+          <div className={styles.image}>
             <h1>Marc Howard Weiner</h1>
+            <img src="/static/images/profile2.jpg"/>
+          </div>
+          <div className={styles.text}>
             <p>
               Marc is a lifelong programmer, creative technologist, builder, and space nerd. He built computer games when he was
               eight and started his first web development company when he was fifteen. After studying Computer Science
               at the University at Buffalo, he helped launch several successful
-              startups. He now helps big and small companies alike in areas such as systems architecture,
-              scalability, automated testing, process optimization, and user experience.  When he is not working, he is
+              startups. He now helps big and small companies alike in areas such as full-stack development, systems architecture,
+              devops, process optimization, and user experience.  When he is not working, he is
               snowboarding, rock climbing, or watching "Beat Bobby Flay".
             </p>
             <h2>Want to hire me? Get in touch.</h2>

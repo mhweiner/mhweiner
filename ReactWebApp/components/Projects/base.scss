@@ -175,10 +175,10 @@ $breakpoint: 1350;
   h2 {
 
     font-size: 33px;
-    margin: 0 0 20px 0;
+    margin: 0 0 25px 0;
     line-height: 1.2;
-    font-weight: 400;
-    font-style: italic;
+    font-weight: 300;
+    color: $color-secondary;
 
     @include media(0, 450) {
 
