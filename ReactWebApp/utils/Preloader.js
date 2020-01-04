@@ -1,74 +1,99 @@
-import imagesLoaded from "images-loaded";
+import imagesLoaded from 'images-loaded';
+import {projects} from '../projectData';
 
-function loadFont(fontFamily, fontWeight) {
+function loadFont(fontFamily, fontWeight, string) {
 
   let p = document.createElement('p');
 
-  p.innerText = 'test';
+  p.innerHTML = string || 'test';
   p.style.fontFamily = fontFamily;
   p.style.fontWeight = fontWeight;
-  p.style.fontSize = '20px';
+  p.style.fontSize = '200px';
   p.style.color = 'transparent';
-  p.style.zIndex = '1000';
   p.style.margin = '0';
   p.style.position = 'absolute';
   p.style.top = '-1000px';
+  p.style.left = '0';
+  p.style.zIndex = '2000';
 
   document.body.appendChild(p);
   setTimeout(() => {p.remove()}, 200);
 
 }
 
-export function Preloader(props) {
+function loadFonts(fonts) {
 
-  //load fonts
-  let fonts = [
-    ['Roboto', 300],
-    ['Roboto', 700]
-  ];
+  fonts.map(font => loadFont(font[0], font[1], `${font[2]}`));
 
-  fonts.map(font => loadFont(font[0], font[1]));
+}
 
-  let images = [
-    '/static/images/profile2.jpg',
-    '/static/images/project-thumbs/advizr-screenshot.png',
-    '/static/images/project-thumbs/shutterstock-bg.jpg',
-    '/static/images/project-thumbs/logos/shutterstock.png',
-    '/static/images/project-thumbs/logos/marvel-white.png',
-    '/static/images/project-thumbs/marvel-bg.jpg',
-    '/static/images/project-thumbs/ec-robot.png',
-    '/static/images/project-thumbs/logos/ciro.png',
-    '/static/images/project-thumbs/logos/devotify.png'
-  ];
+function loadImage(imgSrc, onLoad) {
+
+  let img = document.createElement('img');
+
+  img.src = imgSrc;
+
+  imagesLoaded(img).then(onLoad);
+
+}
+
+function loadImages(images, onProgress, onComplete) {
 
   let numObjects = images.length;
   let numLoaded = 0;
 
   images.map(src => {
 
-    let img = document.createElement('img');
-
-    img.src = src;
-
-    imagesLoaded(img).then(() => {
+    loadImage(src, () => {
 
       numLoaded++;
 
       if (numLoaded >= numObjects) {
 
-        props.onDone.apply();
+        onComplete();
 
       } else {
 
-        props.onProgress.apply(undefined, [numLoaded, numObjects]);
+        onProgress(numLoaded, numObjects);
 
       }
 
-    })
+    });
 
   });
 
+}
+
+function getImagesFromProjectData() {
+
+  let images = [];
+
+  projects.map(project => {
+
+    if (project.preload && project.preload.length) {
+
+      images = images.concat(project.preload);
+
+    }
+
+  });
+
+  return images;
+
+}
+
+
+export function Preloader(props) {
+
+  //load fonts
+  loadFonts([['\'Font Awesome 5 Free\'', '900', '&#xf4fb;']]);
+
+  //load images
+  let images = getImagesFromProjectData();
+
+  loadImages(images, props.onProgress, props.onDone);
+
   //init progress
-  props.onProgress.apply(undefined, [numLoaded, numObjects]);
+  props.onProgress(0, images.length);
 
 }

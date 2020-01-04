@@ -34,13 +34,16 @@ export const projects = [
     content: <Advizr/>,
     years: '2014-2016',
     website: 'https://www.advizr.com/',
-    industry: 'Fintech'
+    industry: 'Fintech',
+    preload: ['/static/images/project-thumbs/advizr-screenshot.png']
   },
 
   {
     id: 'Shutterstock_Invoice_API',
     title: 'Shutterstock Invoice API',
-    bgSrc: '/static/images/project-thumbs/shutterstock-bg.jpg',
+    containerStyle: {
+      background: '#191919'
+    },
     imgSrc: '/static/images/project-thumbs/logos/shutterstock.png',
     imgStyle: {
       maxWidth: '60%',
@@ -49,7 +52,8 @@ export const projects = [
     content: <Shutterstock/>,
     years: '2017',
     website: 'https://www.shutterstock.com',
-    industry: 'E-Commerce'
+    industry: 'E-Commerce',
+    preload: ['/static/images/project-thumbs/logos/shutterstock.png']
   },
 
   {
@@ -60,7 +64,8 @@ export const projects = [
     content: <Marvel/>,
     years: '2013',
     website: 'https://www.marvel.com',
-    industry: 'Entertainment'
+    industry: 'Entertainment',
+    preload: ['/static/images/project-thumbs/logos/marvel-white.png', '/static/images/project-thumbs/marvel-bg.jpg']
   },
 
   {
@@ -79,7 +84,8 @@ export const projects = [
     content: <ElementalCognition/>,
     years: '2018-2019',
     website: 'http://www.elementalcognition.com',
-    industry: 'Artificial Intelligence, R&D'
+    industry: 'Artificial Intelligence, R&D',
+    preload: ['/static/images/project-thumbs/ec-robot.png']
   },
 
   {
@@ -92,7 +98,8 @@ export const projects = [
     content: <Ciro/>,
     years: '2015-2017',
     website: 'https://ciroapp.com',
-    industry: 'Project Management, Collaboration'
+    industry: 'Project Management, Collaboration',
+    preload: ['/static/images/project-thumbs/ciro-lockup.jpg']
   },
 
   {
@@ -105,7 +112,8 @@ export const projects = [
     content: <Devotify/>,
     years: '2013-2014',
     website: 'http://www.devotify.com',
-    industry: 'Loyalty, E-Commerce'
+    industry: 'Loyalty, E-Commerce',
+    preload: ['/static/images/project-thumbs/devotify-phone.jpg']
   }
 
 ];
