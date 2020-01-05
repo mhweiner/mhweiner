@@ -23,26 +23,13 @@ export function getProjectIndexById(id) {
 
 export const projects = [
 
-  {
-    id: 'Advizr',
-    title: 'Advizr',
-    containerStyle: {
-      background: 'url(/static/images/project-thumbs/advizr-screenshot.png) no-repeat top center',
-      backgroundSize: 'cover'
-    },
-    award: true,
-    content: <Advizr/>,
-    years: '2014-2016',
-    website: 'https://www.advizr.com/',
-    industry: 'Fintech',
-    preload: ['/static/images/project-thumbs/advizr-screenshot.png']
-  },
 
   {
     id: 'Shutterstock_Invoice_API',
     title: 'Shutterstock Invoice API',
     containerStyle: {
-      background: '#191919'
+      background: 'url(/static/images/project-thumbs/shutterstock-bg2.jpg) no-repeat top center',
+      backgroundSize: 'cover'
     },
     imgSrc: '/static/images/project-thumbs/logos/shutterstock.png',
     imgStyle: {
@@ -54,6 +41,21 @@ export const projects = [
     website: 'https://www.shutterstock.com',
     industry: 'E-Commerce',
     preload: ['/static/images/project-thumbs/logos/shutterstock.png']
+  },
+
+  {
+    id: 'Advizr',
+    title: 'Advizr',
+    containerStyle: {
+      background: 'url(/static/images/project-thumbs/advizr-screenshot2.png) no-repeat top center',
+      backgroundSize: 'cover'
+    },
+    award: true,
+    content: <Advizr/>,
+    years: '2014-2016',
+    website: 'https://www.advizr.com/',
+    industry: 'Fintech',
+    preload: ['/static/images/project-thumbs/advizr-screenshot.png']
   },
 
   {

@@ -9,11 +9,12 @@ $breakpoint: 1350;
   margin: 0 auto;
   color: black;
 
-  a {
+  a, a:visited, a:active {
 
     color: $color-secondary;
     text-decoration: underline;
     font-weight: bold;
+    transition: 0.1s ease-in-out;
 
     &:hover {
 
