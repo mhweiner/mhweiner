@@ -55,16 +55,19 @@ export default class About extends React.PureComponent {
               <li>
                 <a href="mailto:mhweiner234@gmail.com" target="_blank">
                   <i className='far fa-envelope'/>
+                  <p>Email</p>
                 </a>
               </li>
               <li>
                 <a href="http://linkedin.com/in/mhweiner" target="_blank">
                   <i className='fab fa-linkedin-in'/>
+                  <p>LinkedIn</p>
                 </a>
               </li>
               <li>
                 <a href="http://github.com/mhweiner" target="_blank">
                   <i className='fab fa-github-alt'/>
+                  <p>GitHub</p>
                 </a>
               </li>
             </ul>
