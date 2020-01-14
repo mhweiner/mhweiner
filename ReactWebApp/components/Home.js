@@ -36,7 +36,7 @@ export default class Home extends React.PureComponent {
 
       addClass(this.text.current, animations.animateInFromBottom);
 
-    }, 100);
+    }, 350);
 
     setTimeout(() => {
 
