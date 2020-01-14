@@ -14,6 +14,7 @@ export default class Home extends React.PureComponent {
   ref = React.createRef();
   rocket = React.createRef();
   planet = React.createRef();
+  text = React.createRef();
 
   componentDidMount() {
 
@@ -29,13 +30,19 @@ export default class Home extends React.PureComponent {
 
   animateIn = () => {
 
-    addClass(this.ref.current, animations.animateInFromBottom);
+    addClass(this.ref.current, animations.fadeIn);
 
     setTimeout(() => {
 
-      removeClass(this.ref.current, animations.animateInFromBottom);
+      addClass(this.text.current, animations.animateInFromBottom);
 
-    }, 600);
+    }, 100);
+
+    setTimeout(() => {
+
+      removeClass(this.ref.current, animations.fadeIn);
+
+    }, 805);
 
     this.createObjects();
 
@@ -52,15 +59,14 @@ export default class Home extends React.PureComponent {
   createObjects = () => {
 
     this.rocketInterval = setInterval(this.launchRocket, 20000);
-    this.rocketTimeout = setTimeout(this.launchRocket, 3000);
     this.planetInterval = setInterval(this.flyByPlanet, 46000);
     this.flyByPlanet();
+    this.launchRocket();
 
   };
 
   destroyObjects = () => {
 
-    clearTimeout(this.rocketTimeout);
     clearInterval(this.rocketInterval);
     clearInterval(this.planetInterval);
 
@@ -114,7 +120,7 @@ export default class Home extends React.PureComponent {
         <div className={styles.rocket} ref={this.rocket}><Rocket/></div>
         <div className={styles.planet} ref={this.planet}><Planet/></div>
         <StarryBackground/>
-        <div className={styles.text}>
+        <div className={styles.text} ref={this.text}>
             <p ref={this.text}>Hello! I'm <a href='#' onClick={(e) => {
               e.preventDefault();
               mr.go('about');

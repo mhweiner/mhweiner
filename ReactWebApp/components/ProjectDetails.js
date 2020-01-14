@@ -45,7 +45,7 @@ export default class ProjectDetails extends React.PureComponent {
 
       removeClass(this.ref.current, animations.animateInFromBottom);
 
-    }, 600);
+    }, 805);
 
   };
 

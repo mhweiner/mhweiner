@@ -1,7 +1,7 @@
 import imagesLoaded from 'images-loaded';
 import {projects} from '../projectData';
 
-function loadFont(fontFamily, fontWeight, string) {
+export function loadFont(fontFamily, fontWeight, string) {
 
   let p = document.createElement('p');
 
@@ -21,13 +21,25 @@ function loadFont(fontFamily, fontWeight, string) {
 
 }
 
-function loadFonts(fonts) {
+export function loadFonts(fonts, onLoad) {
 
   fonts.map(font => loadFont(font[0], font[1], `${font[2]}`));
 
+  if (document.fonts && document.fonts.ready) {
+
+    //Browsers that support CSS Font Loading Module Level 3
+    document.fonts.ready.then(onLoad);
+
+  } else {
+
+    //Fallback, wait 50ms
+    setTimeout(onLoad, 50);
+
+  }
+
 }
 
-function loadImage(imgSrc, onLoad) {
+export function loadImage(imgSrc, onLoad) {
 
   let img = document.createElement('img');
 
@@ -37,7 +49,7 @@ function loadImage(imgSrc, onLoad) {
 
 }
 
-function loadImages(images, onProgress, onComplete) {
+export function loadImages(images, onProgress, onComplete) {
 
   let numObjects = images.length;
   let numLoaded = 0;
@@ -61,6 +73,10 @@ function loadImages(images, onProgress, onComplete) {
     });
 
   });
+
+}
+
+export default function loadAssets(assetMap) {
 
 }
 

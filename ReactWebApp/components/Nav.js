@@ -76,7 +76,7 @@ export default class Nav extends React.Component {
       removeClass(this.ref.current, styles.animateOut);
       callback();
 
-    }, 305);
+    }, 605);
 
   };
 

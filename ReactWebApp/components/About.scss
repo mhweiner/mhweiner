@@ -148,7 +148,7 @@ ul.contact {
         position: absolute;
         text-align: center;
         display: block;
-        margin: 0;
+        margin: -5px 0 0 0;
         width: 100px;
         left: -23px;
         font-size: 18px;
@@ -163,14 +163,14 @@ ul.contact {
 
         i {
 
-          @include scale(1.1,1.1);
+          @include scale(1.2,1.2);
           opacity: 1;
 
         }
 
         p {
 
-          @include translateY(7px);
+          @include translateY(12px);
           opacity: 1;
 
         }

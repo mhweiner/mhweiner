@@ -31,7 +31,7 @@ export default class Projects extends React.PureComponent {
     this.ref.current.style.display = 'block';
     setTimeout(() => {
       removeClass(this.ref.current, animations.animateInFromBottom);
-    }, 600);
+    }, 805);
 
   };
 
