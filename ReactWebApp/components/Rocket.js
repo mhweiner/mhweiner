@@ -5,6 +5,15 @@ import styles from './Rocket.scss';
 export default function Rocket() {
 
     return <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 283 520' className={styles.default}>
+      <defs>
+        <filter id="glow" x="-150%" y="-150%" height="500%" width="500%">
+          <feGaussianBlur stdDeviation="30" result="blur"/>
+          <feMerge>
+            <feMergeNode in="blur"/>
+            <feMergeNode in="SourceGraphic"/>
+          </feMerge>
+        </filter>
+      </defs>
               <path d='M206,264.9H76V158.75A243.78,243.78,0,0,1,121,17.39L129.08,6l1.63-1.62h0a13.74,13.74,0,0,1,19.42-.08l.08.08h0L151.83,6,161,17.39a242.85,242.85,0,0,1,45,140.28Z'
                     fill='#d5e3ef' />
               <path d='M168,110V264.9h38V158.75A240,240,0,0,0,160.94,18.48L152.8,6l-1.63-1.6A12.73,12.73,0,0,0,141.94.6,240.81,240.81,0,0,1,168,110Z'
