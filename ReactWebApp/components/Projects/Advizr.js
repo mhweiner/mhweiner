@@ -33,23 +33,30 @@ export default function Advizr() {
         <h3>Technical Strategy</h3>
 
         <p>
-          As an early stage startup, the ability to iterate and grow the application quickly, <strong>while mitigating risk</strong>, is crucial.
-          It's not like our clients had handed
-          us specs &mdash; we didn't really know what we needed to build. To this end, I wanted to make things as
-          modular and flexible as possible. It was this philosophy of practical iteration, coupled with a tight consumer
-          relationship, that would end up being the key to our success.
+          As an early stage startup, the ability to iterate and grow the application quickly,
+          <strong>while mitigating risk</strong>, is crucial. It's not like our clients had handed us specs &mdash; we
+          didn't really know what we needed to build. To this end, I wanted to make things as modular and flexible as
+          possible. It was this philosophy of practical iteration, coupled with a tight consumer relationship, that
+          would end up being our key to success.
         </p>
 
         <p>My first priority was to move from a traditional .NET MVC application to a REST API powered SPA (single page
-          application). This is a very common practice today. There are many benefits, but above all, I was looking
-          for improved scalability, testability, and flexibility. My second priority was implementing an Agile
+          application). This was 2014, and SPA's were still relatively new. There are many benefits, but I
+          was looking for improved UX, scalability, testability, and flexibility. One of the biggest benefits was
+          scalability in terms of hiring additional front-end talent. Front-end engineers wouldn't need to learn .NET,
+          or need to have the back-end run in a virtual machine. This drastically simplified the
+          setup and development environment and increased velocity for front-end engineers (such as myself).
+          This helped to make front-end less of a bottleneck.
+        </p>
+
+        <p>My second priority was implementing an Agile
           workflow process that allowed us to iterate and try out new features while allocating time to manage technical
           debt and re-investing in our infrastructure.
         </p>
 
-        <p>In 2014, front-end component libraries like React were not yet available (or not quite ready), so we used a
-          simple library that I wrote, <a href='http://github.com/mhweiner/hmjs' target='_blank'>HMJS</a>. This strategy
-          succeeded in both embracing new techniques while minimizing the risk of being locked into
+        <p>In 2014, front-end component libraries like React were not yet available, so we used a very
+          simple Javascript component library that I wrote, <a href='http://github.com/mhweiner/hmjs' target='_blank'>HMJS</a>.
+          This strategy succeeded in both embracing new techniques while minimizing the risk of being locked into
           large nascent frameworks and ecosystems (later on, Advizr would seamlessly migrate to React). The result of
           our efforts yielded a component-driven, flexible, and super-speedy interface with an excellent user experience
           that customers loved.

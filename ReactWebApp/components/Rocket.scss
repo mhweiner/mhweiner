@@ -48,7 +48,7 @@ svg.default {
 
     transform-origin: bottom;
     @include animation(mainFlame 0.3s ease-in-out infinite);
-    filter: url(#glow);
+    filter: url(#glow2);
 
   }
 
@@ -56,7 +56,7 @@ svg.default {
 
     transform-origin: bottom;
     @include animation(mainFlameInside 0.3s ease-in-out infinite);
-    filter: url(#glow);
+    filter: url(#glow2);
 
   }
 
@@ -64,7 +64,7 @@ svg.default {
 
     transform-origin: top;
     @include animation(sideFlame 0.3s ease-in-out infinite);
-    filter: url(#glow);
+    filter: url(#glow2);
 
   }
 

@@ -6,7 +6,7 @@ export default function Rocket() {
 
     return <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 283 520' className={styles.default}>
       <defs>
-        <filter id="glow" x="-150%" y="-150%" height="500%" width="500%">
+        <filter id="glow2" x="-150%" y="-150%" height="500%" width="500%">
           <feGaussianBlur stdDeviation="30" result="blur"/>
           <feMerge>
             <feMergeNode in="blur"/>

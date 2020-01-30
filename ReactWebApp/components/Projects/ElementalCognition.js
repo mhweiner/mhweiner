@@ -1,30 +1,11 @@
 import React from 'react';
 
-import styles from './base.scss';
-import ECStyles from './ElementalCognition.scss';
 import ResponsiveImage from "../ResponsiveImage";
 
+import styles from './base.scss';
+import ECStyles from './ElementalCognition.scss';
+
 export default class ElementalCognition extends React.PureComponent {
-
-  state = {
-    h: true //hide images
-  };
-
-  componentDidMount() {
-
-    window._unlock = (pw) => {
-
-      if (pw === 'password') {
-
-        this.setState({
-          unlocked: true
-        });
-
-      }
-
-    };
-
-  }
 
   render() {
 
@@ -69,19 +50,10 @@ export default class ElementalCognition extends React.PureComponent {
 
           <p>The first thing I worked on was a way to visually demonstrate the system's understanding, which I called VKR (Visual Knowledge Representation).</p>
 
-          {this.state.unlocked &&  <div className={ECStyles.img} style={{margin: '30px -80px 0'}}>
-            <img src='/static/images/content/ec/VKR.png'/>
-          </div>}
-
           <p>VKR is a collection of pages that are a designed around a pivot on the data, such as "Motivation", "Objects", "Events", "Timeline", etc.</p>
 
           <p>Then I had to design an application where the user can "chat" with the system, see what it's "thinking", and be able to see the VKR and Summary.
             The user also needs to see the story on the left to have common reference with the system.</p>
-
-          {this.state.unlocked && <div className={ECStyles.img} style={{margin: '30px -80px 0'}}>
-            <img src='/static/images/content/ec/chat.jpg'/>
-            <img src='/static/images/content/ec/thinking.jpg'/>
-          </div>}
 
           <h3>Technical Strategy</h3>
 
@@ -127,17 +99,7 @@ export default class ElementalCognition extends React.PureComponent {
       </div>
 
       <div className={styles.images}>
-        {this.state.unlocked && <iframe
-            src="https://player.vimeo.com/video/308217091"
-            frameBorder="0"
-            webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen
-            style={{
-              width: '100%',
-              height: '571px',
-              border: '1px solid',
-              background: 'black'
-            }}
-        />}
+
         <iframe src="https://www.youtube.com/embed/vsyPZdt6noE" frameBorder="0"
                 allow="encrypted-media;"
                 allowFullScreen style={{
