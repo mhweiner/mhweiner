@@ -25,7 +25,7 @@ export default class Shutterstock extends React.PureComponent {
 
         <div className={styles.main}>
 
-          <h2>I designed and developed the API that Shutterstock uses for all of its enterprise e-commerce.</h2>
+          <h2>I designed and developed the API that Shutterstock uses for its enterprise e-commerce.</h2>
 
           <p>In Spring '17, Shutterstock recognized it had a problem potentially costing them millions. Enterprise customers were not
             able to view or pay their invoices online &mdash; they had to call a service representative or mail a physical check.
