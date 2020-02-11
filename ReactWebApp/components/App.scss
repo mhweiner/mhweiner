@@ -12,11 +12,11 @@ a, a:visited {
   color: white;
   text-decoration: underline;
   font-weight: 700;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.3s cubic-bezier(.3,.71,.44,1.02);
 
   &:hover {
 
-    color: $color-secondary;
+    color: $color-primary;
 
   }
 

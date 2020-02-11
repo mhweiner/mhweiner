@@ -72,16 +72,8 @@ $breakpoint: 450;
 
     a {
 
-      color: $color-primary;
       border: none;
       text-decoration: underline;
-      transition: all 0.1s ease-in-out;
-
-      &:hover {
-
-        color: $color-secondary;
-
-      }
 
     }
 

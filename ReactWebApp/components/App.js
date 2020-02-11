@@ -76,11 +76,6 @@ export default class App extends React.Component {
       },
       onProgress: (numLoaded, numObjects) => {
 
-        console.log('numLoaded:')
-        console.log(numLoaded)
-        console.log('numObjects')
-        console.log(numObjects)
-
         this.setState({
           numLoaded: numLoaded,
           numObjects: numObjects

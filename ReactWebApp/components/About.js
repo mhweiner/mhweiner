@@ -48,7 +48,7 @@ export default class About extends React.PureComponent {
               at the University at Buffalo, he helped launch several successful
               startups. He now helps big and small companies alike in areas such as full-stack development, systems architecture,
               devops, process optimization, and user experience.  When he is not working, he is
-              snowboarding, rock climbing, or watching "Beat Bobby Flay".
+              snowboarding, rock climbing, working on electronics, or flying planes.
             </p>
             <h2>Want to hire me? Get in touch.</h2>
             <ul className={styles.contact}>

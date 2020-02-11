@@ -33,15 +33,15 @@ export default function Advizr() {
         <h3>Technical Strategy</h3>
 
         <p>
-          As an early stage startup, the ability to iterate and grow the application quickly,
-          <strong>while mitigating risk</strong>, is crucial. It's not like our clients had handed us specs &mdash; we
+          As an early stage startup, the ability to iterate and grow the application quickly, <strong>while mitigating risk</strong>,
+          is crucial. It's not like our clients had handed us specs &mdash; we
           didn't really know what we needed to build. To this end, I wanted to make things as modular and flexible as
           possible. It was this philosophy of practical iteration, coupled with a tight consumer relationship, that
           would end up being our key to success.
         </p>
 
         <p>My first priority was to move from a traditional .NET MVC application to a REST API powered SPA (single page
-          application). This was 2014, and SPA's were still relatively new. There are many benefits, but I
+          application). There are many benefits, but I
           was looking for improved UX, scalability, testability, and flexibility. One of the biggest benefits was
           scalability in terms of hiring additional front-end talent. Front-end engineers wouldn't need to learn .NET,
           or need to have the back-end run in a virtual machine. This drastically simplified the
