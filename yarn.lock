@@ -2090,10 +2090,10 @@ eslint-scope@^4.0.0:
     esrecurse "^4.1.0"
     estraverse "^4.1.1"
 
-esm@3.0.84:
-  version "3.0.84"
-  resolved "https://registry.yarnpkg.com/esm/-/esm-3.0.84.tgz#bb108989f4673b32d4f62406869c28eed3815a63"
-  integrity sha512-SzSGoZc17S7P+12R9cg21Bdb7eybX25RnIeRZ80xZs+VZ3kdQKzqTp2k4hZJjR7p9l0186TTXSgrxzlMDBktlw==
+esm@3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/esm/-/esm-3.1.0.tgz#89eb950b3f04b691b12f96a0d9c8de93039a1a26"
+  integrity sha512-r4Go7Wh7Wh0WPinRXeeM9PIajRsUdt8SAyki5R1obVc0+BwtqvtjbngVSSdXg0jCe2xZkY8hyBMx6q/uymUkPw==
 
 esrecurse@^4.1.0:
   version "4.2.1"
@@ -3562,7 +3562,7 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
-mr-router@^2.0.1:
+mr-router@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/mr-router/-/mr-router-2.0.1.tgz#d28482692c50a667b9c0d09987bff7d52b0227b4"
   integrity sha512-QPv84uZwasyLOSMFE9b1+PdzrxGaJCA56/r+AjmTsLX0Nt+qRkqPoaj/NbHYnLGXxlgpS5kHu1JZ4yrtIse9rw==
