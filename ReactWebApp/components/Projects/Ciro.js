@@ -25,7 +25,7 @@ export default class Ciro extends React.PureComponent {
 
         <div className={styles.main}>
 
-          <h2>I started my own company aimed at solving inefficiencies in the way teams communicate.</h2>
+          <h2>I created my own SaaS app aimed at solving inefficiencies in the way teams communicate.</h2>
 
           <p>Existing tools are slow and painful. They either show too much information, or too little. Most importantly, they don't solve the biggest problem that teams face — too many interruptions. </p>
 

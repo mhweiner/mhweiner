@@ -25,7 +25,7 @@
     "build-frontend-prod": "npm run copy-static-assets && npm run build-base-css-prod && mkdir -p www_static_dist/js && webpack --mode production --progress",
     "build-base-css-dev": "mkdir -p www_static_dist/css && node-sass ReactWebApp/styles/base.scss > www_static_dist/css/app.css",
     "build-base-css-prod": "mkdir -p www_static_dist/css && node-sass --output-style compressed ReactWebApp/styles/base.scss > www_static_dist/css/app.css",
-    "copy-static-assets": "rsync -a ReactWebApp/static_assets/* www_static_dist/",
+    "copy-static-assets": "rsync -a ReactWebApp/static_assets/* www_static_dist/ && cp index.html www_static_dist/index.html",
     "start-dev": "NODE_ENV=development node -r esm devServer.js"
   },
   "dependencies": {

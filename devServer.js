@@ -1,5 +1,4 @@
 import express from 'express';
-import rf from 'fs-readfile-promise';
 import path from 'path';
 
 const app = express();
