@@ -74,7 +74,7 @@ export default class ElementalCognition extends React.PureComponent {
           <h3 className={styles.involvement}>My Involvement</h3>
 
           <ul>
-            <li>Led R&D, front-end architecture and development.</li>
+            <li>Led R&D, full-stack development of core UI apps.</li>
             <li>Led UX strategy and conceptual design of "VKR" design system.</li>
             <li>Worked closely with researchers and reported directly to Dr. Ferrucci.</li>
           </ul>
