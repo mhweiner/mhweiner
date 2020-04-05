@@ -834,9 +834,9 @@ acorn-dynamic-import@^3.0.0:
     acorn "^5.0.0"
 
 acorn@^5.0.0, acorn@^5.6.2:
-  version "5.7.3"
-  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.3.tgz#67aa231bf8812974b85235a96771eb6bd07ea279"
-  integrity sha512-T/zvzYRfbVojPWahDsE5evJdHb3oJoQfFbsrKM7w5Zcs++Tr257tia3BmMP8XYVjp1S9RZXQMh7gao96BlqZOw==
+  version "5.7.4"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-5.7.4.tgz#3e8d8a9947d0599a1796d10225d7432f4a4acf5e"
+  integrity sha512-1D++VG7BhrtvQpNbBzovKNc1FLGGEE/oGe7b9xJm/RFHMBeUaUGpluV9RLjZa47YFdPcDAenEYuq9pQPcMdLJg==
 
 ajv-errors@^1.0.0:
   version "1.0.0"
@@ -3562,7 +3562,7 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
-mr-router@^2.0.1:
+mr-router@2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/mr-router/-/mr-router-2.0.1.tgz#d28482692c50a667b9c0d09987bff7d52b0227b4"
   integrity sha512-QPv84uZwasyLOSMFE9b1+PdzrxGaJCA56/r+AjmTsLX0Nt+qRkqPoaj/NbHYnLGXxlgpS5kHu1JZ4yrtIse9rw==
