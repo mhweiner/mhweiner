@@ -1,8 +1,8 @@
 import React from 'react';
 import {addClass, removeClass} from "../utils/DOM";
+import animations from "../styles/animations.scss";
 
 import styles from './About.scss';
-import animations from "../styles/animations.scss";
 
 export default class About extends React.PureComponent {
 
@@ -43,13 +43,26 @@ export default class About extends React.PureComponent {
           </div>
           <div className={styles.text}>
             <p>
-              Marc is a lifelong programmer, creative technologist, builder, and space nerd. He built computer games when he was
-              eight and started his first web development company when he was fifteen. After studying Computer Science
-              at the University at Buffalo, he helped launch several successful
-              startups. He now helps big and small companies alike in areas such as full-stack development, systems architecture,
-              devops, process optimization, and user experience.  When he is not working, he is
-              snowboarding, rock climbing, working on electronics, or flying planes.
+              I am a builder, UI designer, and space nerd. As a kid, I enjoyed
+              building custom high-powered model rockets, R/C airplanes, and programming.
             </p>
+  
+            <p>
+              After studying Aerospace Engineering and Computer Science at the University at Buffalo, I helped launch a
+              handful of successful startups. While working at a health-tech startup, I realized
+              that there are mission-critical web-based applications, just like in aerospace. Ever since, I've
+              focused on ways to help improve reliability in software in other industries.
+            </p>
+            
+            <p>
+              My main interests are in systems design, reliability, scalability, process optimization, and user experience.
+            </p>
+            
+            <p>
+              When I'm not hammering away at the keyboard or having existential thoughts over <a target='_blank' href="https://www.goodreads.com/author/quotes/45368.Kevlin_Henney">Kevlin Henney quotes</a>,
+              you can find me racing down the slopes on my snowboard, <a target='_blank' href="https://24hourultraskate.com/">skating 100+ miles in 24 hours</a>, working on electronics, or flying airplanes.
+            </p>
+            
             <h2>Want to hire me? Get in touch.</h2>
             <ul className={styles.contact}>
               <li>

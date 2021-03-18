@@ -124,7 +124,7 @@ export default class Home extends React.PureComponent {
             <p ref={this.text}>Hello! I'm <a href='#' onClick={(e) => {
               e.preventDefault();
               mr.go('about');
-            }}>Marc</a>. I'm a software engineer, UX architect, and builder of things.
+            }}>Marc</a>. I'm a Systems and Software Engineer.
 
               <a href='#projects' className={styles.seeProjects}>See my projects</a>
 

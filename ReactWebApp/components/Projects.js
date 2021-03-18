@@ -55,8 +55,8 @@ export default class Projects extends React.PureComponent {
       <div className={styles.default} ref={this.ref}>
         <div ref={this.contentRef} className={styles.belt}>
           <h2>My Work</h2>
-          <p>My work spans multiple industries and disciplines. Below are some projects where I have made substantial contributions in technical strategy,
-          architecture, full-stack development, UX, and leadership.</p>
+          <p>My work spans multiple industries and disciplines. Below are some projects where I have made substantial contributions in systems design, requirement gathering, technical strategy,
+          architecture, full-stack development, UX, leadership, and more.</p>
           <ProjectList onClick={this.goToProject}/>
         </div>
       </div>
