@@ -60,7 +60,7 @@ export default class About extends React.PureComponent {
             
             <p>
               When I'm not hammering away at the keyboard or having existential thoughts over <a target='_blank' href="https://www.goodreads.com/author/quotes/45368.Kevlin_Henney">Kevlin Henney quotes</a>,
-              you can find me racing down the slopes on my snowboard, <a target='_blank' href="https://24hourultraskate.com/">skating 100+ miles in 24 hours</a>, working on electronics, or flying airplanes.
+              you can find me on the mountain, <a target='_blank' href="https://24hourultraskate.com/">skating 100+ miles in 24 hours</a>, working on electronics, or flying airplanes.
             </p>
             
             <h2>Want to hire me? Get in touch.</h2>
