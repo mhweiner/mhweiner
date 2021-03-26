@@ -77,19 +77,28 @@ $breakpoint: 450;
 
     }
 
-    a.seeProjects {
+  }
 
-      display: block;
+  .ctas {
+
+    margin: 35px 0 0 0;
+    opacity: 0;
+
+    a {
+
+      display: inline-block;
       font-size: 19px;
       line-height: 55px;
-      margin: 35px auto 0;
+      margin: 10px;
       width: 176px;
-      color: black;
-      background: white;
+      color: white;
+      background: rgba(37, 37, 37, 0.7);
       padding: 0 20px;
       text-decoration: none;
       transition: all 0.1s ease-in-out;
       border-radius: 5px;
+      vertical-align: top;
+      border: 1px solid #ffffff73;
 
       &:hover {
 

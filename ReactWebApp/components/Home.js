@@ -15,6 +15,7 @@ export default class Home extends React.PureComponent {
   rocket = React.createRef();
   planet = React.createRef();
   text = React.createRef();
+  ctas = React.createRef();
 
   componentDidMount() {
 
@@ -37,6 +38,12 @@ export default class Home extends React.PureComponent {
       addClass(this.text.current, animations.animateInFromBottom);
 
     }, 350);
+  
+    setTimeout(() => {
+    
+      addClass(this.ctas.current, animations.animateInFromBottom);
+    
+    }, 400);
 
     setTimeout(() => {
 
@@ -126,7 +133,10 @@ export default class Home extends React.PureComponent {
               mr.go('about');
             }}>Marc</a>. I'm a Systems and Software Engineer.
 
-              <a href='#projects' className={styles.seeProjects}>See my projects</a>
+              <div className={styles.ctas} ref={this.ctas}>
+                <a href='#projects'>See my projects</a>
+                <a href='https://mhweiner.medium.com' target='_blank'>Read my articles</a>
+              </div>
 
             </p>
         </div>

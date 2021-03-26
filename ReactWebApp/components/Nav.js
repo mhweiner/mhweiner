@@ -83,9 +83,10 @@ export default class Nav extends React.Component {
   render() {
 
     return <div className={styles.default} ref={this.ref}>
-      <a href='#home' className={styles.logo}><Planet logo={true}/></a>
-      <a href='#about' className={this.props.page === 'about' ? styles.selected : ''}><i className='fa fa-user-astronaut'/></a>
-      <a href='#projects' className={this.props.page === 'projects' ? styles.selected : ''}><i className="fas fa-briefcase"/></a>
+      <a href='#home' className={styles.logo} title='Home'><Planet logo={true}/></a>
+      <a href='#about' className={this.props.page === 'about' ? styles.selected : ''} title='About'><i className='fa fa-user-astronaut'/></a>
+      <a href='#projects' className={this.props.page === 'projects' ? styles.selected : ''} title='Projects'><i className="fas fa-briefcase"/></a>
+      <a href='https://mhweiner.medium.com' target='_blank' title='Publications'><i className="fas fa-pencil-alt"/></a>
     </div>;
 
   }
