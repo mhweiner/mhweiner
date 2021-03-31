@@ -83,7 +83,7 @@ export default class Marvel extends React.PureComponent {
             <li>Led R&D and front-end development.</li>
             <li>Led in setting standards, methodologies and conventions to ensure a smooth and efficient process and reduce QA workload, such as the innovative Responsive Module Library.</li>
             <li>Co-invented innovative CSS build process technique to reduce filesize.</li>
-            <li>Wrote a multi-process automated testing program specially designed for responsive websites
+            <li>Wrote automated visual CI/CD testing suite specially designed for Marvel.com using a perceptual difference engine.
               (<a href="https://github.com/mhweiner/jdiff" target='_blank'>jdiff</a>).</li>
             <li>Worked closely with Art Director and Art Department to align design and tech efforts.</li>
           </ul>

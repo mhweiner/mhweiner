@@ -66,11 +66,11 @@ export default class Shutterstock extends React.PureComponent {
 
           <ul>
             <li>Led architecture &amp; development of backend API orchestration service.</li>
-            <li>Worked with other stakeholder teams to understand and gather technical requirements.</li>
-            <li>Worked with legacy system team to help design a solution to the performance issues.</li>
+            <li>Requirement gathering, User Validation, API design and technical documentation.</li>
+            <li>Worked with legacy system specialist to help design a solution to the performance issues.</li>
             <li>Led in writing technical documentation and API specification.</li>
-            <li>Established design patterns throughout the application, including testing procedures and philosophy.</li>
-            <li>Worked closely with QA team to help enable them to help enable them to write a test plan and ensure the highest possible quality.</li>
+            <li>Established design patterns, testing policies, and code quality best practices.</li>
+            <li>Worked closely with QA to design testing procedures and wrote automated tests.</li>
             <li>Helped identify potential security issues and design solutions.</li>
           </ul>
 
@@ -84,7 +84,7 @@ export default class Shutterstock extends React.PureComponent {
 
           <ul>
             <li>NodeJS ES6, Express REST API</li>
-            <li>Behavior Driven Development (BDD) with 100% unit test coverage using Mocha</li>
+            <li>Behavior Driven Development (BDD) with 100% unit test coverage using Mocha, Nock, and Supertest</li>
             <li>OpenAPI (Swagger) & <a href='http://jsonapi.org' target='_blank'>JSON API</a> Compliant</li>
             <li>Reporting using Bunyan, New Relic, & Sumologic</li>
             <li>Docker, Kuberneties, AWS</li>
