@@ -128,12 +128,12 @@ ul.contact {
         width: 50px;
         text-align: center;
         line-height: 50px;
-        font-size: 20px;
-        color: white;
-        border: 2px solid;
-        transition: all 0.3s cubic-bezier(.3,.71,.44,1.02);
+        font-size: 25px;
+        color: #03ffde;
+        transition: all 0.3s cubic-bezier(0.3, 0.71, 0.44, 1.02);
         position: relative;
         border-radius: 50px;
+        background: linear-gradient(45deg, #6f6f6f, #2d848096);
 
       }
 
@@ -158,6 +158,7 @@ ul.contact {
         i {
 
           @include scale(1.2,1.2);
+          box-shadow: rgba(0,0,0,0.6) 0 0 12px 2px;
           opacity: 1;
 
         }
